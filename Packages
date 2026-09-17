@@ -7,9 +7,7 @@ Size: 184518
 MD5sum: 35dfb73af18b2c454e9bcfe96515b61b
 Section: Utilities
 Author: Karen/あけみ <karen@akemi.ai>
-Icon: https://githubusercontent.com
-Homepage: https://akemi.ai
-Description: Cài đặt file IPA không cần chữ ký (unsigned), giả lập chữ ký (fake-signed) hoặc ad-hoc dễ dàng trên thiết bị iOS của bạn. Tương thích hoàn hảo với các thiết bị jailbreak bản cũ.
+Description: Cai dat file IPA khong can chu ky (unsigned), gia lap chu ky (fake-signed) hoac ad-hoc de dang tren thiet bi iOS cua ban. Tuong thich hoan hao voi cac thiet bi jailbreak ban cu.
 Name: AppSync Unified (Legacy Arm)
 
 Package: ai.akemi.appsyncunified
@@ -21,8 +19,7 @@ Size: 184462
 MD5sum: a69b5ffba78bf71bc3081e7d020d579d
 Section: Utilities
 Author: Karen/あけみ <karen@akemi.ai>
-Icon: https://githubusercontent.com
-Homepage: https://akemi.ai
-Description: Cài đặt file IPA không cần chữ ký (unsigned), giả lập chữ ký (fake-signed) hoặc ad-hoc dễ dàng trên thiết bị iOS của bạn. Bản tối ưu cho chip 64-bit.
+Description: Cai dat file IPA khong can chu ky (unsigned), gia lap chu ky (fake-signed) hoac ad-hoc de dang tren thiet bi iOS cua ban. Ban toi uu cho chip 64-bit.
 Name: AppSync Unified
+
 
