@@ -5,8 +5,12 @@ Maintainer: Karen/あけみ <karen@akemi.ai>
 Filename: debs/ai.akemi.appsyncunified_116.0_iphoneos-arm.akemi-git-235aca6cddfbdc9fa87fcb5b2aec2df37ed6d65a.deb
 Size: 184518
 MD5sum: 35dfb73af18b2c454e9bcfe96515b61b
-Section: System
-Description: Allows you to install unsigned, fake-signed, or ad-hoc signed IPA packages on your iOS device.
+Section: Utilities
+Author: Karen/あけみ <karen@akemi.ai>
+Icon: https://githubusercontent.com
+Homepage: https://akemi.ai
+Description: Cài đặt file IPA không cần chữ ký (unsigned), giả lập chữ ký (fake-signed) hoặc ad-hoc dễ dàng trên thiết bị iOS của bạn. Tương thích hoàn hảo với các thiết bị jailbreak bản cũ.
+Name: AppSync Unified (Legacy Arm)
 
 Package: ai.akemi.appsyncunified
 Version: 116.0
@@ -15,5 +19,10 @@ Maintainer: Karen/あけみ <karen@akemi.ai>
 Filename: debs/ai.akemi.appsyncunified_116.0_iphoneos-arm64.akemi-git-235aca6cddfbdc9fa87fcb5b2aec2df37ed6d65a.deb
 Size: 184462
 MD5sum: a69b5ffba78bf71bc3081e7d020d579d
-Section: System
-Description: Allows you to install unsigned, fake-signed, or ad-hoc signed IPA packages on your iOS device.
+Section: Utilities
+Author: Karen/あけみ <karen@akemi.ai>
+Icon: https://githubusercontent.com
+Homepage: https://akemi.ai
+Description: Cài đặt file IPA không cần chữ ký (unsigned), giả lập chữ ký (fake-signed) hoặc ad-hoc dễ dàng trên thiết bị iOS của bạn. Bản tối ưu cho chip 64-bit.
+Name: AppSync Unified
+
