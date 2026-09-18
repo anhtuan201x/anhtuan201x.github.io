@@ -1,15 +1,3 @@
-Package: ai.akemi.appsyncunified.arm64
-Version: 116.0
-Architecture: iphoneos-arm64
-Maintainer: AnhTuan201X <anhtuan201x@github.io>
-Filename: debs/ai.akemi.appsyncunified_116.0_iphoneos-arm64.akemi-git-235aca6cddfbdc9fa87fcb5b2aec2df37ed6d65a.deb
-Size: 49472
-MD5sum: d6a31911e878b883e47c6525fa29ecef1
-Section: Utilities
-Author: AnhTuan201X <anhtuan201x@github.io>
-Description: Cai dat file IPA khong can chu ky (unsigned), gia lap chu ky (fake-signed) hoac ad-hoc de dang tren thiet bi iOS cua ban.
-Name: AppSync Unified
-
 Package: ai.akemi.appsyncunified
 Version: 116.0
 Architecture: iphoneos-arm
