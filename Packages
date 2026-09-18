@@ -1,4 +1,4 @@
-Package: ai.akemi.appsyncunified
+Package: com.anhtuan.appsync6
 Version: 116.0
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
@@ -21,4 +21,3 @@ Section: Applications
 Author: bag-xml
 Description: Ung dung ChatGPT danh rieng cho cac thiet bi iOS cu (Legacy iOS).
 Name: ChatGPT Legacy
-
