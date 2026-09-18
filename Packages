@@ -1,4 +1,4 @@
-Package: ai.akemi.appsyncunified
+Package: ai.akemi.appsyncunified.arm64
 Version: 116.0
 Architecture: iphoneos-arm64
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
