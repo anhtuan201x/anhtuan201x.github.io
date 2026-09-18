@@ -3,7 +3,7 @@ Version: 116.0
 Architecture: iphoneos-arm
 Maintainer: Karen/あけみ <karen@akemi.ai>
 Filename: debs/ai.akemi.appsyncunified_116.0_iphoneos-arm.akemi-git-235aca6cddfbdc9fa87fcb5b2aec2df37ed6d65a.deb
-Size: 184518
+Size: 51658
 MD5sum: 35dfb73af18b2c454e9bcfe96515b61b
 Section: Utilities
 Author: Karen/あけみ <karen@akemi.ai>
@@ -15,7 +15,7 @@ Version: 116.0
 Architecture: iphoneos-arm64
 Maintainer: Karen/あけみ <karen@akemi.ai>
 Filename: debs/ai.akemi.appsyncunified_116.0_iphoneos-arm64.akemi-git-235aca6cddfbdc9fa87fcb5b2aec2df37ed6d65a.deb
-Size: 184462
+Size: 49472
 MD5sum: a69b5ffba78bf71bc3081e7d020d579d
 Section: Utilities
 Author: Karen/あけみ <karen@akemi.ai>
