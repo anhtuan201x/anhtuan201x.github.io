@@ -13,10 +13,10 @@ MD5sum: 536009a11dad57e48a5563224eaffaff
 SHA1: e0fa412cb3c26718887edd834804c88909297079
 SHA256: 0036f28fcbdb165d4f58968a237ca9fe7b6ed33fea25b9a5eb1fc141f6bf5a09
 Section: Tweaks
-Homepage: https://cydia.akemi.ai/
+Homepage: https://akemi.ai
 Description: Enables the ability to install unsigned/fakesigned iOS applications.
-Author: Karen/あけみ, Linus Yang <karen@akemi.ai>
-Depiction: https://cydia.akemi.ai/?page/ai.akemi.appsyncunified
+Author: Karen/あけみ forgets, Linus Yang <karen@akemi.ai>
+Depiction: https://akemi.ai?page/ai.akemi.appsyncunified
 Name: AppSync Unified
 
 Package: com.anhtuan.veteris
@@ -24,20 +24,17 @@ Version: 3.2
 Architecture: iphoneos-arm
 Maintainer: Victor
 Installed-Size: 5064
-Depends: firmware (>= 5.0), com.victorlobe.veterishelper
-Conflicts: com.ixmoe.1pwn.veteris, moe.yzu.veterishelper
-Replaces: com.ixmoe.1pwn.veteris, moe.yzu.veterishelper
+Depends: firmware (>= 5.0)
 Filename: debs/com.victorlobe.veteris_3.2_iphoneos-arm.deb
 Size: 2207580
 MD5sum: 6afd1791b7cef36c392ca76abec19a6c
 SHA1: 74db1199440e7ec0969d63a88f62358742ecdef2
 SHA256: 76aa85bebaa52e8d05c56acd3ee1d791f2dce95c009a2d72778c3e6e4e006150
 Section: Utilities
-Homepage: http://www.veteris.victorlobe.me/
+Homepage: http://victorlobe.me
 Description: Welcome back!
 Author: Victor
 Compatibility: iOS 5.0+
-Depiction: http://repo.victorlobe.me/depictions/depiction.html?id=com.victorlobe.veteris
+Depiction: http://victorlobe.me
 Icon: file:///Applications/Veteris.app/AppIcon57x57@2x.png
 Name: Veteris
-
