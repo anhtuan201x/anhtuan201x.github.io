@@ -19,6 +19,51 @@ Author: Karen/あけみ, Linus Yang <karen@akemi.ai>
 Depiction: https://cydia.akemi.ai/?page/ai.akemi.appsyncunified
 Name: AppSync Unified
 
+Package: com.a3tweaks.auxo-le
+Version: 1.1.1~beta1
+Architecture: iphoneos-arm
+Maintainer: thebigboss.org <http://thebigboss.org>
+Installed-Size: 1060
+Depends: firmware (>= 7.0), mobilesubstrate (>= 0.9.5001), applist (>= 1.5.9), preferenceloader (>= 2.2.2)
+Conflicts: com.rpetrich.sectional, libactivator (<< 1.9.8~beta3), com.a3tweaks.auxo3ios9
+Replaces: com.rpetrich.sectional, com.a3tweaks.auxo3ios9
+Filename: debs/cydiastore_com.a3tweaks.auxo-le_v1.1.1~beta1.deb
+Size: 439834
+MD5sum: 4c17d6abd96f4d3262f8c036dc5c6897
+SHA1: e2776a353f4e49fe24dd5a324fb2b66f8b3c3391
+SHA256: 47b90e2a6965da0cfed5c8faccd8734347010cf4a42d5c70c809a40f71286626
+Section: Tweaks
+Homepage: http://rpetri.ch/cydia/auxo/
+Description: A modern app switcher in control center
+Tag: cydia::commercial
+Author: A3Tweaks <auxole-support@a3tweaks.com>
+Depiction: http://rpetri.ch/cydia/auxo/
+Dev: rpetrich
+Name: Auxo Legacy Edition
+
+Package: com.aaronash.barrel
+Version: 1.9.0.2
+Architecture: iphoneos-arm
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Installed-Size: 1420
+Depends: firmware(>= 3.1), mobilesubstrate, preferenceloader
+Conflicts: net.limneos.sbrotator (<= 2.1.5)
+Filename: debs/barrel_v1.9.0.2.deb
+Size: 207132
+MD5sum: b8e967f735c3c48ab22df9cc6baea88d
+SHA1: 7c35659fcfdbf339b3d5b260dd7d0e701c7a6df5
+SHA256: d6fe331f36993db0f8ba51576cc611fc7798c30df6d6cfc3826ff33f3e796fd8
+Section: Tweaks
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=barrelData
+Description: 3D and other effects on icon pages! A jailbreaking classic.
+Tag: purpose::extension, compatible::ios7, compatible::ios8, compatible::ios9, compatible::ios10, compatible::ios11, compatible::ios12, compatible::ios13
+Author: Aaron Ash (Charybdis) <support@multifl0w.com>
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=barrelData
+Dev: aaronash
+Icon: file:///Library/PreferenceBundles/threedeeprefs.bundle/threedeeprefs@2x.png
+Name: Barrel
+Sponsor: thebigboss.org <http://thebigboss.org>
+
 Package: com.exile90.icleanerpro
 Version: 7.10.0
 Architecture: iphoneos-arm
@@ -38,6 +83,29 @@ Author: Ivano Bilenchi <support@ib-soft.net>
 Depiction: http://ib-soft.net/depictions/?pkgId=com.exile90.icleanerpro
 Icon: file:///Applications/iCleaner.app/Icon.png
 Name: iCleaner Pro
+
+Package: com.ia.iconbounce
+Version: 3.0.0-1
+Architecture: iphoneos-arm
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Installed-Size: 433
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 5.0), preferenceloader
+Filename: debs/iconbounce_3.0.0-1.deb
+Size: 96060
+MD5sum: a658fe2edbdf6c5c946835f1e45f332e
+SHA1: fa30f8fd05446c59f44c88b8b88a587afafcce43
+SHA256: 1f3c9159ca304f6ed77f639038079d03d9819c0fabb3a9d7df4f2e791650065e
+Section: Tweaks
+Priority: optional
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=iconbounceDp
+Description: dock icons randomly bounce & animate
+Tag: purpose::extension, compatible::ios7, compatible::ios8, compatible::ios9
+Author: Evan Lucas <evanlucas@me.com>
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=iconbounceDp
+Dev: evanlucas
+Icon: file:///Library/PreferenceBundles/IconBouncePreferences.bundle/Icon@2x.png
+Name: IconBounce
+Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: com.victorlobe.appstorefix
 Version: 1
