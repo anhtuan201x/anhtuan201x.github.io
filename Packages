@@ -101,3 +101,27 @@ Author: Victor
 Compatibility: iOS 5.0+
 Name: Veteris Helper
 
+Package: mobileterminal-applesdk
+Version: 520-2
+Architecture: iphoneos-arm
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Installed-Size: 601
+Depends: firmware (>= 3.2), dpkg (>= 1.14.25-8), bash, coreutils, ncurses, system-cmds
+Conflicts: mobileterminal
+Filename: debs/mobileterminal_520-2.deb
+Size: 237756
+MD5sum: 976152ac3cce2f95ae2092d97807fc31
+SHA1: 3cc37047bab030c34b9a4104f1ef655c4c960d6a
+SHA256: 6f02bb0e3f2833140725f3d6b848e9b0a1e786855dc451778133149ac2ebc986
+Section: Terminal Support
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=mobileterminalDp
+Description: A Terminal emulator for iOS
+ This is a Terminal emulator for the iPhone. With it you can do all of your standard system administration tasks from anywhere: ssh into remote boxes, download files, edit configuration files, whatever.
+Tag: purpose::uikit
+Author: MobileTerminal <mobileterminal@googlegroups.com>
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=mobileterminalDp
+Dev: allenporter
+Icon: file:///Applications/Terminal.app/Icon.png
+Name: MobileTerminal
+Sponsor: thebigboss.org <http://thebigboss.org>
+
