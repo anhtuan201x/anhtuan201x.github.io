@@ -7,7 +7,6 @@ on:
       - master
     paths:
       - 'debs/**'
-      - 'Packages'
 
 jobs:
   build:
@@ -26,16 +25,15 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y dpkg-dev
 
-    - name: Scan Packages automatically
+    - name: Execute CydiaBlock Core Scripts
       run: |
-        dpkg-scanpackages -m debs /dev/null > Packages
-        sed -i 's/\r$//' Packages
-        bzip2 -fk Packages
+        chmod +x control.sh sync.sh
+        ./control.sh
 
-    - name: Commit and Push to GitHub
+    - name: Commit and Push changes by action-user
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git add Packages Packages.bz2
-        git commit -m "Robot successfully scanned and updated Cydia Repo!" || exit 0
+        git add Packages Packages.bz2 debs/
+        git commit -m "Repo successfully synchronized by CydiaBlock infrastructure!" || exit 0
         git push
