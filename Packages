@@ -107,6 +107,176 @@ Icon: file:///Library/PreferenceBundles/IconBouncePreferences.bundle/Icon@2x.png
 Name: IconBounce
 Sponsor: thebigboss.org <http://thebigboss.org>
 
+Package: com.ichitaso.winterboardapp
+Version: 0.9.3915
+Architecture: iphoneos-arm
+Maintainer: ichitaso
+Depends: winterboard, apt7
+Filename: debs/com.ichitaso.winterboardapp_0.9.3915_iphoneos-arm.deb
+Size: 165204
+MD5sum: c0bad8e3066b03c3a6633db1187cdbe6
+SHA1: 065ee7f9e6d23c97dc8859f1c5d132d12a1b8615
+SHA256: aa9a9b02cdfdb0cc161f6928ad3ed13144c85370672c7dc675de767a361ea890
+Section: System
+Priority: optional
+Homepage: http://www.saurik.com/id/9
+Description: Return the WinterBoard app.
+Author: Jay Freeman (saurik) <saurik@saurik.com>
+Icon: file:///Applications/WinterBoard.app/icon@2x.png
+Name: WinterBoard App
+
+Package: com.iky1e.swipeselection
+Version: 1.5.2-1
+Architecture: iphoneos-arm
+Maintainer: Bigboss <bigboss@thebigboss.org>
+Installed-Size: 132
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 4.0)
+Filename: debs/swipeselection_1.5.2-1.deb
+Size: 11394
+MD5sum: 823d5a4505c7e828c6ed4ee1cc7b338a
+SHA1: 37539e3cb94e7c5eef03f6d228ec98420215d40a
+SHA256: d3aaa49a9d81aa1cfc07d00bac894624dfde24186d909df8eb8a512bfdf015b8
+Section: Tweaks
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=swipeselectionDp
+Description: keyboard swipes move cursor & select text
+Tag: purpose::extension, compatible::ios7, compatible::ios8, compatible::ios9
+Author: iKy1e (Kyle Howells) <freerunnering+SwipeSelection@gmail.com>
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=swipeselectionDp
+Dev: freerunnering
+Icon: file:///Library/PreferenceBundles/SwipeSelectionPro.bundle/SwipeSelectionPro@2x.png
+Name: SwipeSelection
+Sponsor: thebigboss.org <http://thebigboss.org>
+
+Package: com.mathieubolard.killbackground
+Version: 1.3.1-7
+Architecture: iphoneos-arm
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Installed-Size: 133
+Depends: mobilesubstrate, firmware (>= 4.0), preferenceloader, applist
+Filename: debs/killbackground_1.3.1-7.deb
+Size: 71698
+MD5sum: a67106c323ca059b2b8680bd030636cd
+SHA1: b2f7cd9fcf117c24c7d558c35410376219698d0e
+SHA256: c5ad31c11a3af480d4c3e060f9bc296056d08d9e746b493e1cf29a32a7669524
+Section: Tweaks
+Priority: optional
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=killbackgroundData
+Description: kill all background apps from switcher
+Tag: purpose::extension
+Author: Mathieu Bolard (mattlawer) <mattlawer08@gmail.com>
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=killbackgroundData
+Dev: mattlawer
+Icon: file:///Library/PreferenceBundles/KillBackgroundPreferences.bundle/Icon@2x.png
+Name: KillBackground
+Sponsor: thebigboss.org <http://thebigboss.org>
+
+Package: com.r333d.cylinder
+Version: 1.1
+Architecture: iphoneos-arm
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Installed-Size: 1419
+Depends: firmware (>= 3.0), mobilesubstrate (>= 0.9.5000), preferenceloader
+Filename: debs/cylinder_1.1.deb
+Size: 300358
+MD5sum: c24e9c9b3f4096a8b93080207fac5580
+SHA1: dd35f74c38b9ac3652a134136e4ffcb15db67329
+SHA256: 5ddac771540c6f8f8e1ada87fa0deae2f85e1aac2536d125aaa0787667528cd4
+Section: Tweaks
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=cylinderDp
+Description: Make your icons dance
+Tag: purpose::extension, compatible::ios7, compatible::ios8, compatible::ios9, compatible::ios10, compatible::ios11, compatible::ios12, compatible::ios13
+Author: Reed Weichler <rweichler+cydia@gmail.com>
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=cylinderDp
+Dev: rweichler
+Icon: file:///Library/PreferenceBundles/CylinderSettings.bundle/Icon@2x.png
+Name: Cylinder
+Sponsor: thebigboss.org <http://thebigboss.org>
+
+Package: com.rpetrich.iconrenamer
+Version: 1.2.6
+Architecture: iphoneos-arm
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Installed-Size: 200
+Depends: firmware (>= 4.0), mobilesubstrate (>= 0.9.5101), preferenceloader (>= 2.2.2)
+Replaces: netskao.iconrenamerx
+Filename: debs/com.rpetrich.iconrenamer_1.2.6_iphoneos-arm.deb
+Size: 18398
+MD5sum: 9a26c3d08853ac3084090c7f2e296562
+SHA1: 0a6854edffcbea1bc736f296922d4cc7dd760275
+SHA256: 3e2674a3d8fba1ad244f4567b8f64d4d31540a804539ca437656ec7b5043312c
+Section: Tweaks
+Homepage: http://rpetri.ch/cydia/iconrenamer/
+Description: Rename icons from your SpringBoard
+Tag: purpose::extension
+Author: Ryan Petrich <rpetrich@gmail.com>
+Depiction: http://rpetri.ch/cydia/iconrenamer/
+Dev: rpetrich
+Name: Icon Renamer
+Sponsor: thebigboss.org <http://thebigboss.org>
+
+Package: com.rpetrich.sslpatch
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Installed-Size: 72
+Depends: firmware (>= 6.0), mobilesubstrate (>= 0.9.5001), firmware (<< 7.0.6)
+Filename: debs/com.rpetrich.sslpatch_1.0_iphoneos-arm.deb
+Size: 9052
+MD5sum: d7f66b9b25b4a53d2d8992702ee8f53d
+SHA1: 647a465da6a70748e478d7b6ad57310df9080277
+SHA256: 163bd5766f123949ff9170444bc0b16caa19b0e69b35338120d86f2ca2458e62
+Section: Tweaks
+Priority: optional
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=sslpatchDp
+Description: Fix for CVE-2014-1266 on iOS 6.0-7.0.5 firmwares
+Tag: purpose::extension
+Author: Ryan Petrich <rpetrich+sslpatch@gmail.com>
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=sslpatchDp
+Dev: rpetrich
+Name: SSLPatch
+Sponsor: thebigboss.org <http://thebigboss.org>
+
+Package: com.saurik.afc2d
+Version: 1.2
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Pre-Depends: dpkg (>= 1.14.25-8)
+Depends: firmware (<< 8.0) | mobilesubstrate
+Conflicts: us.scw.afctwoadd, net.angelxwind.afc2ios70, afc2.25pp, afc2.25pp7, afc2.91, app.taig.afc2
+Replaces: us.scw.afctwoadd, net.angelxwind.afc2ios70, afc2.25pp, afc2.25pp7, afc2.91, app.taig.afc2
+Provides: us.scw.afctwoadd, net.angelxwind.afc2ios70, afc2.25pp, afc2.25pp7, afc2.91, app.taig.afc2
+Filename: debs/com.saurik.afc2d_1.2_iphoneos-arm.deb
+Size: 18114
+MD5sum: 34291f44d22cfbbf3eb4bad0ade3b89c
+SHA1: bddaf385263b9aad2b032b2116179f83afd077cc
+SHA256: 287ac4ce1a6e4095e824fd90f71fed301ff7d9508f1cd2d87a7354053e347a3c
+Section: System
+Priority: optional
+Description: allow full file-system access over USB
+Tag: purpose::daemon, role::enduser
+Author: Jay Freeman (saurik) <saurik@saurik.com>
+Depiction: http://cydia.saurik.com/info/com.saurik.afc2d/
+Name: Apple File Conduit "2"
+
+Package: com.saurik.iphone.fid
+Version: 0.9.3400
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Depends: mobilesubstrate (>= 0.9.3005-1), firmware (>= 2.2), firmware (<< 3.0) | com.chpwn.iconsupport (>= 1.7.3-1)
+Conflicts: gsc.wildcat
+Filename: debs/com.saurik.iphone.fid_0.9.3400_iphoneos-arm.deb
+Size: 8248
+MD5sum: 19858bc7105c8921319f7038d7ab80e8
+SHA1: e570978d488655de797b99229e66e42d26c4a417
+SHA256: 28d2bd4e42a095d5308fcc6f095cd638f8baf7cecde95d57201ec9049e7c8827
+Section: Tweaks
+Priority: optional
+Description: fits even more stuff right down there
+Tag: purpose::extension, role::enduser
+Author: Jay Freeman (saurik) <saurik@saurik.com>
+Depiction: http://cydia.saurik.com/info/com.saurik.iphone.fid/
+Name: Five Icon Dock
+
 Package: com.victorlobe.appstorefix
 Version: 1
 Architecture: iphoneos-arm
@@ -188,6 +358,28 @@ Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=ifileData
 Dev: carsten
 Name: iFile
 
+Package: me.k3a.powersounddisabler
+Version: 1.1.1-6
+Architecture: iphoneos-arm
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Installed-Size: 65
+Depends: firmware (>= 4.0), mobilesubstrate (>= 0.9.5000)
+Filename: debs/powersounddisabler_1.1.1-6.deb
+Size: 3656
+MD5sum: 974acd69246dd1efb78d661e47cce014
+SHA1: 013618179b9fc5d57d0df3c4e3bb340d35a8880e
+SHA256: 088598dcef48154b12e4bc1f90d7273a37bee2496348c66223ffc096eab98102
+Section: Tweaks
+Priority: optional
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=powersounddisablerDp
+Description: no sound/vibration at boot or USB connect
+Tag: purpose::extension
+Author: K3A <kexik@reversity.org>
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=powersounddisablerDp
+Dev: k3a
+Name: PowerSoundDisabler
+Sponsor: thebigboss.org <http://thebigboss.org>
+
 Package: mobileterminal-applesdk
 Version: 520-2
 Architecture: iphoneos-arm
@@ -211,4 +403,106 @@ Dev: allenporter
 Icon: file:///Applications/Terminal.app/Icon.png
 Name: MobileTerminal
 Sponsor: thebigboss.org <http://thebigboss.org>
+
+Package: openssh
+Version: 6.7p1-13
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Installed-Size: 4736
+Pre-Depends: dpkg (>= 1.14.25-8)
+Depends: openssl
+Filename: debs/openssh_6.7p1-13_iphoneos-arm.deb
+Size: 587678
+MD5sum: 51b3398d67bc3b861642c1eff23f9e42
+SHA1: 0312d429110829359f7443adbfbb27cb1f9419d5
+SHA256: ff4eb2a1e4453051e52ba56a71c3d4f56d00c1e83095653647a7a4f49b4c3b1f
+Section: Networking
+Priority: important
+Description: secure remote access between machines
+Depiction: http://cydia.saurik.com/info/openssh/
+Name: OpenSSH
+
+Package: org.coolstar.recordmyscreenapp
+Version: 1.1-4
+Architecture: iphoneos-arm
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Installed-Size: 398
+Depends: firmware (>= 5.0), gsc.armv7, firmware (<< 7.0)
+Filename: debs/recordmyscreen_1.1-4.deb
+Size: 281744
+MD5sum: 9127a7a26551f47615e506a69af3c959
+SHA1: 5b749785b1fe3f1cb8db2fd6ed24671a7f8e01be
+SHA256: a024cf0583cbf79fad718a6076f16d27f0a90be1c40ab3357218ac3e2c463e7b
+Section: Utilities
+Priority: optional
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=recordmyscreenDp
+Description: free, open source screen recorder
+Tag: purpose::uikit
+Author: RecordMyScreen Project <coolstarorganization@gmail.com>
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=recordmyscreenDp
+Dev: coolstar
+Name: RecordMyScreen (App)
+Sponsor: thebigboss.org <http://thebigboss.org>
+
+Package: org.thebigboss.blurriedncbackground
+Version: 3.0-1
+Architecture: iphoneos-arm
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Installed-Size: 24
+Depends: mobilesubstrate, firmware (>= 5.0), preferenceloader
+Filename: debs/blurriedncbackground_3.0-1.deb
+Size: 12962
+MD5sum: dab88b57382279191a793c994acb48c1
+SHA1: ea50310e650ae6b04af6da008af9a5d96d0b437d
+SHA256: 1fd98a17930bd85ddda970aad3e5cd225cf49ebf72e74a27223c5a9cb3bd073b
+Section: Tweaks
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=blurriedncbackgroundDp
+Description: blurred wallpaper behind NotificationCenter
+Tag: purpose::extension
+Author: Philippe <philippemail1@gmail.com>
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=blurriedncbackgroundDp
+Dev: philippemail1
+Icon: file:///Library/PreferenceLoader/Preferences/bncb/bncb@2x.png
+Name: BlurriedNCBackground
+Sponsor: thebigboss.org <http://thebigboss.org>
+
+Package: uk.invoxiplaygames.cydiahttpatch
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: InvoxiPlayGames <webmaster@invoxiplaygames.uk
+Installed-Size: 100
+Depends: cydia, mobilesubstrate, firmware (<< 4.0)
+Filename: debs/cydiahttpatch-1.0.deb
+Size: 2842
+MD5sum: 2100205abecf06d1a7d72d2636e770c4
+SHA1: 26c2c398c93f847aa007a7778b6148e554e395c6
+SHA256: 2c6ff66a0498eea88f786a17b8ca79400ae311a2f5f80d97eaeed44d4fe9d9bf
+Section: Tweaks
+Description: Removes HTTPS from Cydia to use on iOS 3.
+Author: InvoxiPlayGames <webmaster@invoxiplaygames.uk>
+Depiction: http://cydia.invoxiplaygames.uk/dp/cydiahttpatch.php
+Name: Cydia HTTPatch
+
+Package: winterboard
+Version: 0.9.3919
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Pre-Depends: dpkg (>= 1.13.25-5)
+Depends: mobilesubstrate (>= 0.9.3225-1), killall, preferenceloader, findutils, net.howett.pincrush (>= 0.0.1-23) | pincrush
+Conflicts: com.modmyifone.winterboardicon, winterboardsettings, themesettings, com.iphonerepocenter.transparentdockfor3xtheme
+Breaks: jp.ashikase.folderenhancer (<< 1.6.0.2-1)
+Replaces: com.modmyifone.winterboardicon, winterboardsettings, themesettings, com.iphonerepocenter.transparentdockfor3xtheme
+Provides: theme-manager
+Filename: debs/winterboard_0.9.3919_iphoneos-arm.deb
+Size: 111104
+MD5sum: 903869bcc23c88eeb71615e833e626af
+SHA1: 569cc3f77a3ca6cd2046a84bc5c3a68fbb2f00ea
+SHA256: 8cd0ad873eacf4c209e4e89e2e1e0ab0ea963f49cd652ef814ed97d2fb157991
+Section: System
+Priority: optional
+Homepage: http://www.saurik.com/id/9
+Description: theme manager, used by most themes
+Author: Jay Freeman (saurik) <saurik@saurik.com>
+Depiction: http://cydia.saurik.com/info/winterboard/
+Name: WinterBoard
 
