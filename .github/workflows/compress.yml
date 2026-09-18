@@ -2,6 +2,9 @@ name: Auto Convert IPA to DEB and Update Repo
 
 on:
   push:
+    branches:
+      - main
+      - master
     paths:
       - 'ipas/**'
 
