@@ -18,51 +18,50 @@
         }
         .container { 
             max-width: 85%; 
-            width: 420px;
+            width: 440px;
             background: white; 
             border: 1px solid #dcdcdc; 
             border-radius: 16px; 
             padding: 35px 25px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06); 
+            animation: slideUpFade 0.8s ease-out forwards;
         }
         .logo { 
             width: 85px; 
             height: 85px; 
             border-radius: 20px; 
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         h1 { 
             background: linear-gradient(45deg, #FF416C, #FF4B2B);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-size: 26px; 
-            margin: 0 0 15px 0; 
+            font-size: 28px; 
+            margin: 0 0 10px 0; 
             font-weight: 700;
         }
         
-        /* Khung cuon van ban sinh dong */
-        .story-box {
-            max-height: 180px;
-            overflow-y: auto;
-            border: 1px dashed #e0e0e0;
-            border-radius: 8px;
-            padding: 15px;
-            background-color: #fafafa;
-            margin-bottom: 25px;
-            text-align: left;
+        /* Dong gioi thieu ngan cu cua ban */
+        .old-description {
+            color: #1d1d26;
+            font-size: 15px;
+            font-weight: 600;
+            margin: 0 0 20px 0;
         }
         
-        /* Hieu ung chu chay muot ma */
-        .story-text {
-            color: #4a4a4a; 
+        /* Doan van uoc mo dai va hay hon nam o duoi */
+        .story-subtitle {
+            color: #555555; 
             font-size: 13.5px; 
             line-height: 1.6;
-            margin: 0;
-            animation: fadeInUp 0.8s ease-out forwards;
+            margin: 0 0 30px 0;
+            text-align: justify;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
         }
         
-        @keyframes fadeInUp {
+        @keyframes slideUpFade {
             from {
                 opacity: 0;
                 transform: translateY(20px);
@@ -101,13 +100,13 @@
         <img src="CydiaIcon.png" class="logo" alt="Repo Logo">
         <h1>AnhTuan Repo</h1>
         
-        <div class="story-box">
-            <p class="story-text">
-                <strong>[English]</strong><br>
-                Established in 2026, this legacy repository was crafted by Anh Tuan with a profound dream. Fuelled by an endless ambition to achieve greatness and stand side by side with the pioneers of the jailbreak community, A. Tuan created this platform to prove that boundaries are meant to be broken. This is not just a repo; it is the genesis of a dream turning into reality.<br><br>
-                <strong>[Tieng Viet]</strong><br>
-                Trong nam 2026, kho luu tru nay da duoc kien tao boi Anh Tuan voi mot uoc mo sau sac. Xuat phat tu niem dam me chay bong va khat khao duoc chung minh ban than, muon dat duoc nhung thanh tuu to lon nhu bao nguoi di truoc trong cong dong Legacy iOS, A. Tuan da quyet tam tao nen repo nay. Day khong chi la noi luu tru, ma la khoi dau cho cuoc hanh trinh bien uoc mo thanh hien thuc.
-            </p>
+        <p class="old-description">Kho luu tru Tweak va Ung dung Legacy danh rieng cho iOS 6.</p>
+        
+        <div class="story-subtitle">
+            <strong>[Tieng Viet]</strong><br>
+            Trong nam 2026, kho luu tru huyen thoai nay da duoc kien tao boi Anh Tuan voi mot uoc mo vo quan sau sac va lon lao. Xuat phat tu niem dam me chay bong voi the gioi iOS Legacy va khat khao manh liet muon duoc chung minh ban than, muon dat duoc nhung thanh tuu to lon va vinh quang giong nhu nhung nguoi di truoc trong cong dong jailbreak, A. Tuan da quyet tam tu tay thiet ke nen repo nay. Day khong chi la mot noi luu tru tweak don thuan, ma chinh la nen mong dau tien bien uoc mo bay xa cua cau ay thanh hien thuc, mot buoc di lon de sanh vai cung nhung bieu tuong vi dai.<br><br>
+            <strong>[English]</strong><br>
+            In the year 2026, this legacy repository was grandly created by Anh Tuan with a profound and magnificent dream. Driven by an endless passion for the world of Legacy iOS and a fierce desire to achieve greatness—to stand proudly side by side with the legendary pioneers of the jailbreak community—A. Tuan dedicated himself to building this platform. This is far more than just a repository; it represents the dawn of his ultimate ambition, turning a beautiful dream into an everlasting reality.
         </div>
         
         <a class="btn-add" href="cydia://url/http://cydia.saurik.com/api/share/#http://anhtuan201x.github.io/">Add to Cydia</a>
