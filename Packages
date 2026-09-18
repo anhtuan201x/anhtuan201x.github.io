@@ -1,4 +1,4 @@
-Package: ai.akemi.appsyncunified
+Package: com.anhtuan.appsync6
 Version: 116.0
 Architecture: iphoneos-arm
 Maintainer: Karen/あけみ <karen@akemi.ai>
@@ -10,7 +10,7 @@ Author: Karen/あけみ <karen@akemi.ai>
 Description: Cai dat file IPA khong can chu ky (unsigned), gia lap chu ky (fake-signed) hoac ad-hoc de dang tren thiet bi iOS cua ban. Tuong thich hoan hao voi cac thiet bi jailbreak ban cu.
 Name: AppSync Unified (Legacy Arm)
 
-Package: ai.akemi.appsyncunified
+Package: com.anhtuan.appsync6.arm64
 Version: 116.0
 Architecture: iphoneos-arm64
 Maintainer: Karen/あけみ <karen@akemi.ai>
