@@ -41,3 +41,23 @@ Depiction: http://repo.victorlobe.me/depictions/depiction.html?id=com.victorlobe
 Icon: file:///Applications/Veteris.app/AppIcon57x57@2x.png
 Name: Veteris
 
+Package: com.victorlobe.veterishelper
+Version: 1.1
+Architecture: iphoneos-arm
+Maintainer: Victor
+Installed-Size: 136
+Depends: mobilesubstrate (>= 0.9.5000)
+Conflicts: com.ixmoe.1pwn.Veteris, moe.yzu.veterishelper
+Replaces: com.ixmoe.1pwn.Veteris, moe.yzu.veterishelper
+Filename: debs/com.victorlobe.veterishelper_1.1_iphoneos-arm.deb
+Size: 6512
+MD5sum: fa61d752faa95da4bb2c5d11c9329a44
+SHA1: fd5c426e4336d935891e8ed24fac631f74bc3a56
+SHA256: 25a2de9b1e64bac0137af4b5ca010bcba2e310830e023b8aa1ececf896f0094f
+Section: Utilities
+Homepage: http://www.veteris.victorlobe.me/
+Description: Veteris's little friend.
+Author: Victor
+Compatibility: iOS 5.0+
+Name: Veteris Helper
+
