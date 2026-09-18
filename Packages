@@ -10,14 +10,14 @@ Section: Utilities
 Author: Karen Akemi
 Description: Cai dat file IPA khong can chu ky (unsigned), gia lap chu ky (fake-signed) hoac ad-hoc de dang tren thiet bi iOS cua ban.
 
-Package: bag-xml.ChatGPT
+Package: com.anhtuan.chatgptlegacy
 Name: ChatGPT Legacy
 Version: 1.0.2
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: debs/chatgpt.deb
 Size: 3480064
-MD5sum: b45ef7c53d1000f074be22b51206f0e6
+MD5sum: 6c3595f93933c0bdc0fa6829744cfa06
 Section: Applications
 Author: bag-xml
 Description: Ung dung ChatGPT danh rieng cho cac thiet bi iOS cu (Legacy iOS).
