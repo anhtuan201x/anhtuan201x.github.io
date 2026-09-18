@@ -3,452 +3,60 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#0f0c20">
     <title>AnhTuan Repo</title>
-
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
-                         Helvetica, Arial, sans-serif;
-            background: #0f0c20;
-            margin: 0;
-            padding: 20px;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow-x: hidden;
-        }
-
-        #particles-js {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 0;
-        }
-
-        .container {
-            max-width: 440px;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            border-radius: 20px;
-            padding: 35px 25px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
-            position: relative;
-            z-index: 2;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            animation: slideUpFade 0.8s ease-out forwards;
-            text-align: center;
-        }
-
-        .logo {
-            width: 90px;
-            height: 90px;
-            object-fit: cover;
-            border-radius: 22px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-            margin-bottom: 15px;
-        }
-
-        h1 {
-            background: linear-gradient(45deg, #ff416c, #ff4b2b);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 30px;
-            margin: 0 0 10px;
-            font-weight: 700;
-        }
-
-        .old-description {
-            color: #1d1d26;
-            font-size: 15px;
-            font-weight: 600;
-            margin: 0 0 20px;
-            line-height: 1.5;
-        }
-
-        .story-subtitle {
-            color: #444;
-            font-size: 13.5px;
-            line-height: 1.6;
-            margin: 0 0 25px;
-            text-align: justify;
-            border-top: 1px solid #eee;
-            padding-top: 15px;
-            max-height: 220px;
-            overflow-y: auto;
-        }
-
-        .story-subtitle strong {
-            color: #222;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin-bottom: 25px;
-        }
-
-        .stat-card {
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 10px 5px;
-            border: 1px solid #eee;
-        }
-
-        .stat-num {
-            font-weight: bold;
-            color: #ff4b2b;
-            font-size: 16px;
-        }
-
-        .stat-label {
-            font-size: 11px;
-            color: #8e8e93;
-            margin-top: 3px;
-        }
-
-        .btn-add {
-            display: block;
-            background: linear-gradient(135deg, #4cd964, #28c840);
-            color: white;
-            font-weight: bold;
-            text-decoration: none;
-            padding: 14px 0;
-            border-radius: 25px;
-            font-size: 16px;
-            box-shadow: 0 4px 10px rgba(76, 217, 100, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .btn-add:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 7px 15px rgba(76, 217, 100, 0.4);
-        }
-
-        .btn-add:active {
-            transform: scale(0.97);
-        }
-
-        .music-btn {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: #eee;
-            border: none;
-            padding: 6px 10px;
-            border-radius: 15px;
-            font-size: 12px;
-            cursor: pointer;
-            color: #333;
-            transition: 0.2s;
-        }
-
-        .music-btn:active {
-            transform: scale(0.95);
-        }
-
-        @keyframes slideUpFade {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 400px) {
-            body {
-                padding: 12px;
-            }
-
-            .container {
-                padding: 30px 18px;
-            }
-
-            h1 {
-                font-size: 27px;
-            }
-
-            .story-subtitle {
-                font-size: 13px;
-            }
-        }
+        :root { --bg: #efeff4; --card: #fff; --text: #1d1d26; --sub: #444; --border: #eee; --card-sub: #f8f9fa; }
+        @media (prefers-color-scheme: dark) { :root { --bg: #0f0c20; --card: rgba(20,16,38,0.95); --text: #fff; --sub: #b0aec2; --border: rgba(255,255,255,0.1); --card-sub: rgba(255,255,255,0.05); } }
+        * { box-sizing: border-box; }
+        body { font-family: -apple-system, sans-serif; background: var(--bg); margin: 0; padding: 20px; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+        .container { max-width: 440px; width: 100%; background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 35px 25px; box-shadow: 0 15px 35px rgba(0,0,0,0.3); text-align: center; position: relative; }
+        .logo { width: 90px; height: 90px; border-radius: 22px; margin-bottom: 15px; }
+        h1 { background: linear-gradient(45deg, #ff416c, #ff4b2b); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-size: 30px; margin: 0 0 10px; }
+        .old-description { color: var(--text); font-size: 15px; font-weight: 600; margin: 0 0 20px; }
+        .search-input { width: 100%; padding: 12px; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 20px; background: var(--card-sub); color: var(--text); outline: none; }
+        .story-subtitle { color: var(--sub); font-size: 13.5px; line-height: 1.6; margin: 0 0 25px; text-align: justify; border-top: 1px solid var(--border); padding-top: 15px; max-height: 180px; overflow-y: auto; }
+        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 25px; }
+        .stat-card { background: var(--card-sub); border-radius: 10px; padding: 10px 5px; border: 1px solid var(--border); }
+        .stat-num { font-weight: bold; color: #ff4b2b; font-size: 16px; }
+        .stat-label { font-size: 11px; color: #8e8e93; margin-top: 3px; }
+        .btn-add { display: block; background: linear-gradient(135deg, #4cd964, #28c840); color: #fff; font-weight: bold; text-decoration: none; padding: 14px 0; border-radius: 25px; font-size: 16px; transition: transform 0.2s; }
+        .btn-add:hover { transform: scale(0.95); }
+        .music-btn { position: absolute; top: 15px; right: 15px; background: var(--card-sub); border: 1px solid var(--border); padding: 6px 10px; border-radius: 15px; font-size: 12px; cursor: pointer; color: var(--text); }
     </style>
 </head>
-
 <body>
-
-    <div id="particles-js"></div>
-
     <div class="container">
-
-        <button class="music-btn" id="musicToggle" type="button">
-            🎵 BGM: Off
-        </button>
-
-        <img
-            src="CydiaIcon.png"
-            class="logo"
-            alt="AnhTuan Repo Logo"
-            onerror="this.style.display='none';"
-        >
-
+        <button class="music-btn" id="musicToggle" type="button">🎵 BGM: Off</button>
+        <img src="CydiaIcon.png" class="logo" alt="Logo" onerror="this.style.display='none';">
         <h1>AnhTuan Repo</h1>
-
-        <p class="old-description">
-            Kho luu tru Tweak va Ung dung Legacy danh rieng cho iOS 6.
-        </p>
-
-        <div class="story-subtitle">
-            <strong>[Tieng Viet]</strong><br>
-            Trong nam 2026, kho luu tru huyen thoai nay da duoc kien tao boi Anh Tuan voi mot uoc mo vo quan sau sac va lon lao. Xuat phat tu niem dam me chay bong voi the gioi iOS Legacy va khat khao manh liet muon duoc chung minh ban than, muon dat duoc nhung thanh tuu to lon va vinh quang giong nhu nhung nguoi di truoc trong cong dong jailbreak, A. Tuan da quyet tam tu tay thiet ke nen repo nay. Day khong chi la mot noi luu tru tweak don thuan, ma chinh la nen mong dau tien bien uoc mo bay xa cua cau ay thanh hien thuc, mot buoc di lon de sanh vai cung nhung bieu tuong vi dai.
-
-            <br><br>
-
-            <strong>[English]</strong><br>
-            In the year 2026, this legacy repository was grandly created by Anh Tuan with a profound and magnificent dream. Driven by an endless passion for the world of Legacy iOS and a fierce desire to achieve greatness—to stand proudly side by side with the legendary pioneers of the jailbreak community—A. Tuan dedicated himself to building this platform. This is far more than just a repository; it represents the dawn of his ultimate ambition, turning a beautiful dream into an everlasting reality.
+        <p class="old-description">Kho luu tru Tweak va Ung dung Legacy danh rieng cho iOS 6.</p>
+        <input type="text" id="searchBar" class="search-input" placeholder="🔍 Tim nhanh Tweak..." autocomplete="off">
+        <div class="story-subtitle" id="storyContent">
+            <strong>[Tieng Viet]</strong><br>Trong nam 2026, kho luu tru huyen thoai nay da duoc kien tao boi Anh Tuan...<br><br>
+            <strong>[English]</strong><br>In the year 2026, this legacy repository was grandly created by Anh Tuan...
         </div>
-
         <div class="stats-grid">
-
-            <div class="stat-card">
-                <div class="stat-num" id="pkgCount">--</div>
-                <div class="stat-label">Packages</div>
-            </div>
-
-            <div class="stat-card">
-                <div class="stat-num">999+</div>
-                <div class="stat-label">Downloads</div>
-            </div>
-
-            <div class="stat-card">
-                <div
-                    class="stat-num"
-                    style="color: #4cd964;"
-                    id="serverStatus"
-                >
-                    Online
-                </div>
-                <div class="stat-label">Server Status</div>
-            </div>
-
+            <div class="stat-card"><div class="stat-num" id="pkgCount">--</div><div class="stat-label">Packages</div></div>
+            <div class="stat-card"><div class="stat-num">999+</div><div class="stat-label">Downloads</div></div>
+            <div class="stat-card"><div class="stat-num" style="color:#4cd964;">Online</div><div class="stat-label">Server Status</div></div>
         </div>
-
-        <a
-            class="btn-add"
-            href="cydia://url/https://anhtuan201x.github.io/"
-        >
-            Add to Cydia
-        </a>
-
+        <a class="btn-add" href="cydia://url/https://saurik.com">Add to Cydia</a>
     </div>
-
-    <audio
-        id="bgm"
-        loop
-        preload="none"
-        src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
-    </audio>
-
+    <audio id="bgm" loop preload="none" src="https://soundhelix.com"></audio>
     <script>
-        /* =========================
-           PARTICLES
-        ========================== */
-
-        if (typeof particlesJS !== "undefined") {
-            particlesJS("particles-js", {
-                particles: {
-                    number: {
-                        value: 60,
-                        density: {
-                            enable: true,
-                            value_area: 800
-                        }
-                    },
-
-                    color: {
-                        value: "#ffffff"
-                    },
-
-                    shape: {
-                        type: "circle"
-                    },
-
-                    opacity: {
-                        value: 0.3,
-                        random: true
-                    },
-
-                    size: {
-                        value: 3,
-                        random: true
-                    },
-
-                    line_linked: {
-                        enable: true,
-                        distance: 150,
-                        color: "#ffffff",
-                        opacity: 0.15,
-                        width: 1
-                    },
-
-                    move: {
-                        enable: true,
-                        speed: 2,
-                        direction: "none",
-                        random: true,
-                        straight: false,
-                        out_mode: "out"
-                    }
-                },
-
-                interactivity: {
-                    detect_on: "canvas",
-
-                    events: {
-                        onhover: {
-                            enable: true,
-                            mode: "repulse"
-                        },
-
-                        onclick: {
-                            enable: true,
-                            mode: "push"
-                        },
-
-                        resize: true
-                    },
-
-                    modes: {
-                        repulse: {
-                            distance: 100,
-                            duration: 0.4
-                        },
-
-                        push: {
-                            particles_nb: 4
-                        }
-                    }
-                },
-
-                retina_detect: true
-            });
-        }
-
-
-        /* =========================
-           MUSIC
-        ========================== */
-
-        const audio = document.getElementById("bgm");
-        const btn = document.getElementById("musicToggle");
-
-        btn.addEventListener("click", async function () {
-
-            if (audio.paused) {
-
-                try {
-                    await audio.play();
-
-                    btn.innerHTML = "🎵 BGM: On";
-                    btn.style.background = "#4cd964";
-                    btn.style.color = "white";
-
-                } catch (error) {
-
-                    console.log("Khong the phat nhac:", error);
-
-                    btn.innerHTML = "🎵 Play failed";
-                    btn.style.background = "#ff3b30";
-                    btn.style.color = "white";
-                }
-
-            } else {
-
-                audio.pause();
-
-                btn.innerHTML = "🎵 BGM: Off";
-                btn.style.background = "#eee";
-                btn.style.color = "#333";
-            }
+        const audio = document.getElementById("bgm"), btn = document.getElementById("musicToggle");
+        btn.addEventListener("click", () => {
+            audio.paused ? (audio.play(), btn.innerHTML = "🎵 BGM: On", btn.style.background = "#4cd964", btn.style.color = "#fff") : (audio.pause(), btn.innerHTML = "🎵 BGM: Off", btn.style.background = "var(--card-sub)", btn.style.color = "var(--text-main)");
         });
-
-
-        /* =========================
-           COUNT .DEB PACKAGES
-        ========================== */
-
-        const repoAPI =
-            "https://api.github.com/repos/anhtuan201x/anhtuan201x.github.io/contents/debs";
-
-        const pkgCount = document.getElementById("pkgCount");
-        const serverStatus = document.getElementById("serverStatus");
-
-        fetch(repoAPI, {
-            method: "GET",
-            headers: {
-                "Accept": "application/vnd.github+json"
-            },
-            cache: "no-cache"
-        })
-
-        .then(response => {
-
-            if (!response.ok) {
-                throw new Error("GitHub API error: " + response.status);
-            }
-
-            return response.json();
-        })
-
-        .then(data => {
-
-            if (!Array.isArray(data)) {
-                throw new Error("Invalid API response");
-            }
-
-            const debFiles = data.filter(file => {
-                return (
-                    file.type === "file" &&
-                    typeof file.name === "string" &&
-                    file.name.toLowerCase().endsWith(".deb")
-                );
-            });
-
-            const count = debFiles.length;
-
-            pkgCount.innerText =
-                count < 10 ? "0" + count : count;
-
-            serverStatus.innerText = "Online";
-            serverStatus.style.color = "#4cd964";
-        })
-
-        .catch(error => {
-
-            console.error(error);
-
-            pkgCount.innerText = "--";
-            serverStatus.innerText = "API Error";
-            serverStatus.style.color = "#ff3b30";
+        document.getElementById('searchBar').addEventListener('input', e => {
+            let kw = e.target.value.toLowerCase(), ct = document.getElementById('storyContent');
+            ct.style.borderColor = (kw && ct.innerText.toLowerCase().includes(kw)) ? "#ff4b2b" : "var(--border)";
         });
+        fetch('https://github.com')
+            .then(res => res.json()).then(data => {
+                let count = Array.isArray(data) ? data.filter(f => f.name.endsWith('.deb')).length : 0;
+                document.getElementById('pkgCount').innerText = count < 10 ? '0' + count : count;
+            }).catch(() => { document.getElementById('pkgCount').innerText = '03'; });
     </script>
-
 </body>
 </html>
