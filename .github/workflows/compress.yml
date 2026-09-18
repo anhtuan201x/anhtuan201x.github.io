@@ -1,9 +1,9 @@
-name: Auto Compress Packages for Cydia
+name: Auto Scan and Update Cydia Repo
 
 on:
   push:
     paths:
-      - 'Packages'
+      - 'debs/**'
 
 jobs:
   build:
@@ -12,17 +12,26 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Fix Line Endings and Compress Packages
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: Install dpkg-dev tools
       run: |
-        # Ép file Packages về định dạng LF của Linux
+        sudo apt-get update
+        sudo apt-get install -y dpkg-dev
+
+    - name: Scan Packages automatically
+      run: |
+        dpkg-scanpackages -m debs /dev/null > Packages
         sed -i 's/\r$//' Packages
-        # Nén file Packages.bz2 chuẩn cấu trúc UNIX
         bzip2 -fk Packages
 
-    - name: Commit and Push changes
+    - name: Commit and Push to GitHub
       run: |
-        git config --global user.name "GitHub Action"
-        git config --global user.user "actions@github.com"
+        git config --global user.name "GitHub Action Bot"
+        git config --global user.email "actions@github.com"
         git add Packages Packages.bz2
-        git commit -m "Auto-generated Packages.bz2 with LF line endings" || exit 0
+        git commit -m "Auto updated Repo: New tweak detected!" || exit 0
         git push
