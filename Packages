@@ -26,7 +26,7 @@ Package: com.anhtuan.chatgptlegacy
 Version: 1.0.2
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
-Filename: debs/com.anhtuan.chatgptlegacy_1.0.2_iphoneos-arm.deb
+Filename: debs/chatgpt.deb
 Size: 51658
 MD5sum: 536009a11dad57e48a5563224eaffaff
 Section: Applications
