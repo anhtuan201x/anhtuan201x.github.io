@@ -1,16 +1,16 @@
 Package: com.anhtuan.appsync6
+Name: AppSync Unified (Legacy)
 Version: 116.0
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: debs/ai.akemi.appsyncunified_116.0_iphoneos-arm.akemi-git-235aca6cddfbdc9fa87fcb5b2aec2df37ed6d65a.deb
 Size: 51658
 MD5sum: 536009a11dad57e48a5563224eaffaff
-Section: Utilities
-Author: AnhTuan201X <anhtuan201x@github.io>
-Description: Cai dat file IPA khong can chu ky (unsigned), gia lap chu ky (fake-signed) hoac ad-hoc de dang tren thiet bi iOS cua ban.
-Name: AppSync Unified (Legacy Arm)
+Section: Tweaks
+Description: Cai dat file IPA khong can chu ky (unsigned) hoac fake-signed tren iOS 6.
 
 Package: com.anhtuan.chatgptlegacy
+Name: ChatGPT Legacy App
 Version: 1.0.2
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
@@ -18,6 +18,5 @@ Filename: debs/com.anhtuan.chatgptlegacy_1.0.2_iphoneos-arm.deb
 Size: 3480064
 MD5sum: b45ef7c53d1000f074be22b51206f0e6
 Section: Applications
-Author: bag-xml
 Description: Ung dung ChatGPT danh rieng cho cac thiet bi iOS cu (Legacy iOS).
-Name: ChatGPT Legacy
+
