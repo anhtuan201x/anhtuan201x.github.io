@@ -19,6 +19,25 @@ Author: Karen/あけみ, Linus Yang <karen@akemi.ai>
 Depiction: https://cydia.akemi.ai/?page/ai.akemi.appsyncunified
 Name: AppSync Unified
 
+Package: com.victorlobe.appstorefix
+Version: 1
+Architecture: iphoneos-arm
+Maintainer: Victor <contact@victorlobe.me>
+Installed-Size: 60
+Depends: mobilesubstrate (>= 0.9.5000)
+Conflicts: com.skyglow.itunesstorex, net.nekokawa.appstorefix, net.nekokawa.storeetcfix, net.nekokawa.storeloginfix, net.nekokawa.storesslfix
+Filename: debs/com.victorlobe.appstorefix_1_iphoneos-arm.deb
+Size: 11400
+MD5sum: 6f06096e9670d698ef1b58cd9d71254f
+SHA1: 525abb44984eb65f23230f1fc00e4d7ca0a7b269
+SHA256: a615bbd5c367cc1681eb3347725be459c7d8cfad38884e59f59fa594c256d9c7
+Section: Tweaks
+Description: Fix the App Store on iOS 6!
+Author: Victor <contact@victorlobe.me>
+Compatibility: iOS 6.0+
+Depiction: http://repo.victorlobe.me/depictions/depiction.html?id=com.victorlobe.appstorefix
+Name: AppStoreFix
+
 Package: com.victorlobe.veteris
 Version: 3.2
 Architecture: iphoneos-arm
