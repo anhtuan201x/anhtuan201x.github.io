@@ -28,33 +28,32 @@ jobs:
     - name: Auto Convert IPA to DEB
       run: |
         mkdir -p debs
-        if [ -d "ipas" ] && [ "$(ls -A ipas/*.ipa 2>/dev/null)" ]; then
+        if [ -d "ipas" ] && [ "$(ls ipas/*.ipa 2>/dev/null)" ]; then
           for ipa_file in ipas/*.ipa; do
             filename=$(basename "$ipa_file" .ipa)
-            clean_filename=$(echo "$filename" | tr '[:upper:]' '[:lower:]' | tr -cd 'a-z0-9.-')
             
-            mkdir -p "tmp_$clean_filename"
-            unzip -q "$ipa_file" -d "tmp_$clean_filename"
+            mkdir -p "tmp_$filename"
+            unzip -q "$ipa_file" -d "tmp_$filename"
             
-            mkdir -p "deb_build_$clean_filename/Applications"
-            mkdir -p "deb_build_$clean_filename/DEBIAN"
+            mkdir -p "deb_build_$filename/Applications"
+            mkdir -p "deb_build_$filename/DEBIAN"
             
-            cp -r tmp_$clean_filename/Payload/*.app "deb_build_$clean_filename/Applications/"
+            cp -r tmp_$filename/Payload/*.app "deb_build_$filename/Applications/"
             
-            cat <<EOF > "deb_build_$clean_filename/DEBIAN/control"
-Package: com.anhtuan.$clean_filename
+            cat <<EOF > "deb_build_$filename/DEBIAN/control"
+Package: com.anhtuan.legacyapp
 Name: $filename
 Version: 1.0
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Section: Applications
-Description: Game va Ung dung do robot cua Anh Tuan tu dong dong goi truc tuyen.
+Description: Application auto-packed by Anh Tuan online bot.
 EOF
 
-            sed -i 's/\r$//' "deb_build_$clean_filename/DEBIAN/control"
-            dpkg-deb --build "deb_build_$clean_filename" "debs/${clean_filename}.deb"
+            sed -i 's/\r$//' "deb_build_$filename/DEBIAN/control"
+            dpkg-deb --build "deb_build_$filename" "debs/${filename}.deb"
             
-            rm -rf "tmp_$clean_filename" "deb_build_$clean_filename"
+            rm -rf "tmp_$filename" "deb_build_$filename"
             rm -f "$ipa_file"
           done
         fi
@@ -65,11 +64,10 @@ EOF
         sed -i 's/\r$//' Packages
         bzip2 -fk Packages
 
-    - name: Commit and Push changes by action-user
+    - name: Commit and Push changes
       run: |
         git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@://github.com"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git add debs/ Packages Packages.bz2 ipas/
-        git commit -m "Robot auto-converted IPA to DEB and updated Cydia Repo!" || exit 0
+        git commit -m "Robot successfully packed IPA to DEB" || exit 0
         git push
-
