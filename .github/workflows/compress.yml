@@ -1,0 +1,28 @@
+name: Auto Compress Packages for Cydia
+
+on:
+  push:
+    paths:
+      - 'Packages'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Fix Line Endings and Compress Packages
+      run: |
+        # Ép file Packages về định dạng LF của Linux
+        sed -i 's/\r$//' Packages
+        # Nén file Packages.bz2 chuẩn cấu trúc UNIX
+        bzip2 -fk Packages
+
+    - name: Commit and Push changes
+      run: |
+        git config --global user.name "GitHub Action"
+        git config --global user.user "actions@github.com"
+        git add Packages Packages.bz2
+        git commit -m "Auto-generated Packages.bz2 with LF line endings" || exit 0
+        git push
