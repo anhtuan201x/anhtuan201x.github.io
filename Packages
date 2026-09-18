@@ -13,51 +13,46 @@ MD5sum: 536009a11dad57e48a5563224eaffaff
 SHA1: e0fa412cb3c26718887edd834804c88909297079
 SHA256: 0036f28fcbdb165d4f58968a237ca9fe7b6ed33fea25b9a5eb1fc141f6bf5a09
 Section: Tweaks
-Homepage: https://cydia.akemi.ai/
+Homepage: https://akemi.ai
 Description: Enables the ability to install unsigned/fakesigned iOS applications.
 Author: Karen/あけみ, Linus Yang <karen@akemi.ai>
-Depiction: https://cydia.akemi.ai/?page/ai.akemi.appsyncunified
+Depiction: https://akemi.ai?page/ai.akemi.appsyncunified
 Name: AppSync Unified
 
-Package: com.victorlobe.veteris
+Package: com.anhtuan.veteris
 Version: 3.2
 Architecture: iphoneos-arm
 Maintainer: Victor
 Installed-Size: 5064
-Depends: firmware (>= 5.0), com.victorlobe.veterishelper
-Conflicts: com.ixmoe.1pwn.veteris, moe.yzu.veterishelper
-Replaces: com.ixmoe.1pwn.veteris, moe.yzu.veterishelper
+Depends: firmware (>= 5.0), com.anhtuan.veterishelper
 Filename: debs/com.victorlobe.veteris_3.2_iphoneos-arm.deb
 Size: 2207580
 MD5sum: 6afd1791b7cef36c392ca76abec19a6c
 SHA1: 74db1199440e7ec0969d63a88f62358742ecdef2
 SHA256: 76aa85bebaa52e8d05c56acd3ee1d791f2dce95c009a2d72778c3e6e4e006150
 Section: Utilities
-Homepage: http://www.veteris.victorlobe.me/
+Homepage: http://victorlobe.me
 Description: Welcome back!
 Author: Victor
 Compatibility: iOS 5.0+
-Depiction: http://repo.victorlobe.me/depictions/depiction.html?id=com.victorlobe.veteris
+Depiction: http://victorlobe.me
 Icon: file:///Applications/Veteris.app/AppIcon57x57@2x.png
 Name: Veteris
 
-Package: com.victorlobe.veterishelper
+Package: com.anhtuan.veterishelper
 Version: 1.1
 Architecture: iphoneos-arm
 Maintainer: Victor
 Installed-Size: 136
 Depends: mobilesubstrate (>= 0.9.5000)
-Conflicts: com.ixmoe.1pwn.Veteris, moe.yzu.veterishelper
-Replaces: com.ixmoe.1pwn.Veteris, moe.yzu.veterishelper
 Filename: debs/com.victorlobe.veterishelper_1.1_iphoneos-arm.deb
 Size: 6512
 MD5sum: fa61d752faa95da4bb2c5d11c9329a44
 SHA1: fd5c426e4336d935891e8ed24fac631f74bc3a56
 SHA256: 25a2de9b1e64bac0137af4b5ca010bcba2e310830e023b8aa1ececf896f0094f
 Section: Utilities
-Homepage: http://www.veteris.victorlobe.me/
+Homepage: http://victorlobe.me
 Description: Veteris's little friend.
 Author: Victor
 Compatibility: iOS 5.0+
 Name: Veteris Helper
-
