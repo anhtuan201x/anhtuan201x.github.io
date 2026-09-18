@@ -21,3 +21,18 @@ MD5sum: 6c3595f93933c0bdc0fa6829744cfa06
 Section: Applications
 Author: bag-xml
 Description: Ung dung ChatGPT danh rieng cho cac thiet bi iOS cu (Legacy iOS).
+
+Package: com.7bubbl3s.vlc
+Name: VLC Media Player
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: AnhTuan201X <anhtuan201x@github.io>
+Icon: file:///Applications/VLC.app/Icon.png
+Filename: debs/com.7bubbl3s.vlc_1.0_iphoneos-arm.deb
+Size: 5258590
+MD5sum: fb847ccf358681f6c3457fda1ff0b60e
+SHA1: 699ba3e5c2544841db3f60f95e1f28c1323c1d46
+SHA256: 05e992c8bf2419acf0735fc0d3cbcdeb482d05ec0363ede432269fb809746cdf
+Section: Entertainment
+Description: VLC app, formerly on ZodTTD repo, reuploaded here. Has iOS 6 style
+Author: VideoLAN <videolan@vlc.org>
