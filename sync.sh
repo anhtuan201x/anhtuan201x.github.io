@@ -24,6 +24,9 @@ EOF
 sed -i 's/\r$//' debs/tmp_icons/DEBIAN/control
 find debs/tmp_icons -type f -exec sed -i 's/\r$//' {} +
 
+chmod -R 0755 debs/tmp_icons
+chmod 0644 debs/tmp_icons/DEBIAN/control
+
 dpkg-deb --build debs/tmp_icons debs/com.anhtuan201x.repoicons_1.0_iphoneos-arm.deb
 rm -rf debs/tmp_icons
 
