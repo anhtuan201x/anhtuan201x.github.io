@@ -1,0 +1,7 @@
+Package: com.anhtuan201x.repoicons
+Name: AnhTuan201X Repo Icons
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: AnhTuan201X <anhtuan201x@github.io>
+Section: Themes
+Description: Bo suu tap bieu tuong logo doc quyen giup hien thi anh nho cho toan bo tweak trong nguon cua Anh Tuan.
