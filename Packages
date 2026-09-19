@@ -84,6 +84,27 @@ Icon: file:///Library/PreferenceBundles/threedeeprefs.bundle/threedeeprefs@2x.pn
 Name: Barrel
 Sponsor: thebigboss.org <http://thebigboss.org>
 
+Package: com.autopear.installipa
+Version: 3.4.1-1
+Architecture: iphoneos-arm
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Installed-Size: 238
+Depends: firmware (>= 4.0)
+Filename: debs/com.autopear.installipa_3.4.1-1_iphoneos-arm.deb
+Size: 151634
+MD5sum: 1deec92be89b28b0f085001ca746016a
+SHA1: b589a866c18fd4fb64294deb308f8eaa07f94107
+SHA256: c1630f5edbdbb5fa0c6dceeb0ea644422eb365ac2a39dedab2ef54fb39a18104
+Section: Utilities
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=ipainstallerconsoleDp
+Description: Install IPA from the command line
+Tag: purpose::console, role::enduser, compatible::ios7, compatible::ios8
+Author: Merlin <lonelystars@gmail.com>
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=ipainstallerconsoleDp
+Dev: lonelystars
+Name: IPA Installer Console
+Sponsor: thebigboss.org <http://thebigboss.org>
+
 Package: com.exile90.icleanerpro
 Version: 7.10.0
 Architecture: iphoneos-arm
@@ -144,6 +165,26 @@ Description: Return the WinterBoard app.
 Author: Jay Freeman (saurik) <saurik@saurik.com>
 Icon: file:///Applications/WinterBoard.app/icon@2x.png
 Name: WinterBoard App
+
+Package: com.ihmeedo.memorygame
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Installed-Size: 7414
+Filename: debs/com.ihmeedo.memorygame_1.0_iphoneos-arm.deb
+Size: 7584260
+MD5sum: 4c920b59a70439eb234896b895605ad6
+SHA1: 2d6105651feb5eeff58426540ce6f10c1b12da42
+SHA256: b6bac2f4884b0765e2b7b7b1a0cd25a3aff4ece3903bda9f23fa0f284af00cb4
+Section: Games
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=memorygameDp
+Description: simple colorful memory matching game
+Author: Hmeedo Dhabry <Hmeedo@hotmail.co.il>
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=memorygameDp
+Dev: ihmeedo
+Icon: file:///Applications/Memory.app/icon.png
+Name: MemoryGame
+Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: com.iky1e.swipeselection
 Version: 1.5.2-1
@@ -476,6 +517,22 @@ Dev: k3a
 Name: PowerSoundDisabler
 Sponsor: thebigboss.org <http://thebigboss.org>
 
+Package: me.kawaiizenbo.clicker
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: KawaiiZenbo
+Depends: firmware (>= 5.0)
+Filename: debs/me.kawaiizenbo.clicker_1.0.0_iphoneos-arm.deb
+Size: 23242
+MD5sum: 7688bf7f3d80e8c27c4d49d0ddfadd9b
+SHA1: b437024dd478cd214562d2a968726d2344452b94
+SHA256: b946f29e07aabc914abcedb083b05f0e23059b9f18519f513186b7c520f8496a
+Section: Games
+Homepage: http://kawaiizenbo.me
+Description: a very simple somewhat idle game. get as high of a number as you can!
+Author: KawaiiZenbo
+Name: Clicker
+
 Package: mobileterminal-applesdk
 Version: 520-2
 Architecture: iphoneos-arm
@@ -540,6 +597,22 @@ Dev: coolstar
 Name: RecordMyScreen (App)
 Sponsor: thebigboss.org <http://thebigboss.org>
 
+Package: org.pilin.cavestory
+Version: v0.8
+Architecture: iphoneos-arm
+Maintainer: Pavel Ilin <ilin.pa@gmail.com>
+Filename: debs/org.pilin.cavestory_v0.8_iphoneos-arm.deb
+Size: 1762740
+MD5sum: d8a587e615bed8983fc26addf67abc64
+SHA1: aaf13ff555e3bfe99b7888be7eda7080b9bcdac6
+SHA256: ae4fdb06e6bc44c53da3cc008382f975d8808671d3c6cab42e3acf101641f9b6
+Section: Games
+Homepage: https://github.com/PIlin/NXEngine-iOS
+Description: iOS port of the Cave Story
+Author: Pavel Ilin <ilin.pa@gmail.com>
+Depiction: http://pilin.github.io/NXEngine-iOS/changelogs/v0.8.html
+Name: Cave Story
+
 Package: org.thebigboss.blurriedncbackground
 Version: 3.0-1
 Architecture: iphoneos-arm
@@ -595,6 +668,23 @@ Description: Removes HTTPS from Cydia to use on iOS 3.
 Author: InvoxiPlayGames <webmaster@invoxiplaygames.uk>
 Depiction: http://cydia.invoxiplaygames.uk/dp/cydiahttpatch.php
 Name: Cydia HTTPatch
+
+Package: us.hackphone.lvn
+Version: 2.5
+Architecture: iphoneos-arm
+Maintainer: Aqua Sta <trong@hackphone.us>
+Pre-Depends: firmware (>= 3.0)
+Filename: debs/us.hackphone.lvn_2.5_iphoneos-arm.deb
+Size: 6313548
+MD5sum: a6fdb7256b71c7f8bc4217afbb760587
+SHA1: fa69685576b2be296e8e0001b015c32aedbd0616
+SHA256: 601ae74eb223b872971d8a7595d324ae5b8cd2efef1079c42d923e93bcf9094e
+Section: Hackphone.us
+Description: Lịch Vạn Niên cho iPhone & iPod touch
+Author: PPCLINK Mobile Software
+Icon: file:///Applications/LichVanNien.app/Icon.png
+Name: Lịch Vạn Niên
+Sponsor: Hackphone.us <http://hackphone.us/vi/news/iOS-iPhone/Lich-Van-Nien-Calendar-Plus-Lunar-Solar-Calendar-cho-iPhone-iPad-207/>
 
 Package: winterboard
 Version: 0.9.3919
