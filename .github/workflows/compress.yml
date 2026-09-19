@@ -33,7 +33,7 @@ jobs:
     - name: Commit and Push changes by action-user
       run: |
         git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git add Packages Packages.bz2 debs/
-        git commit -m "Repo successfully synchronized by CydiaBlock infrastructure!" || exit 0
+        git config --global user.email "github-actions[bot]@://github.com"
+        git add Packages Packages.bz2 Release
+        git commit -m "Repo successfully synchronized by action-user!" || exit 0
         git push
