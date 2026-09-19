@@ -689,23 +689,6 @@ Author: InvoxiPlayGames <webmaster@invoxiplaygames.uk>
 Depiction: http://cydia.invoxiplaygames.uk/dp/cydiahttpatch.php
 Name: Cydia HTTPatch
 
-Package: us.hackphone.lvn
-Version: 2.5
-Architecture: iphoneos-arm
-Maintainer: Aqua Sta <trong@hackphone.us>
-Pre-Depends: firmware (>= 3.0)
-Filename: debs/us.hackphone.lvn_2.5_iphoneos-arm.deb
-Size: 6313548
-MD5sum: a6fdb7256b71c7f8bc4217afbb760587
-SHA1: fa69685576b2be296e8e0001b015c32aedbd0616
-SHA256: 601ae74eb223b872971d8a7595d324ae5b8cd2efef1079c42d923e93bcf9094e
-Section: Hackphone.us
-Description: Lịch Vạn Niên cho iPhone & iPod touch
-Author: PPCLINK Mobile Software
-Icon: file:///Applications/LichVanNien.app/Icon.png
-Name: Lịch Vạn Niên
-Sponsor: Hackphone.us <http://hackphone.us/vi/news/iOS-iPhone/Lich-Van-Nien-Calendar-Plus-Lunar-Solar-Calendar-cho-iPhone-iPad-207/>
-
 Package: winterboard
 Version: 0.9.3919
 Architecture: iphoneos-arm
