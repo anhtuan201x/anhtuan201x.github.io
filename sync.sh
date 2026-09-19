@@ -3,37 +3,14 @@ mkdir -p debs
 
 if [ -f "Release" ]; then sed -i 's/\r$//' Release; fi
 
+if [ ! -f "ipa2deb" ]; then
+    wget -q https://github.com/alex-free/ipa2deb/raw/refs/heads/master/ipa2deb
+    chmod +x ipa2deb
+fi
+
 for ipa in debs/*.ipa; do
     if [ -f "$ipa" ]; then
-        filename=$(basename -- "$ipa")
-        appname="${filename%.*}"
-        
-        rm -rf debs/tmp_ipa
-        mkdir -p debs/tmp_icons/DEBIAN
-        mkdir -p debs/tmp_icons/Applications
-        
-        unzip -q "$ipa" -d debs/tmp_ipa
-        cp -r debs/tmp_ipa/Payload/*.app debs/tmp_icons/Applications/
-        
-        infoplist=$(find debs/tmp_icons/Applications -name "Info.plist" | head -n 1)
-        bid="com.anhtuan201x.${appname,,}"
-        ver="1.0"
-        if [ -f "$infoplist" ]; then
-            extracted_bid=$(grep -A 1 "CFBundleIdentifier" "$infoplist" | grep "<string>" | sed 's/.*<string>\(.*\)<\/string>.*/\1/')
-            extracted_ver=$(grep -A 1 "CFBundleVersion" "$infoplist" | grep "<string>" | sed 's/.*<string>\(.*\)<\/string>.*/\1/')
-            if [ ! -z "$extracted_bid" ]; then bid="$extracted_bid"; fi
-            if [ ! -z "$extracted_ver" ]; then ver="$extracted_ver"; fi
-        fi
-        
-        printf "Package: %s\nName: %s\nVersion: %s\nArchitecture: iphoneos-arm\nMaintainer: AnhTuan201X <anhtuan201x@github.io>\nSection: Applications\nDescription: Ung dung duoc bien doi tu dong tu file IPA sang DEB boi AnhTuan201X Bot.\n" "$bid" "$appname" "$ver" > debs/tmp_icons/DEBIAN/control
-        
-        sed -i 's/\r$//' debs/tmp_icons/DEBIAN/control
-        find debs/tmp_icons -type f -exec sed -i 's/\r$//' {} +
-        chmod -R 0755 debs/tmp_icons
-        chmod 0644 debs/tmp_icons/DEBIAN/control
-        
-        dpkg-deb --option Uniform-Compression=no -Zgzip --format=2.0 --build debs/tmp_icons "debs/${appname}_${ver}_iphoneos-arm.deb"
-        rm -rf debs/tmp_ipa debs/tmp_icons
+        ./ipa2deb "$ipa" debs "AnhTuan201X <anhtuan201x@github.io>" "http://github.io"
         rm -f "$ipa"
     fi
 done
