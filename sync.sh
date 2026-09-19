@@ -6,7 +6,7 @@ if [ -f "Release" ]; then sed -i 's/\r$//' Release; fi
 dpkg-scanpackages -m debs /dev/null > Packages
 sed -i 's/\r$//' Packages
 
-sed -i '/^Filename:/i \Icon: http://github.com/anhtuan201x/anhtuan201x.github.io/blob/main/Packages
+sed -i '/^Filename:/i \Icon: http://github.com/anhtuan201x/anhtuan201x.github.io/blob/main/icon.png Packages
 
 bzip2 -fk Packages
 
