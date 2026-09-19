@@ -27,6 +27,7 @@ find debs/tmp_icons -type f -exec sed -i 's/\r$//' {} +
 dpkg-deb --build debs/tmp_icons debs/com.anhtuan201x.repoicons_1.0_iphoneos-arm.deb
 rm -rf debs/tmp_icons
 
+rm -f Packages Packages.bz2
 dpkg-scanpackages -m debs /dev/null > Packages
 sed -i 's/\r$//' Packages
 
