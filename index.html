@@ -88,7 +88,7 @@
             <div class="stat-card"><div class="stat-num">999+</div><div class="stat-label">Downloads</div></div>
             <div class="stat-card"><div class="stat-num" style="color:#4cd964;">Online</div><div class="stat-label">Server Status</div></div>
         </div>
-        <a class="btn-add" href="cydia://url/https://cydia.saurik.com/api/share#?source=http://anhtuan201x.github.io/">Add to Cydia</a>
+        <a class="btn-add" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://anhtuan201x.github.io/">Add to Cydia</a>
     </div>
     <audio id="bgm" loop preload="none" src="http://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
     <script>
@@ -141,11 +141,20 @@
         btn.addEventListener("click", () => {
             audio.paused ? (audio.play(), btn.innerHTML = "🎵 BGM: On", btn.style.background = "#4cd964", btn.style.color = "#fff") : (audio.pause(), btn.innerHTML = "🎵 BGM: Off", btn.style.background = "var(--card-sub)", btn.style.color = "var(--text-main)");
         });
-        let src = 'https://github.io' + 'Packages';
-        fetch(src).then(r => r.text()).then(t => {
-            let n = (t.match(/^Package:/gm) || []).length;
-            document.getElementById('pkgCount').innerText = n < 10 ? '0' + n : n;
-        }).catch(() => { document.getElementById('pkgCount').innerText = '03'; });
+        
+        let path = 'https://github.io' + 'Packages?t=' + new Date().getTime();
+        fetch(path).then(r => r.text()).then(t => {
+            let lines = t.split('\n');
+            let count = 0;
+            for (let i = 0; i < lines.length; i++) {
+                if (lines[i].trim().indexOf('Package:') === 0) {
+                    count++;
+                }
+            }
+            document.getElementById('pkgCount').innerText = count < 10 ? '0' + count : count;
+        }).catch(() => {
+            document.getElementById('pkgCount').innerText = '00';
+        });
     </script>
 </body>
 </html>
