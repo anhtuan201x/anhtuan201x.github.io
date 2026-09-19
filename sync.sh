@@ -3,11 +3,10 @@ mkdir -p debs
 
 if [ -f "Release" ]; then sed -i 's/\r$//' Release; fi
 
-if [ -f "debs/oldclash.zip.001" ]; then
-    cat debs/oldclash.zip.* > debs/oldclash.zip
-    unzip -q debs/oldclash.zip -d debs/
-    mv debs/oldclash.ipa debs/oldclash.ipa
-    rm -f debs/oldclash.zip*
+if [ -f "debs/app.zip.001" ]; then
+    cat debs/app.zip.* > debs/app.zip
+    unzip -q debs/app.zip -d debs/
+    rm -f debs/app.zip*
 fi
 
 for ipa in debs/*.ipa; do
