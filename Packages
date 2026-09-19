@@ -490,6 +490,23 @@ Icon: file:///Library/PreferenceLoader/Preferences/bncb/bncb@2x.png
 Name: BlurriedNCBackground
 Sponsor: thebigboss.org <http://thebigboss.org>
 
+Package: trevir.Discord
+Version: 0.8.5
+Architecture: iphoneos-arm
+Maintainer: InvoxiPlayGames <webmaster@invoxiplaygames.uk
+Depends: firmware (>=5.0)
+Filename: debs/discordclassic-0.8.5.deb
+Size: 819392
+MD5sum: a0c2471c860114d3d7d76ba7e1b7e61b
+SHA1: 9dc57ee4d8153fb90f03f08e5f0cbbb7aee8e2b4
+SHA256: 26d3e7b7f46286439774f358b0958e3eaaf53808a640fa06db9fdf7ba8a44bcc
+Section: Social
+Description: Discord client for iOS 5 & 6 by Trevir
+Author: Trevir <triveri@outlook.com>
+Depiction: http://cydia.invoxiplaygames.uk/dp/classicdiscord.php
+Icon: file:///Applications/Discord.app/Icon@2x.png
+Name: Discord Classic
+
 Package: uk.invoxiplaygames.cydiahttpatch
 Version: 1.0
 Architecture: iphoneos-arm
