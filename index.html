@@ -88,9 +88,10 @@
             <div class="stat-card"><div class="stat-num">999+</div><div class="stat-label">Downloads</div></div>
             <div class="stat-card"><div class="stat-num" style="color:#4cd964;">Online</div><div class="stat-label">Server Status</div></div>
         </div>
-        <a class="btn-add" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://anhtuan201x.github.io/">Add to Cydia</a>
+        
+        <a class="btn-add" href="cydia://url/https://cydia.saurik.com/api/share#?source=http://anhtuan201x.github.io/">Add to Cydia</a>
     </div>
-    <audio id="bgm" loop preload="none" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+    <audio id="bgm" loop preload="none" src="http://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
     <script>
         const canvas = document.getElementById("galaxyCanvas"), ctx = canvas.getContext("2d");
         let stars = []; const mouse = { x: null, y: null, radius: 100 };
@@ -142,8 +143,8 @@
             audio.paused ? (audio.play(), btn.innerHTML = "🎵 BGM: On", btn.style.background = "#4cd964", btn.style.color = "#fff") : (audio.pause(), btn.innerHTML = "🎵 BGM: Off", btn.style.background = "var(--card-sub)", btn.style.color = "var(--text-main)");
         });
         
-        let linkFile = window.location.protocol + '//' + window.location.hostname + '/Packages?v=' + Math.random();
-        fetch(linkFile)
+        let path = window.location.protocol + '//' + window.location.hostname + '/Packages?v=' + Math.random();
+        fetch(path)
             .then(response => response.text())
             .then(data => {
                 let lines = data.split('\n');
