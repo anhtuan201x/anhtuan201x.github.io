@@ -3,14 +3,15 @@ mkdir -p debs
 
 if [ -f "Release" ]; then sed -i 's/\r$//' Release; fi
 
-mkdir -p tmp_icons/DEBIAN
-mkdir -p tmp_icons/usr/share/cydia/sections
+rm -rf debs/tmp_icons
+mkdir -p debs/tmp_icons/DEBIAN
+mkdir -p debs/tmp_icons/usr/share/cydia/sections
 
 if [ -f "icon.png" ]; then
-    cp icon.png tmp_icons/usr/share/cydia/sections/com.anhtuan201x.repoicons.png
+    cp icon.png debs/tmp_icons/usr/share/cydia/sections/com.anhtuan201x.repoicons.png
 fi
 
-cat <<EOF > tmp_icons/DEBIAN/control
+cat <<EOF > debs/tmp_icons/DEBIAN/control
 Package: com.anhtuan201x.repoicons
 Name: AnhTuan201X Repo Icons
 Version: 1.0
@@ -20,14 +21,14 @@ Section: Themes
 Description: Bo suu tap bieu tuong logo doc quyen giup hien thi anh nho cho toan bo tweak trong nguon cua Anh Tuan.
 EOF
 
-sed -i 's/\r$//' tmp_icons/DEBIAN/control
-dpkg-deb --build tmp_icons debs/com.anhtuan201x.repoicons_1.0_iphoneos-arm.deb
-rm -rf tmp_icons
+sed -i 's/\r$//' debs/tmp_icons/DEBIAN/control
+dpkg-deb --build debs/tmp_icons debs/com.anhtuan201x.repoicons_1.0_iphoneos-arm.deb
+rm -rf debs/tmp_icons
 
 dpkg-scanpackages -m debs /dev/null > Packages
 sed -i 's/\r$//' Packages
 
-sed -i '/^Filename:/i \Icon: http://anhtuan201x.github.io/icon.png' Packages
+sed -i '/^Name:/a \Icon: http://anhtuan201x.github.io/icon.png' Packages
 
 bzip2 -fk Packages
 
