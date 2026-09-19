@@ -114,10 +114,10 @@ Version: 1.0
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: debs/com.anhtuan201x.repoicons_1.0_iphoneos-arm.deb
-Size: 16352
-MD5sum: 49eddb9ce8e3a7f5a1ce0a669f585ab2
-SHA1: f4384ddb54d045c4b35902da0855a02eddc8977e
-SHA256: 1f613ba445f768d964f65f56d88e5fff842a2350cc1766013fff80c31c9a2458
+Size: 16426
+MD5sum: 9a299bedaa31c6b02f70bdb5f9aa34ec
+SHA1: 8a5db0ae5e7b21448a59dc06ef6bcfd0e67c2a61
+SHA256: 2043102ec3d5ae685735491d382a189193af432cc3898c16997c3812aaab73d1
 Section: Themes
 Icon: http://anhtuan201x.github.io/icon.png
 Description: Bo suu tap bieu tuong logo doc quyen giup hien thi anh nho cho toan bo tweak trong nguon cua Anh Tuan.
