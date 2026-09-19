@@ -25,20 +25,7 @@ for ipa in debs/*.ipa; do
             if [ ! -z "$extracted_ver" ]; then ver="$extracted_ver"; fi
         fi
         
-        cat << 'EOF' > debs/tmp_icons/DEBIAN/control
-Package: com.anhtuan201x.placeholder
-Name: Placeholder
-Version: 1.0
-Architecture: iphoneos-arm
-Maintainer: AnhTuan201X <anhtuan201x@github.io>
-Section: Applications
-Description: Cydia Application
-EOF
-        
-        sed -i "s/^Package:.*/Package: $bid/" debs/tmp_icons/DEBIAN/control
-        sed -i "s/^Name:.*/Name: $appname/" debs/tmp_icons/DEBIAN/control
-        sed -i "s/^Version:.*/Version: $ver/" debs/tmp_icons/DEBIAN/control
-        sed -i "s/^Description:.*/Description: Ung dung duoc bien doi tu dong tu file IPA sang DEB boi AnhTuan201X Bot./" debs/tmp_icons/DEBIAN/control
+        printf "Package: %s\nName: %s\nVersion: %s\nArchitecture: iphoneos-arm\nMaintainer: AnhTuan201X <anhtuan201x@github.io>\nSection: Applications\nDescription: Ung dung duoc bien doi tu dong tu file IPA sang DEB boi AnhTuan201X Bot.\n" "$bid" "$appname" "$ver" > debs/tmp_icons/DEBIAN/control
         
         sed -i 's/\r$//' debs/tmp_icons/DEBIAN/control
         find debs/tmp_icons -type f -exec sed -i 's/\r$//' {} +
