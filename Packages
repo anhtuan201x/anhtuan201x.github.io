@@ -84,6 +84,26 @@ Icon: file:///Library/PreferenceBundles/threedeeprefs.bundle/threedeeprefs@2x.pn
 Name: Barrel
 Sponsor: thebigboss.org <http://thebigboss.org>
 
+Package: com.alexzielenski.zeppelin
+Version: 2.1.0-12
+Architecture: iphoneos-arm
+Maintainer: poetic_folly <poetic_folly@modmyi.com>
+Depends: firmware (>= 4.2), mobilesubstrate, preferenceloader
+Filename: debs/com.alexzielenski.zeppelin_2.1.0-12_iphoneos-arm.deb
+Size: 954082
+MD5sum: 51efc874ace1c620244757edf1c5e925
+SHA1: a3554e437122d4759cc2ba0a058ceb3fc6f46cea
+SHA256: 73f9b992058315c35f6b95d8c60517c1cee49f3eb54f1cfa9555c2a0bb0e0886
+Section: Tweaks
+Priority: extra
+Homepage: http://modmyi.com/info/zeppelin.php
+Description: Replaces carrier text with an image!
+Author: Alex Zielenski <support@alexzielenski.com>
+Depiction: http://modmyi.com/info/zeppelin.d.php
+Icon: http://i.imgur.com/tvLxnB5.png
+Name: Zeppelin
+Sponsor: ModMyi.com <http://modmyi.com/forums/index.php?styleid=31>
+
 Package: com.autopear.installipa
 Version: 3.4.1-1
 Architecture: iphoneos-arm
