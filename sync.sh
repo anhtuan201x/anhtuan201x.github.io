@@ -11,15 +11,9 @@ if [ -f "icon.png" ]; then
     cp icon.png debs/tmp_icons/usr/share/cydia/sections/com.anhtuan201x.repoicons.png
 fi
 
-cat <<EOF > debs/tmp_icons/DEBIAN/control
-Package: com.anhtuan201x.repoicons
-Name: AnhTuan201X Repo Icons
-Version: 1.0
-Architecture: iphoneos-arm
-Maintainer: AnhTuan201X <anhtuan201x@github.io>
-Section: Themes
-Description: Bo suu tap bieu tuong logo doc quyen giup hien thi anh nho cho toan bo tweak trong nguon cua Anh Tuan.
-EOF
+if [ -f "control_template" ]; then
+    cp control_template debs/tmp_icons/DEBIAN/control
+fi
 
 sed -i 's/\r$//' debs/tmp_icons/DEBIAN/control
 find debs/tmp_icons -type f -exec sed -i 's/\r$//' {} +
