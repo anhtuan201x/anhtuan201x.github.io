@@ -415,6 +415,21 @@ Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=ifileData
 Dev: carsten
 Name: iFile
 
+Package: io.github.oldworldordr.iconfix
+Version: 4.0.1
+Architecture: iphoneos-arm
+Maintainer: KawaiiZenbo
+Depends: curl
+Filename: debs/io.github.oldworldordr.iconfix_4.0.1_iphoneos-arm.deb
+Size: 1424
+MD5sum: b00a7f9f85f557c99a4c277ab25774e4
+SHA1: 8c76d282903aafe3021af9bcfd6399ed74e97145
+SHA256: ab201f7ddde3e59d0eb94bf283a72a51ada94278dfffb166b5cd74fc69d1baa1
+Section: Terminal Support
+Description: A shell script that fixes the iFile and MTerminal icons on iOS 6 and below.
+Author: OldWorldOrder <joey.t.reinhart@gmail.com>
+Name: iFile/MTerminal icon fix
+
 Package: libactivator
 Version: 1.9.12~beta1
 Architecture: iphoneos-arm
