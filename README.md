@@ -1,6 +1,6 @@
 # AnhTuan Repo
 
-Kho luu tru Tweak va Ung dung Legacy danh rieng cho thiet bi iOS 6.
+Kho luu tru Tweak va Ung dung Legacy danh rieng cho thiet bi iOS 6,iOS7,iOS3.
 
 ## 🚀 Huong dan them nguon vao Cydia
 1. Mo ung dung **Cydia** tren chiec iPhone/iPad cua ban.
