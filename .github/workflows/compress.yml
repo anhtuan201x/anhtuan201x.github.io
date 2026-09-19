@@ -18,20 +18,20 @@ jobs:
       with:
         python-version: '3.10'
 
-    - name: Install dpkg-dev tools
+    - name: Install tools
       run: |
         sudo apt-get update
-        sudo apt-get install -y dpkg-dev
+        sudo apt-get install -y dpkg-dev unzip
 
-    - name: Execute CydiaBlock Core Scripts
+    - name: Execute Core Scripts
       run: |
         chmod +x control.sh sync.sh
         ./control.sh
 
-    - name: Commit and Push changes by action-user
+    - name: Commit and Push changes
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@://github.com"
         git add Packages Packages.bz2 Release debs/
-        git commit -m "Repo successfully synchronized by action-user!" || exit 0
+        git commit -m "Repo successfully synchronized!" || exit 0
         git push
