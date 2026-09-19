@@ -142,6 +142,22 @@ Icon: http://anhtuan201x.github.io/icon.png
 Description: Bo suu tap bieu tuong logo doc quyen giup hien thi anh nho cho toan bo tweak trong nguon cua Anh Tuan.
 Name: AnhTuan201X Repo Icons
 
+Package: com.coolbooter.coolbooter
+Version: 1.1-release
+Architecture: iphoneos-arm
+Maintainer: CoolBooter <coolbooterios@gmail.com>
+Depends: xpwn, zip, unzip, ldid, diskdev-cmds, firmware (>= 7.0)
+Filename: debs/com.coolbooter.coolbooter-1.1-release.deb
+Size: 20609368
+MD5sum: c20782d63e19773e7f16e8412c47bd21
+SHA1: 414d678fbbf6349978003b8b28b3538ad9c23ed3
+SHA256: dcc9a6a42e063d005aea40e51d527634bfe073335b6680d8d37c46be34b0064e
+Section: System
+Icon: http://anhtuan201x.github.io/icon.png
+Description: CoolBooter is an all-in-one dual booting utility for jailbroken 32 bit iOS devices.
+Author: CoolBooter <coolbooterios@gmail.com>
+Name: CoolBooter
+
 Package: com.exile90.icleanerpro
 Version: 7.10.0
 Architecture: iphoneos-arm
