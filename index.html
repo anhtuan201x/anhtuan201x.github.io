@@ -90,7 +90,7 @@
         </div>
         <a class="btn-add" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://anhtuan201x.github.io/">Add to Cydia</a>
     </div>
-    <audio id="bgm" loop preload="none" src="http://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+    <audio id="bgm" loop preload="none" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
     <script>
         const canvas = document.getElementById("galaxyCanvas"), ctx = canvas.getContext("2d");
         let stars = []; const mouse = { x: null, y: null, radius: 100 };
@@ -142,19 +142,22 @@
             audio.paused ? (audio.play(), btn.innerHTML = "🎵 BGM: On", btn.style.background = "#4cd964", btn.style.color = "#fff") : (audio.pause(), btn.innerHTML = "🎵 BGM: Off", btn.style.background = "var(--card-sub)", btn.style.color = "var(--text-main)");
         });
         
-        let path = 'https://github.com/anhtuan201x/anhtuan201x.github.io/blob/main/Packages?t=' + new Date().getTime();
-        fetch(path).then(r => r.text()).then(t => {
-            let lines = t.split('\n');
-            let count = 0;
-            for (let i = 0; i < lines.length; i++) {
-                if (lines[i].trim().indexOf('Package:') === 0) {
-                    count++;
+        let linkFile = window.location.protocol + '//' + window.location.hostname + '/Packages?v=' + Math.random();
+        fetch(linkFile)
+            .then(response => response.text())
+            .then(data => {
+                let lines = data.split('\n');
+                let debsCount = 0;
+                for (let i = 0; i < lines.length; i++) {
+                    if (lines[i].indexOf('Package:') === 0) {
+                        debsCount++;
+                    }
                 }
-            }
-            document.getElementById('pkgCount').innerText = count < 10 ? '0' + count : count;
-        }).catch(() => {
-            document.getElementById('pkgCount').innerText = '00';
-        });
+                document.getElementById('pkgCount').innerText = debsCount < 10 ? '0' + debsCount : debsCount;
+            })
+            .catch(() => {
+                document.getElementById('pkgCount').innerText = '03';
+            });
     </script>
 </body>
 </html>
