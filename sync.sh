@@ -34,7 +34,7 @@ rm -f Packages Packages.bz2
 dpkg-scanpackages -m debs /dev/null > Packages
 sed -i 's/\r$//' Packages
 
-sed -i '/^Description:/i \Icon: http://anhtuan201x.github.io/icon.png' Packages
+sed -i '/^Description:/a \Icon: http://anhtuan201x.github.io/icon.png' Packages
 
 bzip2 -fk Packages
 
