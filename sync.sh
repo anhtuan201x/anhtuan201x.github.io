@@ -28,7 +28,7 @@ rm -rf debs/tmp_icons
 dpkg-scanpackages -m debs /dev/null > Packages
 sed -i 's/\r$//' Packages
 
-sed -i '/^Name:/a \Icon: http://anhtuan201x.github.io/icon.png' Packages
+sed -i '/^Description:/i \Icon: http://anhtuan201x.github.io/icon.png' Packages
 
 bzip2 -fk Packages
 
