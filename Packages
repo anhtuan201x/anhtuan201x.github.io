@@ -338,6 +338,26 @@ Author: Victor
 Compatibility: iOS 5.0+
 Name: Veteris Helper
 
+Package: dev.preloading.tubereplacer
+Version: 1.0.6
+Architecture: iphoneos-arm
+Maintainer: Preloading <me@preloading.dev>
+Installed-Size: 960
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, firmware (>= 5.0), firmware (<< 11.0)
+Conflicts: bag.xml.tuberepair
+Filename: debs/dev.preloading.tubereplacer_1.0.6_iphoneos-arm.deb
+Size: 238548
+MD5sum: 6beafb88b57e1c6a3191b9d60860f2cb
+SHA1: c8df22659cc7b069244b4dfbac85695d5320b0c1
+SHA256: ef39f5588628d001470378c7e5de827f54b2b5b61cf931195b0f8fc947cd9673
+Section: Tweaks
+Homepage: https://cydia.preloading.dev/depictions/tubereplacer/1.0/
+Description: A fix for YouTube with sign-in.
+Author: Preloading <me@preloading.dev>
+Depiction: https://cydia.preloading.dev/depictions/tubereplacer/1.0/
+Icon: file:///Library/PreferenceBundles/TubeReplacerPrefs.bundle/icon@full.png
+Name: TubeReplacer
+
 Package: eu.heinelt.ifile
 Version: 2.2.0-1
 Architecture: iphoneos-arm
