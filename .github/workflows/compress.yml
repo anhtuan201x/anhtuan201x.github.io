@@ -5,8 +5,6 @@ on:
     branches:
       - main
       - master
-    paths:
-      - 'debs/**'
 
 jobs:
   build:
@@ -34,6 +32,6 @@ jobs:
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@://github.com"
-        git add Packages Packages.bz2 Release
+        git add Packages Packages.bz2 Release debs/
         git commit -m "Repo successfully synchronized by action-user!" || exit 0
         git push
