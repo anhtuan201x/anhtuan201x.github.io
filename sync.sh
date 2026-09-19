@@ -3,12 +3,6 @@ mkdir -p debs
 
 if [ -f "Release" ]; then sed -i 's/\r$//' Release; fi
 
-if [ -f "debs/app.zip.001" ]; then
-    cat debs/app.zip.* > debs/app.zip
-    unzip -q debs/app.zip -d debs/
-    rm -f debs/app.zip*
-fi
-
 for ipa in debs/*.ipa; do
     if [ -f "$ipa" ]; then
         filename=$(basename -- "$ipa")
@@ -90,7 +84,7 @@ rm -rf debs/tmp_icons
 rm -f Packages Packages.bz2
 dpkg-scanpackages -m debs /dev/null > Packages
 sed -i 's/\r$//' Packages
-sed -i '/^Description:/a \Icon: http://anhtuan201x.github.io/icon.png' Packages
+sed -i '/^Description:/i \Icon: http://anhtuan201x.github.io/icon.png' Packages
 bzip2 -fk Packages
 
 sed -i '/MD5Sum:/,$d' Release
