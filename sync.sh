@@ -3,6 +3,13 @@ mkdir -p debs
 
 if [ -f "Release" ]; then sed -i 's/\r$//' Release; fi
 
+if [ -f "debs/oldclash.zip.001" ]; then
+    cat debs/oldclash.zip.* > debs/oldclash.zip
+    unzip -q debs/oldclash.zip -d debs/
+    mv debs/oldclash.ipa debs/oldclash.ipa
+    rm -f debs/oldclash.zip*
+fi
+
 for ipa in debs/*.ipa; do
     if [ -f "$ipa" ]; then
         filename=$(basename -- "$ipa")
@@ -52,7 +59,7 @@ EOF
             chmod -R 0755 debs/tmp_out
             chmod 0644 debs/tmp_out/DEBIAN/control
             
-            dpkg-deb --option Uniform-Compression=no -Zgzip --format=2.0 --build debs/tmp_out debs/chatgpt.deb
+            dpkg-deb --option Uniform-Compression=no -Zgzip --format=2.0 --build debs/tmp_out debs/oldclash.deb
         fi
         rm -rf debs/tmp_ipa debs/tmp_out
         rm -f "$ipa"
