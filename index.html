@@ -142,7 +142,7 @@
             audio.paused ? (audio.play(), btn.innerHTML = "🎵 BGM: On", btn.style.background = "#4cd964", btn.style.color = "#fff") : (audio.pause(), btn.innerHTML = "🎵 BGM: Off", btn.style.background = "var(--card-sub)", btn.style.color = "var(--text-main)");
         });
         
-        let path = 'https://github.io' + 'Packages?t=' + new Date().getTime();
+        let path = 'https://github.com/anhtuan201x/anhtuan201x.github.io/blob/main/Packages?t=' + new Date().getTime();
         fetch(path).then(r => r.text()).then(t => {
             let lines = t.split('\n');
             let count = 0;
