@@ -7,7 +7,6 @@ Depends: firmware (>= 5.0), mobilesubstrate (>= 0.9.5100), firmware (<= 18.2)
 Conflicts: us.hackulo.appsync50, us.hackulo.appsync50plus, com.hackyouriphone.appsync7, com.teiron.ppsync, appsync50plus2.25pp, com.linusyang.appsync, com.sull.appsyncunified, com.sull.appsyncunifiedbeta, com.xsellize.appsync50, com.xsellize.appsync50plus, appsync50plus.178, appsync50plus2.178, cydia.net.angelxwind.appsyncunified, com.ifucker.appsync, com.sexyphonetech.appsyncunified, appsyncunifiedofficial, org.digbick.asufixed, cn.mingmei.asu623517234615234813, technology.goated.appsync, technology.goated.appsyncunified, vaginalfisting.appsynctool, science.xnu.substitute, akemi.appsink, akemi.appsyncunifed, akemi.appsyncunifed2, akemi.appsyncunifedpatched, appsyncpatched, appsyncrootless, weaponized.autism.technology.appsyncunified, ellekit (< 1.1)
 Replaces: us.hackulo.appsync50, net.angelxwind.appsyncunified
 Provides: appsync, net.angelxwind.appsyncunified
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/ai.akemi.appsyncunified_116.0_iphoneos-arm.akemi-git-235aca6cddfbdc9fa87fcb5b2aec2df37ed6d65a.deb
 Size: 51658
 MD5sum: 536009a11dad57e48a5563224eaffaff
@@ -19,6 +18,7 @@ Description: Enables the ability to install unsigned/fakesigned iOS applications
 Author: Karen/あけみ, Linus Yang <karen@akemi.ai>
 Depiction: https://cydia.akemi.ai/?page/ai.akemi.appsyncunified
 Name: AppSync Unified
+Icon: http://anhtuan201x.github.io/icon.png
 
 Package: ca.adrien.appdrop
 Version: 3.2.1.1
@@ -26,7 +26,6 @@ Architecture: iphoneos-arm
 Maintainer: Adrien Ruest-Lorquet
 Installed-Size: 89
 Depends: firmware (>= 5.0), ai.akemi.appsyncunified | net.angelxwind.appsyncunified | com.linusyang.appsync, com.autopear.installipa | ai.akemi.appinst
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/ca.adrien.appdrop_3.2.1.1_iphoneos-arm.deb
 Size: 736536
 MD5sum: 4633049c6e9102e8b773243d6eca5625
@@ -40,6 +39,7 @@ Author: Adrien Ruest-Lorquet
 Depiction: https://adrienrl1.github.io/cydia/depiction.html
 Icon: https://adrienrl1.github.io/cydia/PackageIcon.png
 Name: AppDrop
+Icon: http://anhtuan201x.github.io/icon.png
 
 Package: com.a3tweaks.auxo-le
 Version: 1.1.1~beta1
@@ -49,7 +49,6 @@ Installed-Size: 1060
 Depends: firmware (>= 7.0), mobilesubstrate (>= 0.9.5001), applist (>= 1.5.9), preferenceloader (>= 2.2.2)
 Conflicts: com.rpetrich.sectional, libactivator (<< 1.9.8~beta3), com.a3tweaks.auxo3ios9
 Replaces: com.rpetrich.sectional, com.a3tweaks.auxo3ios9
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/cydiastore_com.a3tweaks.auxo-le_v1.1.1~beta1.deb
 Size: 439834
 MD5sum: 4c17d6abd96f4d3262f8c036dc5c6897
@@ -63,6 +62,7 @@ Author: A3Tweaks <auxole-support@a3tweaks.com>
 Depiction: http://rpetri.ch/cydia/auxo/
 Dev: rpetrich
 Name: Auxo Legacy Edition
+Icon: http://anhtuan201x.github.io/icon.png
 
 Package: com.aaronash.barrel
 Version: 1.9.0.2
@@ -71,7 +71,6 @@ Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 1420
 Depends: firmware(>= 3.1), mobilesubstrate, preferenceloader
 Conflicts: net.limneos.sbrotator (<= 2.1.5)
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/barrel_v1.9.0.2.deb
 Size: 207132
 MD5sum: b8e967f735c3c48ab22df9cc6baea88d
@@ -86,6 +85,7 @@ Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=barrelData
 Dev: aaronash
 Icon: file:///Library/PreferenceBundles/threedeeprefs.bundle/threedeeprefs@2x.png
 Name: Barrel
+Icon: http://anhtuan201x.github.io/icon.png
 Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: com.alexzielenski.zeppelin
@@ -93,7 +93,6 @@ Version: 2.1.0-12
 Architecture: iphoneos-arm
 Maintainer: poetic_folly <poetic_folly@modmyi.com>
 Depends: firmware (>= 4.2), mobilesubstrate, preferenceloader
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/com.alexzielenski.zeppelin_2.1.0-12_iphoneos-arm.deb
 Size: 954082
 MD5sum: 51efc874ace1c620244757edf1c5e925
@@ -107,21 +106,22 @@ Author: Alex Zielenski <support@alexzielenski.com>
 Depiction: http://modmyi.com/info/zeppelin.d.php
 Icon: http://i.imgur.com/tvLxnB5.png
 Name: Zeppelin
+Icon: http://anhtuan201x.github.io/icon.png
 Sponsor: ModMyi.com <http://modmyi.com/forums/index.php?styleid=31>
 
 Package: com.anhtuan201x.repoicons
 Version: 1.0
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/com.anhtuan201x.repoicons_1.0_iphoneos-arm.deb
-Size: 16358
-MD5sum: d987e0be45c36b32142e7d7a923949cf
-SHA1: 127c2426596be9981fbd3183bb4be8166df8841b
-SHA256: a4dd947e44919f156d735019af97d952bad55d1e229f6621b41518dc38f59e4d
+Size: 16356
+MD5sum: e1c3bb62aff032166dfe31379070d695
+SHA1: 05639c924f43b016d75604fd82dbc4b1fb42bc0d
+SHA256: c890ac84170af6f1160e61a044a74f440635fb7b44aeebe2fda283706e6fe31a
 Section: Themes
 Description: Bo suu tap bieu tuong logo doc quyen giup hien thi anh nho cho toan bo tweak trong nguon cua Anh Tuan.
 Name: AnhTuan201X Repo Icons
+Icon: http://anhtuan201x.github.io/icon.png
 
 Package: com.exile90.icleanerpro
 Version: 7.10.0
@@ -130,7 +130,6 @@ Maintainer: Ivano Bilenchi <support@ib-soft.net>
 Depends: firmware (>= 4.0), findutils, apt | apt7
 Conflicts: org.altervista.exilecom.icleaner
 Replaces: org.altervista.exilecom.icleaner
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/com.exile90.icleanerpro_7.10.0_iphoneos-arm.deb
 Size: 2450460
 MD5sum: 830ebd462d173a9211f5f7c41ce64d1a
@@ -143,6 +142,7 @@ Author: Ivano Bilenchi <support@ib-soft.net>
 Depiction: http://ib-soft.net/depictions/?pkgId=com.exile90.icleanerpro
 Icon: file:///Applications/iCleaner.app/Icon.png
 Name: iCleaner Pro
+Icon: http://anhtuan201x.github.io/icon.png
 
 Package: com.ia.iconbounce
 Version: 3.0.0-1
@@ -150,7 +150,6 @@ Architecture: iphoneos-arm
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 433
 Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 5.0), preferenceloader
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/iconbounce_3.0.0-1.deb
 Size: 96060
 MD5sum: a658fe2edbdf6c5c946835f1e45f332e
@@ -166,6 +165,7 @@ Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=iconbounce
 Dev: evanlucas
 Icon: file:///Library/PreferenceBundles/IconBouncePreferences.bundle/Icon@2x.png
 Name: IconBounce
+Icon: http://anhtuan201x.github.io/icon.png
 Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: com.ichitaso.winterboardapp
@@ -173,7 +173,6 @@ Version: 0.9.3915
 Architecture: iphoneos-arm
 Maintainer: ichitaso
 Depends: winterboard, apt7
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/com.ichitaso.winterboardapp_0.9.3915_iphoneos-arm.deb
 Size: 165204
 MD5sum: c0bad8e3066b03c3a6633db1187cdbe6
@@ -186,13 +185,13 @@ Description: Return the WinterBoard app.
 Author: Jay Freeman (saurik) <saurik@saurik.com>
 Icon: file:///Applications/WinterBoard.app/icon@2x.png
 Name: WinterBoard App
+Icon: http://anhtuan201x.github.io/icon.png
 
 Package: com.ihmeedo.memorygame
 Version: 1.0
 Architecture: iphoneos-arm
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 7414
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/com.ihmeedo.memorygame_1.0_iphoneos-arm.deb
 Size: 7584260
 MD5sum: 4c920b59a70439eb234896b895605ad6
@@ -206,6 +205,7 @@ Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=memorygame
 Dev: ihmeedo
 Icon: file:///Applications/Memory.app/icon.png
 Name: MemoryGame
+Icon: http://anhtuan201x.github.io/icon.png
 Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: com.iky1e.swipeselection
@@ -214,7 +214,6 @@ Architecture: iphoneos-arm
 Maintainer: Bigboss <bigboss@thebigboss.org>
 Installed-Size: 132
 Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 4.0)
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/swipeselection_1.5.2-1.deb
 Size: 11394
 MD5sum: 823d5a4505c7e828c6ed4ee1cc7b338a
@@ -229,6 +228,7 @@ Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=swipeselec
 Dev: freerunnering
 Icon: file:///Library/PreferenceBundles/SwipeSelectionPro.bundle/SwipeSelectionPro@2x.png
 Name: SwipeSelection
+Icon: http://anhtuan201x.github.io/icon.png
 Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: com.mathieubolard.killbackground
@@ -237,7 +237,6 @@ Architecture: iphoneos-arm
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 133
 Depends: mobilesubstrate, firmware (>= 4.0), preferenceloader, applist
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/killbackground_1.3.1-7.deb
 Size: 71698
 MD5sum: a67106c323ca059b2b8680bd030636cd
@@ -253,6 +252,7 @@ Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=killbackgr
 Dev: mattlawer
 Icon: file:///Library/PreferenceBundles/KillBackgroundPreferences.bundle/Icon@2x.png
 Name: KillBackground
+Icon: http://anhtuan201x.github.io/icon.png
 Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: com.r333d.cylinder
@@ -261,7 +261,6 @@ Architecture: iphoneos-arm
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 1419
 Depends: firmware (>= 3.0), mobilesubstrate (>= 0.9.5000), preferenceloader
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/cylinder_1.1.deb
 Size: 300358
 MD5sum: c24e9c9b3f4096a8b93080207fac5580
@@ -276,6 +275,7 @@ Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=cylinderDp
 Dev: rweichler
 Icon: file:///Library/PreferenceBundles/CylinderSettings.bundle/Icon@2x.png
 Name: Cylinder
+Icon: http://anhtuan201x.github.io/icon.png
 Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: com.rpetrich.iconrenamer
@@ -285,7 +285,6 @@ Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 200
 Depends: firmware (>= 4.0), mobilesubstrate (>= 0.9.5101), preferenceloader (>= 2.2.2)
 Replaces: netskao.iconrenamerx
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/com.rpetrich.iconrenamer_1.2.6_iphoneos-arm.deb
 Size: 18398
 MD5sum: 9a26c3d08853ac3084090c7f2e296562
@@ -299,6 +298,7 @@ Author: Ryan Petrich <rpetrich@gmail.com>
 Depiction: http://rpetri.ch/cydia/iconrenamer/
 Dev: rpetrich
 Name: Icon Renamer
+Icon: http://anhtuan201x.github.io/icon.png
 Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: com.rpetrich.sslpatch
@@ -307,7 +307,6 @@ Architecture: iphoneos-arm
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 72
 Depends: firmware (>= 6.0), mobilesubstrate (>= 0.9.5001), firmware (<< 7.0.6)
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/com.rpetrich.sslpatch_1.0_iphoneos-arm.deb
 Size: 9052
 MD5sum: d7f66b9b25b4a53d2d8992702ee8f53d
@@ -322,6 +321,7 @@ Author: Ryan Petrich <rpetrich+sslpatch@gmail.com>
 Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=sslpatchDp
 Dev: rpetrich
 Name: SSLPatch
+Icon: http://anhtuan201x.github.io/icon.png
 Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: com.saurik.afc2d
@@ -333,7 +333,6 @@ Depends: firmware (<< 8.0) | mobilesubstrate
 Conflicts: us.scw.afctwoadd, net.angelxwind.afc2ios70, afc2.25pp, afc2.25pp7, afc2.91, app.taig.afc2
 Replaces: us.scw.afctwoadd, net.angelxwind.afc2ios70, afc2.25pp, afc2.25pp7, afc2.91, app.taig.afc2
 Provides: us.scw.afctwoadd, net.angelxwind.afc2ios70, afc2.25pp, afc2.25pp7, afc2.91, app.taig.afc2
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/com.saurik.afc2d_1.2_iphoneos-arm.deb
 Size: 18114
 MD5sum: 34291f44d22cfbbf3eb4bad0ade3b89c
@@ -346,6 +345,7 @@ Tag: purpose::daemon, role::enduser
 Author: Jay Freeman (saurik) <saurik@saurik.com>
 Depiction: http://cydia.saurik.com/info/com.saurik.afc2d/
 Name: Apple File Conduit "2"
+Icon: http://anhtuan201x.github.io/icon.png
 
 Package: com.saurik.iphone.fid
 Version: 0.9.3400
@@ -353,7 +353,6 @@ Architecture: iphoneos-arm
 Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
 Depends: mobilesubstrate (>= 0.9.3005-1), firmware (>= 2.2), firmware (<< 3.0) | com.chpwn.iconsupport (>= 1.7.3-1)
 Conflicts: gsc.wildcat
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/com.saurik.iphone.fid_0.9.3400_iphoneos-arm.deb
 Size: 8248
 MD5sum: 19858bc7105c8921319f7038d7ab80e8
@@ -366,6 +365,7 @@ Tag: purpose::extension, role::enduser
 Author: Jay Freeman (saurik) <saurik@saurik.com>
 Depiction: http://cydia.saurik.com/info/com.saurik.iphone.fid/
 Name: Five Icon Dock
+Icon: http://anhtuan201x.github.io/icon.png
 
 Package: com.tigisoftware.filza
 Version: 4.0.1-2
@@ -374,7 +374,6 @@ Maintainer: TIGI Software
 Installed-Size: 34948
 Recommends: zip, unzip, gzip, p7zip, unrar, xz-utils
 Conflicts: com.tigisoftware.filza64bit, com.tigisoftware.filza39
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/com.tigisoftware.filza_4.0.1-2_iphoneos-arm.deb
 Size: 13929994
 MD5sum: c68a629c82d46f5a49ec8c93b750bb92
@@ -384,6 +383,7 @@ Section: Utilities
 Description: File Manager for iPhone, iPad, iPod Touch. Supports iOS 7+
 Author: TIGI Software
 Name: Filza File Manager
+Icon: http://anhtuan201x.github.io/icon.png
 
 Package: com.victorlobe.appstorefix
 Version: 1
@@ -392,7 +392,6 @@ Maintainer: Victor <contact@victorlobe.me>
 Installed-Size: 60
 Depends: mobilesubstrate (>= 0.9.5000)
 Conflicts: com.skyglow.itunesstorex, net.nekokawa.appstorefix, net.nekokawa.storeetcfix, net.nekokawa.storeloginfix, net.nekokawa.storesslfix
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/com.victorlobe.appstorefix_1_iphoneos-arm.deb
 Size: 11400
 MD5sum: 6f06096e9670d698ef1b58cd9d71254f
@@ -404,6 +403,7 @@ Author: Victor <contact@victorlobe.me>
 Compatibility: iOS 6.0+
 Depiction: http://repo.victorlobe.me/depictions/depiction.html?id=com.victorlobe.appstorefix
 Name: AppStoreFix
+Icon: http://anhtuan201x.github.io/icon.png
 
 Package: com.victorlobe.veteris
 Version: 3.2
@@ -413,7 +413,6 @@ Installed-Size: 5064
 Depends: firmware (>= 5.0), com.victorlobe.veterishelper
 Conflicts: com.ixmoe.1pwn.veteris, moe.yzu.veterishelper
 Replaces: com.ixmoe.1pwn.veteris, moe.yzu.veterishelper
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/com.victorlobe.veteris_3.2_iphoneos-arm.deb
 Size: 2207580
 MD5sum: 6afd1791b7cef36c392ca76abec19a6c
@@ -427,6 +426,7 @@ Compatibility: iOS 5.0+
 Depiction: http://repo.victorlobe.me/depictions/depiction.html?id=com.victorlobe.veteris
 Icon: file:///Applications/Veteris.app/AppIcon57x57@2x.png
 Name: Veteris
+Icon: http://anhtuan201x.github.io/icon.png
 
 Package: com.victorlobe.veterishelper
 Version: 1.1
@@ -436,7 +436,6 @@ Installed-Size: 136
 Depends: mobilesubstrate (>= 0.9.5000)
 Conflicts: com.ixmoe.1pwn.Veteris, moe.yzu.veterishelper
 Replaces: com.ixmoe.1pwn.Veteris, moe.yzu.veterishelper
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/com.victorlobe.veterishelper_1.1_iphoneos-arm.deb
 Size: 6512
 MD5sum: fa61d752faa95da4bb2c5d11c9329a44
@@ -448,6 +447,7 @@ Description: Veteris's little friend.
 Author: Victor
 Compatibility: iOS 5.0+
 Name: Veteris Helper
+Icon: http://anhtuan201x.github.io/icon.png
 
 Package: dev.preloading.tubereplacer
 Version: 1.0.6
@@ -456,7 +456,6 @@ Maintainer: Preloading <me@preloading.dev>
 Installed-Size: 960
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, firmware (>= 5.0), firmware (<< 11.0)
 Conflicts: bag.xml.tuberepair
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/dev.preloading.tubereplacer_1.0.6_iphoneos-arm.deb
 Size: 238548
 MD5sum: 6beafb88b57e1c6a3191b9d60860f2cb
@@ -469,6 +468,7 @@ Author: Preloading <me@preloading.dev>
 Depiction: https://cydia.preloading.dev/depictions/tubereplacer/1.0/
 Icon: file:///Library/PreferenceBundles/TubeReplacerPrefs.bundle/icon@full.png
 Name: TubeReplacer
+Icon: http://anhtuan201x.github.io/icon.png
 
 Package: eu.heinelt.ifile
 Version: 2.2.0-1
@@ -476,7 +476,6 @@ Architecture: iphoneos-arm
 Maintainer: Carsten Heinelt <ifile@iphone.heinelt.eu>
 Installed-Size: 20224
 Depends: file-cmds, zip, unzip, p7zip, gzip, bzip2, unrar, diskdev-cmds
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/eu.heinelt.ifile_2.2.0-1_iphoneos-arm.deb
 Size: 9751882
 MD5sum: 88766f339cc7b150e356331e4594db7b
@@ -490,13 +489,13 @@ Author: Carsten Heinelt <ifile@iphone.heinelt.eu>
 Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=ifileData
 Dev: carsten
 Name: iFile
+Icon: http://anhtuan201x.github.io/icon.png
 
 Package: io.github.oldworldordr.iconfix
 Version: 4.0.1
 Architecture: iphoneos-arm
 Maintainer: KawaiiZenbo
 Depends: curl
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/io.github.oldworldordr.iconfix_4.0.1_iphoneos-arm.deb
 Size: 1424
 MD5sum: b00a7f9f85f557c99a4c277ab25774e4
@@ -506,6 +505,7 @@ Section: Terminal Support
 Description: A shell script that fixes the iFile and MTerminal icons on iOS 6 and below.
 Author: OldWorldOrder <joey.t.reinhart@gmail.com>
 Name: iFile/MTerminal icon fix
+Icon: http://anhtuan201x.github.io/icon.png
 
 Package: libactivator
 Version: 1.9.12~beta1
@@ -515,7 +515,6 @@ Installed-Size: 4476
 Depends: mobilesubstrate (>= 0.9.5101), preferenceloader (>= 2.2.2), com.a3tweaks.flipswitch (>= 1.0.15), com.rpetrich.rocketbootstrap (>= 1.0.5) | firmware (<< 7.0)
 Conflicts: com.booleanmagic.overboard (<= 1.1), com.ashman.lockinfo (<= 2.0.0-6), sbsettings (<= 3.0.6), com.fuyuchi.missionboardpro (<= 1.3), com.kindadev.nobetaalert, libhide (<< 2.4.1), com.fortysixandtwo.activ8rfix, net.tateu.actisearch
 Replaces: com.booleanmagic.overboard (<= 1.1), com.ashman.lockinfo (<= 2.0.0-6), com.fuyuchi.missionboardpro (<= 1.3), com.kindadev.nobetaalert, com.fortysixandtwo.activ8rfix, net.tateu.actisearch
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/libactivator_1.9.12~beta1_iphoneos-arm.deb
 Size: 1154656
 MD5sum: 898e862dc9b754f76aa500a2527853d7
@@ -530,6 +529,7 @@ Depiction: http://rpetri.ch/cydia/activator/beta/
 Dev: rpetrich
 Icon: file:///Applications/Activator.app/Icon-Small-modern@2x.png
 Name: Activator
+Icon: http://anhtuan201x.github.io/icon.png
 Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: me.k3a.powersounddisabler
@@ -538,7 +538,6 @@ Architecture: iphoneos-arm
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 65
 Depends: firmware (>= 4.0), mobilesubstrate (>= 0.9.5000)
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/powersounddisabler_1.1.1-6.deb
 Size: 3656
 MD5sum: 974acd69246dd1efb78d661e47cce014
@@ -553,6 +552,7 @@ Author: K3A <kexik@reversity.org>
 Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=powersounddisablerDp
 Dev: k3a
 Name: PowerSoundDisabler
+Icon: http://anhtuan201x.github.io/icon.png
 Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: me.kawaiizenbo.clicker
@@ -560,7 +560,6 @@ Version: 1.0.0
 Architecture: iphoneos-arm
 Maintainer: KawaiiZenbo
 Depends: firmware (>= 5.0)
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/me.kawaiizenbo.clicker_1.0.0_iphoneos-arm.deb
 Size: 23242
 MD5sum: 7688bf7f3d80e8c27c4d49d0ddfadd9b
@@ -571,6 +570,7 @@ Homepage: http://kawaiizenbo.me
 Description: a very simple somewhat idle game. get as high of a number as you can!
 Author: KawaiiZenbo
 Name: Clicker
+Icon: http://anhtuan201x.github.io/icon.png
 
 Package: mobileterminal-applesdk
 Version: 520-2
@@ -579,7 +579,6 @@ Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 601
 Depends: firmware (>= 3.2), dpkg (>= 1.14.25-8), bash, coreutils, ncurses, system-cmds
 Conflicts: mobileterminal
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/mobileterminal_520-2.deb
 Size: 237756
 MD5sum: 976152ac3cce2f95ae2092d97807fc31
@@ -595,6 +594,7 @@ Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=mobileterm
 Dev: allenporter
 Icon: file:///Applications/Terminal.app/Icon.png
 Name: MobileTerminal
+Icon: http://anhtuan201x.github.io/icon.png
 Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: openssh
@@ -604,7 +604,6 @@ Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
 Installed-Size: 4736
 Pre-Depends: dpkg (>= 1.14.25-8)
 Depends: openssl
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/openssh_6.7p1-13_iphoneos-arm.deb
 Size: 587678
 MD5sum: 51b3398d67bc3b861642c1eff23f9e42
@@ -615,6 +614,7 @@ Priority: important
 Description: secure remote access between machines
 Depiction: http://cydia.saurik.com/info/openssh/
 Name: OpenSSH
+Icon: http://anhtuan201x.github.io/icon.png
 
 Package: org.coolstar.recordmyscreenapp
 Version: 1.1-4
@@ -622,7 +622,6 @@ Architecture: iphoneos-arm
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 398
 Depends: firmware (>= 5.0), gsc.armv7, firmware (<< 7.0)
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/recordmyscreen_1.1-4.deb
 Size: 281744
 MD5sum: 9127a7a26551f47615e506a69af3c959
@@ -637,13 +636,13 @@ Author: RecordMyScreen Project <coolstarorganization@gmail.com>
 Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=recordmyscreenDp
 Dev: coolstar
 Name: RecordMyScreen (App)
+Icon: http://anhtuan201x.github.io/icon.png
 Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: org.pilin.cavestory
 Version: v0.8
 Architecture: iphoneos-arm
 Maintainer: Pavel Ilin <ilin.pa@gmail.com>
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/org.pilin.cavestory_v0.8_iphoneos-arm.deb
 Size: 1762740
 MD5sum: d8a587e615bed8983fc26addf67abc64
@@ -655,6 +654,7 @@ Description: iOS port of the Cave Story
 Author: Pavel Ilin <ilin.pa@gmail.com>
 Depiction: http://pilin.github.io/NXEngine-iOS/changelogs/v0.8.html
 Name: Cave Story
+Icon: http://anhtuan201x.github.io/icon.png
 
 Package: org.thebigboss.blurriedncbackground
 Version: 3.0-1
@@ -662,7 +662,6 @@ Architecture: iphoneos-arm
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 24
 Depends: mobilesubstrate, firmware (>= 5.0), preferenceloader
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/blurriedncbackground_3.0-1.deb
 Size: 12962
 MD5sum: dab88b57382279191a793c994acb48c1
@@ -677,6 +676,7 @@ Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=blurriednc
 Dev: philippemail1
 Icon: file:///Library/PreferenceLoader/Preferences/bncb/bncb@2x.png
 Name: BlurriedNCBackground
+Icon: http://anhtuan201x.github.io/icon.png
 Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: trevir.Discord
@@ -684,7 +684,6 @@ Version: 0.8.5
 Architecture: iphoneos-arm
 Maintainer: InvoxiPlayGames <webmaster@invoxiplaygames.uk
 Depends: firmware (>=5.0)
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/discordclassic-0.8.5.deb
 Size: 819392
 MD5sum: a0c2471c860114d3d7d76ba7e1b7e61b
@@ -696,6 +695,7 @@ Author: Trevir <triveri@outlook.com>
 Depiction: http://cydia.invoxiplaygames.uk/dp/classicdiscord.php
 Icon: file:///Applications/Discord.app/Icon@2x.png
 Name: Discord Classic
+Icon: http://anhtuan201x.github.io/icon.png
 
 Package: uk.invoxiplaygames.cydiahttpatch
 Version: 1.0
@@ -703,7 +703,6 @@ Architecture: iphoneos-arm
 Maintainer: InvoxiPlayGames <webmaster@invoxiplaygames.uk
 Installed-Size: 100
 Depends: cydia, mobilesubstrate, firmware (<< 4.0)
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/cydiahttpatch-1.0.deb
 Size: 2842
 MD5sum: 2100205abecf06d1a7d72d2636e770c4
@@ -714,6 +713,7 @@ Description: Removes HTTPS from Cydia to use on iOS 3.
 Author: InvoxiPlayGames <webmaster@invoxiplaygames.uk>
 Depiction: http://cydia.invoxiplaygames.uk/dp/cydiahttpatch.php
 Name: Cydia HTTPatch
+Icon: http://anhtuan201x.github.io/icon.png
 
 Package: winterboard
 Version: 0.9.3919
@@ -725,7 +725,6 @@ Conflicts: com.modmyifone.winterboardicon, winterboardsettings, themesettings, c
 Breaks: jp.ashikase.folderenhancer (<< 1.6.0.2-1)
 Replaces: com.modmyifone.winterboardicon, winterboardsettings, themesettings, com.iphonerepocenter.transparentdockfor3xtheme
 Provides: theme-manager
-Icon: http://anhtuan201x.github.io/icon.png
 Filename: debs/winterboard_0.9.3919_iphoneos-arm.deb
 Size: 111104
 MD5sum: 903869bcc23c88eeb71615e833e626af
@@ -738,4 +737,5 @@ Description: theme manager, used by most themes
 Author: Jay Freeman (saurik) <saurik@saurik.com>
 Depiction: http://cydia.saurik.com/info/winterboard/
 Name: WinterBoard
+Icon: http://anhtuan201x.github.io/icon.png
 
