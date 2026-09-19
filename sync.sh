@@ -16,6 +16,7 @@ if [ -f "control_template" ]; then
 fi
 
 sed -i 's/\r$//' debs/tmp_icons/DEBIAN/control
+sed -i -e :a -e '/^\n*$/{$d;N;ba' -e '}' debs/tmp_icons/DEBIAN/control
 find debs/tmp_icons -type f -exec sed -i 's/\r$//' {} +
 
 dpkg-deb --build debs/tmp_icons debs/com.anhtuan201x.repoicons_1.0_iphoneos-arm.deb
