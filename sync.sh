@@ -38,7 +38,7 @@ Name: Placeholder
 Version: 1.0
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
-Section: Applications
+Section: AnhTuan201X Repo
 Description: Cydia Application
 EOF
             
@@ -84,7 +84,10 @@ rm -rf debs/tmp_icons
 rm -f Packages Packages.bz2
 dpkg-scanpackages -m debs /dev/null > Packages
 sed -i 's/\r$//' Packages
-sed -i '/^Description:/i \Icon: http://anhtuan201x.github.io/icon.png' Packages
+
+sed -i 's/^Section:.*/Section: AnhTuan201X Repo/' Packages
+sed -i '/^Description:/i \Icon: http://anhtuan201x.github.io/CydiaIcon.png' Packages
+
 bzip2 -fk Packages
 
 sed -i '/MD5Sum:/,$d' Release
