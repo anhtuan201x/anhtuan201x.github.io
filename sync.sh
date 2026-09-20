@@ -1,1079 +1,180 @@
-#!/usr/bin/env bash
+#!/bin/bash
+mkdir -p debs
+mkdir -p ipas
 
-set -Eeuo pipefail
+if [ -f "Release" ] ; then sed -i 's/\r$//' Release; fi
 
-# ============================================================
-# CONFIG
-# ============================================================
-
-REPO_URL="https://anhtuan201x.github.io"
-
-REPO_NAME="AnhTuan201X IPA Store"
-
-DEB_ARCH="iphoneos-arm"
-
-MAINTAINER_NAME="AnhTuan201X"
-MAINTAINER_EMAIL="anhtuan201x@github.io"
-
-CYDIA_PACKAGES="Packages.bz2"
-
-# ============================================================
-# CREATE DIRECTORIES
-# ============================================================
-
-mkdir -p "ipas"
-mkdir -p "debs"
-
-echo "Created:"
-echo "  ipas/"
-echo "  debs/"
-
-# ============================================================
-# CHECK COMMANDS
-# ============================================================
-
-REQUIRED_COMMANDS=(
-    bash
-    unzip
-    dpkg-deb
-    dpkg-scanpackages
-    python3
-    bzip2
-    md5sum
-    stat
-    find
-    sed
-    awk
-)
-
-for cmd in "${REQUIRED_COMMANDS[@]}"; do
-
-    if ! command -v "$cmd" >/dev/null 2>&1; then
-
-        echo "ERROR: Missing command: $cmd"
-
-        exit 1
-
-    fi
-
-done
-
-# ============================================================
-# CREATE IPA INDEX IMMEDIATELY
-# ============================================================
-
-rm -f "ipas/index.html"
-
-cat > "ipas/index.html" <<'EOF'
+cat << 'EOF' > ipas/index.html
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="vi">
 <head>
-
-<meta charset="UTF-8">
-
-<meta
-    name="viewport"
-    content="width=device-width,initial-scale=1"
->
-
-<title>AnhTuan201X IPA Store</title>
-
-<style>
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-
-    margin: 0;
-
-    padding: 20px;
-
-    min-height: 100vh;
-
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        sans-serif;
-
-    background:
-        linear-gradient(
-            135deg,
-            #0b001a,
-            #160033,
-            #001133
-        );
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-}
-
-.store {
-
-    width: 100%;
-
-    max-width: 520px;
-
-    padding: 30px 16px;
-
-    border-radius: 22px;
-
-    background:
-        rgba(255,255,255,.96);
-
-    box-shadow:
-        0 20px 50px rgba(0,0,0,.5);
-}
-
-h1 {
-
-    margin: 0;
-
-    text-align: center;
-
-    font-size: 29px;
-
-    font-weight: 800;
-
-    background:
-        linear-gradient(
-            45deg,
-            #ff416c,
-            #ff4b2b
-        );
-
-    -webkit-background-clip: text;
-
-    background-clip: text;
-
-    -webkit-text-fill-color: transparent;
-}
-
-.subtitle {
-
-    text-align: center;
-
-    color: #8e8e93;
-
-    font-size: 13px;
-
-    margin:
-        8px 0 20px;
-}
-
-.app {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 10px;
-
-    padding: 12px;
-
-    margin-bottom: 12px;
-
-    border-radius: 16px;
-
-    background: #f7f8fa;
-
-    border: 1px solid #e8e8ec;
-}
-
-.info {
-
-    min-width: 0;
-
-    flex: 1;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 10px;
-}
-
-.icon {
-
-    width: 46px;
-
-    height: 46px;
-
-    min-width: 46px;
-
-    border-radius: 12px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    background:
-        linear-gradient(
-            135deg,
-            #11998e,
-            #38ef7d
-        );
-
-    font-size: 21px;
-}
-
-.name {
-
-    font-size: 14px;
-
-    font-weight: 700;
-
-    word-break: break-word;
-}
-
-.version {
-
-    margin-top: 3px;
-
-    color: #8e8e93;
-
-    font-size: 11px;
-}
-
-.buttons {
-
-    display: flex;
-
-    gap: 6px;
-}
-
-.btn {
-
-    color: #fff;
-
-    text-decoration: none;
-
-    padding: 8px 11px;
-
-    border-radius: 14px;
-
-    font-size: 12px;
-
-    font-weight: 700;
-
-    white-space: nowrap;
-}
-
-.download {
-
-    background:
-        linear-gradient(
-            135deg,
-            #0072ff,
-            #00c6ff
-        );
-}
-
-.install {
-
-    background:
-        linear-gradient(
-            135deg,
-            #4cd964,
-            #28c840
-        );
-}
-
-.back {
-
-    display: block;
-
-    margin-top: 18px;
-
-    text-align: center;
-
-    color: #ff4b2b;
-
-    text-decoration: none;
-
-    font-size: 14px;
-
-    font-weight: 600;
-}
-
-@media (prefers-color-scheme: dark) {
-
-    .store {
-
-        background:
-            rgba(20,16,38,.96);
-    }
-
-    .app {
-
-        background:
-            rgba(255,255,255,.06);
-
-        border-color:
-            rgba(255,255,255,.1);
-    }
-
-    .name {
-
-        color: #fff;
-    }
-}
-
-@media(max-width:430px) {
-
-    .app {
-
-        align-items: flex-start;
-    }
-
-    .buttons {
-
-        flex-direction: column;
-    }
-}
-
-</style>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AnhTuan IPA Store</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: -apple-system, sans-serif; background: linear-gradient(135deg, #0b001a 0%, #160033 40%, #001133 100%); margin: 0; padding: 20px; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .store-card { max-width: 500px; width: 100%; background: rgba(255,255,255,0.96); border-radius: 20px; padding: 30px 15px; box-shadow: 0 15px 35px rgba(0,0,0,0.5); text-align: center; }
+        @media (prefers-color-scheme: dark) {
+            .store-card { background: rgba(20,16,38,0.94); border: 1px solid rgba(255,255,255,0.1); }
+            .game-name { color: #fff !important; }
+            .game-item { background: rgba(255,255,255,0.05) !important; border-color: rgba(255,255,255,0.1) !important; }
+        }
+        h1 { background: linear-gradient(45deg, #ff416c, #ff4b2b); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-size: 28px; margin: 0 0 5px; font-weight: 700; }
+        .sub-title { color: #8e8e93; font-size: 13.5px; margin: 0 0 15px; font-weight: 500; line-height: 1.5; }
+        .notice { background: rgba(255,75,43,0.1); border: 1px dashed #ff4b2b; color: #ff4b2b; border-radius: 12px; padding: 12px; font-size: 12.5px; font-weight: 600; margin-bottom: 20px; text-align: justify; line-height: 1.5; }
+        @media (prefers-color-scheme: dark) { .notice { background: rgba(255,75,43,0.15); color: #ff6b4a; } }
+        .game-item { display: flex; align-items: center; justify-content: space-between; gap: 10px; background: #f8f9fa; border: 1px solid #eee; border-radius: 15px; padding: 12px 10px; margin-bottom: 12px; text-align: left; }
+        .game-info { display: flex; align-items: center; gap: 10px; min-width: 0; flex: 1; }
+        .game-icon { width: 45px; height: 45px; min-width: 45px; border-radius: 11px; display: flex; align-items: center; justify-content: center; font-size: 20px; box-shadow: 0 3px 8px rgba(0,0,0,0.1); }
+        .game-name { font-weight: 600; color: #1d1d26; font-size: 14px; word-break: break-word; }
+        .game-size { font-size: 11px; color: #8e8e93; margin-top: 2px; }
+        .btn-group { display: flex; gap: 6px; flex-shrink: 0; }
+        .btn-download, .btn-install { color: #fff; text-decoration: none; padding: 8px 11px; border-radius: 15px; font-size: 12px; font-weight: bold; white-space: nowrap; }
+        .btn-download { background: linear-gradient(135deg, #0072ff, #00c6ff); }
+        .btn-install { background: linear-gradient(135deg, #4cd964, #28c840); box-shadow: 0 3px 6px rgba(76,217,100,0.2); }
+        .btn-back { display: inline-block; margin-top: 15px; color: #ff4b2b; text-decoration: none; font-size: 14px; font-weight: 500; }
+        @media (max-width: 420px) { .game-item { align-items: flex-start; } .btn-group { flex-direction: column; } .btn-download, .btn-install { text-align: center; } }
+    </style>
 </head>
-
 <body>
-
-<div class="store">
-
-<h1>AnhTuan201X IPA Store</h1>
-
-<div class="subtitle">
-IPA applications for iOS.
-</div>
-
+<div class="store-card">
+    <h1>AnhTuan IPA Store</h1>
+    <p class="sub-title">Kho tải ứng dụng & game IPA độc quyền dành cho thiết bị iOS Legacy.</p>
+    <div class="notice">⚠️ <b>Lưu ý:</b> Bạn phải cài đặt sẵn <b>AppSync Unified</b> trên máy. Nếu chưa có, bạn có thể thêm nguồn của tôi tại địa chỉ <b>http://github.io</b> để tải về cài đặt, tránh ứng dụng cài xong bị văng ra lập tức.</div>
 EOF
 
-echo "Created: ipas/index.html"
-
-# ============================================================
-# FIND ALL IPA FILES
-# ============================================================
-
-mapfile -d '' IPA_FILES < <(
-    find "ipas" \
-        -type f \
-        -iname "*.ipa" \
-        -print0
-)
-
-echo
-echo "IPA files found: ${#IPA_FILES[@]}"
-echo
-
-# ============================================================
-# PROCESS EVERY IPA
-# ============================================================
-
-for IPA in "${IPA_FILES[@]}"; do
-
-    [ -f "$IPA" ] || continue
-
-    FILENAME="$(basename "$IPA")"
-
-    ORIGINAL_NAME="${FILENAME%.ipa}"
-
-    echo "============================================================"
-    echo "Processing: $IPA"
-    echo "============================================================"
-
-    # --------------------------------------------------------
-    # SAFE NAME
-    # --------------------------------------------------------
-
-    PACKAGE_NAME="$(
-        printf '%s' "$ORIGINAL_NAME" |
-        tr '[:space:]' '-' |
-        tr -cd '[:alnum:]_.+-'
-    )"
-
-    if [ -z "$PACKAGE_NAME" ]; then
-
-        PACKAGE_NAME="application"
-
-    fi
-
-    # --------------------------------------------------------
-    # TEMP DIRECTORY
-    # --------------------------------------------------------
-
-    TMP_DIR="$(
-        mktemp -d
-    )"
-
-    trap 'rm -rf "$TMP_DIR"' EXIT
-
-    mkdir -p \
-        "$TMP_DIR/unzip" \
-        "$TMP_DIR/package/DEBIAN" \
-        "$TMP_DIR/package/Applications"
-
-    # --------------------------------------------------------
-    # EXTRACT IPA
-    # --------------------------------------------------------
-
-    if ! unzip -q "$IPA" -d "$TMP_DIR/unzip"; then
-
-        echo "ERROR: Failed to extract:"
-        echo "$IPA"
-
-        rm -rf "$TMP_DIR"
-
-        trap - EXIT
-
-        continue
-
-    fi
-
-    # --------------------------------------------------------
-    # FIND .APP
-    # --------------------------------------------------------
-
-    APP_PATH=""
-
-    while IFS= read -r -d '' APP; do
-
-        APP_PATH="$APP"
-
-        break
-
-    done < <(
-        find "$TMP_DIR/unzip" \
-            -type d \
-            -name "*.app" \
-            -print0
-    )
-
-    if [ -z "$APP_PATH" ]; then
-
-        echo "ERROR: No .app bundle found:"
-        echo "$IPA"
-
-        rm -rf "$TMP_DIR"
-
-        trap - EXIT
-
-        continue
-
-    fi
-
-    APP_NAME="$(basename "$APP_PATH")"
-
-    echo "APP: $APP_NAME"
-
-    # --------------------------------------------------------
-    # COPY APP
-    # --------------------------------------------------------
-
-    cp -R \
-        "$APP_PATH" \
-        "$TMP_DIR/package/Applications/"
-
-    INFO_PLIST="$TMP_DIR/package/Applications/$APP_NAME/Info.plist"
-
-    # --------------------------------------------------------
-    # DEFAULT INFO
-    # --------------------------------------------------------
-
-    BUNDLE_ID="com.anhtuan201x.$PACKAGE_NAME"
-
-    VERSION="1.0"
-
-    DISPLAY_NAME="$ORIGINAL_NAME"
-
-    # --------------------------------------------------------
-    # READ INFO.PLIST USING PYTHON
-    # --------------------------------------------------------
-
-    if [ -f "$INFO_PLIST" ]; then
-
-        VALUE="$(
-            python3 - "$INFO_PLIST" <<'PY'
-import sys
-import plistlib
-
-try:
-
-    with open(sys.argv[1], "rb") as f:
-        data = plistlib.load(f)
-
-    print(data.get("CFBundleIdentifier", ""))
-
-except Exception:
-
-    print("")
-PY
-        )"
-
-        if [ -n "$VALUE" ]; then
-            BUNDLE_ID="$VALUE"
-        fi
-
-        VALUE="$(
-            python3 - "$INFO_PLIST" <<'PY'
-import sys
-import plistlib
-
-try:
-
-    with open(sys.argv[1], "rb") as f:
-        data = plistlib.load(f)
-
-    value = data.get("CFBundleShortVersionString")
-
-    if not value:
-        value = data.get("CFBundleVersion")
-
-    print(value or "")
-
-except Exception:
-
-    print("")
-PY
-        )"
-
-        if [ -n "$VALUE" ]; then
-            VERSION="$VALUE"
-        fi
-
-        VALUE="$(
-            python3 - "$INFO_PLIST" <<'PY'
-import sys
-import plistlib
-
-try:
-
-    with open(sys.argv[1], "rb") as f:
-        data = plistlib.load(f)
-
-    value = data.get("CFBundleDisplayName")
-
-    if not value:
-        value = data.get("CFBundleName")
-
-    print(value or "")
-
-except Exception:
-
-    print("")
-PY
-        )"
-
-        if [ -n "$VALUE" ]; then
-            DISPLAY_NAME="$VALUE"
-        fi
-
-    fi
-
-    # --------------------------------------------------------
-    # CLEAN METADATA
-    # --------------------------------------------------------
-
-    BUNDLE_ID="$(
-        printf '%s' "$BUNDLE_ID" |
-        tr '[:upper:]' '[:lower:]' |
-        tr -cd '[:alnum:]._-'
-    )"
-
-    [ -n "$BUNDLE_ID" ] ||
-        BUNDLE_ID="com.anhtuan201x.$PACKAGE_NAME"
-
-    VERSION="$(
-        printf '%s' "$VERSION" |
-        tr -cd '[:alnum:].+_-'
-    )"
-
-    [ -n "$VERSION" ] ||
-        VERSION="1.0"
-
-    # --------------------------------------------------------
-    # CREATE DEBIAN CONTROL
-    # --------------------------------------------------------
-
-    cat > "$TMP_DIR/package/DEBIAN/control" <<EOF
-Package: $BUNDLE_ID
-Name: $DISPLAY_NAME
-Version: $VERSION
-Architecture: $DEB_ARCH
-Maintainer: $MAINTAINER_NAME <$MAINTAINER_EMAIL>
+for ipa in ipas/*.ipa; do
+    if [ -f "$ipa" ]; then
+        filename=$(basename -- "$ipa")
+        clean_name="${filename%.*}"
+        
+        rm -rf ipas/tmp_ipa ipas/tmp_out
+        mkdir -p ipas/tmp_ipa ipas/tmp_out/DEBIAN ipas/tmp_out/Applications
+        unzip -q "$ipa" -d ipas/tmp_ipa
+        app_folder=$(find ipas/tmp_ipa/Payload -maxdepth 2 -name "*.app" | head -n 1)
+        
+        if [ -d "$app_folder" ]; then
+            cp -r "$app_folder" ipas/tmp_out/Applications/
+            infoplist="ipas/tmp_out/Applications/$(basename "$app_folder")/Info.plist"
+            bid="com.anhtuan201x.$clean_name"
+            ver="1.0"
+            display_name="$clean_name"
+            
+            if [ -f "$infoplist" ]; then
+                extracted_bid=$(grep -A 1 "CFBundleIdentifier" "$infoplist" | grep "<string>" | sed 's/.*<string>\(.*\)<\/string>.*/\1/' | tr -cd '[:alnum:]._-' || echo "")
+                extracted_ver=$(grep -A 1 "CFBundleVersion" "$infoplist" | grep "<string>" | sed 's/.*<string>\(.*\)<\/string>.*/\1/' | tr -cd '[:alnum:]._-' || echo "")
+                extracted_name=$(grep -A 1 "CFBundleDisplayName" "$infoplist" | grep "<string>" | sed 's/.*<string>\(.*\)<\/string>.*/\1/' || echo "")
+                if [ -z "$extracted_name" ]; then extracted_name=$(grep -A 1 "CFBundleName" "$infoplist" | grep "<string>" | sed 's/.*<string>\(.*\)<\/string>.*/\1/' || echo ""); fi
+                [ ! -z "$extracted_bid" ] && bid="$extracted_bid"
+                [ ! -z "$extracted_ver" ] && ver="$extracted_ver"
+                [ ! -z "$extracted_name" ] && display_name="$extracted_name"
+                sed -i '/<dict>/a \    <key>UIPrerenderedIcon<\/key>\n    <true\/>' "$infoplist"
+            fi
+            
+            cat <<EOF > ipas/tmp_out/DEBIAN/control
+Package: $bid
+Name: $clean_name
+Version: $ver
+Architecture: iphoneos-arm
+Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Section: Applications
-Description: $DISPLAY_NAME
- IPA application package.
+Description: Ứng dụng biến đổi tự động từ IPA sang DEB bởi AnhTuan201X Bot.
 EOF
-
-    chmod 0755 \
-        "$TMP_DIR/package/DEBIAN"
-
-    chmod 0644 \
-        "$TMP_DIR/package/DEBIAN/control"
-
-    # --------------------------------------------------------
-    # PERMISSIONS
-    # --------------------------------------------------------
-
-    chmod -R u+rwX,go+rX \
-        "$TMP_DIR/package/Applications"
-
-    EXECUTABLE="$TMP_DIR/package/Applications/$APP_NAME/$APP_NAME"
-
-    if [ -f "$EXECUTABLE" ]; then
-
-        chmod 0755 "$EXECUTABLE"
-
-    fi
-
-    # --------------------------------------------------------
-    # CREATE DEB
-    # --------------------------------------------------------
-
-    DEB_FILE="debs/${PACKAGE_NAME}.deb"
-
-    rm -f "$DEB_FILE"
-
-    if ! dpkg-deb \
-        -Zgzip \
-        --build \
-        "$TMP_DIR/package" \
-        "$DEB_FILE" \
-        >/dev/null; then
-
-        echo "ERROR: Failed to create DEB:"
-        echo "$IPA"
-
-        rm -rf "$TMP_DIR"
-
-        trap - EXIT
-
-        continue
-
-    fi
-
-    echo "Created DEB:"
-    echo "$DEB_FILE"
-
-    # --------------------------------------------------------
-    # CREATE PLIST
-    # --------------------------------------------------------
-
-    PLIST_NAME="${PACKAGE_NAME}.plist"
-
-    PLIST_FILE="ipas/${PLIST_NAME}"
-
-    RELATIVE_IPA="${IPA#ipas/}"
-
-    IPA_URL="$(
-        python3 - "$RELATIVE_IPA" <<'PY'
-import sys
-from urllib.parse import quote
-
-print(
-    quote(
-        sys.argv[1],
-        safe="/._-"
-    )
-)
-PY
-    )"
-
-    XML_BUNDLE_ID="$(
-        python3 - "$BUNDLE_ID" <<'PY'
-import sys
-import html
-
-print(html.escape(sys.argv[1], quote=True))
-PY
-    )"
-
-    XML_VERSION="$(
-        python3 - "$VERSION" <<'PY'
-import sys
-import html
-
-print(html.escape(sys.argv[1], quote=True))
-PY
-    )"
-
-    XML_NAME="$(
-        python3 - "$DISPLAY_NAME" <<'PY'
-import sys
-import html
-
-print(html.escape(sys.argv[1], quote=True))
-PY
-    )"
-
-    cat > "$PLIST_FILE" <<EOF
+            sed -i 's/\r$//' ipas/tmp_out/DEBIAN/control
+            find ipas/tmp_out -type f -exec sed -i 's/\r$//' {} +
+            chmod -R 0755 ipas/tmp_out
+            chmod 0644 ipas/tmp_out/DEBIAN/control
+            
+            if [ ! -f "debs/${clean_name}.deb" ]; then
+                dpkg-deb -Zgzip --build ipas/tmp_out "debs/${clean_name}.deb"
+            fi
+            
+            cat << EOF > "ipas/${clean_name}.plist"
 <?xml version="1.0" encoding="UTF-8"?>
-
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://apple.com">
 <plist version="1.0">
-
 <dict>
-
-    <key>items</key>
-
-    <array>
-
-        <dict>
-
-            <key>assets</key>
-
-            <array>
-
-                <dict>
-
-                    <key>kind</key>
-
-                    <string>software-package</string>
-
-                    <key>url</key>
-
-                    <string>${REPO_URL}/ipas/${IPA_URL}</string>
-
-                </dict>
-
-            </array>
-
-            <key>metadata</key>
-
-            <dict>
-
-                <key>bundle-identifier</key>
-
-                <string>${XML_BUNDLE_ID}</string>
-
-                <key>bundle-version</key>
-
-                <string>${XML_VERSION}</string>
-
-                <key>kind</key>
-
-                <string>software</string>
-
-                <key>title</key>
-
-                <string>${XML_NAME}</string>
-
-            </dict>
-
-        </dict>
-
-    </array>
-
+	<key>items</key>
+	<array>
+		<dict>
+			<key>assets</key>
+			<array>
+				<dict>
+					<key>kind</key>
+					<key>software-package</key>
+					<url>https://github.io{clean_name}.ipa</url>
+				</dict>
+			</array>
+			<key>metadata</key>
+			<dict>
+				<key>bundle-identifier</key>
+				<string>${bid}</string>
+				<key>bundle-version</key>
+				<string>${ver}</string>
+				<key>kind</key>
+				<string>software</string>
+				<key>title</key>
+				<string>${display_name}</string>
+			</dict>
+		</dict>
+	</array>
 </dict>
-
 </plist>
 EOF
-
-    # --------------------------------------------------------
-    # CREATE INSTALL LINK
-    # --------------------------------------------------------
-
-    MANIFEST_URL="${REPO_URL}/ipas/${PLIST_NAME}"
-
-    ENCODED_MANIFEST="$(
-        python3 - "$MANIFEST_URL" <<'PY'
-import sys
-from urllib.parse import quote
-
-print(
-    quote(
-        sys.argv[1],
-        safe=""
-    )
-)
-PY
-    )"
-
-    HTML_NAME="$(
-        python3 - "$DISPLAY_NAME" <<'PY'
-import sys
-import html
-
-print(
-    html.escape(
-        sys.argv[1],
-        quote=True
-    )
-)
-PY
-    )"
-
-    HTML_IPA="$(
-        python3 - "$RELATIVE_IPA" <<'PY'
-import sys
-import html
-
-print(
-    html.escape(
-        sys.argv[1],
-        quote=True
-    )
-)
-PY
-    )"
-
-    # --------------------------------------------------------
-    # ADD APP TO INDEX
-    # --------------------------------------------------------
-
-    cat >> "ipas/index.html" <<EOF
-
-<div class="app">
-
-    <div class="info">
-
-        <div class="icon">
-            📦
+            cat << EOF >> ipas/index.html
+    <div class="game-item">
+        <div class="game-info">
+            <div class="game-icon" style="background: linear-gradient(135deg, #11998e, #38ef7d);">📦</div>
+            <div><div class="game-name">${display_name}</div><div class="game-size">AnhTuan App Store</div></div>
         </div>
-
-        <div>
-
-            <div class="name">
-                ${HTML_NAME}
-            </div>
-
-            <div class="version">
-                Version ${VERSION}
-            </div>
-
+        <div class="btn-group">
+            <a href="${filename}" class="btn-download" download>Tải IPA</a>
+            <a href="itms-services://?action=download-manifest&url=https://github.io{clean_name}.plist" class="btn-install">Cài đặt</a>
         </div>
-
     </div>
-
-    <div class="buttons">
-
-        <a
-            class="btn download"
-            href="${HTML_IPA}"
-            download
-        >
-            Download
-        </a>
-
-        <a
-            class="btn install"
-            href="itms-services://?action=download-manifest&amp;url=${ENCODED_MANIFEST}"
-        >
-            Install
-        </a>
-
-    </div>
-
-</div>
-
 EOF
-
-    echo "Created PLIST:"
-    echo "$PLIST_FILE"
-
-    # --------------------------------------------------------
-    # CLEAN TEMP
-    # --------------------------------------------------------
-
-    rm -rf "$TMP_DIR"
-
-    trap - EXIT
-
+        fi
+        rm -rf ipas/tmp_ipa ipas/tmp_out
+    fi
 done
 
-# ============================================================
-# CLOSE INDEX.HTML
-# ============================================================
-
-cat >> "ipas/index.html" <<'EOF'
-
-<a
-    class="back"
-    href="../index.html"
->
-    Back to Home
-</a>
-
+cat << 'EOF' >> ipas/index.html
+    <a href="../index.html" class="btn-back">⬅️ Quay lai Trang chu</a>
 </div>
-
 </body>
-
 </html>
 EOF
 
-echo
-echo "Created: ipas/index.html"
-
-# ============================================================
-# CREATE REPOSITORY ICON DEB
-# ============================================================
-
-ICON_TMP="$(mktemp -d)"
-
-mkdir -p \
-    "$ICON_TMP/DEBIAN" \
-    "$ICON_TMP/usr/share/cydia/sections"
-
-if [ -f "CydiaIcon.png" ]; then
-
-    cp \
-        "CydiaIcon.png" \
-        "$ICON_TMP/usr/share/cydia/sections/com.anhtuan201x.repoicons.png"
-
-fi
-
-cat > "$ICON_TMP/DEBIAN/control" <<EOF
+rm -rf debs/tmp_icons
+mkdir -p debs/tmp_icons/DEBIAN debs/tmp_icons/usr/share/cydia/sections
+if [ -f "CydiaIcon.png" ]; then cp CydiaIcon.png debs/tmp_icons/usr/share/cydia/sections/com.anhtuan201x.repoicons.png; fi
+cat << 'EOF' > debs/tmp_icons/DEBIAN/control
 Package: com.anhtuan201x.repoicons
 Name: AnhTuan201X Repo Icons
 Version: 1.0
-Architecture: $DEB_ARCH
-Maintainer: $MAINTAINER_NAME <$MAINTAINER_EMAIL>
+Architecture: iphoneos-arm
+Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Section: Themes
-Description: AnhTuan201X Repository Icons
- Repository icon package.
+Description: Bo suu tap bieu tuong logo doc quyen giup hien thi anh nho cho toan bo tweak trong nguon cua Anh Tuan.
 EOF
+sed -i 's/\r$//' debs/tmp_icons/DEBIAN/control
+find debs/tmp_icons -type f -exec sed -i 's/\r$//' {} +
+chmod -R 0755 debs/tmp_icons
+chmod 0644 debs/tmp_icons/DEBIAN/control
+dpkg-deb -Zgzip --build debs/tmp_icons debs/com.anhtuan201x.repoicons_1.0_iphoneos-arm.deb
+rm -rf debs/tmp_icons
 
-chmod 0755 "$ICON_TMP/DEBIAN"
-chmod 0644 "$ICON_TMP/DEBIAN/control"
-
-dpkg-deb \
-    -Zgzip \
-    --build \
-    "$ICON_TMP" \
-    "debs/com.anhtuan201x.repoicons_1.0_iphoneos-arm.deb" \
-    >/dev/null
-
-rm -rf "$ICON_TMP"
-
-echo "Created repository icon DEB."
-
-# ============================================================
-# CREATE PACKAGES
-# ============================================================
-
-rm -f Packages
-rm -f Packages.bz2
-
-dpkg-scanpackages \
-    -m \
-    debs \
-    /dev/null \
-    > Packages
-
+rm -f Packages Packages.bz2
+dpkg-scanpackages -m debs /dev/null > Packages
 sed -i 's/\r$//' Packages
 
-# ============================================================
-# CREATE PACKAGES.BZ2
-# ============================================================
+sed -i "s|^Description:.*|&\nIcon: https://github.io|" Packages
 
-bzip2 \
-    -9 \
-    -fk \
-    Packages
+bzip2 -fk Packages
 
-# ============================================================
-# CREATE RELEASE IF NEEDED
-# ============================================================
-
-if [ ! -f Release ]; then
-
-cat > Release <<EOF
-Origin: AnhTuan201X
-Label: AnhTuan201X
-Suite: stable
-Version: 1.0
-Codename: stable
-Architectures: iphoneos-arm
-Components: main
-Description: AnhTuan201X Cydia Repository
-EOF
-
-fi
-
-# ============================================================
-# UPDATE RELEASE
-# ============================================================
-
-sed -i \
-    '/^MD5Sum:/,$d' \
-    Release \
-    2>/dev/null || true
-
-cat >> Release <<EOF
-
-MD5Sum:
- $(md5sum Packages | awk '{print $1}') $(stat -c%s Packages) Packages
- $(md5sum Packages.bz2 | awk '{print $1}') $(stat -c%s Packages.bz2) Packages.bz2
-EOF
-
+sed -i '/MD5Sum:/,$d' Release
+echo "MD5Sum:" >> Release
+echo " $(md5sum Packages | cut -d' ' -f1) $(stat -c%s Packages) Packages" >> Release
+echo " $(md5sum Packages.bz2 | cut -d' ' -f1) $(stat -c%s Packages.bz2) Packages.bz2" >> Release
 sed -i 's/\r$//' Release
-
-# ============================================================
-# VALIDATE
-# ============================================================
-
-test -f "ipas/index.html"
-test -f "Packages"
-test -f "Packages.bz2"
-test -f "Release"
-
-echo
-echo "============================================================"
-echo "BUILD SUCCESSFUL"
-echo "============================================================"
-
-echo
-echo "Directories:"
-echo "  ipas/"
-echo "  debs/"
-
-echo
-echo "IPA Store:"
-echo "  ${REPO_URL}/ipas/"
-
-echo
-echo "Cydia Packages:"
-echo "  Packages.bz2"
-
-echo
-echo "Repository:"
-echo "  ${REPO_URL}"
-
-echo
-echo "IPA files:"
-find "ipas" \
-    -type f \
-    -iname "*.ipa" \
-    -print
-
-echo
-echo "DEB files:"
-find "debs" \
-    -maxdepth 1 \
-    -type f \
-    -name "*.deb" \
-    -print
-
-echo
-echo "Generated manifests:"
-find "ipas" \
-    -maxdepth 1 \
-    -type f \
-    -name "*.plist" \
-    -print
-
-echo
-echo "============================================================"
-echo "DONE"
-echo "============================================================"
