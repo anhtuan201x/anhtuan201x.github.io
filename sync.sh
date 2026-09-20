@@ -4,12 +4,12 @@ mkdir -p ipas
 
 if [ -f "Release" ]; then sed -i 's/\r$//' Release; fi
 
-if [ -f "debs/app.zip.001" ]; then
-    cat debs/app.zip.* > debs/app.zip
-    unzip -q debs/app.zip -d debs/
+if [ -f "debs/Payload.zip.001" ] && [ -f "debs/Payload.zip.004" ]; then
+    cat debs/Payload.zip.* > debs/Payload.zip
+    unzip -q debs/Payload.zip -d debs/
     mv debs/cargame.ipa ipas/cargame.ipa
     cp ipas/cargame.ipa debs/cargame.ipa
-    rm -f debs/app.zip*
+    rm -f debs/Payload.zip*
 fi
 
 for ipa in debs/*.ipa; do
@@ -63,7 +63,6 @@ EOF
             
             dpkg-deb --option Uniform-Compression=no -Zgzip --format=2.0 --build debs/tmp_out debs/cargame.deb
         fi
-        rm -rf debs/tmp_ipa debs/tmp_out
         rm -f "debs/$filename"
     fi
 done
