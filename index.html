@@ -28,50 +28,28 @@
         body {
             font-family: -apple-system, sans-serif;
             background: var(--bg-gradient);
-            margin: 0;
-            padding: 20px;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
+            margin: 0; padding: 20px; min-height: 100vh;
+            display: flex; align-items: center; justify-content: center;
+            position: relative; overflow: hidden;
         }
-        #galaxyCanvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            pointer-events: none;
-        }
+        #galaxyCanvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
         .container {
-            max-width: 440px;
-            width: 100%;
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 35px 25px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-            text-align: center;
-            position: relative;
-            z-index: 2;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            max-width: 440px; width: 100%; background: var(--card-bg); border: 1px solid var(--border);
+            border-radius: 20px; padding: 35px 25px; box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            text-align: center; position: relative; z-index: 2; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
         }
         .logo { width: 90px; height: 90px; border-radius: 22px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
         h1 { background: linear-gradient(45deg, #ff416c, #ff4b2b); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-size: 30px; margin: 0 0 10px; font-weight: 700; }
         .old-description { color: var(--text-main); font-size: 15px; font-weight: 600; margin: 0 0 20px; }
         .story-subtitle { color: var(--text-sub); font-size: 13.5px; line-height: 1.6; margin: 0 0 25px; text-align: justify; border-top: 1px solid var(--border); padding-top: 15px; max-height: 220px; overflow-y: auto; }
         .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 25px; }
-        .stats-grid a { text-decoration: none; display: block; }
         .stat-card { background: var(--card-sub); border-radius: 10px; padding: 10px 5px; border: 1px solid var(--border); }
         .stat-num { font-weight: bold; color: #ff4b2b; font-size: 16px; }
         .stat-label { font-size: 11px; color: #8e8e93; margin-top: 3px; }
-        .btn-add { display: block; background: linear-gradient(135deg, #4cd964, #28c840); color: #fff; font-weight: bold; text-decoration: none; padding: 14px 0; border-radius: 25px; font-size: 16px; box-shadow: 0 4px 10px rgba(76,217,100,0.3); transition: transform 0.2s; }
+        .btn-add { display: block; background: linear-gradient(135deg, #4cd964, #28c840); color: #fff; font-weight: bold; text-decoration: none; padding: 14px 0; border-radius: 25px; font-size: 16px; box-shadow: 0 4px 10px rgba(76,217,100,0.3); transition: transform 0.2s; text-align: center; }
         .btn-add:hover { transform: scale(0.95); }
-        .music-btn { position: absolute; top: 15px; right: 15px; background: var(--card-sub); border: 1px solid var(--border); padding: 6px 10px; border-radius: 15px; font-size: 12px; cursor: pointer; color: var(--text-main); }
+        .music-btn { position: absolute; top: 15px; right: 15px; background: var(--card-sub); border: 1px solid var(--border); padding: 6px 10px; border-radius: 15px; font-size: 12px; cursor: pointer; color: var(--text-main); transition: all 0.3s; }
+        .music-btn.active { background: linear-gradient(135deg, #4cd964, #28c840); color: #fff; box-shadow: 0 4px 10px rgba(76,217,100,0.3); border-color: transparent; }
     </style>
 </head>
 <body>
@@ -90,11 +68,9 @@
             <div class="stat-card"><div class="stat-num">999+</div><div class="stat-label">Downloads</div></div>
             <div class="stat-card"><div class="stat-num" style="color:#4cd964;">Online</div><div class="stat-label">Server Status</div></div>
         </div>
-        
         <a href="link" class="btn-add">Add to Cydia</a>
     </div>
-    <audio id="bgm" loop preload="none" src="<audio id="bgm" loop preload="auto" src="http://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
-"></audio>
+    <audio id="bgm" loop preload="auto" src="http://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
     <script>
         const canvas = document.getElementById("galaxyCanvas"), ctx = canvas.getContext("2d");
         let stars = []; const mouse = { x: null, y: null, radius: 100 };
@@ -104,52 +80,40 @@
         window.addEventListener("mouseout", () => { mouse.x = null; mouse.y = null; });
         class Star {
             constructor() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
-                this.vx = (Math.random() - 0.5) * 0.8;
-                this.vy = (Math.random() - 0.5) * 0.8;
-                this.radius = Math.random() * 2;
-                this.alpha = Math.random();
-                this.alphaSpeed = Math.random() * 0.02 + 0.01;
+                this.x = Math.random() * canvas.width; this.y = Math.random() * canvas.height;
+                this.vx = (Math.random() - 0.5) * 0.8; this.vy = (Math.random() - 0.5) * 0.8;
+                this.radius = Math.random() * 2; this.alpha = Math.random(); this.alphaSpeed = Math.random() * 0.02 + 0.01;
             }
             update() {
                 this.x += this.vx; this.y += this.vy;
                 if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
                 if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-                this.alpha += this.alphaSpeed;
-                if (this.alpha <= 0 || this.alpha >= 1) this.alphaSpeed *= -1;
+                this.alpha += this.alphaSpeed; if (this.alpha <= 0 || this.alpha >= 1) this.alphaSpeed *= -1;
                 if (mouse.x !== null && mouse.y !== null) {
-                    let dx = this.x - mouse.x, dy = this.y - mouse.y;
-                    let dist = Math.sqrt(dx * dx + dy * dy);
+                    let dx = this.x - mouse.x, dy = this.y - mouse.y; let dist = Math.sqrt(dx * dx + dy * dy);
                     if (dist < mouse.radius) {
-                        let force = (mouse.radius - dist) / mouse.radius * 3;
-                        this.x += (dx / dist) * force; this.y += (dy / dist) * force;
+                        let force = (mouse.radius - dist) / mouse.radius * 3; this.x += (dx / dist) * force; this.y += (dy / dist) * force;
                     }
                 }
             }
             draw() {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(255, 255, 255, ${Math.abs(this.alpha)})`;
-                ctx.fill();
+                ctx.beginPath(); ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(255, 255, 255, ${Math.abs(this.alpha)})`; ctx.fill();
             }
         }
         for (let i = 0; i < 100; i++) stars.push(new Star());
         function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            stars.forEach(s => { s.update(); s.draw(); });
+            ctx.clearRect(0, 0, canvas.width, canvas.height); stars.forEach(s => { s.update(); s.draw(); });
             requestAnimationFrame(animate);
         }
         animate();
-
         const bgm = document.getElementById("bgm"), musicToggle = document.getElementById("musicToggle");
         musicToggle.addEventListener("click", () => {
             if (bgm.paused) {
                 bgm.play().catch(err => console.log("BGM play blocked: ", err));
-                musicToggle.innerText = "🎵 BGM: On";
+                musicToggle.innerText = "🎵 BGM: On"; musicToggle.classList.add("active");
             } else {
-                bgm.pause();
-                musicToggle.innerText = "🎵 BGM: Off";
+                bgm.pause(); musicToggle.innerText = "🎵 BGM: Off"; musicToggle.classList.remove("active");
             }
         });
     </script>
