@@ -7,5 +7,5 @@ Architectures: iphoneos-arm iphoneos-arm64
 Components: main
 Description: Kho luu tru tweak cho iOS 6 Legacy.
 MD5Sum:
- f24203dfb7d77b353606499a0d5bd3d1 38221 Packages
- 441f0b9790955d2e3eaf0756e625062e 11202 Packages.bz2
+ 5d00f7dc7d8a3470dfdce321d7ca87cc 38221 Packages
+ ff79c3b232f130d9dcbd3fa470b20f1a 11227 Packages.bz2
