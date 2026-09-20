@@ -305,6 +305,22 @@ Depiction: http://modmyi.com/info/ncsettings.d.php
 Name: NCSettings
 Sponsor: ModMyi.com <http://modmyi.com/forums/index.php?styleid=31>
 
+Package: com.kita.maps5
+Version: 1.0.0
+Architecture: iphoneos-arm
+Maintainer: Kita
+Installed-Size: 228
+Filename: debs/com.kita.maps5_1.0.0_iphoneos-arm.deb
+Size: 21339346
+MD5sum: e6ee53484cce5c6dde1259484390b1ff
+SHA1: 2f38e7d69e9f52fd772caa30c30fbb9d577a718e
+SHA256: dab1fd68e8f358a94991bcbb4edf3438cd3597324bef0c8c9f957e7894897a09
+Section: Tweaks
+Icon: http://anhtuan201x.github.io/icon.png
+Description: Brings the iOS 5 google maps app to iOS 6!
+Author: Kita
+Name: Maps5
+
 Package: com.mathieubolard.killbackground
 Version: 1.3.1-7
 Architecture: iphoneos-arm
