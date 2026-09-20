@@ -38,7 +38,7 @@ Name: Placeholder
 Version: 1.0
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
-Section: AnhTuan201X Repo
+Section: Applications
 Description: Cydia Application
 EOF
             
@@ -62,8 +62,8 @@ done
 rm -rf debs/tmp_icons
 mkdir -p debs/tmp_icons/DEBIAN
 mkdir -p debs/tmp_icons/usr/share/cydia/sections
-if [ -f "icon.png" ]; then
-    cp icon.png debs/tmp_icons/usr/share/cydia/sections/com.anhtuan201x.repoicons.png
+if [ -f "CydiaIcon.png" ]; then
+    cp CydiaIcon.png debs/tmp_icons/usr/share/cydia/sections/com.anhtuan201x.repoicons.png
 fi
 cat << 'EOF' > debs/tmp_icons/DEBIAN/control
 Package: com.anhtuan201x.repoicons
@@ -85,8 +85,7 @@ rm -f Packages Packages.bz2
 dpkg-scanpackages -m debs /dev/null > Packages
 sed -i 's/\r$//' Packages
 
-sed -i 's/^Section:.*/Section: AnhTuan201X Repo/' Packages
-sed -i '/^Description:/i \Icon: http://anhtuan201x.github.io/CydiaIcon.png' Packages
+sed -i '/^Description:/i \Icon: https://anhtuan201x.github.io/CydiaIcon.png' Packages
 
 bzip2 -fk Packages
 
