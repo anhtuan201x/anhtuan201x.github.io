@@ -109,15 +109,29 @@ Icon: http://i.imgur.com/tvLxnB5.png
 Name: Zeppelin
 Sponsor: ModMyi.com <http://modmyi.com/forums/index.php?styleid=31>
 
+Package: com.anhtuan201x.chatgpt
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: AnhTuan201X <anhtuan201x@github.io>
+Filename: debs/chatgpt.deb
+Size: 3551674
+MD5sum: 3029abddd0925cdac7d7354650e1f025
+SHA1: 2d81d88a961e254056b4d7f1bf7f88dea7adc018
+SHA256: 99534b801cd4d4f51d924b1910918f62c249192376aa31dad42d873d0ec5bc66
+Section: Applications
+Description: Ứng dụng biến đổi tự động từ IPA sang DEB bởi AnhTuan201X Bot.
+Icon: https://github.io
+Name: chatgpt
+
 Package: com.anhtuan201x.repoicons
 Version: 1.0
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: debs/com.anhtuan201x.repoicons_1.0_iphoneos-arm.deb
-Size: 16430
-MD5sum: d98f36006eb75f7dcc1324b51f5026e0
-SHA1: ddd2ed31722281484e6a9024d12ef185c6de2b84
-SHA256: dd38865ffb3fe08f7a065eb08869c26fccd1cc56b6bce78f540c2aa81149790d
+Size: 16428
+MD5sum: 18386a89b22c947e6d8e3447ac15b6c6
+SHA1: 0c0deafe8f5840c89631f11b99e3052a7ced7b79
+SHA256: 72744f006dcd608ed150eb2773d692618f9c871120ce79b78be559286943b35e
 Section: Themes
 Description: Bo suu tap bieu tuong logo doc quyen giup hien thi anh nho cho toan bo tweak trong nguon cua Anh Tuan.
 Icon: https://github.io
