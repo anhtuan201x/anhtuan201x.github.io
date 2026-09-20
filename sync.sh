@@ -41,7 +41,7 @@ cat << 'EOF' > ipas/index.html
 <div class="store-card">
     <h1>AnhTuan IPA Store</h1>
     <p class="sub-title">Kho tải ứng dụng & game IPA độc quyền dành cho thiết bị iOS Legacy.</p>
-    <div class="notice">⚠️ <b>Lưu ý:</b> Bạn phải cài đặt sẵn <b>AppSync Unified</b> trên máy. Nếu chưa có, bạn có thể thêm nguồn của tôi tại địa chỉ <b>http://github.io</b> để tải về cài đặt, tránh ứng dụng cài xong bị văng ra lập tức.</div>
+    <div class="notice">⚠️ <b>Lưu ý:</b> Bạn phải cài đặt sẵn <b>AppSync Unified</b> trên máy. Nếu chưa có, bạn có thể thêm nguồn của tôi tại địa chỉ <b>http://anhtuan201x.github.io/</b> để tải về cài đặt, tránh ứng dụng cài xong bị văng ra lập tức.</div>
 EOF
 
 for ipa in ipas/*.ipa; do
@@ -94,20 +94,21 @@ EOF
         
         cat << EOF > "ipas/${clean_name}.plist"
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://apple.com">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>items</key>
 	<array>
 		<dict>
 			<key>assets</key>
-			<array>
-				<dict>
-					<key>kind</key>
-					<key>software-package</key>
-					<url>https://github.io{filename}</url>
-				</dict>
-			</array>
+					<array>
+    					<dict>
+        			<key>kind</key>
+        			<string>software-package</string>
+        			<key>url</key>
+        		<string>https://anhtuan201x.github.io/ipas/app.ipa</string>
+    		</dict>
+		</array>
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
@@ -170,7 +171,7 @@ rm -f Packages Packages.bz2
 dpkg-scanpackages -m debs /dev/null > Packages
 sed -i 's/\r$//' Packages
 
-sed -i "s|^Description:.*|&\nIcon: https://github.io|" Packages
+sed -i "s|^Description:.*|&\nIcon: http://anhtuan201x.github.io/CydiaIcon.png' Packages
 
 bzip2 -fk Packages
 
