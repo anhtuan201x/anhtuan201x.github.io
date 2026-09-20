@@ -2,16 +2,18 @@
 mkdir -p debs
 mkdir -p ipas
 
-if [ -f "Release" ]; then sed -i 's/\r$//' Release; fi
+if [ -f "Release" ] ; then sed -i 's/\r$//' Release; fi
 
-if [ -d "debs/Payload" ]; then
-    cd debs
-    zip -qyX -r cargame.ipa Payload
-    cd ..
+if [ -f "ipas/Payload.zip.001" ] && [ -f "ipas/Payload.zip.004" ]; then
+    cat ipas/Payload.zip.* > ipas/Payload.zip
+    unzip -q ipas/Payload.zip -d ipas/
     
-    if [ -f "debs/cargame.ipa" ]; then
-        mv debs/cargame.ipa ipas/cargame.ipa
-        rm -rf debs/Payload
+    if [ -d "ipas/Payload" ]; then
+        cd ipas
+        zip -qyX -r cargame.ipa Payload
+        cd ..
+        rm -rf ipas/Payload ipas/Payload.zip
+        rm -f ipas/Payload.zip.*
     fi
 fi
 
