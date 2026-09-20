@@ -19,24 +19,6 @@ Author: Karen/あけみ, Linus Yang <karen@akemi.ai>
 Depiction: https://cydia.akemi.ai/?page/ai.akemi.appsyncunified
 Name: AppSync Unified
 
-Package: bag.xml.ChatGPT
-Version: 1.0.2-zoom
-Architecture: iphoneos-arm
-Maintainer: AnhTuan201X <anhtuan201x@github.io>
-Depends: firmware (>= 5.0), uikittools, appsync
-Filename: debs/bag.xml.ChatGPT-1.0.2-zoom-iOS-5.0.deb
-Size: 3552180
-MD5sum: 9b78f88f064fbcbe33286ebc42cc4a2b
-SHA1: 3ca3783aba80cf068ce21d99bd01e5563b77f063
-SHA256: 30f210e32874bd91029f48c3b2be3f1bf43b9c4c08421213bc823723a3219bc7
-Section: AppStore Apps
-Homepage: http://github.io
-Description: The decrypted ipa file: debs/ChatGPT-v1.0.2-openrouter.ipa converted to .deb automatically by https://alex-free.github.io/ipa2deb .
-Author: AnhTuan201X <anhtuan201x@github.io>
-Depiction: http://github.io
-Name: ChatGPT v1.0.2-zoom (iOS 5.0)
-Sponsor: AnhTuan201X <anhtuan201x@github.io>
-
 Package: ca.adrien.appdrop
 Version: 3.2.1.1
 Architecture: iphoneos-arm
@@ -127,10 +109,10 @@ Version: 1.0
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: debs/com.anhtuan201x.repoicons_1.0_iphoneos-arm.deb
-Size: 16392
-MD5sum: 104244cfa7baf569a7cca7c08481b01b
-SHA1: 809e457a49c3703d0c696cc68b8c2b87ba1f80bf
-SHA256: 3df01eaafbaae2c256a73435c22dee31ff0632016ac9ae285541dc80af83187e
+Size: 16396
+MD5sum: 217a9d9c6e016d739ba2eae1f3b1028f
+SHA1: 3f894315876777948744557209b36aac18864f5c
+SHA256: ebf34cb31e5391fdf006144c891c090e7a75950b57dae0298fda384f07c2f763
 Section: Themes
 Description: AnhTuan201X Repository Icons
  Repository icon package.
