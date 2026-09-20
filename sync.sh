@@ -4,42 +4,54 @@ mkdir -p ipas
 
 if [ -f "Release" ] ; then sed -i 's/\r$//' Release; fi
 
-if [ -f "ipas/Payload.zip.001" ] && [ -f "ipas/Payload.zip.004" ]; then
-    cat ipas/Payload.zip.* > ipas/Payload.zip
-    unzip -q ipas/Payload.zip -d ipas/
-    
-    if [ -d "ipas/Payload" ]; then
-        cd ipas
-        zip -q -r -y cargame.ipa Payload/
-        cd ..
-        rm -rf ipas/Payload ipas/Payload.zip
-        rm -f ipas/Payload.zip.*
-    fi
-fi
-
-if [ -d "debs/Payload" ]; then
-    cd debs
-    zip -q -r -y cargame.ipa Payload/
-    cd ..
-    if [ -f "debs/cargame.ipa" ]; then
-        mv debs/cargame.ipa ipas/cargame.ipa
-        rm -rf debs/Payload
-    fi
-fi
-
 for ipa in debs/*.ipa; do
     if [ -f "$ipa" ]; then
         filename=$(basename -- "$ipa")
+        appname="${filename%.*}"
+        clean_name=$(echo "$appname" | tr -cd '[:alnum:]' | tr '[:upper:]' '[:lower:]')
+        rm -rf debs/tmp_ipa debs/tmp_out
+        mkdir -p debs/tmp_ipa debs/tmp_out/DEBIAN debs/tmp_out/Applications
+        unzip -q "$ipa" -d debs/tmp_ipa
+        app_folder=$(find debs/tmp_ipa/Payload -maxdepth 2 -name "*.app" | head -n 1)
+        if [ -d "$app_folder" ]; then
+            cp -r "$app_folder" debs/tmp_out/Applications/
+            infoplist="debs/tmp_out/Applications/$(basename "$app_folder")/Info.plist"
+            bid="com.anhtuan201x.$clean_name"
+            ver="1.0"
+            if [ -f "$infoplist" ]; then
+                extracted_bid=$(grep -A 1 "CFBundleIdentifier" "$infoplist" | grep "<string>" | sed 's/.*<string>\(.*\)<\/string>.*/\1/' | tr -cd '[:alnum:]._-')
+                extracted_ver=$(grep -A 1 "CFBundleVersion" "$infoplist" | grep "<string>" | sed 's/.*<string>\(.*\)<\/string>.*/\1/' | tr -cd '[:alnum:]._-')
+                if [ ! -z "$extracted_bid" ]; then bid="$extracted_bid"; fi
+                if [ ! -z "$extracted_ver" ]; then ver="$extracted_ver"; fi
+                sed -i '/<dict>/a \    <key>UIPrerenderedIcon<\/key>\n    <true\/>' "$infoplist"
+            fi
+            cat << 'EOF' > debs/tmp_out/DEBIAN/control
+Package: com.anhtuan201x.placeholder
+Name: Placeholder
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: AnhTuan201X <anhtuan201x@github.io>
+Section: Applications
+Description: Cydia Application
+EOF
+            sed -i "s/^Package:.*/Package: $bid/" debs/tmp_out/DEBIAN/control
+            sed -i "s/^Name:.*/Name: $clean_name/" debs/tmp_out/DEBIAN/control
+            sed -i "s/^Version:.*/Version: $ver/" debs/tmp_out/DEBIAN/control
+            sed -i "s/^Description:.*/Description: Ung dung duoc bien doi tu dong tu file IPA sang DEB boi AnhTuan201X Bot./" debs/tmp_out/DEBIAN/control
+            sed -i 's/\r$//' debs/tmp_out/DEBIAN/control
+            find debs/tmp_out -type f -exec sed -i 's/\r$//' {} +
+            chmod -R 0755 debs/tmp_out
+            chmod 0644 debs/tmp_out/DEBIAN/control
+            dpkg-deb -Zgzip --build debs/tmp_out "debs/${clean_name}.deb"
+        fi
         mv "$ipa" ipas/
+        rm -rf debs/tmp_ipa debs/tmp_out
     fi
 done
 
 rm -rf debs/tmp_icons
-mkdir -p debs/tmp_icons/DEBIAN
-mkdir -p debs/tmp_icons/usr/share/cydia/sections
-if [ -f "CydiaIcon.png" ]; then
-    cp CydiaIcon.png debs/tmp_icons/usr/share/cydia/sections/com.anhtuan201x.repoicons.png
-fi
+mkdir -p debs/tmp_icons/DEBIAN debs/tmp_icons/usr/share/cydia/sections
+if [ -f "CydiaIcon.png" ]; then cp CydiaIcon.png debs/tmp_icons/usr/share/cydia/sections/com.anhtuan201x.repoicons.png; fi
 cat << 'EOF' > debs/tmp_icons/DEBIAN/control
 Package: com.anhtuan201x.repoicons
 Name: AnhTuan201X Repo Icons
