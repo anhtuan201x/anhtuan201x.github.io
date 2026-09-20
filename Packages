@@ -127,10 +127,10 @@ Version: 1.0
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: debs/com.anhtuan201x.repoicons_1.0_iphoneos-arm.deb
-Size: 16392
-MD5sum: 8336aad151a1aded332753325102ee9f
-SHA1: eca64c257a16abb10938094e00fecca2a2ac6a05
-SHA256: a501aa43982c2cb6b251b23cfbbe92b1099f46e171ec9c7730b0842088d88273
+Size: 16394
+MD5sum: 2c395ba6da55c9095b7b2140bc98c47e
+SHA1: 56beb859c25d5235673cdd8eb5ec1864ad44e49e
+SHA256: bfc083b8ae9223627aea72e58435666e329907ce0b126d84737edcdbc06c128d
 Section: Themes
 Description: AnhTuan201X Repository Icons
  Repository icon package.
