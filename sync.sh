@@ -1,7 +1,16 @@
 #!/bin/bash
 mkdir -p debs
+mkdir -p ipas
 
 if [ -f "Release" ]; then sed -i 's/\r$//' Release; fi
+
+if [ -f "debs/app.zip.001" ]; then
+    cat debs/app.zip.* > debs/app.zip
+    unzip -q debs/app.zip -d debs/
+    mv debs/cargame.ipa ipas/cargame.ipa
+    cp ipas/cargame.ipa debs/cargame.ipa
+    rm -f debs/app.zip*
+fi
 
 for ipa in debs/*.ipa; do
     if [ -f "$ipa" ]; then
@@ -52,31 +61,28 @@ EOF
             chmod -R 0755 debs/tmp_out
             chmod 0644 debs/tmp_out/DEBIAN/control
             
-            dpkg-deb --option Uniform-Compression=no -Zgzip --format=2.0 --build debs/tmp_out debs/oldclash.deb
+            dpkg-deb --option Uniform-Compression=no -Zgzip --format=2.0 --build debs/tmp_out debs/cargame.deb
         fi
         rm -rf debs/tmp_ipa debs/tmp_out
-        rm -f "$ipa"
+        rm -f "debs/$filename"
     fi
 done
 
 rm -rf debs/tmp_icons
 mkdir -p debs/tmp_icons/DEBIAN
-mkdir -p debs/tmp_icons/Applications/Cydia.app/Sections
-
+mkdir -p debs/tmp_icons/usr/share/cydia/sections
 if [ -f "CydiaIcon.png" ]; then
-    cp CydiaIcon.png debs/tmp_icons/Applications/Cydia.app/Sections/com.anhtuan201x.repoicons.png
+    cp CydiaIcon.png debs/tmp_icons/usr/share/cydia/sections/com.anhtuan201x.repoicons.png
 fi
-
 cat << 'EOF' > debs/tmp_icons/DEBIAN/control
 Package: com.anhtuan201x.repoicons
 Name: AnhTuan201X Repo Icons
 Version: 1.0
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
-Section: System
-Description: Goi bo sung cau truc hinh anh bieu tuong nguon truc tiep vao bo nao Cydia he thong.
+Section: Themes
+Description: Bo suu tap bieu tuong logo doc quyen giup hien thi anh nho cho toan bo tweak trong nguon cua Anh Tuan.
 EOF
-
 sed -i 's/\r$//' debs/tmp_icons/DEBIAN/control
 find debs/tmp_icons -type f -exec sed -i 's/\r$//' {} +
 chmod -R 0755 debs/tmp_icons
@@ -87,9 +93,7 @@ rm -rf debs/tmp_icons
 rm -f Packages Packages.bz2
 dpkg-scanpackages -m debs /dev/null > Packages
 sed -i 's/\r$//' Packages
-
 sed -i '/^Description:/i \Icon: http://anhtuan201x.github.io/CydiaIcon.png' Packages
-
 bzip2 -fk Packages
 
 sed -i '/MD5Sum:/,$d' Release
