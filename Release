@@ -6,6 +6,7 @@ Codename: ios
 Architectures: iphoneos-arm iphoneos-arm64
 Components: main
 Description: Kho luu tru tweak cho iOS 6 Legacy.
+
 MD5Sum:
- 6fc94c6207dda3333bea8ecf4669f6ea 38221 Packages
- c732ea3aa2fbcdc2deb11be362979305 11210 Packages.bz2
+ c3a046ab51924ab2e0380bc309af6c21 37373 Packages
+ f11e538982f177e81d79baa241052154 11162 Packages.bz2
