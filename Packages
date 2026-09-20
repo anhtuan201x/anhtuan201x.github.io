@@ -15,7 +15,7 @@ SHA256: 0036f28fcbdb165d4f58968a237ca9fe7b6ed33fea25b9a5eb1fc141f6bf5a09
 Section: Tweaks
 Homepage: https://cydia.akemi.ai/
 Description: Enables the ability to install unsigned/fakesigned iOS applications.
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: Karen/あけみ, Linus Yang <karen@akemi.ai>
 Depiction: https://cydia.akemi.ai/?page/ai.akemi.appsyncunified
 Name: AppSync Unified
@@ -34,7 +34,7 @@ SHA256: 1bd15efdd0a5845fb7e38728a495637cd7a463f013cada4a2801eb05487a3bc4
 Section: Utilities
 Homepage: https://github.com/AdrienRL1/AppDrop
 Description: Browse 43,000+ iOS apps by category and install them on iOS 5-10. Fully iPad-optimized. v3.2: new "Most Downloaded" home shortcut + per-app download counts + sort by downloads, live active-users count. Also fixes version/compatibility selection (always the newest installable, non-encrypted build) and a category-loading glitch. v3.2.0.1: "Uncategorized" category now lists apps that have no category, download counts & Most Downloaded refresh continuously, and the iOS 5.x launch crash is fixed. v3.2.0.3: community "compatibility builds" (an app re-targeted to a lower iOS) merge cleanly and are fully reversible. v3.2.1: freezing is a lot better now, especially on older devices; the catalogue is tidier, with apps that don't belong no longer recommended; the Search, Install and Settings icons at the bottom look a lot sharper; and on a colour or dark theme the selected tab follows your theme instead of always being blue. v3.2.1.1: fixes the big one on iOS 5-8 — AppDrop could say "Installed" for an app that was never installed, because ipainstaller reports a REFUSAL with the same exit code as a success. AppDrop now confirms with the device that the app really registered before claiming success, on every iOS version, and when an app is turned down it tells you exactly why (e.g. "requires iOS 7.0 while your system is 5.1.1") instead of a vague retry message. (17 themes + dark mode, Favorites & folders, 9 languages.)
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Tag: compatible_min::ios5.0
 Author: Adrien Ruest-Lorquet
 Depiction: https://adrienrl1.github.io/cydia/depiction.html
@@ -57,7 +57,7 @@ SHA256: 47b90e2a6965da0cfed5c8faccd8734347010cf4a42d5c70c809a40f71286626
 Section: Tweaks
 Homepage: http://rpetri.ch/cydia/auxo/
 Description: A modern app switcher in control center
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Tag: cydia::commercial
 Author: A3Tweaks <auxole-support@a3tweaks.com>
 Depiction: http://rpetri.ch/cydia/auxo/
@@ -79,7 +79,7 @@ SHA256: d6fe331f36993db0f8ba51576cc611fc7798c30df6d6cfc3826ff33f3e796fd8
 Section: Tweaks
 Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=barrelData
 Description: 3D and other effects on icon pages! A jailbreaking classic.
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Tag: purpose::extension, compatible::ios7, compatible::ios8, compatible::ios9, compatible::ios10, compatible::ios11, compatible::ios12, compatible::ios13
 Author: Aaron Ash (Charybdis) <support@multifl0w.com>
 Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=barrelData
@@ -102,7 +102,7 @@ Section: Tweaks
 Priority: extra
 Homepage: http://modmyi.com/info/zeppelin.php
 Description: Replaces carrier text with an image!
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: Alex Zielenski <support@alexzielenski.com>
 Depiction: http://modmyi.com/info/zeppelin.d.php
 Icon: http://i.imgur.com/tvLxnB5.png
@@ -115,12 +115,12 @@ Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: debs/com.anhtuan201x.repoicons_1.0_iphoneos-arm.deb
 Size: 16430
-MD5sum: 60d05b21c5fbe5913bdf62085a54faf9
-SHA1: 4986b115e19d86924b282ec2cf30df684b15b34f
-SHA256: 9bae0fde98cb4c788b20fa0f95bffe927aaafb04963db1106ad87238ad75072b
+MD5sum: aac85be67e4fa551acf89b477bb7258e
+SHA1: 80ea9e7ed1593ac8f8b6d1e6da6efed4b49c81f9
+SHA256: 8d82abf94567f1a6210a7b92604e74ba5fb4503db17cb713ad32a28c9110dd7d
 Section: Themes
 Description: Bo suu tap bieu tuong logo doc quyen giup hien thi anh nho cho toan bo tweak trong nguon cua Anh Tuan.
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Name: AnhTuan201X Repo Icons
 
 Package: com.coolbooter.coolbooter
@@ -135,7 +135,7 @@ SHA1: 414d678fbbf6349978003b8b28b3538ad9c23ed3
 SHA256: dcc9a6a42e063d005aea40e51d527634bfe073335b6680d8d37c46be34b0064e
 Section: System
 Description: CoolBooter is an all-in-one dual booting utility for jailbroken 32 bit iOS devices.
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: CoolBooter <coolbooterios@gmail.com>
 Name: CoolBooter
 
@@ -154,7 +154,7 @@ SHA256: 99c90c0f4629d47af1c52772f374eb74828f7cdafc469fcc42af0eea6d417c66
 Section: Utilities
 Homepage: http://ib-soft.net/icleaner
 Description: The first real iOS system cleanup and management utility
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: Ivano Bilenchi <support@ib-soft.net>
 Depiction: http://ib-soft.net/depictions/?pkgId=com.exile90.icleanerpro
 Icon: file:///Applications/iCleaner.app/Icon.png
@@ -174,7 +174,7 @@ SHA256: ed0aadc241368a34895d9122dc9debc0a25943853a781c760646dd7ded91654c
 Section: Tweaks (HYI)
 Homepage: http://repo.hackyouriphone.org/depiction/depiction.php?filename=forecast6
 Description: This is a compatibility version of Forecast for iOS6.
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: Stimpy5050 <repo@hackyouriphone.org>
 Depiction: http://repo.hackyouriphone.org/depiction/depiction.php?filename=forecast6
 Name: Forecast for iOS6
@@ -194,7 +194,7 @@ Section: Tweaks
 Priority: optional
 Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=iconbounceDp
 Description: dock icons randomly bounce & animate
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Tag: purpose::extension, compatible::ios7, compatible::ios8, compatible::ios9
 Author: Evan Lucas <evanlucas@me.com>
 Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=iconbounceDp
@@ -217,7 +217,7 @@ Section: System
 Priority: optional
 Homepage: http://www.saurik.com/id/9
 Description: Return the WinterBoard app.
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: Jay Freeman (saurik) <saurik@saurik.com>
 Icon: file:///Applications/WinterBoard.app/icon@2x.png
 Name: WinterBoard App
@@ -235,7 +235,7 @@ SHA256: b6bac2f4884b0765e2b7b7b1a0cd25a3aff4ece3903bda9f23fa0f284af00cb4
 Section: Games
 Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=memorygameDp
 Description: simple colorful memory matching game
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: Hmeedo Dhabry <Hmeedo@hotmail.co.il>
 Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=memorygameDp
 Dev: ihmeedo
@@ -257,7 +257,7 @@ SHA256: d3aaa49a9d81aa1cfc07d00bac894624dfde24186d909df8eb8a512bfdf015b8
 Section: Tweaks
 Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=swipeselectionDp
 Description: keyboard swipes move cursor & select text
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Tag: purpose::extension, compatible::ios7, compatible::ios8, compatible::ios9
 Author: iKy1e (Kyle Howells) <freerunnering+SwipeSelection@gmail.com>
 Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=swipeselectionDp
@@ -280,7 +280,7 @@ Section: Addons (NotificationCenter)
 Priority: extra
 Homepage: http://modmyi.com/info/ncsettings.php
 Description: NCSettings is a sleek Notification Center toggle widget
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: JamieD360 <jamied360support@live.co.uk>
 Depiction: http://modmyi.com/info/ncsettings.d.php
 Name: NCSettings
@@ -298,7 +298,7 @@ SHA1: 2f38e7d69e9f52fd772caa30c30fbb9d577a718e
 SHA256: dab1fd68e8f358a94991bcbb4edf3438cd3597324bef0c8c9f957e7894897a09
 Section: Tweaks
 Description: Brings the iOS 5 google maps app to iOS 6!
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: Kita
 Name: Maps5
 
@@ -317,7 +317,7 @@ Section: Tweaks
 Priority: optional
 Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=killbackgroundData
 Description: kill all background apps from switcher
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Tag: purpose::extension
 Author: Mathieu Bolard (mattlawer) <mattlawer08@gmail.com>
 Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=killbackgroundData
@@ -340,7 +340,7 @@ SHA256: 5ddac771540c6f8f8e1ada87fa0deae2f85e1aac2536d125aaa0787667528cd4
 Section: Tweaks
 Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=cylinderDp
 Description: Make your icons dance
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Tag: purpose::extension, compatible::ios7, compatible::ios8, compatible::ios9, compatible::ios10, compatible::ios11, compatible::ios12, compatible::ios13
 Author: Reed Weichler <rweichler+cydia@gmail.com>
 Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=cylinderDp
@@ -364,7 +364,7 @@ SHA256: 3e2674a3d8fba1ad244f4567b8f64d4d31540a804539ca437656ec7b5043312c
 Section: Tweaks
 Homepage: http://rpetri.ch/cydia/iconrenamer/
 Description: Rename icons from your SpringBoard
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Tag: purpose::extension
 Author: Ryan Petrich <rpetrich@gmail.com>
 Depiction: http://rpetri.ch/cydia/iconrenamer/
@@ -387,7 +387,7 @@ Section: Tweaks
 Priority: optional
 Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=sslpatchDp
 Description: Fix for CVE-2014-1266 on iOS 6.0-7.0.5 firmwares
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Tag: purpose::extension
 Author: Ryan Petrich <rpetrich+sslpatch@gmail.com>
 Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=sslpatchDp
@@ -412,7 +412,7 @@ SHA256: 287ac4ce1a6e4095e824fd90f71fed301ff7d9508f1cd2d87a7354053e347a3c
 Section: System
 Priority: optional
 Description: allow full file-system access over USB
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Tag: purpose::daemon, role::enduser
 Author: Jay Freeman (saurik) <saurik@saurik.com>
 Depiction: http://cydia.saurik.com/info/com.saurik.afc2d/
@@ -432,7 +432,7 @@ SHA256: 28d2bd4e42a095d5308fcc6f095cd638f8baf7cecde95d57201ec9049e7c8827
 Section: Tweaks
 Priority: optional
 Description: fits even more stuff right down there
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Tag: purpose::extension, role::enduser
 Author: Jay Freeman (saurik) <saurik@saurik.com>
 Depiction: http://cydia.saurik.com/info/com.saurik.iphone.fid/
@@ -451,7 +451,7 @@ SHA1: 7b100318280ace140e4f6b5c6f4e229cdfad4268
 SHA256: c63278d10b14407afbe9f4f155ef00efb831cacf84b881fb57a46174ca3afad1
 Section: Tweaks
 Description: Fix iOS's Weather & Stocks apps from iPhoneOS 2 to iOS 7, the widgets in the notification center, and the temperature in the iPad clock app!
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: Requis, Electimon
 Depiction: http://cydia.skyglow.es/depictions/com.skyglow.weatherx/depictions/index.html
 Name: Weather & Stocks
@@ -470,7 +470,7 @@ SHA1: 677bae75af27ed30af0934048c439565498a1908
 SHA256: 3bed517bf606e7849632b96a727fb1f4e105f6c70d8007dfc4f6789681db98f9
 Section: Utilities
 Description: File Manager for iPhone, iPad, iPod Touch. Supports iOS 7+
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: TIGI Software
 Name: Filza File Manager
 
@@ -488,7 +488,7 @@ SHA1: 525abb44984eb65f23230f1fc00e4d7ca0a7b269
 SHA256: a615bbd5c367cc1681eb3347725be459c7d8cfad38884e59f59fa594c256d9c7
 Section: Tweaks
 Description: Fix the App Store on iOS 6!
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: Victor <contact@victorlobe.me>
 Compatibility: iOS 6.0+
 Depiction: http://repo.victorlobe.me/depictions/depiction.html?id=com.victorlobe.appstorefix
@@ -510,7 +510,7 @@ SHA256: 76aa85bebaa52e8d05c56acd3ee1d791f2dce95c009a2d72778c3e6e4e006150
 Section: Utilities
 Homepage: http://www.veteris.victorlobe.me/
 Description: Welcome back!
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: Victor
 Compatibility: iOS 5.0+
 Depiction: http://repo.victorlobe.me/depictions/depiction.html?id=com.victorlobe.veteris
@@ -533,7 +533,7 @@ SHA256: 25a2de9b1e64bac0137af4b5ca010bcba2e310830e023b8aa1ececf896f0094f
 Section: Utilities
 Homepage: http://www.veteris.victorlobe.me/
 Description: Veteris's little friend.
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: Victor
 Compatibility: iOS 5.0+
 Name: Veteris Helper
@@ -553,7 +553,7 @@ SHA256: ef39f5588628d001470378c7e5de827f54b2b5b61cf931195b0f8fc947cd9673
 Section: Tweaks
 Homepage: https://cydia.preloading.dev/depictions/tubereplacer/1.0/
 Description: A fix for YouTube with sign-in.
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: Preloading <me@preloading.dev>
 Depiction: https://cydia.preloading.dev/depictions/tubereplacer/1.0/
 Icon: file:///Library/PreferenceBundles/TubeReplacerPrefs.bundle/icon@full.png
@@ -573,7 +573,7 @@ SHA256: 9f8c38312d7676a88507dcac6196261185928c9b38666bab80ac50fcfb8c3c61
 Section: System
 Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=ifileData
 Description: A File Manager and Viewer. iFile is a file manager runnning under user root. It allows fast navigation through the iPhone file system. It allows direct viewing of files of various types, e.g. movies, sound, text, HTML, Microsoft types, PDF, ZIP. For PDF files direct jumping to pages is possible. ZIP packing and unpacking is also supported. Files can be sent as email attachments. Text files and property lists can be edited. Folders and files can be bookmarked. In addition, files can be uploaded and downloaded from iFile's built-in web server.
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Tag: purpose::uikit, cydia::commercial
 Author: Carsten Heinelt <ifile@iphone.heinelt.eu>
 Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=ifileData
@@ -592,7 +592,7 @@ SHA1: 8c76d282903aafe3021af9bcfd6399ed74e97145
 SHA256: ab201f7ddde3e59d0eb94bf283a72a51ada94278dfffb166b5cd74fc69d1baa1
 Section: Terminal Support
 Description: A shell script that fixes the iFile and MTerminal icons on iOS 6 and below.
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: OldWorldOrder <joey.t.reinhart@gmail.com>
 Name: iFile/MTerminal icon fix
 
@@ -613,7 +613,7 @@ Section: System
 Priority: optional
 Homepage: http://rpetri.ch/cydia/activator/beta/
 Description: Centralized gestures, button and shortcut management for iOS
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: Ryan Petrich <rpetrich+activator@gmail.com>
 Depiction: http://rpetri.ch/cydia/activator/beta/
 Dev: rpetrich
@@ -636,7 +636,7 @@ Section: Tweaks
 Priority: optional
 Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=powersounddisablerDp
 Description: no sound/vibration at boot or USB connect
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Tag: purpose::extension
 Author: K3A <kexik@reversity.org>
 Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=powersounddisablerDp
@@ -657,7 +657,7 @@ SHA256: b946f29e07aabc914abcedb083b05f0e23059b9f18519f513186b7c520f8496a
 Section: Games
 Homepage: http://kawaiizenbo.me
 Description: a very simple somewhat idle game. get as high of a number as you can!
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: KawaiiZenbo
 Name: Clicker
 
@@ -676,7 +676,7 @@ SHA256: 6f02bb0e3f2833140725f3d6b848e9b0a1e786855dc451778133149ac2ebc986
 Section: Terminal Support
 Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=mobileterminalDp
 Description: A Terminal emulator for iOS
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
  This is a Terminal emulator for the iPhone. With it you can do all of your standard system administration tasks from anywhere: ssh into remote boxes, download files, edit configuration files, whatever.
 Tag: purpose::uikit
 Author: MobileTerminal <mobileterminal@googlegroups.com>
@@ -701,7 +701,7 @@ SHA256: ff4eb2a1e4453051e52ba56a71c3d4f56d00c1e83095653647a7a4f49b4c3b1f
 Section: Networking
 Priority: important
 Description: secure remote access between machines
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Depiction: http://cydia.saurik.com/info/openssh/
 Name: OpenSSH
 
@@ -720,7 +720,7 @@ Section: Utilities
 Priority: optional
 Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=recordmyscreenDp
 Description: free, open source screen recorder
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Tag: purpose::uikit
 Author: RecordMyScreen Project <coolstarorganization@gmail.com>
 Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=recordmyscreenDp
@@ -740,7 +740,7 @@ SHA256: ae4fdb06e6bc44c53da3cc008382f975d8808671d3c6cab42e3acf101641f9b6
 Section: Games
 Homepage: https://github.com/PIlin/NXEngine-iOS
 Description: iOS port of the Cave Story
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: Pavel Ilin <ilin.pa@gmail.com>
 Depiction: http://pilin.github.io/NXEngine-iOS/changelogs/v0.8.html
 Name: Cave Story
@@ -759,7 +759,7 @@ SHA256: 1fd98a17930bd85ddda970aad3e5cd225cf49ebf72e74a27223c5a9cb3bd073b
 Section: Tweaks
 Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=blurriedncbackgroundDp
 Description: blurred wallpaper behind NotificationCenter
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Tag: purpose::extension
 Author: Philippe <philippemail1@gmail.com>
 Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=blurriedncbackgroundDp
@@ -780,7 +780,7 @@ SHA1: 9dc57ee4d8153fb90f03f08e5f0cbbb7aee8e2b4
 SHA256: 26d3e7b7f46286439774f358b0958e3eaaf53808a640fa06db9fdf7ba8a44bcc
 Section: Social
 Description: Discord client for iOS 5 & 6 by Trevir
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: Trevir <triveri@outlook.com>
 Depiction: http://cydia.invoxiplaygames.uk/dp/classicdiscord.php
 Icon: file:///Applications/Discord.app/Icon@2x.png
@@ -799,7 +799,7 @@ SHA1: 26c2c398c93f847aa007a7778b6148e554e395c6
 SHA256: 2c6ff66a0498eea88f786a17b8ca79400ae311a2f5f80d97eaeed44d4fe9d9bf
 Section: Tweaks
 Description: Removes HTTPS from Cydia to use on iOS 3.
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: InvoxiPlayGames <webmaster@invoxiplaygames.uk>
 Depiction: http://cydia.invoxiplaygames.uk/dp/cydiahttpatch.php
 Name: Cydia HTTPatch
@@ -818,7 +818,7 @@ SHA1: c1c34c89b5b6a769e556a45fb0f0d01a6246b085
 SHA256: 5b3ab21be336ee5815fb22ef6df113c27a96c50c135358cfa50f222c2dd3d16a
 Section: Tweaks
 Description: Removes HTTPS from Cydia.
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: InvoxiPlayGames <webmaster@invoxiplaygames.uk>
 Name: Cydia HTTPatch (iOS 4+)
 
@@ -841,7 +841,7 @@ Section: System
 Priority: optional
 Homepage: http://www.saurik.com/id/9
 Description: theme manager, used by most themes
-Icon: https://github.io
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: Jay Freeman (saurik) <saurik@saurik.com>
 Depiction: http://cydia.saurik.com/info/winterboard/
 Name: WinterBoard
