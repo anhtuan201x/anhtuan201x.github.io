@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+mkdir -p debs
+mkdir -p ipas
 set -Eeuo pipefail
 
 # ============================================================
