@@ -3,10 +3,16 @@
 mkdir -p debs
 mkdir -p ipas
 
+# ==========================================
+# CLEAN RELEASE
+# ==========================================
 if [ -f "Release" ]; then
     sed -i 's/\r$//' Release
 fi
 
+# ==========================================
+# IPA STORE
+# ==========================================
 cat << 'EOF' > ipas/index.html
 <!DOCTYPE html>
 <html lang="vi">
@@ -14,12 +20,20 @@ cat << 'EOF' > ipas/index.html
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AnhTuan IPA Store</title>
+
     <style>
-        * { box-sizing: border-box; }
+        * {
+            box-sizing: border-box;
+        }
 
         body {
             font-family: -apple-system, sans-serif;
-            background: linear-gradient(135deg, #0b001a 0%, #160033 40%, #001133 100%);
+            background: linear-gradient(
+                135deg,
+                #0b001a 0%,
+                #160033 40%,
+                #001133 100%
+            );
             margin: 0;
             padding: 20px;
             min-height: 100vh;
@@ -84,13 +98,6 @@ cat << 'EOF' > ipas/index.html
             margin-bottom: 20px;
             text-align: justify;
             line-height: 1.5;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            .notice {
-                background: rgba(255,75,43,0.15);
-                color: #ff6b4a;
-            }
         }
 
         .game-item {
@@ -161,7 +168,12 @@ cat << 'EOF' > ipas/index.html
         }
 
         .btn-install {
-            background: linear-gradient(135deg, #0052d4, #4364f7, #6fb1fc);
+            background: linear-gradient(
+                135deg,
+                #0052d4,
+                #4364f7,
+                #6fb1fc
+            );
             box-shadow: 0 3px 6px rgba(0,114,255,0.2);
         }
 
@@ -192,6 +204,7 @@ cat << 'EOF' > ipas/index.html
 </head>
 
 <body>
+
 <div class="store-card">
 
     <h1>AnhTuan IPA Store</h1>
@@ -201,231 +214,301 @@ cat << 'EOF' > ipas/index.html
     </p>
 
     <div class="notice">
-        ⚠️ <b>Lưu ý:</b> Bạn phải cài đặt sẵn <b>AppSync Unified</b> trên máy. Nếu chưa có, bạn có thể thêm nguồn của tôi tại địa chỉ<b>http://anhtuan201x.github.io/</b> để tải về cài đặt,tránh ứng dụng cài xong bị văng ra lập tức.
+        ⚠️ <b>Lưu ý:</b>
+        Bạn phải cài đặt sẵn <b>AppSync Unified</b> trên máy.
+        Nếu chưa có, bạn có thể thêm nguồn của tôi tại:
+        <b>http://anhtuan201x.github.io/</b>
+        để tải về cài đặt, tránh ứng dụng cài xong bị văng ra lập tức.
     </div>
 
+    <!-- CHATGPT -->
+    <div class="game-item">
+        <div class="game-info">
+            <div
+                class="game-icon"
+                style="background: linear-gradient(135deg, #11998e, #38ef7d);"
+            >
+                💬
+            </div>
+
+            <div>
+                <div class="game-name">ChatGPT Legacy</div>
+                <div class="game-size">Dung lượng: 3.4 MB</div>
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <a
+                href="https://github.com/bag-xml/ChatGPT-for-Legacy-iOS/releases/download/v1.0.2-release/ChatGPT-v1.0.2-openrouter.ipa"
+                class="btn-download"
+                download
+            >
+                Tải IPA
+            </a>
+
+            <a
+                href="itms-services://?action=download-manifest&url=http://anhtuan201x.github.io/ipas/chatgpt.plist"
+                class="btn-install"
+            >
+                Cài đặt
+            </a>
+        </div>
+    </div>
+
+    <!-- OLDCLASH -->
+    <div class="game-item">
+        <div class="game-info">
+            <div
+                class="game-icon"
+                style="background: linear-gradient(135deg, #f12711, #f5af19);"
+            >
+                ⚔️
+            </div>
+
+            <div>
+                <div class="game-name">
+                    OldClash (Clash of Clans)
+                </div>
+
+                <div class="game-size">
+                    Dung lượng: 87.1 MB
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <a
+                href="http://oldclash.bag-xml.com/apps/ios/itml/6.253/app.ipa"
+                class="btn-download"
+                download
+            >
+                Tải IPA
+            </a>
+
+            <a
+                href="itms-services://?action=download-manifest&url=http://oldclash.bag-xml.com/apps/ios/itml/6.253/app.plist"
+                class="btn-install"
+            >
+                Cài đặt
+            </a>
+        </div>
+    </div>
+
+    <a href="../index.html" class="btn-back">
+        ⬅️ Quay lại Trang chủ
+    </a>
+
+</div>
+
+</body>
+</html>
 EOF
 
-for ipa in ipas/*.ipa; do
+# ==========================================
+# IPA -> DEB
+# CHỈ QUÉT debs/*.ipa
+# KHÔNG QUÉT ipas/
+# ==========================================
+
+for ipa in debs/*.ipa; do
 
     if [ -f "$ipa" ]; then
 
         filename=$(basename -- "$ipa")
-        clean_name="${filename%.*}"
-        clean_id=$(echo "$clean_name" | tr '[:upper:]' '[:lower:]')
+        clean_name="${filename%.ipa}"
+        clean_id=$(echo "$clean_name" | tr '[:upper:]' '[:lower:]' | tr ' ' '.')
 
-        rm -rf ipas/tmp_ipa ipas/tmp_out
+        echo "=========================================="
+        echo "Đang xử lý: $filename"
+        echo "=========================================="
 
-        mkdir -p \
-            ipas/tmp_ipa \
-            ipas/tmp_out/DEBIAN \
-            ipas/tmp_out/Applications
+        rm -rf debs/tmp_ipa
+        rm -rf debs/tmp_out
 
-        unzip -q "$ipa" -d ipas/tmp_ipa || true
+        mkdir -p debs/tmp_ipa
+        mkdir -p debs/tmp_out/DEBIAN
+        mkdir -p debs/tmp_out/Applications
+
+        unzip -q "$ipa" -d debs/tmp_ipa || {
+            echo "Lỗi giải nén: $filename"
+            continue
+        }
 
         app_folder=$(
-            find ipas/tmp_ipa/Payload \
+            find debs/tmp_ipa/Payload \
                 -maxdepth 2 \
                 -name "*.app" \
                 2>/dev/null |
-            head -n 1 ||
-            echo ""
+            head -n 1
         )
+
+        if [ -z "$app_folder" ] || [ ! -d "$app_folder" ]; then
+            echo "Không tìm thấy .app trong $filename"
+            continue
+        fi
 
         bid="com.anhtuan201x.$clean_id"
         ver="1.0"
         display_name="$clean_name"
 
-        if [ -n "$app_folder" ] && [ -d "$app_folder" ]; then
+        cp -r "$app_folder" debs/tmp_out/Applications/
 
-            cp -r "$app_folder" ipas/tmp_out/Applications/
+        infoplist="debs/tmp_out/Applications/$(basename "$app_folder")/Info.plist"
 
-            infoplist="ipas/tmp_out/Applications/$(basename "$app_folder")/Info.plist"
+        # ==========================================
+        # ĐỌC INFO.PLIST
+        # ==========================================
 
-            if [ -f "$infoplist" ]; then
+        if [ -f "$infoplist" ]; then
 
-                extracted_bid=$(
-                    grep -a -A 1 "CFBundleIdentifier" "$infoplist" |
-                    grep -a "<string>" |
-                    sed 's/.*<string>\(.*\)<\/string>.*/\1/' |
-                    tr -cd '[:alnum:]._-' ||
-                    echo ""
-                )
+            extracted_bid=$(
+                grep -a -A 1 "CFBundleIdentifier" "$infoplist" |
+                grep -a "<string>" |
+                sed 's/.*<string>\(.*\)<\/string>.*/\1/' |
+                tr -cd '[:alnum:]._-' || true
+            )
 
-                extracted_ver=$(
-                    grep -a -A 1 "CFBundleVersion" "$infoplist" |
-                    grep -a "<string>" |
-                    sed 's/.*<string>\(.*\)<\/string>.*/\1/' |
-                    tr -cd '[:alnum:]._-' ||
-                    echo ""
-                )
+            extracted_ver=$(
+                grep -a -A 1 "CFBundleVersion" "$infoplist" |
+                grep -a "<string>" |
+                sed 's/.*<string>\(.*\)<\/string>.*/\1/' |
+                tr -cd '[:alnum:]._-' || true
+            )
+
+            extracted_name=$(
+                grep -a -A 1 "CFBundleDisplayName" "$infoplist" |
+                grep -a "<string>" |
+                sed 's/.*<string>\(.*\)<\/string>.*/\1/' || true
+            )
+
+            if [ -z "$extracted_name" ]; then
 
                 extracted_name=$(
-                    grep -a -A 1 "CFBundleDisplayName" "$infoplist" |
+                    grep -a -A 1 "CFBundleName" "$infoplist" |
                     grep -a "<string>" |
-                    sed 's/.*<string>\(.*\)<\/string>.*/\1/' ||
-                    echo ""
+                    sed 's/.*<string>\(.*\)<\/string>.*/\1/' || true
                 )
-
-                if [ -z "$extracted_name" ]; then
-                    extracted_name=$(
-                        grep -a -A 1 "CFBundleName" "$infoplist" |
-                        grep -a "<string>" |
-                        sed 's/.*<string>\(.*\)<\/string>.*/\1/' ||
-                        echo ""
-                    )
-                fi
-
-                [ -n "$extracted_bid" ] && bid="$extracted_bid"
-                [ -n "$extracted_ver" ] && ver="$extracted_ver"
-                [ -n "$extracted_name" ] && display_name="$extracted_name"
-
-                sed -i '/<dict>/a \
-    <key>UIPrerenderedIcon<\/key>\
-    <true\/>' "$infoplist"
 
             fi
 
-            cat <<EOF > ipas/tmp_out/DEBIAN/control
+            [ -n "$extracted_bid" ] && bid="$extracted_bid"
+            [ -n "$extracted_ver" ] && ver="$extracted_ver"
+            [ -n "$extracted_name" ] && display_name="$extracted_name"
+
+        fi
+
+        # ==========================================
+        # CONTROL DEB
+        # ==========================================
+
+        cat << EOF > debs/tmp_out/DEBIAN/control
 Package: $bid
 Name: $clean_id
 Version: $ver
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Section: Applications
-Description: Ung dung duoc bien doi tu dong tu IPA sang DEB boi AnhTuan201X Bot.
+Description: Ung dung chuyen doi tu IPA sang DEB.
 EOF
 
-            sed -i 's/\r$//' ipas/tmp_out/DEBIAN/control
+        sed -i 's/\r$//' debs/tmp_out/DEBIAN/control
 
-            find ipas/tmp_out -type f -exec sed -i 's/\r$//' {} +
+        chmod -R 0755 debs/tmp_out
+        chmod 0644 debs/tmp_out/DEBIAN/control
 
-            chmod -R 0755 ipas/tmp_out
-            chmod 0644 ipas/tmp_out/DEBIAN/control
+        # ==========================================
+        # BUILD DEB
+        # ==========================================
 
-            if [ ! -f "debs/${clean_id}.deb" ]; then
-                dpkg-deb -Zgzip \
-                    --build \
-                    ipas/tmp_out \
-                    "debs/${clean_id}.deb" ||
-                    true
-            fi
-        fi
+        dpkg-deb -Zgzip \
+            --build \
+            debs/tmp_out \
+            "debs/${clean_id}.deb" || true
+
+        # ==========================================
+        # TẠO PLIST
+        # DTD APPLE CHUẨN
+        # ==========================================
 
         cat << EOF > "ipas/${clean_id}.plist"
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>items</key>
-	<array>
-		<dict>
-			<key>assets</key>
-			<array>
-				<dict>
-					<key>kind</key>
-					<string>software-package</string>
-					<key>url</key>
-					<string>https://anhtuan201x.github.io/ipas/${filename}</string>
-				</dict>
-			</array>
-			<key>metadata</key>
-			<dict>
-				<key>bundle-identifier</key>
-				<string>${bid}</string>
-				<key>bundle-version</key>
-				<string>${ver}</string>
-				<key>kind</key>
-				<string>software</string>
-				<key>title</key>
-				<string>${display_name}</string>
-			</dict>
-		</dict>
-	</array>
+    <key>items</key>
+    <array>
+        <dict>
+            <key>assets</key>
+            <array>
+                <dict>
+                    <key>kind</key>
+                    <string>software-package</string>
+
+                    <key>url</key>
+                    <string>https://anhtuan201x.github.io/ipas/${filename}</string>
+                </dict>
+            </array>
+
+            <key>metadata</key>
+            <dict>
+                <key>bundle-identifier</key>
+                <string>${bid}</string>
+
+                <key>bundle-version</key>
+                <string>${ver}</string>
+
+                <key>kind</key>
+                <string>software</string>
+
+                <key>title</key>
+                <string>${display_name}</string>
+            </dict>
+        </dict>
+    </array>
 </dict>
 </plist>
 EOF
 
-        if [ "$clean_id" = "chatgpt" ]; then
-
-            cat << EOF >> ipas/index.html
-    <div class="game-item">
-        <div class="game-info">
-            <div class="game-icon" style="background: linear-gradient(135deg, #11998e, #38ef7d);">📦</div>
-            <div>
-                <div class="game-name">${display_name}</div>
-                <div class="game-size">AnhTuan App Store</div>
-            </div>
-        </div>
-
-        <div class="btn-group">
-            <a href="${filename}" class="btn-download" download>Tải IPA</a>
-            <a href="itms-services://?action=download-manifest&url=https://anhtuan201x.github.io/ipas/${clean_id}.plist" class="btn-install">Cài đặt</a>
-        </div>
-    </div>
-EOF
-
-        else
-
-            cat << EOF >> ipas/index.html
-    <div class="game-item">
-        <div class="game-info">
-            <div class="game-icon" style="background: linear-gradient(135deg, #11998e, #38ef7d);">📦</div>
-            <div>
-                <div class="game-name">${display_name}</div>
-                <div class="game-size">AnhTuan App Store</div>
-            </div>
-        </div>
-
-        <div class="btn-group">
-            <a href="${filename}" class="btn-download" download>Tải IPA</a>
-            <a href="itms-services://?action=download-manifest&url=https://anhtuan201x.github.io/ipas/${clean_id}.plist" class="btn-install">Cài đặt</a>
-        </div>
-    </div>
-EOF
-
-        fi
-
-        rm -rf ipas/tmp_ipa ipas/tmp_out
+        rm -rf debs/tmp_ipa
+        rm -rf debs/tmp_out
 
     fi
 
 done
 
-cat << 'EOF' >> ipas/index.html
+# ==========================================
+# KHÔNG XÓA IPA
+# IPA NẰM TRONG debs/
+# ==========================================
 
-    <a href="../index.html" class="btn-back">⬅️ Quay lai Trang chu</a>
-
-</div>
-</body>
-</html>
-EOF
+# ==========================================
+# REPO ICON
+# ==========================================
 
 rm -rf debs/tmp_icons
 
-mkdir -p \
-    debs/tmp_icons/DEBIAN \
-    debs/tmp_icons/usr/share/cydia/sections
+mkdir -p debs/tmp_icons/DEBIAN
+mkdir -p debs/tmp_icons/usr/share/cydia/sections
 
 if [ -f "CydiaIcon.png" ]; then
+
     cp \
         CydiaIcon.png \
         debs/tmp_icons/usr/share/cydia/sections/com.anhtuan201x.repoicons.png
+
 fi
 
-cat << 'EOF' > debs/tmp_icons/DEBIAN/control
+cat << EOF > debs/tmp_icons/DEBIAN/control
 Package: com.anhtuan201x.repoicons
 Name: AnhTuan201X Repo Icons
 Version: 1.0
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Section: Themes
-Description: Bo suu tap bieu tuong logo doc quyen giup hien thi anh nho cho toan bo tweak trong nguon cua Anh Tuan.
+Description: Bo suu tap bieu tuong logo cho repo AnhTuan201X.
 EOF
 
 sed -i 's/\r$//' debs/tmp_icons/DEBIAN/control
-
-find debs/tmp_icons -type f -exec sed -i 's/\r$//' {} +
 
 chmod -R 0755 debs/tmp_icons
 chmod 0644 debs/tmp_icons/DEBIAN/control
@@ -438,24 +521,50 @@ dpkg-deb \
 
 rm -rf debs/tmp_icons
 
-rm -f Packages Packages.bz2
+# ==========================================
+# PACKAGES
+# ==========================================
+
+rm -f Packages
+rm -f Packages.bz2
 
 dpkg-scanpackages -m debs /dev/null > Packages
 
 sed -i 's/\r$//' Packages
 
-sed -i \
-    "s|^Description:.*|&\nIcon: https://anhtuan201x.github.io/CydiaIcon.png|" \
-    Packages
+if [ -f "CydiaIcon.png" ]; then
+
+    sed -i \
+        "s|^Description:.*|&\nIcon: https://anhtuan201x.github.io/CydiaIcon.png|" \
+        Packages
+
+fi
 
 bzip2 -fk Packages
 
-sed -i '/MD5Sum:/,$d' Release
+# ==========================================
+# RELEASE MD5
+# ==========================================
 
-echo "MD5Sum:" >> Release
+if [ -f "Release" ]; then
 
-echo " $(md5sum Packages | cut -d' ' -f1) $(stat -c%s Packages) Packages" >> Release
+    sed -i '/MD5Sum:/,$d' Release
 
-echo " $(md5sum Packages.bz2 | cut -d' ' -f1) $(stat -c%s Packages.bz2) Packages.bz2" >> Release
+    echo "MD5Sum:" >> Release
 
-sed -i 's/\r$//' Release
+    echo " $(md5sum Packages | cut -d' ' -f1) $(stat -c%s Packages) Packages" \
+        >> Release
+
+    echo " $(md5sum Packages.bz2 | cut -d' ' -f1) $(stat -c%s Packages.bz2) Packages.bz2" \
+        >> Release
+
+    sed -i 's/\r$//' Release
+
+fi
+
+echo "=========================================="
+echo "SYNC HOÀN TẤT"
+echo "IPA INPUT : debs/*.ipa"
+echo "DEB OUTPUT: debs/*.deb"
+echo "PLIST     : ipas/*.plist"
+echo "=========================================="
