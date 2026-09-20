@@ -16,14 +16,14 @@ MAINTAINER_EMAIL="anhtuan201x@github.io"
 
 DEB_ARCH="iphoneos-arm"
 
-# Cydia package index
 CYDIA_PACKAGES="Packages.bz2"
 
 # ============================================================
-# CHECK COMMANDS
+# CHECK DEPENDENCIES
 # ============================================================
 
 REQUIRED_COMMANDS=(
+    bash
     unzip
     dpkg-deb
     dpkg-scanpackages
@@ -37,23 +37,18 @@ REQUIRED_COMMANDS=(
 )
 
 for cmd in "${REQUIRED_COMMANDS[@]}"; do
-
     if ! command -v "$cmd" >/dev/null 2>&1; then
-
         echo "ERROR: Missing command: $cmd"
-
         exit 1
-
     fi
-
 done
 
 # ============================================================
-# CREATE DIRECTORIES
+# DIRECTORIES
 # ============================================================
 
-mkdir -p debs
 mkdir -p ipas
+mkdir -p debs
 
 # ============================================================
 # CLEAN GENERATED FILES
@@ -62,6 +57,8 @@ mkdir -p ipas
 rm -f Packages
 rm -f Packages.bz2
 
+# Only delete generated manifests in the root of ipas.
+# IPA files and subdirectories are preserved.
 find ipas \
     -maxdepth 1 \
     -type f \
@@ -69,7 +66,7 @@ find ipas \
     -delete
 
 # ============================================================
-# PYTHON PLIST READER
+# PLIST READER
 # ============================================================
 
 read_plist_value() {
@@ -150,7 +147,7 @@ PY
 }
 
 # ============================================================
-# CREATE RELEASE
+# CREATE RELEASE IF MISSING
 # ============================================================
 
 if [ ! -f Release ]; then
@@ -171,7 +168,7 @@ fi
 sed -i 's/\r$//' Release
 
 # ============================================================
-# CREATE IPA STORE INDEX
+# CREATE IPA STORE
 # ============================================================
 
 cat > ipas/index.html <<EOF
@@ -508,18 +505,19 @@ Installation requires a compatible IPA installation environment.
 EOF
 
 # ============================================================
-# FIND IPA FILES
+# FIND ALL IPA FILES RECURSIVELY
 # ============================================================
 
-shopt -s nullglob
+mapfile -d '' IPA_FILES < <(
+    find ipas \
+        -type f \
+        -iname "*.ipa" \
+        -print0
+)
 
-IPA_FILES=(ipas/*.ipa)
-
-if [ ${#IPA_FILES[@]} -eq 0 ]; then
-
-    echo "WARNING: No IPA files found in ipas/"
-
-fi
+echo
+echo "Found ${#IPA_FILES[@]} IPA file(s)."
+echo
 
 # ============================================================
 # PROCESS IPA FILES
@@ -531,11 +529,12 @@ for IPA in "${IPA_FILES[@]}"; do
 
     FILENAME="$(basename "$IPA")"
 
-    ORIGINAL_NAME="${FILENAME%.ipa}"
+    ORIGINAL_NAME="${FILENAME%.*}"
 
-    echo
+    RELATIVE_IPA="${IPA#ipas/}"
+
     echo "============================================================"
-    echo "Processing: $FILENAME"
+    echo "Processing: $IPA"
     echo "============================================================"
 
     # --------------------------------------------------------
@@ -551,6 +550,22 @@ for IPA in "${IPA_FILES[@]}"; do
     if [ -z "$PACKAGE_NAME" ]; then
         PACKAGE_NAME="application"
     fi
+
+    # --------------------------------------------------------
+    # PREVENT DUPLICATE PACKAGE NAMES
+    # --------------------------------------------------------
+
+    BASE_PACKAGE_NAME="$PACKAGE_NAME"
+
+    COUNTER=1
+
+    while [ -f "debs/${PACKAGE_NAME}.deb" ]; do
+
+        PACKAGE_NAME="${BASE_PACKAGE_NAME}-${COUNTER}"
+
+        COUNTER=$((COUNTER + 1))
+
+    done
 
     # --------------------------------------------------------
     # TEMP DIRECTORY
@@ -577,7 +592,8 @@ for IPA in "${IPA_FILES[@]}"; do
 
     if ! unzip -q "$IPA" -d "$TMP_DIR/unzip"; then
 
-        echo "ERROR: Cannot extract $FILENAME"
+        echo "ERROR: Failed to extract:"
+        echo "$IPA"
 
         cleanup
         trap - EXIT
@@ -608,9 +624,33 @@ for IPA in "${IPA_FILES[@]}"; do
             2>/dev/null
     )
 
+    # --------------------------------------------------------
+    # FALLBACK SEARCH
+    # --------------------------------------------------------
+
     if [ -z "$APP_PATH" ]; then
 
-        echo "ERROR: Payload/*.app not found."
+        while IFS= read -r -d '' APP; do
+
+            APP_PATH="$APP"
+
+            break
+
+        done < <(
+            find \
+                "$TMP_DIR/unzip" \
+                -type d \
+                -name "*.app" \
+                -print0 \
+                2>/dev/null
+        )
+
+    fi
+
+    if [ -z "$APP_PATH" ]; then
+
+        echo "ERROR: No .app bundle found:"
+        echo "$IPA"
 
         cleanup
         trap - EXIT
@@ -624,7 +664,7 @@ for IPA in "${IPA_FILES[@]}"; do
     echo "Application: $APP_NAME"
 
     # --------------------------------------------------------
-    # COPY APPLICATION
+    # COPY APP
     # --------------------------------------------------------
 
     cp -R \
@@ -644,7 +684,7 @@ for IPA in "${IPA_FILES[@]}"; do
     DISPLAY_NAME="$ORIGINAL_NAME"
 
     # --------------------------------------------------------
-    # READ INFO.PLIST WITH PYTHON
+    # READ INFO.PLIST
     # --------------------------------------------------------
 
     if [ -f "$INFO_PLIST" ]; then
@@ -729,7 +769,7 @@ for IPA in "${IPA_FILES[@]}"; do
     fi
 
     # --------------------------------------------------------
-    # CREATE DEBIAN CONTROL
+    # CONTROL FILE
     # --------------------------------------------------------
 
     cat > "$TMP_DIR/package/DEBIAN/control" <<EOF
@@ -750,7 +790,7 @@ EOF
         "$TMP_DIR/package/DEBIAN/control"
 
     # --------------------------------------------------------
-    # APP PERMISSIONS
+    # APPLICATION PERMISSIONS
     # --------------------------------------------------------
 
     chmod -R u+rwX,go+rX \
@@ -770,8 +810,6 @@ EOF
 
     DEB_FILE="debs/${PACKAGE_NAME}.deb"
 
-    rm -f "$DEB_FILE"
-
     if ! dpkg-deb \
         -Zgzip \
         --build \
@@ -779,7 +817,8 @@ EOF
         "$DEB_FILE" \
         >/dev/null; then
 
-        echo "ERROR: DEB build failed."
+        echo "ERROR: Failed to build DEB:"
+        echo "$IPA"
 
         cleanup
         trap - EXIT
@@ -788,21 +827,29 @@ EOF
 
     fi
 
-    echo "DEB created: $DEB_FILE"
+    echo "Created: $DEB_FILE"
 
     # --------------------------------------------------------
-    # CREATE OTA MANIFEST
+    # CREATE MANIFEST NAME
+    # --------------------------------------------------------
+
+    PLIST_NAME="${PACKAGE_NAME}.plist"
+
+    # --------------------------------------------------------
+    # URL PATH
     # --------------------------------------------------------
 
     IPA_URL_NAME="$(
-        url_encode "$FILENAME"
+        url_encode "$RELATIVE_IPA"
     )"
-
-    PLIST_NAME="${PACKAGE_NAME}.plist"
 
     PLIST_URL_NAME="$(
         url_encode "$PLIST_NAME"
     )"
+
+    # --------------------------------------------------------
+    # XML VALUES
+    # --------------------------------------------------------
 
     XML_BUNDLE_ID="$(
         xml_escape "$BUNDLE_ID"
@@ -815,6 +862,10 @@ EOF
     XML_DISPLAY_NAME="$(
         xml_escape "$DISPLAY_NAME"
     )"
+
+    # --------------------------------------------------------
+    # OTA MANIFEST
+    # --------------------------------------------------------
 
     cat > "ipas/$PLIST_NAME" <<EOF
 <?xml version="1.0" encoding="UTF-8"?>
@@ -881,7 +932,7 @@ EOF
 EOF
 
     # --------------------------------------------------------
-    # CREATE INSTALL URL
+    # INSTALL URL
     # --------------------------------------------------------
 
     MANIFEST_URL="${REPO_URL}/ipas/${PLIST_URL_NAME}"
@@ -964,10 +1015,11 @@ PY
 
 EOF
 
-    echo "Bundle ID : $BUNDLE_ID"
-    echo "Version   : $VERSION"
-    echo "Name      : $DISPLAY_NAME"
-    echo "Manifest  : ipas/$PLIST_NAME"
+    echo "Bundle ID: $BUNDLE_ID"
+    echo "Version  : $VERSION"
+    echo "Name     : $DISPLAY_NAME"
+    echo "Manifest : ipas/$PLIST_NAME"
+    echo
 
     cleanup
     trap - EXIT
@@ -975,7 +1027,7 @@ EOF
 done
 
 # ============================================================
-# CLOSE IPA STORE PAGE
+# CLOSE HTML
 # ============================================================
 
 cat >> ipas/index.html <<'EOF'
@@ -995,7 +1047,7 @@ cat >> ipas/index.html <<'EOF'
 EOF
 
 # ============================================================
-# CREATE REPOSITORY ICON PACKAGE
+# REPOSITORY ICON PACKAGE
 # ============================================================
 
 rm -rf debs/tmp_icons
@@ -1111,7 +1163,7 @@ EOF
 sed -i 's/\r$//' Release
 
 # ============================================================
-# VALIDATE PACKAGES
+# VALIDATE
 # ============================================================
 
 if [ ! -s Packages ]; then
@@ -1139,7 +1191,7 @@ if [ ! -s Release ]; then
 fi
 
 # ============================================================
-# FINAL OUTPUT
+# SUMMARY
 # ============================================================
 
 echo
@@ -1152,7 +1204,7 @@ echo "Repository:"
 echo "$REPO_URL"
 
 echo
-echo "Cydia package index:"
+echo "CYDIA_PACKAGES:"
 echo "$CYDIA_PACKAGES"
 
 echo
@@ -1172,20 +1224,19 @@ echo "IPA Store:"
 echo "$REPO_URL/ipas/"
 
 echo
+echo "IPA files found:"
+find ipas \
+    -type f \
+    -iname "*.ipa" \
+    -print \
+    2>/dev/null || true
+
+echo
 echo "DEB files:"
 find debs \
     -maxdepth 1 \
     -type f \
     -name "*.deb" \
-    -print \
-    2>/dev/null || true
-
-echo
-echo "IPA files:"
-find ipas \
-    -maxdepth 1 \
-    -type f \
-    -name "*.ipa" \
     -print \
     2>/dev/null || true
 
