@@ -1,9 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 set -Eeuo pipefail
 
 # ============================================================
 # AnhTuan201X Repository Builder
+# GitHub Actions / Ubuntu compatible
 # ============================================================
 
 REPO_URL="https://anhtuan201x.github.io"
@@ -19,14 +20,7 @@ DEB_ARCH="iphoneos-arm"
 CYDIA_PACKAGES="Packages.bz2"
 
 # ============================================================
-# DIRECTORIES
-# ============================================================
-
-mkdir -p debs
-mkdir -p ipas
-
-# ============================================================
-# CHECK DEPENDENCIES
+# CHECK COMMANDS
 # ============================================================
 
 REQUIRED_COMMANDS=(
@@ -39,28 +33,35 @@ REQUIRED_COMMANDS=(
     awk
     find
     python3
+    bzip2
 )
 
 for cmd in "${REQUIRED_COMMANDS[@]}"; do
+
     if ! command -v "$cmd" >/dev/null 2>&1; then
+
         echo "ERROR: Missing command: $cmd"
+
         exit 1
+
     fi
+
 done
 
-if ! command -v plutil >/dev/null 2>&1; then
-    echo "ERROR: plutil is required."
-    exit 1
-fi
+# ============================================================
+# CREATE DIRECTORIES
+# ============================================================
+
+mkdir -p debs
+mkdir -p ipas
 
 # ============================================================
-# CLEAN OLD BUILD FILES
+# CLEAN GENERATED FILES
 # ============================================================
 
 rm -f Packages
 rm -f Packages.bz2
 
-# Remove old generated manifests.
 find ipas \
     -maxdepth 1 \
     -type f \
@@ -68,16 +69,54 @@ find ipas \
     -delete
 
 # ============================================================
+# PYTHON PLIST READER
+# ============================================================
+
+read_plist_value() {
+
+    local plist="$1"
+    local key="$2"
+
+    python3 - "$plist" "$key" <<'PY'
+import sys
+import plistlib
+
+plist_path = sys.argv[1]
+key = sys.argv[2]
+
+try:
+    with open(plist_path, "rb") as f:
+        data = plistlib.load(f)
+
+    value = data.get(key, "")
+
+    if value is None:
+        value = ""
+
+    if isinstance(value, bytes):
+        value = value.decode("utf-8", errors="replace")
+
+    print(str(value))
+
+except Exception:
+    print("")
+PY
+
+}
+
+# ============================================================
 # URL ENCODER
 # ============================================================
 
 url_encode() {
+
     python3 - "$1" <<'PY'
 import sys
 from urllib.parse import quote
 
 print(quote(sys.argv[1], safe="/._-"))
 PY
+
 }
 
 # ============================================================
@@ -85,12 +124,14 @@ PY
 # ============================================================
 
 xml_escape() {
+
     python3 - "$1" <<'PY'
 import sys
 import html
 
 print(html.escape(sys.argv[1], quote=True))
 PY
+
 }
 
 # ============================================================
@@ -98,12 +139,14 @@ PY
 # ============================================================
 
 html_escape() {
+
     python3 - "$1" <<'PY'
 import sys
 import html
 
 print(html.escape(sys.argv[1], quote=True))
 PY
+
 }
 
 # ============================================================
@@ -134,6 +177,7 @@ sed -i 's/\r$//' Release
 cat > ipas/index.html <<EOF
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="utf-8">
@@ -472,11 +516,13 @@ shopt -s nullglob
 IPA_FILES=(ipas/*.ipa)
 
 if [ ${#IPA_FILES[@]} -eq 0 ]; then
-    echo "WARNING: No IPA files found."
+
+    echo "WARNING: No IPA files found in ipas/"
+
 fi
 
 # ============================================================
-# PROCESS EACH IPA
+# PROCESS IPA FILES
 # ============================================================
 
 for IPA in "${IPA_FILES[@]}"; do
@@ -488,12 +534,12 @@ for IPA in "${IPA_FILES[@]}"; do
     ORIGINAL_NAME="${FILENAME%.ipa}"
 
     echo
-    echo "------------------------------------------------------------"
+    echo "============================================================"
     echo "Processing: $FILENAME"
-    echo "------------------------------------------------------------"
+    echo "============================================================"
 
     # --------------------------------------------------------
-    # SAFE FILE NAME
+    # SAFE PACKAGE NAME
     # --------------------------------------------------------
 
     PACKAGE_NAME="$(
@@ -502,13 +548,17 @@ for IPA in "${IPA_FILES[@]}"; do
         tr -cd '[:alnum:]_.+-'
     )"
 
-    [ -n "$PACKAGE_NAME" ] || PACKAGE_NAME="application"
+    if [ -z "$PACKAGE_NAME" ]; then
+        PACKAGE_NAME="application"
+    fi
 
     # --------------------------------------------------------
     # TEMP DIRECTORY
     # --------------------------------------------------------
 
-    TMP_DIR="$(mktemp -d "${TMPDIR:-/tmp}/anhtuan-build.XXXXXX")"
+    TMP_DIR="$(
+        mktemp -d "${TMPDIR:-/tmp}/anhtuan-build.XXXXXX"
+    )"
 
     cleanup() {
         rm -rf "$TMP_DIR"
@@ -533,17 +583,21 @@ for IPA in "${IPA_FILES[@]}"; do
         trap - EXIT
 
         continue
+
     fi
 
     # --------------------------------------------------------
-    # LOCATE APP
+    # FIND APP BUNDLE
     # --------------------------------------------------------
 
     APP_PATH=""
 
     while IFS= read -r -d '' APP; do
+
         APP_PATH="$APP"
+
         break
+
     done < <(
         find \
             "$TMP_DIR/unzip/Payload" \
@@ -556,12 +610,13 @@ for IPA in "${IPA_FILES[@]}"; do
 
     if [ -z "$APP_PATH" ]; then
 
-        echo "ERROR: No .app bundle found."
+        echo "ERROR: Payload/*.app not found."
 
         cleanup
         trap - EXIT
 
         continue
+
     fi
 
     APP_NAME="$(basename "$APP_PATH")"
@@ -589,21 +644,15 @@ for IPA in "${IPA_FILES[@]}"; do
     DISPLAY_NAME="$ORIGINAL_NAME"
 
     # --------------------------------------------------------
-    # READ INFO.PLIST
+    # READ INFO.PLIST WITH PYTHON
     # --------------------------------------------------------
 
     if [ -f "$INFO_PLIST" ]; then
 
-        plutil \
-            -convert xml1 \
-            "$INFO_PLIST" \
-            2>/dev/null || true
-
         VALUE="$(
-            plutil \
-                -extract CFBundleIdentifier raw \
+            read_plist_value \
                 "$INFO_PLIST" \
-                2>/dev/null || true
+                "CFBundleIdentifier"
         )"
 
         if [ -n "$VALUE" ]; then
@@ -611,20 +660,18 @@ for IPA in "${IPA_FILES[@]}"; do
         fi
 
         VALUE="$(
-            plutil \
-                -extract CFBundleShortVersionString raw \
+            read_plist_value \
                 "$INFO_PLIST" \
-                2>/dev/null || true
+                "CFBundleShortVersionString"
         )"
 
         if [ -z "$VALUE" ]; then
 
             VALUE="$(
-                plutil \
-                    -extract CFBundleVersion raw \
+                read_plist_value \
                     "$INFO_PLIST" \
-                    2>/dev/null || true
-            )
+                    "CFBundleVersion"
+            )"
 
         fi
 
@@ -633,20 +680,18 @@ for IPA in "${IPA_FILES[@]}"; do
         fi
 
         VALUE="$(
-            plutil \
-                -extract CFBundleDisplayName raw \
+            read_plist_value \
                 "$INFO_PLIST" \
-                2>/dev/null || true
+                "CFBundleDisplayName"
         )"
 
         if [ -z "$VALUE" ]; then
 
             VALUE="$(
-                plutil \
-                    -extract CFBundleName raw \
+                read_plist_value \
                     "$INFO_PLIST" \
-                    2>/dev/null || true
-            )
+                    "CFBundleName"
+            )"
 
         fi
 
@@ -679,31 +724,12 @@ for IPA in "${IPA_FILES[@]}"; do
         tr -cd '[:alnum:].+_-'
     )"
 
-    [ -n "$VERSION" ] || VERSION="1.0"
-
-    # --------------------------------------------------------
-    # SET ICON MODE
-    # --------------------------------------------------------
-
-    if [ -f "$INFO_PLIST" ] &&
-       command -v /usr/libexec/PlistBuddy >/dev/null 2>&1; then
-
-        if ! /usr/libexec/PlistBuddy \
-            -c "Print :UIPrerenderedIcon" \
-            "$INFO_PLIST" \
-            >/dev/null 2>&1; then
-
-            /usr/libexec/PlistBuddy \
-                -c "Add :UIPrerenderedIcon bool true" \
-                "$INFO_PLIST" \
-                >/dev/null 2>&1 || true
-
-        fi
-
+    if [ -z "$VERSION" ]; then
+        VERSION="1.0"
     fi
 
     # --------------------------------------------------------
-    # CREATE CONTROL
+    # CREATE DEBIAN CONTROL
     # --------------------------------------------------------
 
     cat > "$TMP_DIR/package/DEBIAN/control" <<EOF
@@ -717,15 +743,15 @@ Description: $DISPLAY_NAME
  IPA application package.
 EOF
 
-    # --------------------------------------------------------
-    # PERMISSIONS
-    # --------------------------------------------------------
-
     chmod 0755 \
         "$TMP_DIR/package/DEBIAN"
 
     chmod 0644 \
         "$TMP_DIR/package/DEBIAN/control"
+
+    # --------------------------------------------------------
+    # APP PERMISSIONS
+    # --------------------------------------------------------
 
     chmod -R u+rwX,go+rX \
         "$TMP_DIR/package/Applications"
@@ -733,7 +759,9 @@ EOF
     EXECUTABLE="$TMP_DIR/package/Applications/$APP_NAME/$APP_NAME"
 
     if [ -f "$EXECUTABLE" ]; then
-        chmod 0755 "$EXECUTABLE" || true
+
+        chmod 0755 "$EXECUTABLE"
+
     fi
 
     # --------------------------------------------------------
@@ -757,28 +785,40 @@ EOF
         trap - EXIT
 
         continue
+
     fi
 
-    echo "DEB: $DEB_FILE"
+    echo "DEB created: $DEB_FILE"
 
     # --------------------------------------------------------
     # CREATE OTA MANIFEST
     # --------------------------------------------------------
 
-    IPA_URL_NAME="$(url_encode "$FILENAME")"
+    IPA_URL_NAME="$(
+        url_encode "$FILENAME"
+    )"
 
     PLIST_NAME="${PACKAGE_NAME}.plist"
 
-    PLIST_URL_NAME="$(url_encode "$PLIST_NAME")"
+    PLIST_URL_NAME="$(
+        url_encode "$PLIST_NAME"
+    )"
 
-    XML_BUNDLE_ID="$(xml_escape "$BUNDLE_ID")"
+    XML_BUNDLE_ID="$(
+        xml_escape "$BUNDLE_ID"
+    )"
 
-    XML_VERSION="$(xml_escape "$VERSION")"
+    XML_VERSION="$(
+        xml_escape "$VERSION"
+    )"
 
-    XML_DISPLAY_NAME="$(xml_escape "$DISPLAY_NAME")"
+    XML_DISPLAY_NAME="$(
+        xml_escape "$DISPLAY_NAME"
+    )"
 
     cat > "ipas/$PLIST_NAME" <<EOF
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 
 <plist version="1.0">
@@ -855,12 +895,16 @@ print(quote(sys.argv[1], safe=""))
 PY
     )"
 
-    HTML_NAME="$(html_escape "$DISPLAY_NAME")"
+    HTML_NAME="$(
+        html_escape "$DISPLAY_NAME"
+    )"
 
-    HTML_IPA="$(html_escape "$IPA_URL_NAME")"
+    HTML_IPA="$(
+        html_escape "$IPA_URL_NAME"
+    )"
 
     # --------------------------------------------------------
-    # ADD APPLICATION TO HTML
+    # ADD APP TO INDEX
     # --------------------------------------------------------
 
     cat >> ipas/index.html <<EOF
@@ -931,7 +975,7 @@ EOF
 done
 
 # ============================================================
-# CLOSE HTML
+# CLOSE IPA STORE PAGE
 # ============================================================
 
 cat >> ipas/index.html <<'EOF'
@@ -946,11 +990,12 @@ cat >> ipas/index.html <<'EOF'
 </div>
 
 </body>
+
 </html>
 EOF
 
 # ============================================================
-# REPOSITORY ICON PACKAGE
+# CREATE REPOSITORY ICON PACKAGE
 # ============================================================
 
 rm -rf debs/tmp_icons
@@ -1066,12 +1111,40 @@ EOF
 sed -i 's/\r$//' Release
 
 # ============================================================
-# FINAL VALIDATION
+# VALIDATE PACKAGES
+# ============================================================
+
+if [ ! -s Packages ]; then
+
+    echo "ERROR: Packages is empty."
+
+    exit 1
+
+fi
+
+if [ ! -s Packages.bz2 ]; then
+
+    echo "ERROR: Packages.bz2 was not created."
+
+    exit 1
+
+fi
+
+if [ ! -s Release ]; then
+
+    echo "ERROR: Release is empty."
+
+    exit 1
+
+fi
+
+# ============================================================
+# FINAL OUTPUT
 # ============================================================
 
 echo
 echo "============================================================"
-echo "BUILD COMPLETE"
+echo "BUILD SUCCESSFUL"
 echo "============================================================"
 
 echo
@@ -1127,5 +1200,5 @@ find ipas \
 
 echo
 echo "============================================================"
-echo "SUCCESS"
+echo "DONE"
 echo "============================================================"
