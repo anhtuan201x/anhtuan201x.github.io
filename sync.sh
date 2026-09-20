@@ -6,11 +6,11 @@ if [ -f "Release" ] ; then sed -i 's/\r$//' Release; fi
 
 if [ -f "ipas/Payload.zip.001" ] && [ -f "ipas/Payload.zip.004" ]; then
     cat ipas/Payload.zip.* > ipas/Payload.zip
-    unzip -q ipas/Payload.zip -d .
+    unzip -q ipas/Payload.zip -d ipas/
     
     if [ -d "ipas/Payload" ]; then
         cd ipas
-        zip -q -r -y cargame.ipa Payload
+        zip -q -r -y cargame.ipa Payload/
         cd ..
         rm -rf ipas/Payload ipas/Payload.zip
         rm -f ipas/Payload.zip.*
@@ -19,7 +19,7 @@ fi
 
 if [ -d "debs/Payload" ]; then
     cd debs
-    zip -q -r -y cargame.ipa Payload
+    zip -q -r -y cargame.ipa Payload/
     cd ..
     if [ -f "debs/cargame.ipa" ]; then
         mv debs/cargame.ipa ipas/cargame.ipa
