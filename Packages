@@ -129,9 +129,9 @@ Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: debs/com.anhtuan201x.repoicons_1.0_iphoneos-arm.deb
 Size: 16430
-MD5sum: 8c42654e5f6f2541fa8229044e0b3347
-SHA1: 1b469a9a1391a0d97328df16aa99695f94816252
-SHA256: 0a55655c1f95ade27e7036d26a5c7561444903806419ee37e8f73790169a9617
+MD5sum: c2f385beb3f88bb1d746ab7dc4b437b7
+SHA1: 3920f56308533d9a0ea3ad8027d90ca360d2c931
+SHA256: b043668a1d4d777db540082929108cad059ddebc10ad13860a518db058755807
 Section: Themes
 Description: Bo suu tap bieu tuong logo doc quyen giup hien thi anh nho cho toan bo tweak trong nguon cua Anh Tuan.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
