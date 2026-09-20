@@ -65,6 +65,7 @@
         .old-description { color: var(--text-main); font-size: 15px; font-weight: 600; margin: 0 0 20px; }
         .story-subtitle { color: var(--text-sub); font-size: 13.5px; line-height: 1.6; margin: 0 0 25px; text-align: justify; border-top: 1px solid var(--border); padding-top: 15px; max-height: 220px; overflow-y: auto; }
         .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 25px; }
+        .stats-grid a { text-decoration: none; display: block; }
         .stat-card { background: var(--card-sub); border-radius: 10px; padding: 10px 5px; border: 1px solid var(--border); }
         .stat-num { font-weight: bold; color: #ff4b2b; font-size: 16px; }
         .stat-label { font-size: 11px; color: #8e8e93; margin-top: 3px; }
@@ -85,12 +86,12 @@
             <strong>[English]</strong><br>In the year 2026, this legacy repository was grandly created by Anh Tuan with a profound and magnificent dream. Driven by an endless passion for the world of Legacy iOS and a fierce desire to achieve greatness—to stand proudly side by side with the legendary pioneers of the jailbreak community—A. Tuan dedicated himself to building this platform. This is far more than just a repository; it represents the dawn of his ultimate ambition, turning a beautiful dream into an everlasting reality.
         </div>
         <div class="stats-grid">
-            <div class="stat-card"><div class="stat-num" id="pkgCount">--</div><div class="stat-label">Packages</div></div>
+            <div class="stat-card"><div class="stat-num" id="pkgCount">24</div><div class="stat-label">Packages</div></div>
             <div class="stat-card"><div class="stat-num">999+</div><div class="stat-label">Downloads</div></div>
             <div class="stat-card"><div class="stat-num" style="color:#4cd964;">Online</div><div class="stat-label">Server Status</div></div>
         </div>
         
-        <a class="btn-add" href="cydia://url/https://cydia.saurik.com/api/share#?source=http://anhtuan201x.github.io/">Add to Cydia</a>
+        <a href="link" class="btn-add">Add to Cydia</a>
     </div>
     <audio id="bgm" loop preload="none" src="http://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
     <script>
@@ -132,34 +133,24 @@
                 ctx.fill();
             }
         }
-        for (let i = 0; i < 100; i++) stars.push(new Star());
+        for (let i = 0; i <  starCount = 100; i++) stars.push(new Star());
         function animate() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             stars.forEach(s => { s.update(); s.draw(); });
             requestAnimationFrame(animate);
         }
         animate();
-        const audio = document.getElementById("bgm"), btn = document.getElementById("musicToggle");
-        btn.addEventListener("click", () => {
-            audio.paused ? (audio.play(), btn.innerHTML = "🎵 BGM: On", btn.style.background = "#4cd964", btn.style.color = "#fff") : (audio.pause(), btn.innerHTML = "🎵 BGM: Off", btn.style.background = "var(--card-sub)", btn.style.color = "var(--text-main)");
+
+        const bgm = document.getElementById("bgm"), musicToggle = document.getElementById("musicToggle");
+        musicToggle.addEventListener("click", () => {
+            if (bgm.paused) {
+                bgm.play().catch(err => console.log("BGM play blocked: ", err));
+                musicToggle.innerText = "🎵 BGM: On";
+            } else {
+                bgm.pause();
+                musicToggle.innerText = "🎵 BGM: Off";
+            }
         });
-        
-        let path = window.location.protocol + '//' + window.location.hostname + '/Packages?v=' + Math.random();
-        fetch(path)
-            .then(response => response.text())
-            .then(data => {
-                let lines = data.split('\n');
-                let debsCount = 0;
-                for (let i = 0; i < lines.length; i++) {
-                    if (lines[i].indexOf('Package:') === 0) {
-                        debsCount++;
-                    }
-                }
-                document.getElementById('pkgCount').innerText = debsCount < 10 ? '0' + debsCount : debsCount;
-            })
-            .catch(() => {
-                document.getElementById('pkgCount').innerText = '03';
-            });
     </script>
 </body>
 </html>
