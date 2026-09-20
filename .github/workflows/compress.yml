@@ -25,8 +25,8 @@ jobs:
 
     - name: Execute Core Scripts
       run: |
-        chmod +x control.sh sync.sh
-        ./control.sh
+        chmod +x sync.sh
+        ./sync.sh
 
     - name: Commit and Push changes
       run: |
