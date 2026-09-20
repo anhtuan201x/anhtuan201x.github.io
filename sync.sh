@@ -51,16 +51,17 @@ for ipa in ipas/*.ipa; do
         
         rm -rf ipas/tmp_ipa ipas/tmp_out
         mkdir -p ipas/tmp_ipa ipas/tmp_out/DEBIAN ipas/tmp_out/Applications
-        unzip -q "$ipa" -d ipas/tmp_ipa
-        app_folder=$(find ipas/tmp_ipa/Payload -maxdepth 2 -name "*.app" | head -n 1)
         
-        if [ -d "$app_folder" ]; then
+        unzip -q "$ipa" -d ipas/tmp_ipa || true
+        app_folder=$(find ipas/tmp_ipa/Payload -maxdepth 2 -name "*.app" 2>/dev/null | head -n 1 || echo "")
+        
+        bid="com.anhtuan201x.$clean_name"
+        ver="1.0"
+        display_name="$clean_name"
+        
+        if [ ! -z "$app_folder" ] && [ -d "$app_folder" ]; then
             cp -r "$app_folder" ipas/tmp_out/Applications/
             infoplist="ipas/tmp_out/Applications/$(basename "$app_folder")/Info.plist"
-            bid="com.anhtuan201x.$clean_name"
-            ver="1.0"
-            display_name="$clean_name"
-            
             if [ -f "$infoplist" ]; then
                 extracted_bid=$(grep -A 1 "CFBundleIdentifier" "$infoplist" | grep "<string>" | sed 's/.*<string>\(.*\)<\/string>.*/\1/' | tr -cd '[:alnum:]._-' || echo "")
                 extracted_ver=$(grep -A 1 "CFBundleVersion" "$infoplist" | grep "<string>" | sed 's/.*<string>\(.*\)<\/string>.*/\1/' | tr -cd '[:alnum:]._-' || echo "")
@@ -87,10 +88,11 @@ EOF
             chmod 0644 ipas/tmp_out/DEBIAN/control
             
             if [ ! -f "debs/${clean_name}.deb" ]; then
-                dpkg-deb -Zgzip --build ipas/tmp_out "debs/${clean_name}.deb"
+                dpkg-deb -Zgzip --build ipas/tmp_out "debs/${clean_name}.deb" || true
             fi
-            
-            cat << EOF > "ipas/${clean_name}.plist"
+        fi
+        
+        cat << EOF > "ipas/${clean_name}.plist"
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://apple.com">
 <plist version="1.0">
@@ -103,7 +105,7 @@ EOF
 				<dict>
 					<key>kind</key>
 					<key>software-package</key>
-					<url>https://github.io{clean_name}.ipa</url>
+					<url>https://github.io{filename}</url>
 				</dict>
 			</array>
 			<key>metadata</key>
@@ -122,7 +124,7 @@ EOF
 </dict>
 </plist>
 EOF
-            cat << EOF >> ipas/index.html
+        cat << EOF >> ipas/index.html
     <div class="game-item">
         <div class="game-info">
             <div class="game-icon" style="background: linear-gradient(135deg, #11998e, #38ef7d);">📦</div>
@@ -134,7 +136,6 @@ EOF
         </div>
     </div>
 EOF
-        fi
         rm -rf ipas/tmp_ipa ipas/tmp_out
     fi
 done
