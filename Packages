@@ -115,9 +115,9 @@ Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: debs/com.anhtuan201x.repoicons_1.0_iphoneos-arm.deb
 Size: 16378
-MD5sum: 85b0afef44559fc58eb6211ac1874b0e
-SHA1: b54db0a70b86bede0379fd6643ac6da96d11098b
-SHA256: d1dd0bb4941d0ca8426f6fa4c2f1f0a3d5f02bd5b74c8fa02d1bf845ef4faa0f
+MD5sum: 47d134fb594d408c99d06234f9a46ae6
+SHA1: ce9a61411e0fadb7ba272cf0cfa9fa735b8c7f19
+SHA256: 20c6ec4234a56146c5ee7b3955c91ec243c00b0eca837cde9ac5a6611bf16ec0
 Section: Themes
 Description: AnhTuan201X Repo Icons.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
