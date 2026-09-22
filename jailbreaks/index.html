@@ -2,388 +2,390 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>Jailbreak iOS 4 - iOS 18</title>
+<title>iOS Jailbreak Archive — iOS 4 to 18</title>
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+:root{
+  --bg:#07080c;
+  --card:#11141b;
+  --card2:#181c25;
+  --line:#252a35;
+  --text:#f5f7ff;
+  --muted:#8d95a8;
+  --blue:#0a84ff;
+  --purple:#8b5cf6;
+  --green:#22c55e;
+  --orange:#f59e0b;
+  --red:#ef4444;
 }
 
 body{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-    background:#05070b;
-    color:#fff;
+  font-family:-apple-system,BlinkMacSystemFont,
+  "SF Pro Display","Segoe UI",Arial,sans-serif;
+  background:
+    radial-gradient(
+      circle at 50% -15%,
+      rgba(55,100,190,.35),
+      transparent 40%
+    ),
+    var(--bg);
+  color:var(--text);
+  min-height:100vh;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
 }
 
 /* HEADER */
 
 header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    backdrop-filter:blur(20px);
-    background:rgba(5,7,11,.85);
-    border-bottom:1px solid #20232c;
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(7,8,12,.78);
+  backdrop-filter:blur(22px);
+  border-bottom:1px solid var(--line);
 }
 
 .nav{
-    max-width:1200px;
-    margin:auto;
-    padding:15px 20px;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+  max-width:1200px;
+  margin:auto;
+  padding:14px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
 
 .logo{
-    font-size:20px;
-    font-weight:800;
+  font-weight:800;
+  font-size:19px;
 }
 
-.logo span{
-    color:#0a84ff;
+.logo b{
+  color:var(--blue);
 }
 
 .github{
-    padding:9px 15px;
-    border-radius:10px;
-    background:#171a22;
-    border:1px solid #292d38;
-    color:#fff;
-    text-decoration:none;
-    font-size:14px;
+  padding:9px 14px;
+  border:1px solid var(--line);
+  border-radius:11px;
+  background:#11141b;
+  font-size:13px;
 }
 
 /* HERO */
 
 .hero{
-    text-align:center;
-    max-width:900px;
-    margin:auto;
-    padding:85px 20px 55px;
+  max-width:1000px;
+  margin:auto;
+  text-align:center;
+  padding:85px 20px 55px;
 }
 
 .badge{
-    display:inline-block;
-    padding:7px 13px;
-    border-radius:30px;
-
-    color:#58a6ff;
-    background:rgba(10,132,255,.12);
-    border:1px solid rgba(10,132,255,.25);
-
-    font-size:13px;
-    margin-bottom:20px;
+  display:inline-block;
+  padding:7px 13px;
+  border-radius:999px;
+  color:#65adff;
+  background:rgba(10,132,255,.11);
+  border:1px solid rgba(10,132,255,.25);
+  font-size:12px;
+  font-weight:700;
+  margin-bottom:20px;
 }
 
 h1{
-    font-size:clamp(45px,8vw,80px);
-    line-height:1;
-    letter-spacing:-4px;
+  font-size:clamp(44px,8vw,78px);
+  line-height:.98;
+  letter-spacing:-4px;
 }
 
 .gradient{
-    background:linear-gradient(
-        90deg,
-        #0a84ff,
-        #8b5cf6,
-        #c084fc
-    );
-
-    -webkit-background-clip:text;
-    color:transparent;
+  background:linear-gradient(
+    90deg,
+    #0a84ff,
+    #7c5cff,
+    #c084fc
+  );
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
 }
 
 .hero p{
-    color:#8d93a5;
-    max-width:650px;
-    margin:25px auto;
-    line-height:1.7;
+  max-width:680px;
+  margin:25px auto;
+  color:var(--muted);
+  line-height:1.7;
+  font-size:16px;
 }
 
 /* SEARCH */
 
 .search{
-    max-width:650px;
-    margin:30px auto 0;
+  max-width:650px;
+  margin:30px auto 0;
 }
 
 .search input{
-    width:100%;
-    padding:17px 20px;
-
-    border-radius:14px;
-    border:1px solid #292d38;
-
-    background:#11141b;
-    color:white;
-
-    outline:none;
-    font-size:15px;
+  width:100%;
+  padding:16px 19px;
+  border-radius:14px;
+  outline:none;
+  border:1px solid var(--line);
+  background:#11141b;
+  color:#fff;
+  font-size:15px;
 }
 
 .search input:focus{
-    border-color:#0a84ff;
+  border-color:var(--blue);
+  box-shadow:0 0 0 4px rgba(10,132,255,.08);
 }
 
 /* MAIN */
 
 .container{
-    max-width:1200px;
-    margin:auto;
-    padding:0 20px 80px;
+  max-width:1200px;
+  margin:auto;
+  padding:0 20px 80px;
 }
 
 .title{
-    font-size:25px;
-    margin-bottom:18px;
+  font-size:25px;
+  margin-bottom:16px;
 }
 
-/* VERSION */
+/* IOS FILTER */
 
 .versions{
-    display:flex;
-    gap:8px;
-
-    overflow-x:auto;
-    padding-bottom:10px;
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  padding-bottom:10px;
+  scrollbar-width:none;
 }
 
 .versions::-webkit-scrollbar{
-    display:none;
+  display:none;
 }
 
 .version{
-    flex-shrink:0;
-
-    padding:9px 14px;
-
-    border-radius:10px;
-
-    border:1px solid #292d38;
-    background:#11141b;
-
-    color:#aaa;
-
-    cursor:pointer;
-    font-weight:600;
+  flex-shrink:0;
+  padding:9px 14px;
+  border-radius:10px;
+  border:1px solid var(--line);
+  background:#11141b;
+  color:#aeb5c5;
+  cursor:pointer;
+  font-weight:700;
 }
 
 .version:hover,
 .version.active{
-    background:#0a84ff;
-    border-color:#0a84ff;
-    color:white;
+  background:var(--blue);
+  color:#fff;
+  border-color:var(--blue);
 }
 
-/* CARDS */
+/* RESULT */
+
+.result{
+  margin-top:18px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* GRID */
 
 .grid{
-    display:grid;
-    grid-template-columns:
-        repeat(3,minmax(0,1fr));
-
-    gap:18px;
-    margin-top:25px;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+  margin-top:20px;
 }
 
+/* CARD */
+
 .card{
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,.065),
-            rgba(255,255,255,.025)
-        );
-
-    border:1px solid #222630;
-
-    border-radius:20px;
-
-    padding:22px;
-
-    transition:.25s;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.065),
+      rgba(255,255,255,.025)
+    );
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:22px;
+  transition:.22s;
 }
 
 .card:hover{
-    transform:translateY(-5px);
-    border-color:#0a84ff;
+  transform:translateY(-4px);
+  border-color:rgba(10,132,255,.45);
 }
 
-.card-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    margin-bottom:18px;
+.top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:17px;
 }
 
 .icon{
-    width:48px;
-    height:48px;
-
-    display:grid;
-    place-items:center;
-
-    border-radius:14px;
-
-    font-size:23px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #0a84ff,
-            #7c3aed
-        );
+  width:48px;
+  height:48px;
+  display:grid;
+  place-items:center;
+  border-radius:14px;
+  font-size:22px;
+  background:linear-gradient(
+    135deg,
+    #0a84ff,
+    #7c3aed
+  );
 }
 
 .status{
-    font-size:11px;
+  font-size:10px;
+  font-weight:800;
+  padding:5px 9px;
+  border-radius:999px;
+}
 
-    padding:5px 9px;
+.working{
+  color:#4ade80;
+  background:rgba(34,197,94,.1);
+}
 
-    border-radius:20px;
+.legacy{
+  color:#fbbf24;
+  background:rgba(245,158,11,.1);
+}
 
-    color:#4ade80;
-
-    background:rgba(34,197,94,.1);
-
-    border:1px solid rgba(34,197,94,.2);
+.research{
+  color:#c084fc;
+  background:rgba(168,85,247,.1);
 }
 
 .card h2{
-    font-size:20px;
-    margin-bottom:6px;
+  font-size:20px;
+  margin-bottom:6px;
 }
 
 .ios{
-    color:#58a6ff;
-    font-size:13px;
-    font-weight:600;
-
-    margin-bottom:12px;
+  color:#5caaff;
+  font-weight:700;
+  font-size:12px;
+  margin-bottom:11px;
 }
 
 .card p{
-    color:#8d93a5;
-    font-size:14px;
-    line-height:1.6;
-
-    min-height:65px;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.6;
+  min-height:63px;
 }
 
-.devices{
-    display:flex;
-    flex-wrap:wrap;
-
-    gap:6px;
-
-    margin:15px 0;
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin:15px 0;
 }
 
-.device{
-    background:#191c24;
-
-    color:#b8bdca;
-
-    padding:5px 8px;
-
-    border-radius:7px;
-
-    font-size:11px;
+.tag{
+  padding:5px 8px;
+  border-radius:7px;
+  background:#191d26;
+  color:#b7bdcc;
+  font-size:10px;
 }
 
 .button{
-    display:block;
-
-    text-align:center;
-
-    padding:11px;
-
-    border-radius:11px;
-
-    background:rgba(10,132,255,.12);
-
-    border:1px solid rgba(10,132,255,.25);
-
-    color:#58a6ff;
-
-    font-size:13px;
-
-    font-weight:700;
-
-    text-decoration:none;
-
-    transition:.2s;
+  display:block;
+  text-align:center;
+  padding:11px;
+  border-radius:11px;
+  color:#5daaff;
+  background:rgba(10,132,255,.1);
+  border:1px solid rgba(10,132,255,.22);
+  font-size:12px;
+  font-weight:800;
 }
 
 .button:hover{
-    background:#0a84ff;
-    color:white;
+  background:var(--blue);
+  color:#fff;
+}
+
+/* EMPTY */
+
+.empty{
+  display:none;
+  text-align:center;
+  padding:60px 20px;
+  color:var(--muted);
 }
 
 /* WARNING */
 
 .warning{
-    margin-top:30px;
-
-    padding:18px;
-
-    border-radius:14px;
-
-    background:rgba(245,158,11,.07);
-
-    border:1px solid rgba(245,158,11,.2);
-
-    color:#f5c56b;
-
-    font-size:13px;
-
-    line-height:1.6;
+  margin-top:30px;
+  padding:18px;
+  border-radius:15px;
+  border:1px solid rgba(245,158,11,.2);
+  background:rgba(245,158,11,.06);
+  color:#f4c66e;
+  font-size:12px;
+  line-height:1.7;
 }
 
 /* FOOTER */
 
 footer{
-    text-align:center;
-
-    padding:30px 20px;
-
-    border-top:1px solid #20232c;
-
-    color:#777d8d;
-
-    font-size:13px;
+  border-top:1px solid var(--line);
+  text-align:center;
+  color:#777f92;
+  padding:30px 20px;
+  font-size:12px;
 }
 
 /* MOBILE */
 
 @media(max-width:900px){
-
-    .grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
+  .grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
 }
 
 @media(max-width:600px){
+  .grid{
+    grid-template-columns:1fr;
+  }
 
-    .grid{
-        grid-template-columns:1fr;
-    }
+  .hero{
+    padding-top:60px;
+  }
 
-    .hero{
-        padding-top:60px;
-    }
+  h1{
+    letter-spacing:-2.5px;
+  }
 
-    h1{
-        letter-spacing:-2px;
-    }
-
+  .container{
+    padding-left:15px;
+    padding-right:15px;
+  }
 }
 </style>
 </head>
@@ -391,540 +393,1132 @@ footer{
 <body>
 
 <header>
+  <div class="nav">
 
-<div class="nav">
+    <div class="logo">
+      <b></b> iOS Jailbreak Archive
+    </div>
 
-<div class="logo">
-<span></span> iOS Jailbreak
-</div>
+    <a
+      class="github"
+      href="https://github.com/anhtuan201x/anhtuan201x.github.io"
+      target="_blank">
+      GitHub ↗
+    </a>
 
-<a
-class="github"
-href="https://github.com/anhtuan201x/anhtuan201x.github.io"
-target="_blank">
-GitHub ↗
-</a>
-
-</div>
-
+  </div>
 </header>
 
 
 <section class="hero">
 
-<div class="badge">
-iOS 4 → iOS 18
-</div>
+  <div class="badge">
+    iOS 4 — iOS 18
+  </div>
 
-<h1>
-Jailbreak<br>
-<span class="gradient">Archive</span>
-</h1>
+  <h1>
+    Jailbreak<br>
+    <span class="gradient">Archive</span>
+  </h1>
 
-<p>
-Kho lưu trữ Jailbreak dành cho iPhone, iPad
-và iPod touch từ iOS 4 đến iOS 18.
-</p>
+  <p>
+    Tra cứu các công cụ Jailbreak từ thời iOS 4
+    đến iOS 18. Tìm theo phiên bản iOS, tên tool
+    hoặc thiết bị.
+  </p>
 
-<div class="search">
-
-<input
-id="search"
-type="text"
-placeholder="🔎  Tìm Jailbreak, iOS hoặc thiết bị...">
-
-</div>
+  <div class="search">
+    <input
+      id="search"
+      type="search"
+      placeholder="🔎  Tìm redsn0w, evasi0n, iOS 6, iPhone 4...">
+  </div>
 
 </section>
 
 
 <main class="container">
 
-<h2 class="title">
-Chọn phiên bản iOS
-</h2>
+  <h2 class="title">iOS Version</h2>
 
+  <div class="versions">
 
-<div class="versions">
+    <button class="version active" data-version="all">
+      Tất cả
+    </button>
 
-<button class="version active"
-data-version="all">
-Tất cả
-</button>
+    <button class="version" data-version="4">iOS 4</button>
+    <button class="version" data-version="5">iOS 5</button>
+    <button class="version" data-version="6">iOS 6</button>
+    <button class="version" data-version="7">iOS 7</button>
+    <button class="version" data-version="8">iOS 8</button>
+    <button class="version" data-version="9">iOS 9</button>
+    <button class="version" data-version="10">iOS 10</button>
+    <button class="version" data-version="11">iOS 11</button>
+    <button class="version" data-version="12">iOS 12</button>
+    <button class="version" data-version="13">iOS 13</button>
+    <button class="version" data-version="14">iOS 14</button>
+    <button class="version" data-version="15">iOS 15</button>
+    <button class="version" data-version="16">iOS 16</button>
+    <button class="version" data-version="17">iOS 17</button>
+    <button class="version" data-version="18">iOS 18</button>
 
-<button class="version" data-version="4">iOS 4</button>
-<button class="version" data-version="5">iOS 5</button>
-<button class="version" data-version="6">iOS 6</button>
-<button class="version" data-version="7">iOS 7</button>
-<button class="version" data-version="8">iOS 8</button>
-<button class="version" data-version="9">iOS 9</button>
-<button class="version" data-version="10">iOS 10</button>
-<button class="version" data-version="11">iOS 11</button>
-<button class="version" data-version="12">iOS 12</button>
-<button class="version" data-version="13">iOS 13</button>
-<button class="version" data-version="14">iOS 14</button>
-<button class="version" data-version="15">iOS 15</button>
-<button class="version" data-version="16">iOS 16</button>
-<button class="version" data-version="17">iOS 17</button>
-<button class="version" data-version="18">iOS 18</button>
+  </div>
 
-</div>
 
+  <div class="result" id="result"></div>
 
-<div class="grid" id="grid">
 
+  <div class="grid" id="grid">
 
-<!-- CHECKRA1N -->
 
-<article class="card" data-ios="12,13,14">
+    <!-- iOS 4 -->
 
-<div class="card-top">
+    <article class="card"
+      data-ios="4"
+      data-search="ios 4 redsn0w pwnagetool sn0wbreeze iphone 3gs iphone 4">
 
-<div class="icon">
-⚡
-</div>
+      <div class="top">
+        <div class="icon">⚡</div>
+        <span class="status legacy">LEGACY</span>
+      </div>
 
-<span class="status">
-Available
-</span>
+      <h2>redsn0w</h2>
 
-</div>
+      <div class="ios">
+        iOS 4.x
+      </div>
 
-<h2>
-checkra1n
-</h2>
+      <p>
+        Công cụ jailbreak kinh điển cho các thiết bị
+        iPhone, iPod touch và iPad đời cũ.
+      </p>
 
-<div class="ios">
-iOS 12 → iOS 14
-</div>
+      <div class="tags">
+        <span class="tag">iPhone 3G</span>
+        <span class="tag">iPhone 3GS</span>
+        <span class="tag">iPhone 4</span>
+        <span class="tag">iPod touch</span>
+      </div>
 
-<p>
-Jailbreak dựa trên checkm8 dành cho
-các thiết bị sử dụng chip A5 đến A11.
-</p>
+      <a class="button"
+        href="https://github.com/wh1ter0se/redsn0w"
+        target="_blank">
+        Archive / GitHub →
+      </a>
 
-<div class="devices">
+    </article>
 
-<span class="device">iPhone 5s</span>
-<span class="device">iPhone 6</span>
-<span class="device">iPhone 7</span>
-<span class="device">iPhone 8</span>
-<span class="device">iPhone X</span>
 
-</div>
+    <article class="card"
+      data-ios="4"
+      data-search="ios 4 pwnagetool iphone ipad ipod touch">
 
-<a
-class="button"
-href="https://checkra.in/"
-target="_blank">
+      <div class="top">
+        <div class="icon">🧰</div>
+        <span class="status legacy">LEGACY</span>
+      </div>
 
-Trang chính thức →
+      <h2>PwnageTool</h2>
 
-</a>
+      <div class="ios">
+        iOS 4.x
+      </div>
 
-</article>
+      <p>
+        Công cụ jailbreak dạng custom IPSW nổi tiếng
+        trên macOS thời iPhone đời đầu.
+      </p>
 
+      <div class="tags">
+        <span class="tag">iPhone</span>
+        <span class="tag">iPad</span>
+        <span class="tag">iPod touch</span>
+        <span class="tag">Mac</span>
+      </div>
 
-<!-- UNC0VER -->
+      <a class="button"
+        href="https://en.wikipedia.org/wiki/PwnageTool"
+        target="_blank">
+        Information →
+      </a>
 
-<article class="card" data-ios="11,12,13,14">
+    </article>
 
-<div class="card-top">
 
-<div class="icon">
-🔓
-</div>
+    <!-- iOS 5 -->
 
-<span class="status">
-Available
-</span>
+    <article class="card"
+      data-ios="5"
+      data-search="ios 5 redsn0w absinthe sn0wbreeze iphone 4s ipad 2">
 
-</div>
+      <div class="top">
+        <div class="icon">🔓</div>
+        <span class="status legacy">LEGACY</span>
+      </div>
 
-<h2>
-unc0ver
-</h2>
+      <h2>Absinthe</h2>
 
-<div class="ios">
-iOS 11 → iOS 14
-</div>
+      <div class="ios">
+        iOS 5.x
+      </div>
 
-<p>
-Jailbreak phổ biến hỗ trợ nhiều phiên bản
-iOS cũ trên iPhone và iPad.
-</p>
+      <p>
+        Công cụ jailbreak untethered nổi bật của
+        thời iOS 5, đặc biệt cho các thiết bị A5.
+      </p>
 
-<div class="devices">
+      <div class="tags">
+        <span class="tag">iPhone 4S</span>
+        <span class="tag">iPad 2</span>
+        <span class="tag">iOS 5</span>
+      </div>
 
-<span class="device">iPhone</span>
-<span class="device">iPad</span>
-<span class="device">iPod touch</span>
+      <a class="button"
+        href="https://en.wikipedia.org/wiki/Absinthe_(jailbreak)"
+        target="_blank">
+        Information →
+      </a>
 
-</div>
+    </article>
 
-<a
-class="button"
-href="https://unc0ver.dev/"
-target="_blank">
 
-Trang chính thức →
+    <article class="card"
+      data-ios="5"
+      data-search="ios 5 redsn0w iphone ipad ipod">
 
-</a>
+      <div class="top">
+        <div class="icon">⚡</div>
+        <span class="status legacy">LEGACY</span>
+      </div>
 
-</article>
+      <h2>redsn0w</h2>
 
+      <div class="ios">
+        iOS 5.x
+      </div>
 
-<!-- TAURINE -->
+      <p>
+        redsn0w tiếp tục được sử dụng rộng rãi
+        trên nhiều thiết bị chạy iOS 5.
+      </p>
 
-<article class="card" data-ios="14">
+      <div class="tags">
+        <span class="tag">iPhone</span>
+        <span class="tag">iPad</span>
+        <span class="tag">iPod touch</span>
+      </div>
 
-<div class="card-top">
+      <a class="button"
+        href="https://en.wikipedia.org/wiki/Redsn0w"
+        target="_blank">
+        Information →
+      </a>
 
-<div class="icon">
-🌊
-</div>
+    </article>
 
-<span class="status">
-Available
-</span>
 
-</div>
+    <!-- iOS 6 -->
 
-<h2>
-Taurine
-</h2>
+    <article class="card"
+      data-ios="6"
+      data-search="ios 6 evasi0n redsn0w iphone 4s iphone 5 ipad">
 
-<div class="ios">
-iOS 14 → 14.8.1
-</div>
+      <div class="top">
+        <div class="icon">💥</div>
+        <span class="status legacy">LEGACY</span>
+      </div>
 
-<p>
-Jailbreak dành cho các thiết bị hỗ trợ
-iOS 14.
-</p>
+      <h2>evasi0n</h2>
 
-<div class="devices">
+      <div class="ios">
+        iOS 6.x
+      </div>
 
-<span class="device">A8</span>
-<span class="device">A9</span>
-<span class="device">A10</span>
-<span class="device">A11</span>
-<span class="device">A12</span>
-<span class="device">A14</span>
+      <p>
+        Một trong những jailbreak nổi tiếng nhất
+        của thời iOS 6.
+      </p>
 
-</div>
+      <div class="tags">
+        <span class="tag">iPhone 4</span>
+        <span class="tag">iPhone 4S</span>
+        <span class="tag">iPhone 5</span>
+        <span class="tag">iPad</span>
+      </div>
 
-<a
-class="button"
-href="https://taurine.app/"
-target="_blank">
+      <a class="button"
+        href="https://en.wikipedia.org/wiki/IOS_jailbreaking"
+        target="_blank">
+        Information →
+      </a>
 
-Trang chính thức →
+    </article>
 
-</a>
 
-</article>
+    <!-- iOS 7 -->
 
+    <article class="card"
+      data-ios="7"
+      data-search="ios 7 evasi0n7 evasi0n iphone 5 iphone 5s ipad">
 
-<!-- DOPAMINE -->
+      <div class="top">
+        <div class="icon">💥</div>
+        <span class="status legacy">LEGACY</span>
+      </div>
 
-<article class="card" data-ios="15,16">
+      <h2>evasi0n7</h2>
 
-<div class="card-top">
+      <div class="ios">
+        iOS 7.x
+      </div>
 
-<div class="icon">
-💊
-</div>
+      <p>
+        Jailbreak nổi tiếng dành cho thế hệ
+        iOS 7.
+      </p>
 
-<span class="status">
-Available
-</span>
+      <div class="tags">
+        <span class="tag">iPhone 5</span>
+        <span class="tag">iPhone 5s</span>
+        <span class="tag">iPad</span>
+      </div>
 
-</div>
+      <a class="button"
+        href="https://en.wikipedia.org/wiki/IOS_jailbreaking"
+        target="_blank">
+        Information →
+      </a>
 
-<h2>
-Dopamine
-</h2>
+    </article>
 
-<div class="ios">
-iOS 15 → iOS 16
-</div>
 
-<p>
-Rootless jailbreak dành cho một số
-thiết bị chạy iOS 15 và iOS 16.
-</p>
+    <article class="card"
+      data-ios="7"
+      data-search="ios 7 pangu iphone ipad ipod">
 
-<div class="devices">
+      <div class="top">
+        <div class="icon">🔓</div>
+        <span class="status legacy">LEGACY</span>
+      </div>
 
-<span class="device">A8+</span>
-<span class="device">iPhone</span>
-<span class="device">iPad</span>
+      <h2>Pangu</h2>
 
-</div>
+      <div class="ios">
+        iOS 7.x
+      </div>
 
-<a
-class="button"
-href="https://ellekit.space/dopamine/"
-target="_blank">
+      <p>
+        Một jailbreak tool khác xuất hiện trong
+        giai đoạn cuối của iOS 7.
+      </p>
 
-Trang chính thức →
+      <div class="tags">
+        <span class="tag">iOS 7</span>
+        <span class="tag">iPhone</span>
+        <span class="tag">iPad</span>
+      </div>
 
-</a>
+      <a class="button"
+        href="https://en.wikipedia.org/wiki/IOS_jailbreaking"
+        target="_blank">
+        Information →
+      </a>
 
-</article>
+    </article>
 
 
-<!-- PALERA1N -->
+    <!-- iOS 8 -->
 
-<article class="card" data-ios="15,16,17,18">
+    <article class="card"
+      data-ios="8"
+      data-search="ios 8 pangu8 pangu jailbreak iphone ipad">
 
-<div class="card-top">
+      <div class="top">
+        <div class="icon">🔓</div>
+        <span class="status legacy">LEGACY</span>
+      </div>
 
-<div class="icon">
-🛠️
-</div>
+      <h2>Pangu8</h2>
 
-<span class="status">
-Available
-</span>
+      <div class="ios">
+        iOS 8.x
+      </div>
 
-</div>
+      <p>
+        Jailbreak tool nổi bật cho các phiên bản
+        iOS 8 được hỗ trợ.
+      </p>
 
-<h2>
-palera1n
-</h2>
+      <div class="tags">
+        <span class="tag">iOS 8</span>
+        <span class="tag">iPhone</span>
+        <span class="tag">iPad</span>
+      </div>
 
-<div class="ios">
-iOS 15 → iOS 18
-</div>
+      <a class="button"
+        href="https://en.wikipedia.org/wiki/IOS_jailbreaking"
+        target="_blank">
+        Information →
+      </a>
 
-<p>
-Jailbreak dựa trên checkm8 cho các
-thiết bị A8 đến A11.
-</p>
+    </article>
 
-<div class="devices">
 
-<span class="device">A8</span>
-<span class="device">A9</span>
-<span class="device">A10</span>
-<span class="device">A11</span>
+    <article class="card"
+      data-ios="8"
+      data-search="ios 8 taig tai g jailbreak iphone ipad">
 
-</div>
+      <div class="top">
+        <div class="icon">⚙️</div>
+        <span class="status legacy">LEGACY</span>
+      </div>
 
-<a
-class="button"
-href="https://palera.in/"
-target="_blank">
+      <h2>TaiG</h2>
 
-Trang chính thức →
+      <div class="ios">
+        iOS 8.x
+      </div>
 
-</a>
+      <p>
+        Công cụ jailbreak từng được sử dụng
+        rộng rãi trên iOS 8.
+      </p>
 
-</article>
+      <div class="tags">
+        <span class="tag">iOS 8</span>
+        <span class="tag">iPhone</span>
+        <span class="tag">iPad</span>
+      </div>
 
+      <a class="button"
+        href="https://en.wikipedia.org/wiki/IOS_jailbreaking"
+        target="_blank">
+        Information →
+      </a>
 
-<!-- FUGU15 -->
+    </article>
 
-<article class="card" data-ios="15">
 
-<div class="card-top">
+    <!-- iOS 9 -->
 
-<div class="icon">
-🐡
-</div>
+    <article class="card"
+      data-ios="9"
+      data-search="ios 9 pangu9 pangu jailbreak iphone ipad">
 
-<span class="status">
-Research
-</span>
+      <div class="top">
+        <div class="icon">🔓</div>
+        <span class="status legacy">LEGACY</span>
+      </div>
 
-</div>
+      <h2>Pangu9</h2>
 
-<h2>
-Fugu15
-</h2>
+      <div class="ios">
+        iOS 9.x
+      </div>
 
-<div class="ios">
-iOS 15
-</div>
+      <p>
+        Jailbreak tool nổi tiếng dành cho nhiều
+        phiên bản iOS 9.
+      </p>
 
-<p>
-Project nghiên cứu jailbreak cho
-thiết bị arm64e trên iOS 15.
-</p>
+      <div class="tags">
+        <span class="tag">iOS 9</span>
+        <span class="tag">iPhone</span>
+        <span class="tag">iPad</span>
+      </div>
 
-<div class="devices">
+      <a class="button"
+        href="https://en.wikipedia.org/wiki/IOS_jailbreaking"
+        target="_blank">
+        Information →
+      </a>
 
-<span class="device">A12+</span>
-<span class="device">arm64e</span>
+    </article>
 
-</div>
 
-<a
-class="button"
-href="https://github.com/pinauten/Fugu15"
-target="_blank">
+    <!-- iOS 10 -->
 
-GitHub →
+    <article class="card"
+      data-ios="10"
+      data-search="ios 10 yalu yalu102 phoenix jailbreak iphone ipad">
 
-</a>
+      <div class="top">
+        <div class="icon">🦊</div>
+        <span class="status legacy">LEGACY</span>
+      </div>
 
-</article>
+      <h2>Yalu / Yalu102</h2>
 
+      <div class="ios">
+        iOS 10.x
+      </div>
 
-<!-- FUGU18 -->
+      <p>
+        Jailbreak dành cho một số phiên bản
+        iOS 10 và thiết bị tương thích.
+      </p>
 
-<article class="card" data-ios="18">
+      <div class="tags">
+        <span class="tag">iOS 10</span>
+        <span class="tag">64-bit</span>
+        <span class="tag">iPhone</span>
+      </div>
 
-<div class="card-top">
+      <a class="button"
+        href="https://github.com/kpwn/yalu"
+        target="_blank">
+        GitHub →
+      </a>
 
-<div class="icon">
-🐡
-</div>
+    </article>
 
-<span class="status">
-Research
-</span>
 
-</div>
+    <article class="card"
+      data-ios="10"
+      data-search="ios 10 phoenix jailbreak 32 bit iphone 5 ipad">
 
-<h2>
-Fugu18
-</h2>
+      <div class="top">
+        <div class="icon">🔥</div>
+        <span class="status legacy">LEGACY</span>
+      </div>
 
-<div class="ios">
-iOS 18
-</div>
+      <h2>Phoenix</h2>
 
-<p>
-Project nghiên cứu jailbreak cho
-một số thiết bị và build iOS 18.
-</p>
+      <div class="ios">
+        iOS 9.3.5 — 9.3.6
+      </div>
 
-<div class="devices">
+      <p>
+        Jailbreak dành cho một số thiết bị
+        32-bit chạy iOS 9.3.5–9.3.6.
+      </p>
 
-<span class="device">A12+</span>
-<span class="device">iOS 18</span>
+      <div class="tags">
+        <span class="tag">32-bit</span>
+        <span class="tag">iPad</span>
+        <span class="tag">iPhone 4S</span>
+      </div>
 
-</div>
+      <a class="button"
+        href="https://phoenixpwn.com/"
+        target="_blank">
+        Website →
+      </a>
 
-<a
-class="button"
-href="https://github.com/dleovl/Fugu18"
-target="_blank">
+    </article>
 
-GitHub →
 
-</a>
+    <!-- iOS 11 -->
 
-</article>
+    <article class="card"
+      data-ios="11"
+      data-search="ios 11 electra jailbreak iphone ipad">
 
+      <div class="top">
+        <div class="icon">⚡</div>
+        <span class="status legacy">LEGACY</span>
+      </div>
 
-</div>
+      <h2>Electra</h2>
 
+      <div class="ios">
+        iOS 11.x
+      </div>
 
-<div class="warning">
+      <p>
+        Một jailbreak tool quan trọng của thời
+        iOS 11.
+      </p>
 
-⚠️ <b>Lưu ý:</b>
-Khả năng Jailbreak phụ thuộc vào model thiết bị,
-chip, phiên bản iOS và đôi khi cả build number.
-Hãy kiểm tra thông tin từ project chính thức
-trước khi thực hiện.
+      <div class="tags">
+        <span class="tag">iOS 11</span>
+        <span class="tag">iPhone</span>
+        <span class="tag">iPad</span>
+      </div>
 
-</div>
+      <a class="button"
+        href="https://coolstar.org/electra/"
+        target="_blank">
+        Website →
+      </a>
+
+    </article>
+
+
+    <article class="card"
+      data-ios="11"
+      data-search="ios 11 unc0ver jailbreak iphone ipad">
+
+      <div class="top">
+        <div class="icon">🔓</div>
+        <span class="status legacy">LEGACY</span>
+      </div>
+
+      <h2>unc0ver</h2>
+
+      <div class="ios">
+        iOS 11.x
+      </div>
+
+      <p>
+        Jailbreak hỗ trợ nhiều phiên bản iOS
+        và nhiều thế hệ thiết bị.
+      </p>
+
+      <div class="tags">
+        <span class="tag">iOS 11</span>
+        <span class="tag">iPhone</span>
+        <span class="tag">iPad</span>
+      </div>
+
+      <a class="button"
+        href="https://unc0ver.dev/"
+        target="_blank">
+        Official Website →
+      </a>
+
+    </article>
+
+
+    <!-- iOS 12 -->
+
+    <article class="card"
+      data-ios="12"
+      data-search="ios 12 chimera unc0ver checkra1n jailbreak">
+
+      <div class="top">
+        <div class="icon">⚡</div>
+        <span class="status legacy">LEGACY</span>
+      </div>
+
+      <h2>Chimera</h2>
+
+      <div class="ios">
+        iOS 12.x
+      </div>
+
+      <p>
+        Jailbreak rootless thời kỳ đầu, được phát triển
+        cho các phiên bản iOS tương thích.
+      </p>
+
+      <div class="tags">
+        <span class="tag">iOS 12</span>
+        <span class="tag">A7+</span>
+        <span class="tag">iPhone</span>
+      </div>
+
+      <a class="button"
+        href="https://chimera.coolstar.org/"
+        target="_blank">
+        Website →
+      </a>
+
+    </article>
+
+
+    <article class="card"
+      data-ios="12"
+      data-search="ios 12 checkra1n iphone 5s 6 7 8 x">
+
+      <div class="top">
+        <div class="icon">⚡</div>
+        <span class="status working">CHECKM8</span>
+      </div>
+
+      <h2>checkra1n</h2>
+
+      <div class="ios">
+        iOS 12.x+
+      </div>
+
+      <p>
+        Jailbreak dựa trên exploit checkm8,
+        dành cho thiết bị A5–A11 tương thích.
+      </p>
+
+      <div class="tags">
+        <span class="tag">A5</span>
+        <span class="tag">A7</span>
+        <span class="tag">A11</span>
+        <span class="tag">iPhone X</span>
+      </div>
+
+      <a class="button"
+        href="https://checkra.in/"
+        target="_blank">
+        Official Website →
+      </a>
+
+    </article>
+
+
+    <!-- iOS 13 -->
+
+    <article class="card"
+      data-ios="13"
+      data-search="ios 13 unc0ver checkra1n jailbreak iphone ipad">
+
+      <div class="top">
+        <div class="icon">🔓</div>
+        <span class="status working">AVAILABLE</span>
+      </div>
+
+      <h2>unc0ver</h2>
+
+      <div class="ios">
+        iOS 13.x
+      </div>
+
+      <p>
+        Jailbreak hỗ trợ các phiên bản iOS 13
+        tương thích.
+      </p>
+
+      <div class="tags">
+        <span class="tag">iOS 13</span>
+        <span class="tag">A12+</span>
+        <span class="tag">iPhone</span>
+      </div>
+
+      <a class="button"
+        href="https://unc0ver.dev/"
+        target="_blank">
+        Official Website →
+      </a>
+
+    </article>
+
+
+    <!-- iOS 14 -->
+
+    <article class="card"
+      data-ios="14"
+      data-search="ios 14 unc0ver taurine checkra1n jailbreak">
+
+      <div class="top">
+        <div class="icon">🌊</div>
+        <span class="status working">AVAILABLE</span>
+      </div>
+
+      <h2>Taurine</h2>
+
+      <div class="ios">
+        iOS 14.x
+      </div>
+
+      <p>
+        Jailbreak dành cho các thiết bị và
+        phiên bản iOS 14 được hỗ trợ.
+      </p>
+
+      <div class="tags">
+        <span class="tag">iOS 14</span>
+        <span class="tag">A8–A14</span>
+        <span class="tag">Rootless</span>
+      </div>
+
+      <a class="button"
+        href="https://taurine.app/"
+        target="_blank">
+        Official Website →
+      </a>
+
+    </article>
+
+
+    <!-- iOS 15 -->
+
+    <article class="card"
+      data-ios="15"
+      data-search="ios 15 dopamine palera1n fugu15 jailbreak">
+
+      <div class="top">
+        <div class="icon">💊</div>
+        <span class="status working">AVAILABLE</span>
+      </div>
+
+      <h2>Dopamine</h2>
+
+      <div class="ios">
+        iOS 15.x+
+      </div>
+
+      <p>
+        Rootless jailbreak dành cho các phiên bản
+        và thiết bị tương thích.
+      </p>
+
+      <div class="tags">
+        <span class="tag">iOS 15</span>
+        <span class="tag">A8+</span>
+        <span class="tag">Rootless</span>
+      </div>
+
+      <a class="button"
+        href="https://ellekit.space/dopamine/"
+        target="_blank">
+        Official Website →
+      </a>
+
+    </article>
+
+
+    <article class="card"
+      data-ios="15"
+      data-search="ios 15 palera1n checkm8 a8 a11 iphone ipad">
+
+      <div class="top">
+        <div class="icon">🛠️</div>
+        <span class="status working">CHECKM8</span>
+      </div>
+
+      <h2>palera1n</h2>
+
+      <div class="ios">
+        iOS 15.x+
+      </div>
+
+      <p>
+        Jailbreak checkm8 cho các thiết bị
+        A8–A11 tương thích.
+      </p>
+
+      <div class="tags">
+        <span class="tag">A8</span>
+        <span class="tag">A9</span>
+        <span class="tag">A10</span>
+        <span class="tag">A11</span>
+      </div>
+
+      <a class="button"
+        href="https://palera.in/"
+        target="_blank">
+        Official Website →
+      </a>
+
+    </article>
+
+
+    <!-- iOS 16 -->
+
+    <article class="card"
+      data-ios="16"
+      data-search="ios 16 dopamine palera1n jailbreak">
+
+      <div class="top">
+        <div class="icon">💊</div>
+        <span class="status working">AVAILABLE</span>
+      </div>
+
+      <h2>Dopamine</h2>
+
+      <div class="ios">
+        iOS 16.x
+      </div>
+
+      <p>
+        Jailbreak rootless cho các phiên bản
+        và thiết bị nằm trong phạm vi hỗ trợ.
+      </p>
+
+      <div class="tags">
+        <span class="tag">iOS 16</span>
+        <span class="tag">Rootless</span>
+        <span class="tag">A8+</span>
+      </div>
+
+      <a class="button"
+        href="https://ellekit.space/dopamine/"
+        target="_blank">
+        Official Website →
+      </a>
+
+    </article>
+
+
+    <article class="card"
+      data-ios="16"
+      data-search="ios 16 palera1n iphone 8 iphone x ipad">
+
+      <div class="top">
+        <div class="icon">🛠️</div>
+        <span class="status working">CHECKM8</span>
+      </div>
+
+      <h2>palera1n</h2>
+
+      <div class="ios">
+        iOS 16.x
+      </div>
+
+      <p>
+        Jailbreak checkm8 dành cho thiết bị
+        A8–A11 tương thích.
+      </p>
+
+      <div class="tags">
+        <span class="tag">A8–A11</span>
+        <span class="tag">iPhone 8</span>
+        <span class="tag">iPhone X</span>
+      </div>
+
+      <a class="button"
+        href="https://palera.in/"
+        target="_blank">
+        Official Website →
+      </a>
+
+    </article>
+
+
+    <!-- iOS 17 -->
+
+    <article class="card"
+      data-ios="17"
+      data-search="ios 17 palera1n jailbreak checkm8 iphone 8 x">
+
+      <div class="top">
+        <div class="icon">🛠️</div>
+        <span class="status working">CHECKM8</span>
+      </div>
+
+      <h2>palera1n</h2>
+
+      <div class="ios">
+        iOS 17.x
+      </div>
+
+      <p>
+        Hỗ trợ phụ thuộc thiết bị checkm8 và
+        phiên bản/build iOS cụ thể.
+      </p>
+
+      <div class="tags">
+        <span class="tag">A8–A11</span>
+        <span class="tag">iOS 17</span>
+        <span class="tag">checkm8</span>
+      </div>
+
+      <a class="button"
+        href="https://palera.in/"
+        target="_blank">
+        Official Website →
+      </a>
+
+    </article>
+
+
+    <!-- iOS 18 -->
+
+    <article class="card"
+      data-ios="18"
+      data-search="ios 18 palera1n fugu18 jailbreak checkm8">
+
+      <div class="top">
+        <div class="icon">🛠️</div>
+        <span class="status research">CHECK FIRST</span>
+      </div>
+
+      <h2>palera1n</h2>
+
+      <div class="ios">
+        iOS 18.x
+      </div>
+
+      <p>
+        Khả năng hỗ trợ phụ thuộc model thiết bị,
+        build iOS và tình trạng project.
+      </p>
+
+      <div class="tags">
+        <span class="tag">A8–A11</span>
+        <span class="tag">checkm8</span>
+        <span class="tag">iOS 18</span>
+      </div>
+
+      <a class="button"
+        href="https://palera.in/"
+        target="_blank">
+        Check Official Site →
+      </a>
+
+    </article>
+
+
+    <article class="card"
+      data-ios="18"
+      data-search="ios 18 fugu18 jailbreak research a12">
+
+      <div class="top">
+        <div class="icon">🐡</div>
+        <span class="status research">RESEARCH</span>
+      </div>
+
+      <h2>Fugu18</h2>
+
+      <div class="ios">
+        iOS 18
+      </div>
+
+      <p>
+        Project nghiên cứu liên quan đến jailbreak
+        cho một số thiết bị/build cụ thể.
+      </p>
+
+      <div class="tags">
+        <span class="tag">A12+</span>
+        <span class="tag">iOS 18</span>
+        <span class="tag">Research</span>
+      </div>
+
+      <a class="button"
+        href="https://github.com/dleovl/Fugu18"
+        target="_blank">
+        GitHub →
+      </a>
+
+    </article>
+
+  </div>
+
+
+  <div class="empty" id="empty">
+    Không tìm thấy công cụ phù hợp.
+  </div>
+
+
+  <div class="warning">
+    ⚠️ <b>Lưu ý:</b>
+    Đây là trang archive/tham khảo. Khả năng jailbreak thực tế
+    phụ thuộc vào phiên bản iOS chính xác, build number, model
+    thiết bị và chip. Không nên coi tên iOS trong card là cam kết
+    rằng mọi thiết bị trên phiên bản đó đều được hỗ trợ.
+  </div>
 
 </main>
 
 
 <footer>
-
-<b>iOS Jailbreak Archive</b>
-<br><br>
-
-© 2026 Anhtuan201x · iOS 4 → iOS 18
-
+  <b>iOS Jailbreak Archive</b>
+  <br><br>
+  © 2026 Anhtuan201x · iOS 4 → iOS 18
 </footer>
 
 
 <script>
 
 const buttons =
-document.querySelectorAll(".version");
+  document.querySelectorAll(".version");
 
 const cards =
-document.querySelectorAll(".card");
+  document.querySelectorAll(".card");
 
 const search =
-document.getElementById("search");
+  document.getElementById("search");
+
+const result =
+  document.getElementById("result");
+
+const empty =
+  document.getElementById("empty");
 
 let selectedVersion = "all";
 
 
-function filter(){
+function filterCards(){
 
-const keyword =
-search.value.toLowerCase().trim();
+  const keyword =
+    search.value.toLowerCase().trim();
 
+  let count = 0;
 
-cards.forEach(card => {
+  cards.forEach(card => {
 
-const versions =
-card.dataset.ios.split(",");
+    const versions =
+      card.dataset.ios.split(",");
 
-const text =
-card.innerText.toLowerCase();
+    const searchable =
+      (
+        card.dataset.search +
+        " " +
+        card.innerText
+      ).toLowerCase();
 
+    const versionOK =
+      selectedVersion === "all" ||
+      versions.includes(selectedVersion);
 
-const versionOK =
-selectedVersion === "all" ||
-versions.includes(selectedVersion);
+    const searchOK =
+      keyword === "" ||
+      searchable.includes(keyword);
 
+    if(versionOK && searchOK){
 
-const searchOK =
-keyword === "" ||
-text.includes(keyword);
+      card.style.display = "";
 
+      count++;
 
-if(versionOK && searchOK){
+    }else{
 
-card.style.display = "block";
+      card.style.display = "none";
 
-}else{
+    }
 
-card.style.display = "none";
+  });
 
-}
+  if(selectedVersion === "all"){
 
-});
+    result.textContent =
+      count + " công cụ / project";
+
+  }else{
+
+    result.textContent =
+      "iOS " + selectedVersion +
+      " · " + count + " công cụ / project";
+
+  }
+
+  empty.style.display =
+    count === 0 ? "block" : "none";
 
 }
 
 
 buttons.forEach(button => {
 
-button.addEventListener("click",()=>{
+  button.addEventListener("click",() => {
 
-buttons.forEach(b =>
-b.classList.remove("active")
-);
+    buttons.forEach(b =>
+      b.classList.remove("active")
+    );
 
-button.classList.add("active");
+    button.classList.add("active");
 
-selectedVersion =
-button.dataset.version;
+    selectedVersion =
+      button.dataset.version;
 
-filter();
+    filterCards();
 
-});
+    window.scrollTo({
+      top:document.querySelector(".container").offsetTop - 70,
+      behavior:"smooth"
+    });
+
+  });
 
 });
 
 
 search.addEventListener(
-"input",
-filter
+  "input",
+  filterCards
 );
+
+
+filterCards();
 
 </script>
 
