@@ -1,5 +1,6 @@
 #!/bin/bash
 mkdir -p debs
+mkdir -p dists/stable/main/binary-iphoneos-arm
 
 if [ -f "Release" ] ; then sed -i 's/\r$//' Release; fi
 
@@ -26,14 +27,16 @@ for ipa in debs/*.ipa; do
                 [ -n "$extracted_bid" ] && bid="$extracted_bid"
                 [ -n "$extracted_ver" ] && ver="$extracted_ver"
             fi
+            
+            # ÉP FILE CONTROL NHẬN KIẾN TRÚC TOÀN NĂNG (ALL) ĐỂ MÁY 64-BIT VẪN HIỂN THỊ
             cat <<EOF > debs/tmp_out/DEBIAN/control
 Package: $bid
 Name: $clean_name
 Version: $ver
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Section: Applications
-Description: Ứng dụng chuyển đổi tự động sang DEB.
+Description: Ứng dụng chuyển đổi tự động sang DEB tương thích mọi thiết bị.
 EOF
             sed -i 's/\r$//' debs/tmp_out/DEBIAN/control
             chmod -R 0755 debs/tmp_out
@@ -46,7 +49,7 @@ done
 find debs -maxdepth 1 -type f -name "*.ipa" -delete
 
 # ==========================================
-# 2. ĐÓNG GÓI ICON REPO CHO TẤT CẢ CÁC THIẾT BỊ
+# 2. ĐÓNG GÓI ICON REPO TOÀN NĂNG
 # ==========================================
 rm -rf debs/tmp_icons
 mkdir -p debs/tmp_icons/DEBIAN debs/tmp_icons/usr/share/cydia/sections
@@ -55,7 +58,7 @@ cat <<EOF > debs/tmp_icons/DEBIAN/control
 Package: com.anhtuan201x.repoicons
 Name: AnhTuan201X Repo Icons
 Version: 1.0
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Section: Themes
 Description: Bộ sưu tập biểu tượng ảnh nhỏ hiển thị cho các gói cài đặt.
@@ -67,19 +70,27 @@ dpkg-deb -Zgzip --build debs/tmp_icons debs/com.anhtuan201x.repoicons_1.0_iphone
 rm -rf debs/tmp_icons
 
 # ==========================================
-# 3. QUÉT MỤC LỤC PACKAGES NÂNG CAO
+# 3. QUÉT MỤC LỤC PACKAGES VÀ ÉP ĐÈ KIẾN TRÚC "ALL" CHO SILEO/ZEBRA ĐỌC
 # ==========================================
-rm -f Packages Packages.bz2
+rm -f Packages Packages.bz2 dists/stable/main/binary-iphoneos-arm/Packages dists/stable/main/binary-iphoneos-arm/Packages.bz2
+
 dpkg-scanpackages -m debs /dev/null > Packages
 sed -i 's/\r$//' Packages
+
+# Mẹo chí mạng: Ép toàn bộ các dòng Architecture trong file mục lục thành chữ "all"
+sed -i 's/Architecture: iphoneos-arm/Architecture: all/g' Packages
 
 if [ -f "CydiaIcon.png" ]; then
     sed -i "s|^Description:.*|&\nIcon: https://anhtuan201x.github.io/CydiaIcon.png|" Packages
 fi
+
+cp Packages dists/stable/main/binary-iphoneos-arm/Packages
+bzip2 -fk Packages
+mv Packages.bz2 dists/stable/main/binary-iphoneos-arm/Packages.bz2
 bzip2 -fk Packages
 
 # ==========================================
-# 4. KHAI BÁO MULTI-ARCH CHÍ MẠNG TRONG FILE RELEASE (HỖ TRỢ CẢ ARM VÀ ARM64)
+# 4. TẠO FILE RELEASE ĐA PHÂN VÙNG HOÀN MỸ
 # ==========================================
 cat <<EOF > Release
 Origin: AnhTuan201X Repo
@@ -89,10 +100,11 @@ Version: 1.0
 Codename: stable
 Architectures: iphoneos-arm iphoneos-arm64
 Components: main
-Description: Kho lưu trữ Tweak và Ứng dụng Jailbreak hỗ trợ đa nền tảng từ thiết bị cũ đến thiết bị mới.
+Description: Kho lưu trữ Tweak và Ứng dụng Jailbreak tương thích hoàn toàn với Cydia, Sileo, Zebra.
 MD5Sum:
- $(md5sum Packages | cut -d' ' -f1) $(stat -c%s Packages) Packages
- $(md5sum Packages.bz2 | cut -d' ' -f1) $(stat -c%s Packages.bz2) Packages.bz2
+ $(md5sum dists/stable/main/binary-iphoneos-arm/Packages | cut -d' ' -f1) $(stat -c%s dists/stable/main/binary-iphoneos-arm/Packages) main/binary-iphoneos-arm/Packages
+ $(md5sum dists/stable/main/binary-iphoneos-arm/Packages.bz2 | cut -d' ' -f1) $(stat -c%s dists/stable/main/binary-iphoneos-arm/Packages.bz2) main/binary-iphoneos-arm/Packages.bz2
 EOF
 
 sed -i 's/\r$//' Release
+cp Release dists/stable/Release
