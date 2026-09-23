@@ -4,7 +4,7 @@ mkdir -p debs
 if [ -f "Release" ] ; then sed -i 's/\r$//' Release; fi
 
 # ==========================================
-# 1. QUÉT FILE IPA TRONG THƯ MỤC DEBS (NẾU CÓ)
+# 1. QUÉT VÀ ĐÓNG GÓI FILE IPA THÀNH DEB ĐA KIẾN TRÚC
 # ==========================================
 for ipa in debs/*.ipa; do
     if [ -f "$ipa" ]; then
@@ -46,7 +46,7 @@ done
 find debs -maxdepth 1 -type f -name "*.ipa" -delete
 
 # ==========================================
-# 2. ĐÓNG GÓI ICON REPO CHO CYDIA/SILEO/ZEBRA
+# 2. ĐÓNG GÓI ICON REPO CHO TẤT CẢ CÁC THIẾT BỊ
 # ==========================================
 rm -rf debs/tmp_icons
 mkdir -p debs/tmp_icons/DEBIAN debs/tmp_icons/usr/share/cydia/sections
@@ -67,18 +67,19 @@ dpkg-deb -Zgzip --build debs/tmp_icons debs/com.anhtuan201x.repoicons_1.0_iphone
 rm -rf debs/tmp_icons
 
 # ==========================================
-# 3. QUÉT MỤC LỤC PACKAGES TIÊU CHUẨN NÂNG CAO
+# 3. QUÉT MỤC LỤC PACKAGES NÂNG CAO
 # ==========================================
 rm -f Packages Packages.bz2
 dpkg-scanpackages -m debs /dev/null > Packages
 sed -i 's/\r$//' Packages
+
 if [ -f "CydiaIcon.png" ]; then
-    sed -i "s|^Description:.*|&\nIcon: https://github.io|" Packages
+    sed -i "s|^Description:.*|&\nIcon: https://anhtuan201x.github.io/CydiaIcon.png|" Packages
 fi
 bzip2 -fk Packages
 
 # ==========================================
-# 4. TẠO FILE RELEASE ĐA NỀN TẢNG (CHÍ MẠNG CHO SILEO/ZEBRA)
+# 4. KHAI BÁO MULTI-ARCH CHÍ MẠNG TRONG FILE RELEASE (HỖ TRỢ CẢ ARM VÀ ARM64)
 # ==========================================
 cat <<EOF > Release
 Origin: AnhTuan201X Repo
@@ -86,12 +87,12 @@ Label: AnhTuan201X
 Suite: stable
 Version: 1.0
 Codename: stable
-Architectures: iphoneos-arm
+Architectures: iphoneos-arm iphoneos-arm64
 Components: main
-Description: Kho lưu trữ Tweak và Ứng dụng Jailbreak tương thích hoàn toàn với Cydia, Sileo, Zebra.
+Description: Kho lưu trữ Tweak và Ứng dụng Jailbreak hỗ trợ đa nền tảng từ thiết bị cũ đến thiết bị mới.
+MD5Sum:
+ $(md5sum Packages | cut -d' ' -f1) $(stat -c%s Packages) Packages
+ $(md5sum Packages.bz2 | cut -d' ' -f1) $(stat -c%s Packages.bz2) Packages.bz2
 EOF
 
-echo "MD5Sum:" >> Release
-echo " $(md5sum Packages | cut -d' ' -f1) $(stat -c%s Packages) Packages" >> Release
-echo " $(md5sum Packages.bz2 | cut -d' ' -f1) $(stat -c%s Packages.bz2) Packages.bz2" >> Release
 sed -i 's/\r$//' Release
