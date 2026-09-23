@@ -114,10 +114,10 @@ Version: 1.0
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: debs/com.anhtuan201x.repoicons_1.0_iphoneos-arm.deb
-Size: 16442
-MD5sum: 3609e4efde0ea3859ce2276ce0294fdf
-SHA1: 687f18f429bef318e21b9d83ba9a1f3150343e19
-SHA256: 8ada626c828900660188dc84eec1ef6592ec353793b2484d6d5ee73765c7e9bc
+Size: 16446
+MD5sum: 9e590ed473189b7905059c2fac98c606
+SHA1: 2c90007fda85fcdcbbb4169ea18694e70dbce126
+SHA256: 243042a24057ee50b19bb81b9674b94230b308d7b2d3e1a2a6d618c4ce0cf5b8
 Section: Themes
 Description: Bộ sưu tập biểu tượng ảnh nhỏ hiển thị cho các gói cài đặt.
 Icon: https://github.io
