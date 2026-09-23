@@ -5,7 +5,8 @@ Version: 1.0
 Codename: stable
 Architectures: iphoneos-arm iphoneos-arm64
 Components: main
-Description: Kho lưu trữ Tweak và Ứng dụng Jailbreak tương thích hoàn toàn với Cydia, Sileo, Zebra.
+Description: Kho lưu trữ Tweak và Ứng dụng Jailbreak của AnhTuan201X.
+
 MD5Sum:
- 8dae051c1b1cc66a7670c125311afb8a 37037 main/binary-iphoneos-arm/Packages
- 48dec7b12df6b5c180b0421e68566994 11073 main/binary-iphoneos-arm/Packages.bz2
+ 61b7d87902f0c0e40d6f251dbb9cc294 40500 main/binary-iphoneos-arm/Packages
+ d20984750940bebade2abedd1eba7c44 11245 main/binary-iphoneos-arm/Packages.bz2

@@ -1,13 +1,13 @@
 Package: ai.akemi.appsyncunified
 Version: 116.0
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: Karen/あけみ <karen@akemi.ai>
 Installed-Size: 636
 Depends: firmware (>= 5.0), mobilesubstrate (>= 0.9.5100), firmware (<= 18.2)
 Conflicts: us.hackulo.appsync50, us.hackulo.appsync50plus, com.hackyouriphone.appsync7, com.teiron.ppsync, appsync50plus2.25pp, com.linusyang.appsync, com.sull.appsyncunified, com.sull.appsyncunifiedbeta, com.xsellize.appsync50, com.xsellize.appsync50plus, appsync50plus.178, appsync50plus2.178, cydia.net.angelxwind.appsyncunified, com.ifucker.appsync, com.sexyphonetech.appsyncunified, appsyncunifiedofficial, org.digbick.asufixed, cn.mingmei.asu623517234615234813, technology.goated.appsync, technology.goated.appsyncunified, vaginalfisting.appsynctool, science.xnu.substitute, akemi.appsink, akemi.appsyncunifed, akemi.appsyncunifed2, akemi.appsyncunifedpatched, appsyncpatched, appsyncrootless, weaponized.autism.technology.appsyncunified, ellekit (< 1.1)
 Replaces: us.hackulo.appsync50, net.angelxwind.appsyncunified
 Provides: appsync, net.angelxwind.appsyncunified
-Filename: debs/ai.akemi.appsyncunified_116.0_iphoneos-arm.akemi-git-235aca6cddfbdc9fa87fcb5b2aec2df37ed6d65a.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/ai.akemi.appsyncunified_116.0_iphoneos-arm.akemi-git-235aca6cddfbdc9fa87fcb5b2aec2df37ed6d65a.deb
 Size: 51658
 MD5sum: 536009a11dad57e48a5563224eaffaff
 SHA1: e0fa412cb3c26718887edd834804c88909297079
@@ -22,11 +22,11 @@ Name: AppSync Unified
 
 Package: ca.adrien.appdrop
 Version: 3.2.1.1
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: Adrien Ruest-Lorquet
 Installed-Size: 89
 Depends: firmware (>= 5.0), ai.akemi.appsyncunified | net.angelxwind.appsyncunified | com.linusyang.appsync, com.autopear.installipa | ai.akemi.appinst
-Filename: debs/ca.adrien.appdrop_3.2.1.1_iphoneos-arm.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/ca.adrien.appdrop_3.2.1.1_iphoneos-arm.deb
 Size: 736536
 MD5sum: 4633049c6e9102e8b773243d6eca5625
 SHA1: 4f14510c7ed4002338eb98ef54e1b3a488540aab
@@ -43,13 +43,13 @@ Name: AppDrop
 
 Package: com.a3tweaks.auxo-le
 Version: 1.1.1~beta1
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: thebigboss.org <http://thebigboss.org>
 Installed-Size: 1060
 Depends: firmware (>= 7.0), mobilesubstrate (>= 0.9.5001), applist (>= 1.5.9), preferenceloader (>= 2.2.2)
 Conflicts: com.rpetrich.sectional, libactivator (<< 1.9.8~beta3), com.a3tweaks.auxo3ios9
 Replaces: com.rpetrich.sectional, com.a3tweaks.auxo3ios9
-Filename: debs/cydiastore_com.a3tweaks.auxo-le_v1.1.1~beta1.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/cydiastore_com.a3tweaks.auxo-le_v1.1.1~beta1.deb
 Size: 439834
 MD5sum: 4c17d6abd96f4d3262f8c036dc5c6897
 SHA1: e2776a353f4e49fe24dd5a324fb2b66f8b3c3391
@@ -66,12 +66,12 @@ Name: Auxo Legacy Edition
 
 Package: com.aaronash.barrel
 Version: 1.9.0.2
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 1420
 Depends: firmware(>= 3.1), mobilesubstrate, preferenceloader
 Conflicts: net.limneos.sbrotator (<= 2.1.5)
-Filename: debs/barrel_v1.9.0.2.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/barrel_v1.9.0.2.deb
 Size: 207132
 MD5sum: b8e967f735c3c48ab22df9cc6baea88d
 SHA1: 7c35659fcfdbf339b3d5b260dd7d0e701c7a6df5
@@ -90,10 +90,10 @@ Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: com.alexzielenski.zeppelin
 Version: 2.1.0-12
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: poetic_folly <poetic_folly@modmyi.com>
 Depends: firmware (>= 4.2), mobilesubstrate, preferenceloader
-Filename: debs/com.alexzielenski.zeppelin_2.1.0-12_iphoneos-arm.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/com.alexzielenski.zeppelin_2.1.0-12_iphoneos-arm.deb
 Size: 954082
 MD5sum: 51efc874ace1c620244757edf1c5e925
 SHA1: a3554e437122d4759cc2ba0a058ceb3fc6f46cea
@@ -113,7 +113,22 @@ Package: com.anhtuan201x.repoicons
 Version: 1.0
 Architecture: all
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
-Filename: debs/com.anhtuan201x.repoicons_1.0_iphoneos-arm.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/com.anhtuan201x.repoicons_1.0_all.deb
+Size: 16294
+MD5sum: 6467bd36e53b2f87260999654ecad44b
+SHA1: 72df6121fce6f313bf445c7b5f3f8e6f430845d6
+SHA256: 5d3ed9d9edcae78fa2e3dac7c05dd3a263b62913ac18e4c4f2979298dca04483
+Section: Themes
+Priority: optional
+Description: AnhTuan201X Repo icon package.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Name: AnhTuan201X Repo Icons
+
+Package: com.anhtuan201x.repoicons
+Version: 1.0
+Architecture: all
+Maintainer: AnhTuan201X <anhtuan201x@github.io>
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/com.anhtuan201x.repoicons_1.0_iphoneos-arm.deb
 Size: 16432
 MD5sum: 574159e05e81befe66ff5612188d791f
 SHA1: 0ee20ae3b1d23e809aacc2bae3d822911f333e99
@@ -125,10 +140,10 @@ Name: AnhTuan201X Repo Icons
 
 Package: com.coolbooter.coolbooter
 Version: 1.1-release
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: CoolBooter <coolbooterios@gmail.com>
 Depends: xpwn, zip, unzip, ldid, diskdev-cmds, firmware (>= 7.0)
-Filename: debs/com.coolbooter.coolbooter-1.1-release.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/com.coolbooter.coolbooter-1.1-release.deb
 Size: 20609368
 MD5sum: c20782d63e19773e7f16e8412c47bd21
 SHA1: 414d678fbbf6349978003b8b28b3538ad9c23ed3
@@ -141,12 +156,12 @@ Name: CoolBooter
 
 Package: com.exile90.icleanerpro
 Version: 7.10.0
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: Ivano Bilenchi <support@ib-soft.net>
 Depends: firmware (>= 4.0), findutils, apt | apt7
 Conflicts: org.altervista.exilecom.icleaner
 Replaces: org.altervista.exilecom.icleaner
-Filename: debs/com.exile90.icleanerpro_7.10.0_iphoneos-arm.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/com.exile90.icleanerpro_7.10.0_iphoneos-arm.deb
 Size: 2450460
 MD5sum: 830ebd462d173a9211f5f7c41ce64d1a
 SHA1: 437f5c5097cdab433698b11dab81c3cb8fc82917
@@ -162,11 +177,11 @@ Name: iCleaner Pro
 
 Package: com.hackyouriphone.forecast6
 Version: 2.3.0-1
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: iDevid <repo@hackyouriphone.org>
 Depends: mobilesubstrate, com.arichardson.weepreferenceloader, firmware (<< 7.0)
 Conflicts: com.ashman.clockhide, gsc.ipad, com.dba-tech.forecast
-Filename: debs/com.hackyouriphone.forecast6_2.3.0-1_iphoneos-arm.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/com.hackyouriphone.forecast6_2.3.0-1_iphoneos-arm.deb
 Size: 25446
 MD5sum: 832d703d2f9b6ee0bce3eb11c42e5f41
 SHA1: 1dfbaeab26cef2e31b225ede5cb3f23838e94c47
@@ -181,11 +196,11 @@ Name: Forecast for iOS6
 
 Package: com.ia.iconbounce
 Version: 3.0.0-1
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 433
 Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 5.0), preferenceloader
-Filename: debs/iconbounce_3.0.0-1.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/iconbounce_3.0.0-1.deb
 Size: 96060
 MD5sum: a658fe2edbdf6c5c946835f1e45f332e
 SHA1: fa30f8fd05446c59f44c88b8b88a587afafcce43
@@ -205,10 +220,10 @@ Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: com.ichitaso.winterboardapp
 Version: 0.9.3915
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: ichitaso
 Depends: winterboard, apt7
-Filename: debs/com.ichitaso.winterboardapp_0.9.3915_iphoneos-arm.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/com.ichitaso.winterboardapp_0.9.3915_iphoneos-arm.deb
 Size: 165204
 MD5sum: c0bad8e3066b03c3a6633db1187cdbe6
 SHA1: 065ee7f9e6d23c97dc8859f1c5d132d12a1b8615
@@ -224,10 +239,10 @@ Name: WinterBoard App
 
 Package: com.ihmeedo.memorygame
 Version: 1.0
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 7414
-Filename: debs/com.ihmeedo.memorygame_1.0_iphoneos-arm.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/com.ihmeedo.memorygame_1.0_iphoneos-arm.deb
 Size: 7584260
 MD5sum: 4c920b59a70439eb234896b895605ad6
 SHA1: 2d6105651feb5eeff58426540ce6f10c1b12da42
@@ -245,11 +260,11 @@ Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: com.iky1e.swipeselection
 Version: 1.5.2-1
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: Bigboss <bigboss@thebigboss.org>
 Installed-Size: 132
 Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 4.0)
-Filename: debs/swipeselection_1.5.2-1.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/swipeselection_1.5.2-1.deb
 Size: 11394
 MD5sum: 823d5a4505c7e828c6ed4ee1cc7b338a
 SHA1: 37539e3cb94e7c5eef03f6d228ec98420215d40a
@@ -268,10 +283,10 @@ Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: com.jamied360.ncsettings
 Version: 1.7.1
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: poetic_folly <poetic_folly@modmyi.com>
 Depends: firmware (>= 5.0), mobilesubstrate, com.chpwn.weeloader, preferenceloader
-Filename: debs/com.jamied360.ncsettings_1.7.1_iphoneos-arm.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/com.jamied360.ncsettings_1.7.1_iphoneos-arm.deb
 Size: 469846
 MD5sum: 3c6b229e4de50823855d1b3c24365ef9
 SHA1: 49655217c4207068addebdb8ce578c54355bbe8a
@@ -288,10 +303,10 @@ Sponsor: ModMyi.com <http://modmyi.com/forums/index.php?styleid=31>
 
 Package: com.kita.maps5
 Version: 1.0.0
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: Kita
 Installed-Size: 228
-Filename: debs/com.kita.maps5_1.0.0_iphoneos-arm.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/com.kita.maps5_1.0.0_iphoneos-arm.deb
 Size: 21339346
 MD5sum: e6ee53484cce5c6dde1259484390b1ff
 SHA1: 2f38e7d69e9f52fd772caa30c30fbb9d577a718e
@@ -304,11 +319,11 @@ Name: Maps5
 
 Package: com.mathieubolard.killbackground
 Version: 1.3.1-7
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 133
 Depends: mobilesubstrate, firmware (>= 4.0), preferenceloader, applist
-Filename: debs/killbackground_1.3.1-7.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/killbackground_1.3.1-7.deb
 Size: 71698
 MD5sum: a67106c323ca059b2b8680bd030636cd
 SHA1: b2f7cd9fcf117c24c7d558c35410376219698d0e
@@ -328,11 +343,11 @@ Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: com.r333d.cylinder
 Version: 1.1
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 1419
 Depends: firmware (>= 3.0), mobilesubstrate (>= 0.9.5000), preferenceloader
-Filename: debs/cylinder_1.1.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/cylinder_1.1.deb
 Size: 300358
 MD5sum: c24e9c9b3f4096a8b93080207fac5580
 SHA1: dd35f74c38b9ac3652a134136e4ffcb15db67329
@@ -351,12 +366,12 @@ Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: com.rpetrich.iconrenamer
 Version: 1.2.6
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 200
 Depends: firmware (>= 4.0), mobilesubstrate (>= 0.9.5101), preferenceloader (>= 2.2.2)
 Replaces: netskao.iconrenamerx
-Filename: debs/com.rpetrich.iconrenamer_1.2.6_iphoneos-arm.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/com.rpetrich.iconrenamer_1.2.6_iphoneos-arm.deb
 Size: 18398
 MD5sum: 9a26c3d08853ac3084090c7f2e296562
 SHA1: 0a6854edffcbea1bc736f296922d4cc7dd760275
@@ -374,11 +389,11 @@ Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: com.rpetrich.sslpatch
 Version: 1.0
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 72
 Depends: firmware (>= 6.0), mobilesubstrate (>= 0.9.5001), firmware (<< 7.0.6)
-Filename: debs/com.rpetrich.sslpatch_1.0_iphoneos-arm.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/com.rpetrich.sslpatch_1.0_iphoneos-arm.deb
 Size: 9052
 MD5sum: d7f66b9b25b4a53d2d8992702ee8f53d
 SHA1: 647a465da6a70748e478d7b6ad57310df9080277
@@ -397,14 +412,14 @@ Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: com.saurik.afc2d
 Version: 1.2
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
 Pre-Depends: dpkg (>= 1.14.25-8)
 Depends: firmware (<< 8.0) | mobilesubstrate
 Conflicts: us.scw.afctwoadd, net.angelxwind.afc2ios70, afc2.25pp, afc2.25pp7, afc2.91, app.taig.afc2
 Replaces: us.scw.afctwoadd, net.angelxwind.afc2ios70, afc2.25pp, afc2.25pp7, afc2.91, app.taig.afc2
 Provides: us.scw.afctwoadd, net.angelxwind.afc2ios70, afc2.25pp, afc2.25pp7, afc2.91, app.taig.afc2
-Filename: debs/com.saurik.afc2d_1.2_iphoneos-arm.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/com.saurik.afc2d_1.2_iphoneos-arm.deb
 Size: 18114
 MD5sum: 34291f44d22cfbbf3eb4bad0ade3b89c
 SHA1: bddaf385263b9aad2b032b2116179f83afd077cc
@@ -420,11 +435,11 @@ Name: Apple File Conduit "2"
 
 Package: com.saurik.iphone.fid
 Version: 0.9.3400
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
 Depends: mobilesubstrate (>= 0.9.3005-1), firmware (>= 2.2), firmware (<< 3.0) | com.chpwn.iconsupport (>= 1.7.3-1)
 Conflicts: gsc.wildcat
-Filename: debs/com.saurik.iphone.fid_0.9.3400_iphoneos-arm.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/com.saurik.iphone.fid_0.9.3400_iphoneos-arm.deb
 Size: 8248
 MD5sum: 19858bc7105c8921319f7038d7ab80e8
 SHA1: e570978d488655de797b99229e66e42d26c4a417
@@ -440,11 +455,11 @@ Name: Five Icon Dock
 
 Package: com.skyglow.weatherx
 Version: 3.6
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: Requis
 Depends: mobilesubstrate (>= 0.9.2586), firmware (>= 2.0), firmware (<= 7.9), preferenceloader
 Conflicts: com.ixmoe.1pwn.weatherx, com.skyglow.stocksx
-Filename: debs/com.skyglow.weatherx_3.6_iphoneos-arm.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/com.skyglow.weatherx_3.6_iphoneos-arm.deb
 Size: 157736
 MD5sum: f013c3dcf3707a14abbc18150ae8eff0
 SHA1: 7b100318280ace140e4f6b5c6f4e229cdfad4268
@@ -458,12 +473,12 @@ Name: Weather & Stocks
 
 Package: com.tigisoftware.filza
 Version: 4.0.1-2
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: TIGI Software
 Installed-Size: 34948
 Recommends: zip, unzip, gzip, p7zip, unrar, xz-utils
 Conflicts: com.tigisoftware.filza64bit, com.tigisoftware.filza39
-Filename: debs/com.tigisoftware.filza_4.0.1-2_iphoneos-arm.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/com.tigisoftware.filza_4.0.1-2_iphoneos-arm.deb
 Size: 13929994
 MD5sum: c68a629c82d46f5a49ec8c93b750bb92
 SHA1: 677bae75af27ed30af0934048c439565498a1908
@@ -476,12 +491,12 @@ Name: Filza File Manager
 
 Package: com.victorlobe.appstorefix
 Version: 1
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: Victor <contact@victorlobe.me>
 Installed-Size: 60
 Depends: mobilesubstrate (>= 0.9.5000)
 Conflicts: com.skyglow.itunesstorex, net.nekokawa.appstorefix, net.nekokawa.storeetcfix, net.nekokawa.storeloginfix, net.nekokawa.storesslfix
-Filename: debs/com.victorlobe.appstorefix_1_iphoneos-arm.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/com.victorlobe.appstorefix_1_iphoneos-arm.deb
 Size: 11400
 MD5sum: 6f06096e9670d698ef1b58cd9d71254f
 SHA1: 525abb44984eb65f23230f1fc00e4d7ca0a7b269
@@ -496,13 +511,13 @@ Name: AppStoreFix
 
 Package: com.victorlobe.veteris
 Version: 3.2
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: Victor
 Installed-Size: 5064
 Depends: firmware (>= 5.0), com.victorlobe.veterishelper
 Conflicts: com.ixmoe.1pwn.veteris, moe.yzu.veterishelper
 Replaces: com.ixmoe.1pwn.veteris, moe.yzu.veterishelper
-Filename: debs/com.victorlobe.veteris_3.2_iphoneos-arm.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/com.victorlobe.veteris_3.2_iphoneos-arm.deb
 Size: 2207580
 MD5sum: 6afd1791b7cef36c392ca76abec19a6c
 SHA1: 74db1199440e7ec0969d63a88f62358742ecdef2
@@ -519,13 +534,13 @@ Name: Veteris
 
 Package: com.victorlobe.veterishelper
 Version: 1.1
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: Victor
 Installed-Size: 136
 Depends: mobilesubstrate (>= 0.9.5000)
 Conflicts: com.ixmoe.1pwn.Veteris, moe.yzu.veterishelper
 Replaces: com.ixmoe.1pwn.Veteris, moe.yzu.veterishelper
-Filename: debs/com.victorlobe.veterishelper_1.1_iphoneos-arm.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/com.victorlobe.veterishelper_1.1_iphoneos-arm.deb
 Size: 6512
 MD5sum: fa61d752faa95da4bb2c5d11c9329a44
 SHA1: fd5c426e4336d935891e8ed24fac631f74bc3a56
@@ -540,12 +555,12 @@ Name: Veteris Helper
 
 Package: dev.preloading.tubereplacer
 Version: 1.0.6
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: Preloading <me@preloading.dev>
 Installed-Size: 960
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, firmware (>= 5.0), firmware (<< 11.0)
 Conflicts: bag.xml.tuberepair
-Filename: debs/dev.preloading.tubereplacer_1.0.6_iphoneos-arm.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/dev.preloading.tubereplacer_1.0.6_iphoneos-arm.deb
 Size: 238548
 MD5sum: 6beafb88b57e1c6a3191b9d60860f2cb
 SHA1: c8df22659cc7b069244b4dfbac85695d5320b0c1
@@ -561,11 +576,11 @@ Name: TubeReplacer
 
 Package: eu.heinelt.ifile
 Version: 2.2.0-1
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: Carsten Heinelt <ifile@iphone.heinelt.eu>
 Installed-Size: 20224
 Depends: file-cmds, zip, unzip, p7zip, gzip, bzip2, unrar, diskdev-cmds
-Filename: debs/eu.heinelt.ifile_2.2.0-1_iphoneos-arm.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/eu.heinelt.ifile_2.2.0-1_iphoneos-arm.deb
 Size: 9751882
 MD5sum: 88766f339cc7b150e356331e4594db7b
 SHA1: 3ff2ab2d71d013510c2d7946165719757878a613
@@ -582,10 +597,10 @@ Name: iFile
 
 Package: io.github.oldworldordr.iconfix
 Version: 4.0.1
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: KawaiiZenbo
 Depends: curl
-Filename: debs/io.github.oldworldordr.iconfix_4.0.1_iphoneos-arm.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/io.github.oldworldordr.iconfix_4.0.1_iphoneos-arm.deb
 Size: 1424
 MD5sum: b00a7f9f85f557c99a4c277ab25774e4
 SHA1: 8c76d282903aafe3021af9bcfd6399ed74e97145
@@ -598,13 +613,13 @@ Name: iFile/MTerminal icon fix
 
 Package: libactivator
 Version: 1.9.12~beta1
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: Ryan Petrich <rpetrich+activator@gmail.com>
 Installed-Size: 4476
 Depends: mobilesubstrate (>= 0.9.5101), preferenceloader (>= 2.2.2), com.a3tweaks.flipswitch (>= 1.0.15), com.rpetrich.rocketbootstrap (>= 1.0.5) | firmware (<< 7.0)
 Conflicts: com.booleanmagic.overboard (<= 1.1), com.ashman.lockinfo (<= 2.0.0-6), sbsettings (<= 3.0.6), com.fuyuchi.missionboardpro (<= 1.3), com.kindadev.nobetaalert, libhide (<< 2.4.1), com.fortysixandtwo.activ8rfix, net.tateu.actisearch
 Replaces: com.booleanmagic.overboard (<= 1.1), com.ashman.lockinfo (<= 2.0.0-6), com.fuyuchi.missionboardpro (<= 1.3), com.kindadev.nobetaalert, com.fortysixandtwo.activ8rfix, net.tateu.actisearch
-Filename: debs/libactivator_1.9.12~beta1_iphoneos-arm.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/libactivator_1.9.12~beta1_iphoneos-arm.deb
 Size: 1154656
 MD5sum: 898e862dc9b754f76aa500a2527853d7
 SHA1: a49c0f4459a0e1b0f1d9ae3a2f74b4d17528fdee
@@ -623,11 +638,11 @@ Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: me.k3a.powersounddisabler
 Version: 1.1.1-6
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 65
 Depends: firmware (>= 4.0), mobilesubstrate (>= 0.9.5000)
-Filename: debs/powersounddisabler_1.1.1-6.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/powersounddisabler_1.1.1-6.deb
 Size: 3656
 MD5sum: 974acd69246dd1efb78d661e47cce014
 SHA1: 013618179b9fc5d57d0df3c4e3bb340d35a8880e
@@ -646,10 +661,10 @@ Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: me.kawaiizenbo.clicker
 Version: 1.0.0
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: KawaiiZenbo
 Depends: firmware (>= 5.0)
-Filename: debs/me.kawaiizenbo.clicker_1.0.0_iphoneos-arm.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/me.kawaiizenbo.clicker_1.0.0_iphoneos-arm.deb
 Size: 23242
 MD5sum: 7688bf7f3d80e8c27c4d49d0ddfadd9b
 SHA1: b437024dd478cd214562d2a968726d2344452b94
@@ -663,12 +678,12 @@ Name: Clicker
 
 Package: mobileterminal-applesdk
 Version: 520-2
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 601
 Depends: firmware (>= 3.2), dpkg (>= 1.14.25-8), bash, coreutils, ncurses, system-cmds
 Conflicts: mobileterminal
-Filename: debs/mobileterminal_520-2.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/mobileterminal_520-2.deb
 Size: 237756
 MD5sum: 976152ac3cce2f95ae2092d97807fc31
 SHA1: 3cc37047bab030c34b9a4104f1ef655c4c960d6a
@@ -688,12 +703,12 @@ Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: openssh
 Version: 6.7p1-13
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
 Installed-Size: 4736
 Pre-Depends: dpkg (>= 1.14.25-8)
 Depends: openssl
-Filename: debs/openssh_6.7p1-13_iphoneos-arm.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/openssh_6.7p1-13_iphoneos-arm.deb
 Size: 587678
 MD5sum: 51b3398d67bc3b861642c1eff23f9e42
 SHA1: 0312d429110829359f7443adbfbb27cb1f9419d5
@@ -707,11 +722,11 @@ Name: OpenSSH
 
 Package: org.coolstar.recordmyscreenapp
 Version: 1.1-4
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 398
 Depends: firmware (>= 5.0), gsc.armv7, firmware (<< 7.0)
-Filename: debs/recordmyscreen_1.1-4.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/recordmyscreen_1.1-4.deb
 Size: 281744
 MD5sum: 9127a7a26551f47615e506a69af3c959
 SHA1: 5b749785b1fe3f1cb8db2fd6ed24671a7f8e01be
@@ -730,9 +745,9 @@ Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: org.pilin.cavestory
 Version: v0.8
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: Pavel Ilin <ilin.pa@gmail.com>
-Filename: debs/org.pilin.cavestory_v0.8_iphoneos-arm.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/org.pilin.cavestory_v0.8_iphoneos-arm.deb
 Size: 1762740
 MD5sum: d8a587e615bed8983fc26addf67abc64
 SHA1: aaf13ff555e3bfe99b7888be7eda7080b9bcdac6
@@ -747,11 +762,11 @@ Name: Cave Story
 
 Package: org.thebigboss.blurriedncbackground
 Version: 3.0-1
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 24
 Depends: mobilesubstrate, firmware (>= 5.0), preferenceloader
-Filename: debs/blurriedncbackground_3.0-1.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/blurriedncbackground_3.0-1.deb
 Size: 12962
 MD5sum: dab88b57382279191a793c994acb48c1
 SHA1: ea50310e650ae6b04af6da008af9a5d96d0b437d
@@ -770,10 +785,10 @@ Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: trevir.Discord
 Version: 0.8.5
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: InvoxiPlayGames <webmaster@invoxiplaygames.uk
 Depends: firmware (>=5.0)
-Filename: debs/discordclassic-0.8.5.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/discordclassic-0.8.5.deb
 Size: 819392
 MD5sum: a0c2471c860114d3d7d76ba7e1b7e61b
 SHA1: 9dc57ee4d8153fb90f03f08e5f0cbbb7aee8e2b4
@@ -788,11 +803,11 @@ Name: Discord Classic
 
 Package: uk.invoxiplaygames.cydiahttpatch
 Version: 1.0
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: InvoxiPlayGames <webmaster@invoxiplaygames.uk
 Installed-Size: 100
 Depends: cydia, mobilesubstrate, firmware (<< 4.0)
-Filename: debs/cydiahttpatch-1.0.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/cydiahttpatch-1.0.deb
 Size: 2842
 MD5sum: 2100205abecf06d1a7d72d2636e770c4
 SHA1: 26c2c398c93f847aa007a7778b6148e554e395c6
@@ -806,12 +821,12 @@ Name: Cydia HTTPatch
 
 Package: uk.invoxiplaygames.cydiahttpatch2
 Version: 1.0
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: InvoxiPlayGames <webmaster@invoxiplaygames.uk>
 Installed-Size: 100
 Depends: cydia, mobilesubstrate, firmware (>= 4.0)
 Conflicts: uk.invoxiplaygames.cydiahttpatch
-Filename: debs/uk.invoxiplaygames.cydiahttpatch2_1.0_iphoneos-arm.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/uk.invoxiplaygames.cydiahttpatch2_1.0_iphoneos-arm.deb
 Size: 4450
 MD5sum: ef83eeb1c20c920ba03fc94112a9c46b
 SHA1: c1c34c89b5b6a769e556a45fb0f0d01a6246b085
@@ -824,7 +839,7 @@ Name: Cydia HTTPatch (iOS 4+)
 
 Package: winterboard
 Version: 0.9.3919
-Architecture: all
+Architecture: iphoneos-arm
 Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
 Pre-Depends: dpkg (>= 1.13.25-5)
 Depends: mobilesubstrate (>= 0.9.3225-1), killall, preferenceloader, findutils, net.howett.pincrush (>= 0.0.1-23) | pincrush
@@ -832,7 +847,7 @@ Conflicts: com.modmyifone.winterboardicon, winterboardsettings, themesettings, c
 Breaks: jp.ashikase.folderenhancer (<< 1.6.0.2-1)
 Replaces: com.modmyifone.winterboardicon, winterboardsettings, themesettings, com.iphonerepocenter.transparentdockfor3xtheme
 Provides: theme-manager
-Filename: debs/winterboard_0.9.3919_iphoneos-arm.deb
+Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/winterboard_0.9.3919_iphoneos-arm.deb
 Size: 111104
 MD5sum: 903869bcc23c88eeb71615e833e626af
 SHA1: 569cc3f77a3ca6cd2046a84bc5c3a68fbb2f00ea
