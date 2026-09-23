@@ -1,20 +1,11 @@
-Origin: AnhTuan Repo
-Label: AnhTuan Repo
+Origin: AnhTuan201X Repo
+Label: AnhTuan201X
 Suite: stable
-Version: 1.1
-Codename: ios
-Architectures: iphoneos-arm iphoneos-arm64
+Version: 1.0
+Codename: stable
+Architectures: iphoneos-arm
 Components: main
-Description: Kho luu tru tweak cho iOS 6 Legacy.
-
-
-
-
-
-
-
-
-
+Description: Kho lưu trữ Tweak và Ứng dụng Jailbreak tương thích hoàn toàn với Cydia, Sileo, Zebra.
 MD5Sum:
- 7f0451d88e320f0d357485dac3208a73 37346 Packages
- c80cb7137a5bd2eb87b59209c81382f0 10975 Packages.bz2
+ 0ad31c41de43531968c65177db40d90b 36340 Packages
+ 08dddcebea1ab8bb496f0f8f9037e3c1 11047 Packages.bz2
