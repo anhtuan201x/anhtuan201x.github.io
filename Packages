@@ -1,6 +1,6 @@
 Package: ai.akemi.appsyncunified
 Version: 116.0
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: Karen/あけみ <karen@akemi.ai>
 Installed-Size: 636
 Depends: firmware (>= 5.0), mobilesubstrate (>= 0.9.5100), firmware (<= 18.2)
@@ -22,7 +22,7 @@ Name: AppSync Unified
 
 Package: ca.adrien.appdrop
 Version: 3.2.1.1
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: Adrien Ruest-Lorquet
 Installed-Size: 89
 Depends: firmware (>= 5.0), ai.akemi.appsyncunified | net.angelxwind.appsyncunified | com.linusyang.appsync, com.autopear.installipa | ai.akemi.appinst
@@ -43,7 +43,7 @@ Name: AppDrop
 
 Package: com.a3tweaks.auxo-le
 Version: 1.1.1~beta1
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: thebigboss.org <http://thebigboss.org>
 Installed-Size: 1060
 Depends: firmware (>= 7.0), mobilesubstrate (>= 0.9.5001), applist (>= 1.5.9), preferenceloader (>= 2.2.2)
@@ -66,7 +66,7 @@ Name: Auxo Legacy Edition
 
 Package: com.aaronash.barrel
 Version: 1.9.0.2
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 1420
 Depends: firmware(>= 3.1), mobilesubstrate, preferenceloader
@@ -90,7 +90,7 @@ Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: com.alexzielenski.zeppelin
 Version: 2.1.0-12
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: poetic_folly <poetic_folly@modmyi.com>
 Depends: firmware (>= 4.2), mobilesubstrate, preferenceloader
 Filename: debs/com.alexzielenski.zeppelin_2.1.0-12_iphoneos-arm.deb
@@ -111,13 +111,13 @@ Sponsor: ModMyi.com <http://modmyi.com/forums/index.php?styleid=31>
 
 Package: com.anhtuan201x.repoicons
 Version: 1.0
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: debs/com.anhtuan201x.repoicons_1.0_iphoneos-arm.deb
-Size: 16446
-MD5sum: e955acb823779f29d1cbe1cdffe84314
-SHA1: c4ecb24fce3d1a99ff311b68ce9c864c03538db8
-SHA256: 417742c8113fd675cc49d3c26cf04e2bd27df56b67be77a14a9a84afd0a77612
+Size: 16432
+MD5sum: 574159e05e81befe66ff5612188d791f
+SHA1: 0ee20ae3b1d23e809aacc2bae3d822911f333e99
+SHA256: 6ffa0cf8c87cd979e28d9c9b8af82516bbed98a4a7ffe73fb9aa90179596ea3a
 Section: Themes
 Description: Bộ sưu tập biểu tượng ảnh nhỏ hiển thị cho các gói cài đặt.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
@@ -125,7 +125,7 @@ Name: AnhTuan201X Repo Icons
 
 Package: com.coolbooter.coolbooter
 Version: 1.1-release
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: CoolBooter <coolbooterios@gmail.com>
 Depends: xpwn, zip, unzip, ldid, diskdev-cmds, firmware (>= 7.0)
 Filename: debs/com.coolbooter.coolbooter-1.1-release.deb
@@ -141,7 +141,7 @@ Name: CoolBooter
 
 Package: com.exile90.icleanerpro
 Version: 7.10.0
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: Ivano Bilenchi <support@ib-soft.net>
 Depends: firmware (>= 4.0), findutils, apt | apt7
 Conflicts: org.altervista.exilecom.icleaner
@@ -162,7 +162,7 @@ Name: iCleaner Pro
 
 Package: com.hackyouriphone.forecast6
 Version: 2.3.0-1
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: iDevid <repo@hackyouriphone.org>
 Depends: mobilesubstrate, com.arichardson.weepreferenceloader, firmware (<< 7.0)
 Conflicts: com.ashman.clockhide, gsc.ipad, com.dba-tech.forecast
@@ -181,7 +181,7 @@ Name: Forecast for iOS6
 
 Package: com.ia.iconbounce
 Version: 3.0.0-1
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 433
 Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 5.0), preferenceloader
@@ -205,7 +205,7 @@ Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: com.ichitaso.winterboardapp
 Version: 0.9.3915
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: ichitaso
 Depends: winterboard, apt7
 Filename: debs/com.ichitaso.winterboardapp_0.9.3915_iphoneos-arm.deb
@@ -224,7 +224,7 @@ Name: WinterBoard App
 
 Package: com.ihmeedo.memorygame
 Version: 1.0
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 7414
 Filename: debs/com.ihmeedo.memorygame_1.0_iphoneos-arm.deb
@@ -245,7 +245,7 @@ Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: com.iky1e.swipeselection
 Version: 1.5.2-1
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: Bigboss <bigboss@thebigboss.org>
 Installed-Size: 132
 Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 4.0)
@@ -268,7 +268,7 @@ Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: com.jamied360.ncsettings
 Version: 1.7.1
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: poetic_folly <poetic_folly@modmyi.com>
 Depends: firmware (>= 5.0), mobilesubstrate, com.chpwn.weeloader, preferenceloader
 Filename: debs/com.jamied360.ncsettings_1.7.1_iphoneos-arm.deb
@@ -288,7 +288,7 @@ Sponsor: ModMyi.com <http://modmyi.com/forums/index.php?styleid=31>
 
 Package: com.kita.maps5
 Version: 1.0.0
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: Kita
 Installed-Size: 228
 Filename: debs/com.kita.maps5_1.0.0_iphoneos-arm.deb
@@ -304,7 +304,7 @@ Name: Maps5
 
 Package: com.mathieubolard.killbackground
 Version: 1.3.1-7
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 133
 Depends: mobilesubstrate, firmware (>= 4.0), preferenceloader, applist
@@ -328,7 +328,7 @@ Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: com.r333d.cylinder
 Version: 1.1
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 1419
 Depends: firmware (>= 3.0), mobilesubstrate (>= 0.9.5000), preferenceloader
@@ -351,7 +351,7 @@ Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: com.rpetrich.iconrenamer
 Version: 1.2.6
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 200
 Depends: firmware (>= 4.0), mobilesubstrate (>= 0.9.5101), preferenceloader (>= 2.2.2)
@@ -374,7 +374,7 @@ Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: com.rpetrich.sslpatch
 Version: 1.0
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 72
 Depends: firmware (>= 6.0), mobilesubstrate (>= 0.9.5001), firmware (<< 7.0.6)
@@ -397,7 +397,7 @@ Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: com.saurik.afc2d
 Version: 1.2
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
 Pre-Depends: dpkg (>= 1.14.25-8)
 Depends: firmware (<< 8.0) | mobilesubstrate
@@ -420,7 +420,7 @@ Name: Apple File Conduit "2"
 
 Package: com.saurik.iphone.fid
 Version: 0.9.3400
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
 Depends: mobilesubstrate (>= 0.9.3005-1), firmware (>= 2.2), firmware (<< 3.0) | com.chpwn.iconsupport (>= 1.7.3-1)
 Conflicts: gsc.wildcat
@@ -440,7 +440,7 @@ Name: Five Icon Dock
 
 Package: com.skyglow.weatherx
 Version: 3.6
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: Requis
 Depends: mobilesubstrate (>= 0.9.2586), firmware (>= 2.0), firmware (<= 7.9), preferenceloader
 Conflicts: com.ixmoe.1pwn.weatherx, com.skyglow.stocksx
@@ -458,7 +458,7 @@ Name: Weather & Stocks
 
 Package: com.tigisoftware.filza
 Version: 4.0.1-2
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: TIGI Software
 Installed-Size: 34948
 Recommends: zip, unzip, gzip, p7zip, unrar, xz-utils
@@ -476,7 +476,7 @@ Name: Filza File Manager
 
 Package: com.victorlobe.appstorefix
 Version: 1
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: Victor <contact@victorlobe.me>
 Installed-Size: 60
 Depends: mobilesubstrate (>= 0.9.5000)
@@ -496,7 +496,7 @@ Name: AppStoreFix
 
 Package: com.victorlobe.veteris
 Version: 3.2
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: Victor
 Installed-Size: 5064
 Depends: firmware (>= 5.0), com.victorlobe.veterishelper
@@ -519,7 +519,7 @@ Name: Veteris
 
 Package: com.victorlobe.veterishelper
 Version: 1.1
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: Victor
 Installed-Size: 136
 Depends: mobilesubstrate (>= 0.9.5000)
@@ -540,7 +540,7 @@ Name: Veteris Helper
 
 Package: dev.preloading.tubereplacer
 Version: 1.0.6
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: Preloading <me@preloading.dev>
 Installed-Size: 960
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, firmware (>= 5.0), firmware (<< 11.0)
@@ -561,7 +561,7 @@ Name: TubeReplacer
 
 Package: eu.heinelt.ifile
 Version: 2.2.0-1
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: Carsten Heinelt <ifile@iphone.heinelt.eu>
 Installed-Size: 20224
 Depends: file-cmds, zip, unzip, p7zip, gzip, bzip2, unrar, diskdev-cmds
@@ -582,7 +582,7 @@ Name: iFile
 
 Package: io.github.oldworldordr.iconfix
 Version: 4.0.1
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: KawaiiZenbo
 Depends: curl
 Filename: debs/io.github.oldworldordr.iconfix_4.0.1_iphoneos-arm.deb
@@ -598,7 +598,7 @@ Name: iFile/MTerminal icon fix
 
 Package: libactivator
 Version: 1.9.12~beta1
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: Ryan Petrich <rpetrich+activator@gmail.com>
 Installed-Size: 4476
 Depends: mobilesubstrate (>= 0.9.5101), preferenceloader (>= 2.2.2), com.a3tweaks.flipswitch (>= 1.0.15), com.rpetrich.rocketbootstrap (>= 1.0.5) | firmware (<< 7.0)
@@ -623,7 +623,7 @@ Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: me.k3a.powersounddisabler
 Version: 1.1.1-6
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 65
 Depends: firmware (>= 4.0), mobilesubstrate (>= 0.9.5000)
@@ -646,7 +646,7 @@ Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: me.kawaiizenbo.clicker
 Version: 1.0.0
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: KawaiiZenbo
 Depends: firmware (>= 5.0)
 Filename: debs/me.kawaiizenbo.clicker_1.0.0_iphoneos-arm.deb
@@ -663,7 +663,7 @@ Name: Clicker
 
 Package: mobileterminal-applesdk
 Version: 520-2
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 601
 Depends: firmware (>= 3.2), dpkg (>= 1.14.25-8), bash, coreutils, ncurses, system-cmds
@@ -688,7 +688,7 @@ Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: openssh
 Version: 6.7p1-13
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
 Installed-Size: 4736
 Pre-Depends: dpkg (>= 1.14.25-8)
@@ -707,7 +707,7 @@ Name: OpenSSH
 
 Package: org.coolstar.recordmyscreenapp
 Version: 1.1-4
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 398
 Depends: firmware (>= 5.0), gsc.armv7, firmware (<< 7.0)
@@ -730,7 +730,7 @@ Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: org.pilin.cavestory
 Version: v0.8
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: Pavel Ilin <ilin.pa@gmail.com>
 Filename: debs/org.pilin.cavestory_v0.8_iphoneos-arm.deb
 Size: 1762740
@@ -747,7 +747,7 @@ Name: Cave Story
 
 Package: org.thebigboss.blurriedncbackground
 Version: 3.0-1
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 24
 Depends: mobilesubstrate, firmware (>= 5.0), preferenceloader
@@ -770,7 +770,7 @@ Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: trevir.Discord
 Version: 0.8.5
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: InvoxiPlayGames <webmaster@invoxiplaygames.uk
 Depends: firmware (>=5.0)
 Filename: debs/discordclassic-0.8.5.deb
@@ -788,7 +788,7 @@ Name: Discord Classic
 
 Package: uk.invoxiplaygames.cydiahttpatch
 Version: 1.0
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: InvoxiPlayGames <webmaster@invoxiplaygames.uk
 Installed-Size: 100
 Depends: cydia, mobilesubstrate, firmware (<< 4.0)
@@ -806,7 +806,7 @@ Name: Cydia HTTPatch
 
 Package: uk.invoxiplaygames.cydiahttpatch2
 Version: 1.0
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: InvoxiPlayGames <webmaster@invoxiplaygames.uk>
 Installed-Size: 100
 Depends: cydia, mobilesubstrate, firmware (>= 4.0)
@@ -824,7 +824,7 @@ Name: Cydia HTTPatch (iOS 4+)
 
 Package: winterboard
 Version: 0.9.3919
-Architecture: iphoneos-arm
+Architecture: all
 Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
 Pre-Depends: dpkg (>= 1.13.25-5)
 Depends: mobilesubstrate (>= 0.9.3225-1), killall, preferenceloader, findutils, net.howett.pincrush (>= 0.0.1-23) | pincrush
