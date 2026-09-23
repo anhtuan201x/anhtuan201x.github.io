@@ -3,9 +3,9 @@ Label: AnhTuan201X
 Suite: stable
 Version: 1.0
 Codename: stable
-Architectures: iphoneos-arm
+Architectures: iphoneos-arm iphoneos-arm64
 Components: main
-Description: Kho lưu trữ Tweak và Ứng dụng Jailbreak tương thích hoàn toàn với Cydia, Sileo, Zebra.
+Description: Kho lưu trữ Tweak và Ứng dụng Jailbreak hỗ trợ đa nền tảng từ thiết bị cũ đến thiết bị mới.
 MD5Sum:
- 46bea82b82a81ad2d28876efc3f66126 36340 Packages
- b2b28e39040b9ef7e278383b6209a467 11038 Packages.bz2
+ c8eb0e16908338b74328b46d5c84ab55 37406 Packages
+ 9cedac4496ac228096527ad821fa49d5 11049 Packages.bz2
