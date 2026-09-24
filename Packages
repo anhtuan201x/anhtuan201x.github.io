@@ -128,10 +128,10 @@ Version: 1.0
 Architecture: all
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: /home/runner/work/anhtuan201x.github.io/anhtuan201x.github.io/debs/com.anhtuan201x.repoicons_1.0_all.deb
-Size: 16296
-MD5sum: 8a816b065213c54e14f9191b88295575
-SHA1: 5c8c68981ea998b69ebef364bc85a2f0727f312f
-SHA256: af26f46a901eaeeaf8737a3dbef877bdfdd77dc638caaa286392a5857bb09101
+Size: 16290
+MD5sum: e90decea407f1ea3749c8fea75275398
+SHA1: e72d96ff32b94f88640bf86fa0cbba906469d65c
+SHA256: 76e13d1aa584d473094c87536e00547abef4833232cc94f38830dc6e6f1bbe65
 Section: Themes
 Priority: optional
 Description: AnhTuan201X Repo icon package.
