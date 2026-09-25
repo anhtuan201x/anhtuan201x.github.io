@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AnhTuan201X Repo</title>
 <link rel="icon" type="image/png" href="CydiaIcon.png">
+
 <style>
 * { box-sizing: border-box; }
 
@@ -133,6 +134,8 @@ h1 {
     font-weight: 700;
     transition: .2s;
     text-align: center;
+    border: 0;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -181,7 +184,9 @@ h1 {
 
 <div class="container">
 
-<button class="music-btn" id="musicToggle">🎵 BGM: Off</button>
+<button class="music-btn" id="musicToggle">
+🎵 BGM: Off
+</button>
 
 <img src="CydiaIcon.png"
      class="logo"
@@ -213,13 +218,17 @@ tập trung vào tweak, ứng dụng IPA và công cụ jailbreak legacy.
 </div>
 
 <div class="stat">
-<div class="stat-number" style="color:#28c840">Online</div>
+<div class="stat-number" style="color:#28c840">
+Online
+</div>
 <div class="stat-label">Server</div>
 </div>
 
 </div>
 
-<a href="cydia://url/https://github.io" class="btn cydia">
+<a href="#"
+   class="btn cydia"
+   id="addCydia">
 ➕ Add to Cydia
 </a>
 
@@ -237,7 +246,11 @@ tập trung vào tweak, ứng dụng IPA và công cụ jailbreak legacy.
 
 </div>
 
-<audio id="bgm" loop preload="none" src="music.mp3"></audio>
+<audio id="bgm"
+       loop
+       preload="none"
+       src="music.mp3">
+</audio>
 
 <script>
 const canvas = document.getElementById("galaxyCanvas");
@@ -277,6 +290,7 @@ class Star {
 
     draw() {
         ctx.beginPath();
+
         ctx.arc(
             this.x,
             this.y,
@@ -313,6 +327,19 @@ function animate() {
 }
 
 animate();
+
+const addCydia = document.getElementById("addCydia");
+
+addCydia.addEventListener("click", function(e) {
+    e.preventDefault();
+
+    const repo = "http://anhtuan201x.github.io/";
+    const cydiaURL =
+        "cydia://url/https://cydia.saurik.com/api/share#?url=" +
+        encodeURIComponent(repo);
+
+    window.location.href = cydiaURL;
+});
 
 const bgm = document.getElementById("bgm");
 const musicToggle = document.getElementById("musicToggle");
