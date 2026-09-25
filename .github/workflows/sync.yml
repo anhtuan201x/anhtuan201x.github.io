@@ -36,8 +36,8 @@ jobs:
           git add -A
           if ! git diff --cached --exit-code --quiet; then
             git commit -m "Bot: Auto updated Cydia Repo & IPA Store"
-            # LỆNH THẦN THÁNH CHỐNG LỆCH NHÁNH ĐẨY CODE BẤT TỬ
-            git pull origin main --rebase
+            # LỆNH THẦN THÁNH ÉP ĐỒNG BỘ GỘP NHÁNH PHÁ CACHE LỆCH LỊCH SỬ
+            git pull origin main --rebase --strategy-option=theirs || true
             git push origin main
           else
             echo "No changes detected. Skipping push."
