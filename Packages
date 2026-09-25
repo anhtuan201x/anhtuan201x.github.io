@@ -117,6 +117,20 @@ Section: Themes
 Description: Bộ sưu tập biểu tượng ảnh nhỏ hiển thị cho các gói cài đặt.
 Name: AnhTuan201X Repo Icons
 
+Package: com.anhtuan201x.repoicons
+Version: 1.0
+Architecture: all
+Maintainer: AnhTuan201X <anhtuan201x@github.io>
+Filename: debs/com.anhtuan201x.repoicons_1.0_all.deb
+Size: 16294
+MD5sum: 74c958cbfee28c09212bcc1cfc767578
+SHA1: 50800470b2c294c456bb709829ee111a8e6b9177
+SHA256: 09167a901d0cb62a55bef27902c693c2a21fe30f272c0eebdcc5da809bea8a15
+Section: Themes
+Priority: optional
+Description: AnhTuan201X Repo icon package.
+Name: AnhTuan201X Repo Icons
+
 Package: com.coolbooter.coolbooter
 Version: 1.1-release
 Architecture: iphoneos-arm
