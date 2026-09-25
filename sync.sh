@@ -3,7 +3,9 @@
 set -e
 
 # ==========================================
+
 # AnhTuan201X Repo - sync.sh
+
 # ==========================================
 
 ROOT_DIR="$(cd "$(dirname "$0")" && pwd)"
@@ -14,7 +16,9 @@ echo " AnhTuan201X Repo Sync"
 echo "=========================================="
 
 # ==========================================
-# 1. DỌN & TẠO THƯ MỤC
+
+# 1. DỌN DẸP VÀ TẠO THƯ MỤC
+
 # ==========================================
 
 rm -rf jailbreaks link ipas
@@ -24,27 +28,35 @@ mkdir -p bundles
 mkdir -p dists/stable/main/binary-iphoneos-arm
 
 # ==========================================
-# 2. ĐẾM PACKAGE
+
+# 2. ĐẾM SỐ LƯỢNG DEB
+
 # ==========================================
 
-count_deb=$(find debs -maxdepth 1 -type f -name "*.deb" | wc -l | tr -d ' ')
+count_deb=$(find debs -maxdepth 1 -type f -name "*.deb" | wc -l)
 total_packages="$count_deb"
 
 if [ "$total_packages" -eq 0 ]; then
-    total_packages=45
+total_packages=45
 fi
 
 echo "DEB packages : $count_deb"
 echo "Total        : $total_packages"
 
 # ==========================================
-# 3. TRANG CHỦ
+
+# 3. TẠO TRANG CHỦ index.html
+
 # ==========================================
 
 cat > index.html <<EOF
+
 <!DOCTYPE html>
+
 <html lang="vi">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -53,6 +65,7 @@ cat > index.html <<EOF
 <link rel="icon" type="image/png" href="CydiaIcon.png">
 
 <style>
+
 * {
     box-sizing: border-box;
 }
@@ -78,17 +91,14 @@ body {
     margin: 0;
     padding: 20px;
     min-height: 100vh;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     font-family:
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
         sans-serif;
-
     background:
         linear-gradient(
             135deg,
@@ -96,7 +106,6 @@ body {
             var(--bg2),
             var(--bg3)
         );
-
     color: var(--text);
     overflow-x: hidden;
 }
@@ -106,7 +115,6 @@ body {
     inset: 0;
     width: 100%;
     height: 100%;
-
     z-index: 0;
     pointer-events: none;
 }
@@ -114,55 +122,38 @@ body {
 .container {
     position: relative;
     z-index: 2;
-
     width: 100%;
     max-width: 440px;
-
     padding: 35px 25px;
-
     text-align: center;
-
     border-radius: 24px;
-
     background: var(--card);
-
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-
-    box-shadow:
-        0 20px 50px rgba(0,0,0,.5);
+    box-shadow: 0 20px 50px rgba(0,0,0,.5);
 }
 
 .logo {
     width: 90px;
     height: 90px;
-
     object-fit: cover;
-
     border-radius: 22px;
-
     margin-bottom: 15px;
-
-    box-shadow:
-        0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 h1 {
     margin: 0 0 10px;
-
     font-size: 30px;
     font-weight: 800;
-
     background:
         linear-gradient(
             45deg,
             #ff416c,
             #ff4b2b
         );
-
     -webkit-background-clip: text;
     background-clip: text;
-
     -webkit-text-fill-color: transparent;
 }
 
@@ -174,39 +165,25 @@ h1 {
 
 .story {
     color: var(--sub);
-
     font-size: 13.5px;
     line-height: 1.6;
-
     text-align: left;
-
     padding: 15px 0;
-
-    border-top:
-        1px solid rgba(128,128,128,.25);
-
-    border-bottom:
-        1px solid rgba(128,128,128,.25);
+    border-top: 1px solid rgba(128,128,128,.25);
+    border-bottom: 1px solid rgba(128,128,128,.25);
 }
 
 .stats {
     display: grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
+    grid-template-columns: repeat(3,1fr);
     gap: 10px;
-
     margin: 22px 0;
 }
 
 .stat {
     padding: 12px 5px;
-
     border-radius: 12px;
-
-    background:
-        rgba(128,128,128,.1);
+    background: rgba(128,128,128,.1);
 }
 
 .stat-number {
@@ -217,32 +194,21 @@ h1 {
 
 .stat-label {
     margin-top: 3px;
-
     font-size: 11px;
-
     color: #888;
 }
 
 .btn {
     display: block;
-
     width: 100%;
-
     padding: 14px;
-
     margin-bottom: 10px;
-
     border-radius: 25px;
-
     color: white;
-
     text-decoration: none;
-
     font-size: 15px;
     font-weight: 700;
-
     transition: .2s;
-
     text-align: center;
 }
 
@@ -259,14 +225,13 @@ h1 {
         );
 }
 
-.bundles-btn {
+.apps-btn {
     background:
         linear-gradient(
             135deg,
             #0072ff,
             #00c6ff
         );
-
     box-shadow:
         0 4px 10px
         rgba(0,114,255,0.3);
@@ -274,23 +239,14 @@ h1 {
 
 .music-btn {
     position: absolute;
-
     right: 15px;
     top: 15px;
-
     border: 0;
-
     padding: 7px 12px;
-
     border-radius: 15px;
-
     cursor: pointer;
-
-    background:
-        rgba(128,128,128,.15);
-
+    background: rgba(128,128,128,.15);
     color: var(--text);
-
     font-weight: bold;
 }
 
@@ -298,7 +254,9 @@ h1 {
     background: #28c840;
     color: white;
 }
+
 </style>
+
 </head>
 
 <body>
@@ -308,21 +266,20 @@ h1 {
 <div class="container">
 
 <button
-    class="music-btn"
-    id="musicToggle">
-    🎵 BGM: Off
-</button>
+ class="music-btn"
+ id="musicToggle">
+🎵 BGM: Off </button>
 
 <img
-    src="CydiaIcon.png"
-    class="logo"
-    alt="AnhTuan201X Repo"
-    onerror="this.style.display='none'">
+ src="CydiaIcon.png"
+ class="logo"
+ alt="AnhTuan201X Repo"
+ onerror="this.style.display='none'">
 
 <h1>AnhTuan201X Repo</h1>
 
 <div class="description">
-    Kho lưu trữ Tweak và ứng dụng Legacy dành cho iOS.
+Kho lưu trữ Tweak và ứng dụng Legacy dành cho iOS.
 </div>
 
 <div class="story">
@@ -334,30 +291,20 @@ h1 {
 Kho lưu trữ chuyên biệt dành cho
 các thiết bị iOS Legacy (iOS 5+),
 tập trung vào Tweak hệ thống
-và các tệp tin Signed iOS Bundles.
+và các ứng dụng dành cho iOS cũ.
 
 </div>
 
 <div class="stats">
 
 <div class="stat">
-    <div class="stat-number">
-        ${total_packages}
-    </div>
-
-    <div class="stat-label">
-        Packages
-    </div>
+    <div class="stat-number">${total_packages}</div>
+    <div class="stat-label">Packages</div>
 </div>
 
 <div class="stat">
-    <div class="stat-number">
-        999+
-    </div>
-
-    <div class="stat-label">
-        Downloads
-    </div>
+    <div class="stat-number">999+</div>
+    <div class="stat-label">Downloads</div>
 </div>
 
 <div class="stat">
@@ -366,40 +313,38 @@ và các tệp tin Signed iOS Bundles.
         style="color:#28c840">
         Online
     </div>
-
-    <div class="stat-label">
-        Server
-    </div>
+    <div class="stat-label">Server</div>
 </div>
 
 </div>
-
-<!--
-    Cydia API Share
-    Repo:
-    http://anhtuan201x.github.io/
--->
 
 <a
-    href="cydia://url/https://cydia.saurik.com/api/share#?url=http%3A%2F%2Fanhtuan201x.github.io%2F"
-    class="btn cydia">
-    ➕ Add to Cydia
+ href="cydia://url/https://cydia.saurik.com/api/share#?url=http%3A%2F%2Fanhtuan201x.github.io%2F"
+ class="btn cydia">
+
+```
+➕ Add to Cydia
+```
+
 </a>
 
 <a
-    href="bundles/index.html"
-    class="btn bundles-btn">
-    📦 Signed iOS Bundles (iOS 5+)
+ href="bundles/index.html"
+ class="btn apps-btn">
+
+```
+📱 Ứng dụng
+```
+
 </a>
 
 </div>
 
 <audio
-    id="bgm"
-    loop
-    preload="none"
-    src="music.mp3">
-</audio>
+ id="bgm"
+ loop
+ preload="none"
+ src="music.mp3"> </audio>
 
 <script>
 
@@ -447,16 +392,14 @@ class Star {
 
         this.alpha =
             Math.random();
+
     }
 
     update() {
 
         this.y += this.speed;
 
-        if (
-            this.y >
-            canvas.height
-        ) {
+        if (this.y > canvas.height) {
 
             this.y = 0;
 
@@ -473,6 +416,7 @@ class Star {
 
         if (this.alpha > 1)
             this.alpha = 1;
+
     }
 
     draw() {
@@ -493,6 +437,7 @@ class Star {
             ")";
 
         ctx.fill();
+
     }
 }
 
@@ -501,10 +446,7 @@ for (
     i < 100;
     i++
 ) {
-
-    stars.push(
-        new Star()
-    );
+    stars.push(new Star());
 }
 
 function animate() {
@@ -516,14 +458,12 @@ function animate() {
         canvas.height
     );
 
-    stars.forEach(
-        star => {
+    stars.forEach(star => {
 
-            star.update();
-            star.draw();
+        star.update();
+        star.draw();
 
-        }
-    );
+    });
 
     requestAnimationFrame(
         animate
@@ -536,9 +476,7 @@ const bgm =
     document.getElementById("bgm");
 
 const musicToggle =
-    document.getElementById(
-        "musicToggle"
-    );
+    document.getElementById("musicToggle");
 
 musicToggle.addEventListener(
     "click",
@@ -547,25 +485,25 @@ musicToggle.addEventListener(
         if (bgm.paused) {
 
             bgm.play()
-            .then(() => {
+                .then(() => {
 
-                musicToggle.textContent =
-                    "🎵 BGM: On";
+                    musicToggle.textContent =
+                        "🎵 BGM: On";
 
-                musicToggle.classList.add(
-                    "active"
-                );
+                    musicToggle.classList.add(
+                        "active"
+                    );
 
-            })
-            .catch(() => {
+                })
+                .catch(() => {
 
-                alert(
-                    "Không thể phát nhạc. " +
-                    "Hãy đặt music.mp3 " +
-                    "vào thư mục repo."
-                );
+                    alert(
+                        "Không thể phát nhạc. " +
+                        "Hãy đặt music.mp3 vào " +
+                        "thư mục repo."
+                    );
 
-            });
+                });
 
         } else {
 
@@ -577,22 +515,29 @@ musicToggle.addEventListener(
             musicToggle.classList.remove(
                 "active"
             );
+
         }
+
     }
 );
 
 </script>
 
 </body>
+
 </html>
 EOF
 
 # ==========================================
-# 4. BUNDLES
+
+# 4. TẠO TRANG ỨNG DỤNG
+
 # ==========================================
 
 cat > bundles/index.html <<'EOF'
+
 <!DOCTYPE html>
+
 <html lang="vi">
 
 <head>
@@ -600,10 +545,10 @@ cat > bundles/index.html <<'EOF'
 <meta charset="UTF-8">
 
 <meta
-    name="viewport"
-    content="width=device-width,initial-scale=1">
+ name="viewport"
+ content="width=device-width,initial-scale=1">
 
-<title>Signed iOS Bundles</title>
+<title>Ứng dụng - AnhTuan201X Repo</title>
 
 <style>
 
@@ -641,7 +586,6 @@ body {
 .store-card {
 
     max-width: 500px;
-
     width: 100%;
 
     background:
@@ -771,6 +715,10 @@ body {
             #0072ff,
             #00c6ff
         );
+
+    box-shadow:
+        0 3px 8px
+        rgba(0,0,0,0.1);
 }
 
 .game-name {
@@ -870,6 +818,7 @@ body {
     .btn-install {
         text-align: center;
     }
+
 }
 
 </style>
@@ -880,18 +829,17 @@ body {
 
 <div class="store-card">
 
-<h1>Signed iOS Bundles</h1>
+<h1>📱 Ứng dụng</h1>
 
 <p
     style="
-    color:#8e8e93;
-    font-size:13px;
-    margin-bottom:15px;
+        color:#8e8e93;
+        font-size:13px;
+        margin-bottom:15px;
     ">
 
-Kho tải ứng dụng,
-game đã ký (Signed)
-dành cho iOS 5 trở lên.
+Kho tải ứng dụng và game
+dành cho các thiết bị iOS Legacy.
 
 </p>
 
@@ -901,23 +849,24 @@ dành cho iOS 5 trở lên.
 
 <br>
 
-Đây là khu vực dành cho các
-ứng dụng/bundle đã ký.
-Hãy đảm bảo thiết bị có chứng chỉ
-phù hợp trước khi cài đặt.
+Một số ứng dụng có thể yêu cầu
+chứng chỉ hoặc cấu hình phù hợp
+trước khi cài đặt.
 
 <a
-    href="https://litten.ca"
-    class="btn-cert">
+ href="https://tlsroot.litten.ca/beeg.mobileconfig"
+ class="btn-cert">
 
-🔑 Cài đặt Hanabi CA Cert
+🔑 Cài đặt Hanabi Updated CA
 
 </a>
 
 </div>
 
 <!-- ============================== -->
-<!-- ChatGPT -->
+
+<!-- ChatGPT Legacy -->
+
 <!-- ============================== -->
 
 <div class="game-item">
@@ -945,16 +894,16 @@ Dung lượng: 3.4 MB
 <div class="btn-group">
 
 <a
-    href="https://github.com/bag-xml/ChatGPT-for-Legacy-iOS/releases/download/v1.0.2-release/ChatGPT-v1.0.2-openrouter.ipa"
-    class="btn-download">
+ href="https://github.com/bag-xml/ChatGPT-for-Legacy-iOS/releases/download/v1.0.2-release/ChatGPT-v1.0.2-openrouter.ipa"
+ class="btn-download">
 
 Tải IPA
 
 </a>
 
 <a
-    href="itms-services://?action=download-manifest&url=http://bag-xml.com/projects/chatgpt/assets/itml/chatgpt/1.0/app.plist"
-    class="btn-install">
+ href="itms-services://?action=download-manifest&url=http://bag-xml.com/projects/chatgpt/assets/itml/chatgpt/1.0/app.plist"
+ class="btn-install">
 
 Cài đặt
 
@@ -965,7 +914,9 @@ Cài đặt
 </div>
 
 <!-- ============================== -->
+
 <!-- OldClash -->
+
 <!-- ============================== -->
 
 <div class="game-item">
@@ -993,16 +944,16 @@ Dung lượng: 87.1 MB
 <div class="btn-group">
 
 <a
-    href="https://oldclash.bag-xml.com/apps/ios/itml/6.253/app.ipa"
-    class="btn-download">
+ href="https://oldclash.bag-xml.com/apps/ios/itml/6.253/app.ipa"
+ class="btn-download">
 
 Tải IPA
 
 </a>
 
 <a
-    href="itms-services://?action=download-manifest&url=http://oldclash.bag-xml.com/apps/ios/itml/6.253/app.plist"
-    class="btn-install">
+ href="itms-services://?action=download-manifest&url=http://oldclash.bag-xml.com/apps/ios/itml/6.253/app.plist"
+ class="btn-install">
 
 Cài đặt
 
@@ -1013,7 +964,9 @@ Cài đặt
 </div>
 
 <!-- ============================== -->
-<!-- Discord -->
+
+<!-- Discord Classic -->
+
 <!-- ============================== -->
 
 <div class="game-item">
@@ -1041,16 +994,16 @@ Dung lượng: 11.1 MB
 <div class="btn-group">
 
 <a
-    href="https://github.com/Ayeris23/Discord-Classic/releases/download/v0.9.6-2/Discord_0.9.6-2.ipa"
-    class="btn-download">
+ href="https://github.com/Ayeris23/Discord-Classic/releases/download/v0.9.6-2/Discord_0.9.6-2.ipa"
+ class="btn-download">
 
 Tải IPA
 
 </a>
 
 <a
-    href="itms-services://?action=download-manifest&url=http://bag-xml.com/assets/itml/discord/0.9/app.plist"
-    class="btn-install">
+ href="itms-services://?action=download-manifest&url=http://bag-xml.com/assets/itml/discord/0.9/app.plist"
+ class="btn-install">
 
 Cài đặt
 
@@ -1061,7 +1014,9 @@ Cài đặt
 </div>
 
 <!-- ============================== -->
+
 <!-- Asphalt 4 -->
+
 <!-- ============================== -->
 
 <div class="game-item">
@@ -1089,16 +1044,16 @@ Dung lượng: 24.3 MB
 <div class="btn-group">
 
 <a
-    href="https://archive.org/download/Asphalt4/Asphalt%204.ipa"
-    class="btn-download">
+ href="https://archive.org/download/Asphalt4/Asphalt%204.ipa"
+ class="btn-download">
 
 Tải IPA
 
 </a>
 
 <a
-    href="https://github.com/anhtuan201x/anhtuan201x.github.io/blob/main/ipas/asphalt4.plist"
-    class="btn-install">
+ href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/anhtuan201x/anhtuan201x.github.io/main/ipas/asphalt4.plist"
+ class="btn-install">
 
 Cài đặt
 
@@ -1109,8 +1064,8 @@ Cài đặt
 </div>
 
 <a
-    href="../index.html"
-    class="btn-back">
+ href="../index.html"
+ class="btn-back">
 
 ⬅️ Quay lại Trang chủ
 
@@ -1124,37 +1079,36 @@ Cài đặt
 EOF
 
 # ==========================================
-# 5. QUÉT PACKAGES
+
+# 5. QUÉT PACKAGES CYDIA
+
 # ==========================================
-
-rm -f Packages
-rm -f Packages.bz2
-
-rm -f dists/stable/main/binary-iphoneos-arm/Packages
-rm -f dists/stable/main/binary-iphoneos-arm/Packages.bz2
 
 dpkg-scanpackages -m debs /dev/null > Packages
 
 sed -i 's/\r$//' Packages
 
 if [ -f "CydiaIcon.png" ]; then
-    sed -i '/^Description:/a Icon: CydiaIcon.png' Packages
+sed -i "s|^Description:.*|&\nIcon: CydiaIcon.png|" Packages
 fi
 
-cp \
-    Packages \
-    dists/stable/main/binary-iphoneos-arm/Packages
+cp 
+Packages 
+dists/stable/main/binary-iphoneos-arm/Packages
+
+rm -f 
+dists/stable/main/binary-iphoneos-arm/Packages.bz2
 
 bzip2 -fk Packages
 
-mv \
-    Packages.bz2 \
-    dists/stable/main/binary-iphoneos-arm/Packages.bz2
-
-echo "Packages generated successfully."
+mv 
+Packages.bz2 
+dists/stable/main/binary-iphoneos-arm/Packages.bz2
 
 # ==========================================
-# 6. RELEASE
+
+# 6. TẠO RELEASE
+
 # ==========================================
 
 cat > Release <<EOF
@@ -1165,8 +1119,7 @@ Version: 1.0
 Codename: stable
 Architectures: iphoneos-arm
 Components: main
-Description: Kho lưu trữ Tweak và Ứng dụng Jailbreak của AnhTuan201X.
-
+Description: Kho lưu trữ Tweak và Ứng dụng Legacy của AnhTuan201X.
 MD5Sum:
 $(md5sum dists/stable/main/binary-iphoneos-arm/Packages | cut -d' ' -f1) $(stat -c%s dists/stable/main/binary-iphoneos-arm/Packages) main/binary-iphoneos-arm/Packages
 $(md5sum dists/stable/main/binary-iphoneos-arm/Packages.bz2 | cut -d' ' -f1) $(stat -c%s dists/stable/main/binary-iphoneos-arm/Packages.bz2) main/binary-iphoneos-arm/Packages.bz2
@@ -1174,40 +1127,35 @@ EOF
 
 sed -i 's/\r$//' Release
 
-cp \
-    Release \
-    dists/stable/Release
-
-echo "Release generated successfully."
+cp Release dists/stable/Release
 
 # ==========================================
+
 # 7. GIT SYNC
+
 # ==========================================
 
 git config --global user.name "anhtuan201x-bot"
-git config --global user.email "anhtuan201x@github.io"
+git config --global user.email "[anhtuan201x@github.io](mailto:anhtuan201x@github.io)"
 
 git add -A
 
-if ! git diff --cached --quiet; then
+if ! git diff --cached --exit-code --quiet; then
 
-    git commit \
-        -m "Bot: Auto sync AnhTuan201X Repo" \
-        || true
+```
+git commit \
+    -m "Bot: Update Vietnamese app store and repo"
 
-    git pull \
-        origin main \
-        --rebase \
-        --strategy-option=theirs \
-        || true
+git pull origin main \
+    --rebase \
+    --strategy-option=theirs || true
 
-    git push \
-        origin main \
-        || true
+git push origin main || true
+```
 
 fi
 
 echo "=========================================="
-echo " Sync completed."
-echo " Repo: http://anhtuan201x.github.io/"
+echo " Sync hoàn tất!"
 echo "=========================================="
+EOF
