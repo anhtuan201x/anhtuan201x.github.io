@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AnhTuan201X Repo</title>
 <link rel="icon" type="image/png" href="CydiaIcon.png">
-
 <style>
 * { box-sizing: border-box; }
 
@@ -182,9 +181,7 @@ h1 {
 
 <div class="container">
 
-<button class="music-btn" id="musicToggle">
-🎵 BGM: Off
-</button>
+<button class="music-btn" id="musicToggle">🎵 BGM: Off</button>
 
 <img src="CydiaIcon.png"
      class="logo"
@@ -216,16 +213,13 @@ tập trung vào tweak, ứng dụng IPA và công cụ jailbreak legacy.
 </div>
 
 <div class="stat">
-<div class="stat-number" style="color:#28c840">
-Online
-</div>
+<div class="stat-number" style="color:#28c840">Online</div>
 <div class="stat-label">Server</div>
 </div>
 
 </div>
 
-<a href="cydia://url/https://cydia.saurik.com/api/share#?url=http%3A%2F%2Fanhtuan201x.github.io%2F"
-   class="btn cydia">
+<a href="cydia://url/https://github.io" class="btn cydia">
 ➕ Add to Cydia
 </a>
 
@@ -243,11 +237,7 @@ Online
 
 </div>
 
-<audio id="bgm"
-       loop
-       preload="none"
-       src="music.mp3">
-</audio>
+<audio id="bgm" loop preload="none" src="music.mp3"></audio>
 
 <script>
 const canvas = document.getElementById("galaxyCanvas");
@@ -287,7 +277,6 @@ class Star {
 
     draw() {
         ctx.beginPath();
-
         ctx.arc(
             this.x,
             this.y,
@@ -334,23 +323,18 @@ musicToggle.addEventListener("click", () => {
 
         bgm.play()
         .then(() => {
-
             musicToggle.textContent = "🎵 BGM: On";
             musicToggle.classList.add("active");
-
         })
         .catch(() => {
-
             alert(
                 "Không thể phát nhạc. Hãy đặt music.mp3 vào thư mục repo."
             );
-
         });
 
     } else {
 
         bgm.pause();
-
         musicToggle.textContent = "🎵 BGM: Off";
         musicToggle.classList.remove("active");
 
