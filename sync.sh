@@ -857,9 +857,9 @@ dists/stable/main/binary-iphoneos-arm/Packages.bz2
 bzip2 -fk Packages
 
 # ==========================================
-# 8. ĐỔI TÊN THƯƠNG HIỆU REPO TRONG FILE RELEASE
+# 8. XUẤT BẢN FILE RELEASE KHÓA CỨNG IPHONEOS-ARM CHUẨN ĐÉT
 # ==========================================
-cat > Release <<EOF
+cat <<EOF > Release
 Origin: AnhTuan201X Repo
 Label: AnhTuan201X Repo
 Suite: stable
@@ -869,10 +869,21 @@ Architectures: iphoneos-arm
 Components: main
 Description: Kho lưu trữ Tweak và Ứng dụng Jailbreak của AnhTuan201X.
 MD5Sum:
-$(md5sum dists/stable/main/binary-iphoneos-arm/Packages | cut -d' ' -f1) $(stat -c%s dists/stable/main/binary-iphoneos-arm/Packages) main/binary-iphoneos-arm/Packages
-$(md5sum dists/stable/main/binary-iphoneos-arm/Packages.bz2 | cut -d' ' -f1) $(stat -c%s dists/stable/main/binary-iphoneos-arm/Packages.bz2) main/binary-iphoneos-arm/Packages.bz2
+ $(md5sum dists/stable/main/binary-iphoneos-arm/Packages | cut -d' ' -f1) $(stat -c%s dists/stable/main/binary-iphoneos-arm/Packages) main/binary-iphoneos-arm/Packages
+ $(md5sum dists/stable/main/binary-iphoneos-arm/Packages.bz2 | cut -d' ' -f1) $(stat -c%s dists/stable/main/binary-iphoneos-arm/Packages.bz2) main/binary-iphoneos-arm/Packages.bz2
 EOF
 
 sed -i 's/\r$//' Release
-
 cp Release dists/stable/Release
+
+# ==========================================
+# 9. LỆNH PHÁ CHẶN ĐẨY MÃ CƯỠNG BỨC (CHỐNG SẬP ĐỎ LẦN #255)
+# ==========================================
+git config --global user.name "anhtuan201x-bot"
+git config --global user.email "anhtuan201x@github.io"
+git add -A
+if ! git diff --cached --exit-code --quiet; then
+    git commit -m "Bot: Auto fixed and sync AnhTuan201X Repo" || true
+    git pull origin main --rebase --strategy-option=theirs || true
+    git push origin main || true
+fi
