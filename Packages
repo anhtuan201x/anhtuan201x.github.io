@@ -114,10 +114,10 @@ Version: 1.0
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: debs/com.anhtuan201x.repoicons_1.0_iphoneos-arm.deb
-Size: 16442
-MD5sum: fb5123a3e4782feac6adaae56f36b4b0
-SHA1: bf7a3a7406864afecbec159f1c5f06336776e37a
-SHA256: 18b1ded603b4be4b57903f6ae33823e86f4821cf9931c1e23e014024c0e141b8
+Size: 16448
+MD5sum: c2b44f719c787480b0c1ce0942f2bbf2
+SHA1: 471dab7d605aacd7cc4fb889e00758d06268b1cf
+SHA256: e474e7b3b50da882ab50c404fc4211062809bd493e65579b64903445fb6904c8
 Section: Themes
 Description: Bộ sưu tập biểu tượng ảnh nhỏ hiển thị cho các gói cài đặt.
 Icon: https://github.io
@@ -553,6 +553,31 @@ Author: Victor
 Compatibility: iOS 5.0+
 Name: Veteris Helper
 
+Package: cydia
+Version: 1.1.36+2.g0397a15
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Installed-Size: 9768
+Pre-Depends: debianutils, dpkg (>= 1.16.1), firmware (>= 5.0)
+Depends: cydia-lproj (>= 1.1.10), darwintools, debianutils, dpkg (>= 1.19.1), org.thebigboss.repo.icons, sed, shell-cmds, system-cmds, uikittools (>= 1.1.14), xz
+Conflicts: bigboss, bigbossbetarepo, com.sosiphone.addcydia, cydia-sources, ispazio.net, modmyifone, ste, yellowsn0w.com, zodttd
+Replaces: bigboss, bigbossbetarepo, com.sosiphone.addcydia, cydia-sources, ispazio.net, modmyifone, saurik, ste, yellowsn0w.com, zodttd
+Provides: bigbossbetarepo, cydia-sources
+Filename: debs/cydia_1.1.36+2.g0397a15_iphoneos-arm.deb
+Size: 15119156
+MD5sum: fd4b8f68d7f26eceb6503ee10b455f4f
+SHA1: bbe0649f28faa66d2bbd354944e803cce20bb332
+SHA256: 6f960c47581cfd67477340ecebbbd90c4a11b87413a1da8177633910d00cc058
+Section: Packaging
+Priority: required
+Description: graphical iPhone front-end for APT
+Icon: https://github.io
+Tag: purpose::uikit, cydia::essential, role::enduser
+Author: Jay Freeman (saurik) <saurik@saurik.com>
+Depiction: http://cydia.saurik.com/info/cydia/
+Icon: file:///Applications/Cydia.app/Icon-60.png
+Name: Cydia Installer
+
 Package: dev.preloading.tubereplacer
 Version: 1.0.6
 Architecture: iphoneos-arm
@@ -701,6 +726,22 @@ Icon: file:///Applications/Terminal.app/Icon.png
 Name: MobileTerminal
 Sponsor: thebigboss.org <http://thebigboss.org>
 
+Package: neofetch
+Version: 7.1.0.2
+Architecture: iphoneos-arm
+Maintainer: KawaiiZenbo
+Depends: coreutils, gawk, grep, bash, coreutils-bin, system-cmds, darwintools
+Filename: debs/neofetch_7.1.0.2_iphoneos-arm.deb
+Size: 86864
+MD5sum: 74cde61993bbbe0c4922392ef39a7cd0
+SHA1: fbfef5018a121518eb4ffee35ad822f82523f222
+SHA256: 0201b7409314e76f9bd1882a849f81f5a65b840a6e75a5765e97b91a9a16a995
+Section: Terminal Support
+Description: A command-line system information tool written in bash 3.2+ from https://github.com/dylanaraps/neofetch, packaged for iOS
+Icon: https://github.io
+Author: dylanaraps
+Name: neofetch
+
 Package: openssh
 Version: 6.7p1-13
 Architecture: iphoneos-arm
@@ -836,6 +877,25 @@ Description: Removes HTTPS from Cydia.
 Icon: https://github.io
 Author: InvoxiPlayGames <webmaster@invoxiplaygames.uk>
 Name: Cydia HTTPatch (iOS 4+)
+
+Package: uk.invoxiplaygames.youtube
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: InvoxiPlayGames <webmaster@invoxiplaygames.uk>
+Depends: firmware (>= 6.0), firmware (<= 7.0)
+Conflicts: com.tekwik.youtube
+Filename: debs/uk.invoxiplaygames.youtube_1.0_iphoneos-arm.deb
+Size: 311244
+MD5sum: d7bbdbdeb0bd9d876d68f4c1451ecf6b
+SHA1: fcb90dd497859e26b7e5e5676e8be6a6a5362166
+SHA256: bd8a02f6cd4dc2f168758fa7e133aa4e6f028922ba4c310a2972bdf37c48a987
+Section: Entertainment
+Priority: optional
+Description: Returns the classic YouTube app to iOS 6.
+Icon: https://github.io
+Author: InvoxiPlayGames
+Depiction: http://cydia.invoxiplaygames.uk/dp/youtube.php
+Name: Classic YouTube App
 
 Package: winterboard
 Version: 0.9.3919
