@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
 
 <title>AnhTuan201X Repo</title>
 
-<link rel="icon" type="image/png" href="CydiaIcon.png">
+<link
+    rel="icon"
+    type="image/png"
+    href="CydiaIcon.png">
 
 <style>
+
 * {
     box-sizing: border-box;
 }
@@ -17,26 +26,35 @@
     --bg1: #0b001a;
     --bg2: #160033;
     --bg3: #001133;
+
     --card: rgba(255,255,255,0.95);
+
     --text: #1d1d26;
     --sub: #555;
 }
 
 @media (prefers-color-scheme: dark) {
+
     :root {
         --card: rgba(20,16,38,0.94);
         --text: #fff;
         --sub: #b0aec2;
     }
+
 }
 
 body {
+
     margin: 0;
+
     padding: 20px;
+
     min-height: 100vh;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     font-family:
@@ -54,24 +72,32 @@ body {
         );
 
     color: var(--text);
+
     overflow-x: hidden;
 }
 
 #galaxyCanvas {
+
     position: fixed;
+
     inset: 0;
+
     width: 100%;
     height: 100%;
 
     z-index: 0;
+
     pointer-events: none;
 }
 
 .container {
+
     position: relative;
+
     z-index: 2;
 
     width: 100%;
+
     max-width: 440px;
 
     padding: 35px 25px;
@@ -83,13 +109,16 @@ body {
     background: var(--card);
 
     backdrop-filter: blur(15px);
+
     -webkit-backdrop-filter: blur(15px);
 
     box-shadow:
-        0 20px 50px rgba(0,0,0,.5);
+        0 20px 50px
+        rgba(0,0,0,.5);
 }
 
 .logo {
+
     width: 90px;
     height: 90px;
 
@@ -100,13 +129,16 @@ body {
     margin-bottom: 15px;
 
     box-shadow:
-        0 4px 15px rgba(0,0,0,0.2);
+        0 4px 15px
+        rgba(0,0,0,0.2);
 }
 
 h1 {
+
     margin: 0 0 10px;
 
     font-size: 30px;
+
     font-weight: 800;
 
     background:
@@ -117,21 +149,27 @@ h1 {
         );
 
     -webkit-background-clip: text;
+
     background-clip: text;
 
     -webkit-text-fill-color: transparent;
 }
 
 .description {
+
     font-size: 15px;
+
     font-weight: 600;
+
     margin-bottom: 20px;
 }
 
 .story {
+
     color: var(--sub);
 
     font-size: 13.5px;
+
     line-height: 1.6;
 
     text-align: left;
@@ -139,13 +177,16 @@ h1 {
     padding: 15px 0;
 
     border-top:
-        1px solid rgba(128,128,128,.25);
+        1px solid
+        rgba(128,128,128,.25);
 
     border-bottom:
-        1px solid rgba(128,128,128,.25);
+        1px solid
+        rgba(128,128,128,.25);
 }
 
 .stats {
+
     display: grid;
 
     grid-template-columns:
@@ -157,6 +198,7 @@ h1 {
 }
 
 .stat {
+
     padding: 12px 5px;
 
     border-radius: 12px;
@@ -166,12 +208,16 @@ h1 {
 }
 
 .stat-number {
+
     font-size: 16px;
+
     font-weight: 800;
+
     color: #ff4b2b;
 }
 
 .stat-label {
+
     margin-top: 3px;
 
     font-size: 11px;
@@ -180,6 +226,7 @@ h1 {
 }
 
 .btn {
+
     display: block;
 
     width: 100%;
@@ -195,6 +242,7 @@ h1 {
     text-decoration: none;
 
     font-size: 15px;
+
     font-weight: 700;
 
     transition: .2s;
@@ -203,10 +251,12 @@ h1 {
 }
 
 .btn:hover {
+
     transform: scale(.97);
 }
 
 .cydia {
+
     background:
         linear-gradient(
             135deg,
@@ -215,7 +265,8 @@ h1 {
         );
 }
 
-.bundles-btn {
+.bundle-btn {
+
     background:
         linear-gradient(
             135deg,
@@ -229,9 +280,11 @@ h1 {
 }
 
 .music-btn {
+
     position: absolute;
 
     right: 15px;
+
     top: 15px;
 
     border: 0;
@@ -251,10 +304,14 @@ h1 {
 }
 
 .music-btn.active {
+
     background: #28c840;
+
     color: white;
 }
+
 </style>
+
 </head>
 
 <body>
@@ -266,7 +323,9 @@ h1 {
 <button
     class="music-btn"
     id="musicToggle">
+
     🎵 BGM: Off
+
 </button>
 
 <img
@@ -275,77 +334,89 @@ h1 {
     alt="AnhTuan201X Repo"
     onerror="this.style.display='none'">
 
-<h1>AnhTuan201X Repo</h1>
+<h1>
+    AnhTuan201X Repo
+</h1>
 
 <div class="description">
-    Kho lưu trữ Tweak và ứng dụng Legacy dành cho iOS.
+
+    Kho lưu trữ Tweak
+    và ứng dụng Legacy dành cho iOS.
+
 </div>
 
 <div class="story">
 
 <strong>🇻🇳 AnhTuan201X Repo</strong>
 
-<br><br>
+<br>
+<br>
 
 Kho lưu trữ chuyên biệt dành cho
 các thiết bị iOS Legacy (iOS 5+),
 tập trung vào Tweak hệ thống
-và các tệp tin Signed iOS Bundles.
+và các tệp tin ứng dụng đã ký.
 
 </div>
 
 <div class="stats">
 
 <div class="stat">
-    <div class="stat-number">
-        45
-    </div>
 
-    <div class="stat-label">
-        Packages
-    </div>
+<div class="stat-number">
+45
+</div>
+
+<div class="stat-label">
+Packages
+</div>
+
 </div>
 
 <div class="stat">
-    <div class="stat-number">
-        999+
-    </div>
 
-    <div class="stat-label">
-        Downloads
-    </div>
+<div class="stat-number">
+999+
+</div>
+
+<div class="stat-label">
+Downloads
+</div>
+
 </div>
 
 <div class="stat">
-    <div
-        class="stat-number"
-        style="color:#28c840">
-        Online
-    </div>
 
-    <div class="stat-label">
-        Server
-    </div>
+<div
+    class="stat-number"
+    style="color:#28c840">
+
+Online
+
+</div>
+
+<div class="stat-label">
+Server
 </div>
 
 </div>
 
-<!--
-    Cydia API Share
-    Repo:
-    http://anhtuan201x.github.io/
--->
+</div>
 
 <a
-    href="cydia://url/https://cydia.saurik.com/api/share#?url=http%3A%2F%2Fanhtuan201x.github.io%2F"
+    href="cydia://url/https://anhtuan201x.github.io"
     class="btn cydia">
+
     ➕ Add to Cydia
+
 </a>
 
 <a
-    href="bundles/index.html"
-    class="btn bundles-btn">
-    📦 Signed iOS Bundles (iOS 5+)
+    href="https://tlsroot.litten.ca/beeg.mobileconfig"
+    class="btn bundle-btn">
+
+    📦 Signed iOS Bundle
+
 </a>
 
 </div>
@@ -388,12 +459,12 @@ class Star {
     constructor() {
 
         this.x =
-            Math.random() *
-            canvas.width;
+            Math.random()
+            * canvas.width;
 
         this.y =
-            Math.random() *
-            canvas.height;
+            Math.random()
+            * canvas.height;
 
         this.size =
             Math.random() * 2;
@@ -417,12 +488,13 @@ class Star {
             this.y = 0;
 
             this.x =
-                Math.random() *
-                canvas.width;
+                Math.random()
+                * canvas.width;
         }
 
         this.alpha +=
-            (Math.random() - .5) * .03;
+            (Math.random() - .5)
+            * .03;
 
         if (this.alpha < .1)
             this.alpha = .1;
@@ -444,9 +516,9 @@ class Star {
         );
 
         ctx.fillStyle =
-            "rgba(255,255,255," +
-            this.alpha +
-            ")";
+            "rgba(255,255,255,"
+            + this.alpha
+            + ")";
 
         ctx.fill();
     }
@@ -476,6 +548,7 @@ function animate() {
         star => {
 
             star.update();
+
             star.draw();
 
         }
@@ -534,10 +607,12 @@ musicToggle.addEventListener(
                 "active"
             );
         }
+
     }
 );
 
 </script>
 
 </body>
+
 </html>
