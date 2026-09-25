@@ -60,7 +60,6 @@ body {
 #galaxyCanvas {
     position: fixed;
     inset: 0;
-
     width: 100%;
     height: 100%;
 
@@ -126,7 +125,6 @@ h1 {
 .description {
     font-size: 15px;
     font-weight: 600;
-
     margin-bottom: 20px;
 }
 
@@ -170,7 +168,6 @@ h1 {
 .stat-number {
     font-size: 16px;
     font-weight: 800;
-
     color: #ff4b2b;
 }
 
@@ -216,9 +213,6 @@ h1 {
             #4cd964,
             #28c840
         );
-
-    box-shadow:
-        0 4px 10px rgba(40,200,64,.3);
 }
 
 .bundles-btn {
@@ -230,7 +224,8 @@ h1 {
         );
 
     box-shadow:
-        0 4px 10px rgba(0,114,255,.3);
+        0 4px 10px
+        rgba(0,114,255,0.3);
 }
 
 .music-btn {
@@ -268,89 +263,90 @@ h1 {
 
 <div class="container">
 
-    <button
-        class="music-btn"
-        id="musicToggle"
-        type="button">
-        🎵 BGM: Off
-    </button>
+<button
+    class="music-btn"
+    id="musicToggle">
+    🎵 BGM: Off
+</button>
 
-    <img
-        src="CydiaIcon.png"
-        class="logo"
-        alt="AnhTuan201X Repo"
-        onerror="this.style.display='none'">
+<img
+    src="CydiaIcon.png"
+    class="logo"
+    alt="AnhTuan201X Repo"
+    onerror="this.style.display='none'">
 
-    <h1>AnhTuan201X Repo</h1>
+<h1>AnhTuan201X Repo</h1>
 
-    <div class="description">
-        Kho lưu trữ Tweak và ứng dụng Legacy dành cho iOS.
+<div class="description">
+    Kho lưu trữ Tweak và ứng dụng Legacy dành cho iOS.
+</div>
+
+<div class="story">
+
+<strong>🇻🇳 AnhTuan201X Repo</strong>
+
+<br><br>
+
+Kho lưu trữ chuyên biệt dành cho
+các thiết bị iOS Legacy (iOS 5+),
+tập trung vào Tweak hệ thống
+và các tệp tin Signed iOS Bundles.
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+    <div class="stat-number">
+        45
     </div>
 
-    <div class="story">
-        <strong>🇻🇳 AnhTuan201X Repo</strong>
-        <br><br>
+    <div class="stat-label">
+        Packages
+    </div>
+</div>
 
-        Kho lưu trữ chuyên biệt dành cho các thiết bị
-        iOS Legacy (iOS 5+), tập trung vào Tweak hệ thống
-        và các tệp tin Signed iOS Bundles.
+<div class="stat">
+    <div class="stat-number">
+        999+
     </div>
 
-    <div class="stats">
+    <div class="stat-label">
+        Downloads
+    </div>
+</div>
 
-        <div class="stat">
-            <div class="stat-number">45</div>
-            <div class="stat-label">
-                Packages
-            </div>
-        </div>
-
-        <div class="stat">
-            <div class="stat-number">999+</div>
-            <div class="stat-label">
-                Downloads
-            </div>
-        </div>
-
-        <div class="stat">
-            <div
-                class="stat-number"
-                style="color:#28c840">
-                Online
-            </div>
-
-            <div class="stat-label">
-                Server
-            </div>
-        </div>
-
+<div class="stat">
+    <div
+        class="stat-number"
+        style="color:#28c840">
+        Online
     </div>
 
-    <!--
-        ADD TO CYDIA
+    <div class="stat-label">
+        Server
+    </div>
+</div>
 
-        Repo:
-        http://anhtuan201x.github.io/
+</div>
 
-        Dùng Cydia Share API để tránh biến URL
-        thành cydia://url/https://github.io
-    -->
+<!--
+    Cydia API Share
+    Repo:
+    http://anhtuan201x.github.io/
+-->
 
-    <a
-        href="cydia://url/https://cydia.saurik.com/api/share#?url=http%3A%2F%2Fanhtuan201x.github.io%2F"
-        class="btn cydia">
+<a
+    href="cydia://url/https://cydia.saurik.com/api/share#?url=http%3A%2F%2Fanhtuan201x.github.io%2F"
+    class="btn cydia">
+    ➕ Add to Cydia
+</a>
 
-        ➕ Add to Cydia
-
-    </a>
-
-    <a
-        href="bundles/index.html"
-        class="btn bundles-btn">
-
-        📦 Signed iOS Bundles (iOS 5+)
-
-    </a>
+<a
+    href="bundles/index.html"
+    class="btn bundles-btn">
+    📦 Signed iOS Bundles (iOS 5+)
+</a>
 
 </div>
 
@@ -371,11 +367,6 @@ const ctx =
 
 let stars = [];
 
-
-/* ==============================
-   GALAXY BACKGROUND
-============================== */
-
 function resize() {
 
     canvas.width =
@@ -391,7 +382,6 @@ window.addEventListener(
 );
 
 resize();
-
 
 class Star {
 
@@ -415,13 +405,14 @@ class Star {
             Math.random();
     }
 
-
     update() {
 
         this.y += this.speed;
 
-
-        if (this.y > canvas.height) {
+        if (
+            this.y >
+            canvas.height
+        ) {
 
             this.y = 0;
 
@@ -430,21 +421,15 @@ class Star {
                 canvas.width;
         }
 
-
         this.alpha +=
             (Math.random() - .5) * .03;
 
-
-        if (this.alpha < .1) {
+        if (this.alpha < .1)
             this.alpha = .1;
-        }
 
-
-        if (this.alpha > 1) {
+        if (this.alpha > 1)
             this.alpha = 1;
-        }
     }
-
 
     draw() {
 
@@ -467,14 +452,16 @@ class Star {
     }
 }
 
-
-for (let i = 0; i < 100; i++) {
+for (
+    let i = 0;
+    i < 100;
+    i++
+) {
 
     stars.push(
         new Star()
     );
 }
-
 
 function animate() {
 
@@ -485,35 +472,29 @@ function animate() {
         canvas.height
     );
 
+    stars.forEach(
+        star => {
 
-    stars.forEach(star => {
+            star.update();
+            star.draw();
 
-        star.update();
-
-        star.draw();
-
-    });
-
+        }
+    );
 
     requestAnimationFrame(
         animate
     );
 }
 
-
 animate();
-
-
-/* ==============================
-   MUSIC
-============================== */
 
 const bgm =
     document.getElementById("bgm");
 
 const musicToggle =
-    document.getElementById("musicToggle");
-
+    document.getElementById(
+        "musicToggle"
+    );
 
 musicToggle.addEventListener(
     "click",
@@ -522,24 +503,25 @@ musicToggle.addEventListener(
         if (bgm.paused) {
 
             bgm.play()
-                .then(() => {
+            .then(() => {
 
-                    musicToggle.textContent =
-                        "🎵 BGM: On";
+                musicToggle.textContent =
+                    "🎵 BGM: On";
 
-                    musicToggle.classList.add(
-                        "active"
-                    );
+                musicToggle.classList.add(
+                    "active"
+                );
 
-                })
-                .catch(() => {
+            })
+            .catch(() => {
 
-                    alert(
-                        "Không thể phát nhạc. " +
-                        "Hãy đặt music.mp3 vào thư mục repo."
-                    );
+                alert(
+                    "Không thể phát nhạc. " +
+                    "Hãy đặt music.mp3 " +
+                    "vào thư mục repo."
+                );
 
-                });
+            });
 
         } else {
 
@@ -552,7 +534,6 @@ musicToggle.addEventListener(
                 "active"
             );
         }
-
     }
 );
 
