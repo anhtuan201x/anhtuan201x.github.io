@@ -3,9 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>AnhTuan201X Repo</title>
-
 <link rel="icon" type="image/png" href="CydiaIcon.png">
 
 <style>
@@ -60,6 +58,7 @@ body {
 #galaxyCanvas {
     position: fixed;
     inset: 0;
+
     width: 100%;
     height: 100%;
 
@@ -168,6 +167,7 @@ h1 {
 .stat-number {
     font-size: 16px;
     font-weight: 800;
+
     color: #ff4b2b;
 }
 
@@ -215,7 +215,7 @@ h1 {
         );
 }
 
-.bundles-btn {
+.apps-btn {
     background:
         linear-gradient(
             135deg,
@@ -224,8 +224,19 @@ h1 {
         );
 
     box-shadow:
-        0 4px 10px
-        rgba(0,114,255,0.3);
+        0 4px 10px rgba(0,114,255,0.3);
+}
+
+.ca-btn {
+    background:
+        linear-gradient(
+            135deg,
+            #ff9500,
+            #ffcc00
+        );
+
+    box-shadow:
+        0 4px 10px rgba(255,149,0,0.3);
 }
 
 .music-btn {
@@ -265,7 +276,8 @@ h1 {
 
 <button
     class="music-btn"
-    id="musicToggle">
+    id="musicToggle"
+    type="button">
     🎵 BGM: Off
 </button>
 
@@ -282,70 +294,72 @@ h1 {
 </div>
 
 <div class="story">
+    <strong>🇻🇳 AnhTuan201X Repo</strong>
+    <br><br>
 
-<strong>🇻🇳 AnhTuan201X Repo</strong>
-
-<br><br>
-
-Kho lưu trữ chuyên biệt dành cho
-các thiết bị iOS Legacy (iOS 5+),
-tập trung vào Tweak hệ thống
-và các tệp tin Signed iOS Bundles.
-
+    Kho lưu trữ chuyên biệt dành cho các thiết bị
+    iOS Legacy (iOS 5+), tập trung vào Tweak hệ thống
+    và các ứng dụng Legacy.
 </div>
 
 <div class="stats">
 
-<div class="stat">
-    <div class="stat-number">
-        45
+    <div class="stat">
+        <div class="stat-number">45</div>
+        <div class="stat-label">
+            Packages
+        </div>
     </div>
 
-    <div class="stat-label">
-        Packages
-    </div>
-</div>
-
-<div class="stat">
-    <div class="stat-number">
-        999+
+    <div class="stat">
+        <div class="stat-number">999+</div>
+        <div class="stat-label">
+            Downloads
+        </div>
     </div>
 
-    <div class="stat-label">
-        Downloads
-    </div>
-</div>
+    <div class="stat">
+        <div
+            class="stat-number"
+            style="color:#28c840">
+            Online
+        </div>
 
-<div class="stat">
-    <div
-        class="stat-number"
-        style="color:#28c840">
-        Online
+        <div class="stat-label">
+            Server
+        </div>
     </div>
-
-    <div class="stat-label">
-        Server
-    </div>
-</div>
 
 </div>
 
-<!--
-    Cydia API Share
-    Repo:
-    http://anhtuan201x.github.io/
--->
+<!-- ADD TO CYDIA -->
 
 <a
     href="cydia://url/https://cydia.saurik.com/api/share#?url=http%3A%2F%2Fanhtuan201x.github.io%2F"
     class="btn cydia">
+
     ➕ Add to Cydia
+
 </a>
+
+<!-- ỨNG DỤNG -->
 
 <a
     href="bundles/index.html"
-    class="btn bundles-btn">
-    📦 Signed iOS Bundles (iOS 5+)
+    class="btn apps-btn">
+
+    📱 Ứng dụng
+
+</a>
+
+<!-- HANABI UPDATED CA -->
+
+<a
+    href="https://tlsroot.litten.ca/beeg.mobileconfig"
+    class="btn ca-btn">
+
+    🔐 Tải Hanabi Updated CA
+
 </a>
 
 </div>
@@ -359,6 +373,10 @@ và các tệp tin Signed iOS Bundles.
 
 <script>
 
+/* =========================
+   GALAXY BACKGROUND
+========================= */
+
 const canvas =
     document.getElementById("galaxyCanvas");
 
@@ -366,6 +384,7 @@ const ctx =
     canvas.getContext("2d");
 
 let stars = [];
+
 
 function resize() {
 
@@ -382,6 +401,7 @@ window.addEventListener(
 );
 
 resize();
+
 
 class Star {
 
@@ -405,14 +425,13 @@ class Star {
             Math.random();
     }
 
+
     update() {
 
         this.y += this.speed;
 
-        if (
-            this.y >
-            canvas.height
-        ) {
+
+        if (this.y > canvas.height) {
 
             this.y = 0;
 
@@ -421,15 +440,21 @@ class Star {
                 canvas.width;
         }
 
+
         this.alpha +=
             (Math.random() - .5) * .03;
 
-        if (this.alpha < .1)
-            this.alpha = .1;
 
-        if (this.alpha > 1)
+        if (this.alpha < .1) {
+            this.alpha = .1;
+        }
+
+
+        if (this.alpha > 1) {
             this.alpha = 1;
+        }
     }
+
 
     draw() {
 
@@ -452,16 +477,14 @@ class Star {
     }
 }
 
-for (
-    let i = 0;
-    i < 100;
-    i++
-) {
+
+for (let i = 0; i < 100; i++) {
 
     stars.push(
         new Star()
     );
 }
+
 
 function animate() {
 
@@ -472,29 +495,34 @@ function animate() {
         canvas.height
     );
 
-    stars.forEach(
-        star => {
 
-            star.update();
-            star.draw();
+    stars.forEach(star => {
 
-        }
-    );
+        star.update();
+        star.draw();
+
+    });
+
 
     requestAnimationFrame(
         animate
     );
 }
 
+
 animate();
+
+
+/* =========================
+   MUSIC
+========================= */
 
 const bgm =
     document.getElementById("bgm");
 
 const musicToggle =
-    document.getElementById(
-        "musicToggle"
-    );
+    document.getElementById("musicToggle");
+
 
 musicToggle.addEventListener(
     "click",
@@ -503,25 +531,24 @@ musicToggle.addEventListener(
         if (bgm.paused) {
 
             bgm.play()
-            .then(() => {
+                .then(() => {
 
-                musicToggle.textContent =
-                    "🎵 BGM: On";
+                    musicToggle.textContent =
+                        "🎵 BGM: On";
 
-                musicToggle.classList.add(
-                    "active"
-                );
+                    musicToggle.classList.add(
+                        "active"
+                    );
 
-            })
-            .catch(() => {
+                })
+                .catch(() => {
 
-                alert(
-                    "Không thể phát nhạc. " +
-                    "Hãy đặt music.mp3 " +
-                    "vào thư mục repo."
-                );
+                    alert(
+                        "Không thể phát nhạc. " +
+                        "Hãy đặt music.mp3 vào thư mục repo."
+                    );
 
-            });
+                });
 
         } else {
 
@@ -534,6 +561,7 @@ musicToggle.addEventListener(
                 "active"
             );
         }
+
     }
 );
 
