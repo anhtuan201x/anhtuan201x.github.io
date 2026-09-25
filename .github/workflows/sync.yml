@@ -35,7 +35,9 @@ jobs:
           git config --global user.email "anhtuan201x@github.io"
           git add -A
           if ! git diff --cached --exit-code --quiet; then
-            git commit -m "Bot: Auto updated Cydia Repo & IPA Store [Skip CI]"
+            git commit -m "Bot: Auto updated Cydia Repo & IPA Store"
+            # LỆNH THẦN THÁNH CHỐNG LỆCH NHÁNH ĐẨY CODE BẤT TỬ
+            git pull origin main --rebase
             git push origin main
           else
             echo "No changes detected. Skipping push."
