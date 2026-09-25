@@ -5,8 +5,7 @@ Version: 1.0
 Codename: stable
 Architectures: iphoneos-arm
 Components: main
-Description: Kho lưu trữ Tweak và ứng dụng Jailbreak của AnhTuan201X.
-
+Description: Kho lưu trữ Tweak và Ứng dụng Jailbreak của AnhTuan201X.
 MD5Sum:
- f536d6e1d9ffb76f39c85d6f9027fb8f 38253 main/binary-iphoneos-arm/Packages
- 59d70cc55966c19f3c1c887b4ecfe504 11774 main/binary-iphoneos-arm/Packages.bz2
+2fca095b71e032def87dbb858e7050b3 38973 main/binary-iphoneos-arm/Packages
+d7fb3a3ed009448bacfb8896ea4e317d 11821 main/binary-iphoneos-arm/Packages.bz2
