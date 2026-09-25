@@ -3,10 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>AnhTuan201X Repo</title>
+
 <link rel="icon" type="image/png" href="CydiaIcon.png">
+
 <style>
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
 
 :root {
     --bg1: #0b001a;
@@ -29,11 +34,25 @@ body {
     margin: 0;
     padding: 20px;
     min-height: 100vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background: linear-gradient(135deg,var(--bg1),var(--bg2),var(--bg3));
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--bg1),
+            var(--bg2),
+            var(--bg3)
+        );
+
     color: var(--text);
     overflow-x: hidden;
 }
@@ -43,6 +62,7 @@ body {
     inset: 0;
     width: 100%;
     height: 100%;
+
     z-index: 0;
     pointer-events: none;
 }
@@ -50,33 +70,55 @@ body {
 .container {
     position: relative;
     z-index: 2;
+
     width: 100%;
     max-width: 440px;
+
     padding: 35px 25px;
+
     text-align: center;
+
     border-radius: 24px;
+
     background: var(--card);
+
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    box-shadow: 0 20px 50px rgba(0,0,0,.5);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.5);
 }
 
 .logo {
     width: 90px;
     height: 90px;
+
     object-fit: cover;
+
     border-radius: 22px;
+
     margin-bottom: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.2);
 }
 
 h1 {
     margin: 0 0 10px;
+
     font-size: 30px;
     font-weight: 800;
-    background: linear-gradient(45deg,#ff416c,#ff4b2b);
+
+    background:
+        linear-gradient(
+            45deg,
+            #ff416c,
+            #ff4b2b
+        );
+
     -webkit-background-clip: text;
     background-clip: text;
+
     -webkit-text-fill-color: transparent;
 }
 
@@ -88,25 +130,39 @@ h1 {
 
 .story {
     color: var(--sub);
+
     font-size: 13.5px;
     line-height: 1.6;
+
     text-align: left;
+
     padding: 15px 0;
-    border-top: 1px solid rgba(128,128,128,.25);
-    border-bottom: 1px solid rgba(128,128,128,.25);
+
+    border-top:
+        1px solid rgba(128,128,128,.25);
+
+    border-bottom:
+        1px solid rgba(128,128,128,.25);
 }
 
 .stats {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+
+    grid-template-columns:
+        repeat(3,1fr);
+
     gap: 10px;
+
     margin: 22px 0;
 }
 
 .stat {
     padding: 12px 5px;
+
     border-radius: 12px;
-    background: rgba(128,128,128,.1);
+
+    background:
+        rgba(128,128,128,.1);
 }
 
 .stat-number {
@@ -117,21 +173,32 @@ h1 {
 
 .stat-label {
     margin-top: 3px;
+
     font-size: 11px;
+
     color: #888;
 }
 
 .btn {
     display: block;
+
     width: 100%;
+
     padding: 14px;
+
     margin-bottom: 10px;
+
     border-radius: 25px;
+
     color: white;
+
     text-decoration: none;
+
     font-size: 15px;
     font-weight: 700;
+
     transition: .2s;
+
     text-align: center;
 }
 
@@ -140,31 +207,46 @@ h1 {
 }
 
 .cydia {
-    background: linear-gradient(135deg,#4cd964,#28c840);
+    background:
+        linear-gradient(
+            135deg,
+            #4cd964,
+            #28c840
+        );
 }
 
-.ipa {
-    background: linear-gradient(135deg,#0072ff,#00c6ff);
-}
+.bundles-btn {
+    background:
+        linear-gradient(
+            135deg,
+            #0072ff,
+            #00c6ff
+        );
 
-.jailbreak {
-    background: linear-gradient(135deg,#7b2ff7,#f107a3);
-}
-
-.links {
-    background: linear-gradient(135deg,#ff512f,#dd2476);
+    box-shadow:
+        0 4px 10px
+        rgba(0,114,255,0.3);
 }
 
 .music-btn {
     position: absolute;
+
     right: 15px;
     top: 15px;
+
     border: 0;
+
     padding: 7px 12px;
+
     border-radius: 15px;
+
     cursor: pointer;
-    background: rgba(128,128,128,.15);
+
+    background:
+        rgba(128,128,128,.15);
+
     color: var(--text);
+
     font-weight: bold;
 }
 
@@ -181,102 +263,178 @@ h1 {
 
 <div class="container">
 
-<button class="music-btn" id="musicToggle">🎵 BGM: Off</button>
+<button
+    class="music-btn"
+    id="musicToggle">
+    🎵 BGM: Off
+</button>
 
-<img src="CydiaIcon.png"
-     class="logo"
-     alt="AnhTuan201X Repo"
-     onerror="this.style.display='none'">
+<img
+    src="CydiaIcon.png"
+    class="logo"
+    alt="AnhTuan201X Repo"
+    onerror="this.style.display='none'">
 
 <h1>AnhTuan201X Repo</h1>
 
 <div class="description">
-Kho lưu trữ Tweak và ứng dụng Legacy dành cho iOS.
+    Kho lưu trữ Tweak và ứng dụng Legacy dành cho iOS.
 </div>
 
 <div class="story">
-<strong>🇻🇳 AnhTuan201X Repo</strong><br><br>
-Kho lưu trữ dành cho các thiết bị iOS cũ,
-tập trung vào tweak, ứng dụng IPA và công cụ jailbreak legacy.
+
+<strong>🇻🇳 AnhTuan201X Repo</strong>
+
+<br><br>
+
+Kho lưu trữ chuyên biệt dành cho
+các thiết bị iOS Legacy (iOS 5+),
+tập trung vào Tweak hệ thống
+và các tệp tin Signed iOS Bundles.
+
 </div>
 
 <div class="stats">
 
 <div class="stat">
-<div class="stat-number">45</div>
-<div class="stat-label">Packages</div>
+    <div class="stat-number">
+        45
+    </div>
+
+    <div class="stat-label">
+        Packages
+    </div>
 </div>
 
 <div class="stat">
-<div class="stat-number">999+</div>
-<div class="stat-label">Downloads</div>
+    <div class="stat-number">
+        999+
+    </div>
+
+    <div class="stat-label">
+        Downloads
+    </div>
 </div>
 
 <div class="stat">
-<div class="stat-number" style="color:#28c840">Online</div>
-<div class="stat-label">Server</div>
+    <div
+        class="stat-number"
+        style="color:#28c840">
+        Online
+    </div>
+
+    <div class="stat-label">
+        Server
+    </div>
 </div>
 
 </div>
 
-<a href="cydia://url/https://github.io" class="btn cydia">
-➕ Add to Cydia
+<!--
+    Cydia API Share
+    Repo:
+    http://anhtuan201x.github.io/
+-->
+
+<a
+    href="cydia://url/https://cydia.saurik.com/api/share#?url=http%3A%2F%2Fanhtuan201x.github.io%2F"
+    class="btn cydia">
+    ➕ Add to Cydia
 </a>
 
-<a href="ipas/index.html" class="btn ipa">
-📦 IPA Store
-</a>
-
-<a href="jailbreaks/index.html" class="btn jailbreak">
-⚔️ Jailbreak Tools
-</a>
-
-<a href="link/index.html" class="btn links">
-🔗 Link Bio
+<a
+    href="bundles/index.html"
+    class="btn bundles-btn">
+    📦 Signed iOS Bundles (iOS 5+)
 </a>
 
 </div>
 
-<audio id="bgm" loop preload="none" src="music.mp3"></audio>
+<audio
+    id="bgm"
+    loop
+    preload="none"
+    src="music.mp3">
+</audio>
 
 <script>
-const canvas = document.getElementById("galaxyCanvas");
-const ctx = canvas.getContext("2d");
+
+const canvas =
+    document.getElementById("galaxyCanvas");
+
+const ctx =
+    canvas.getContext("2d");
+
 let stars = [];
 
 function resize() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+
+    canvas.width =
+        window.innerWidth;
+
+    canvas.height =
+        window.innerHeight;
 }
 
-window.addEventListener("resize", resize);
+window.addEventListener(
+    "resize",
+    resize
+);
+
 resize();
 
 class Star {
+
     constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 2;
-        this.speed = Math.random() * .5 + .1;
-        this.alpha = Math.random();
+
+        this.x =
+            Math.random() *
+            canvas.width;
+
+        this.y =
+            Math.random() *
+            canvas.height;
+
+        this.size =
+            Math.random() * 2;
+
+        this.speed =
+            Math.random() * .5 + .1;
+
+        this.alpha =
+            Math.random();
     }
 
     update() {
+
         this.y += this.speed;
 
-        if (this.y > canvas.height) {
+        if (
+            this.y >
+            canvas.height
+        ) {
+
             this.y = 0;
-            this.x = Math.random() * canvas.width;
+
+            this.x =
+                Math.random() *
+                canvas.width;
         }
 
-        this.alpha += (Math.random() - .5) * .03;
+        this.alpha +=
+            (Math.random() - .5) * .03;
 
-        if (this.alpha < .1) this.alpha = .1;
-        if (this.alpha > 1) this.alpha = 1;
+        if (this.alpha < .1)
+            this.alpha = .1;
+
+        if (this.alpha > 1)
+            this.alpha = 1;
     }
 
     draw() {
+
         ctx.beginPath();
+
         ctx.arc(
             this.x,
             this.y,
@@ -286,17 +444,27 @@ class Star {
         );
 
         ctx.fillStyle =
-            "rgba(255,255,255," + this.alpha + ")";
+            "rgba(255,255,255," +
+            this.alpha +
+            ")";
 
         ctx.fill();
     }
 }
 
-for (let i = 0; i < 100; i++) {
-    stars.push(new Star());
+for (
+    let i = 0;
+    i < 100;
+    i++
+) {
+
+    stars.push(
+        new Star()
+    );
 }
 
 function animate() {
+
     ctx.clearRect(
         0,
         0,
@@ -304,43 +472,71 @@ function animate() {
         canvas.height
     );
 
-    stars.forEach(star => {
-        star.update();
-        star.draw();
-    });
+    stars.forEach(
+        star => {
 
-    requestAnimationFrame(animate);
+            star.update();
+            star.draw();
+
+        }
+    );
+
+    requestAnimationFrame(
+        animate
+    );
 }
 
 animate();
 
-const bgm = document.getElementById("bgm");
-const musicToggle = document.getElementById("musicToggle");
+const bgm =
+    document.getElementById("bgm");
 
-musicToggle.addEventListener("click", () => {
+const musicToggle =
+    document.getElementById(
+        "musicToggle"
+    );
 
-    if (bgm.paused) {
+musicToggle.addEventListener(
+    "click",
+    () => {
 
-        bgm.play()
-        .then(() => {
-            musicToggle.textContent = "🎵 BGM: On";
-            musicToggle.classList.add("active");
-        })
-        .catch(() => {
-            alert(
-                "Không thể phát nhạc. Hãy đặt music.mp3 vào thư mục repo."
+        if (bgm.paused) {
+
+            bgm.play()
+            .then(() => {
+
+                musicToggle.textContent =
+                    "🎵 BGM: On";
+
+                musicToggle.classList.add(
+                    "active"
+                );
+
+            })
+            .catch(() => {
+
+                alert(
+                    "Không thể phát nhạc. " +
+                    "Hãy đặt music.mp3 " +
+                    "vào thư mục repo."
+                );
+
+            });
+
+        } else {
+
+            bgm.pause();
+
+            musicToggle.textContent =
+                "🎵 BGM: Off";
+
+            musicToggle.classList.remove(
+                "active"
             );
-        });
-
-    } else {
-
-        bgm.pause();
-        musicToggle.textContent = "🎵 BGM: Off";
-        musicToggle.classList.remove("active");
-
+        }
     }
+);
 
-});
 </script>
 
 </body>
