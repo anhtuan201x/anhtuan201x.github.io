@@ -39,7 +39,7 @@ echo "IPA packages : $count_ipa"
 echo "Total        : $total_packages"
 
 # ==========================================
-# 3. TRANG CHỦ: anhtuan201x.github.io
+# 3. TRANG CHỦ
 # ==========================================
 cat > index.html <<EOF
 <!DOCTYPE html>
@@ -47,17 +47,28 @@ cat > index.html <<EOF
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AnhTuan Repo</title>
+<title>AnhTuan201X Repo</title>
 <link rel="icon" type="image/png" href="CydiaIcon.png">
 <style>
 * { box-sizing: border-box; }
+
 :root {
-    --bg1: #0b001a; --bg2: #160033; --bg3: #001133;
-    --card: rgba(255,255,255,0.95); --text: #1d1d26; --sub: #555;
+    --bg1: #0b001a;
+    --bg2: #160033;
+    --bg3: #001133;
+    --card: rgba(255,255,255,0.95);
+    --text: #1d1d26;
+    --sub: #555;
 }
+
 @media (prefers-color-scheme: dark) {
-    :root { --card: rgba(20,16,38,0.94); --text: #fff; --sub: #b0aec2; }
+    :root {
+        --card: rgba(20,16,38,0.94);
+        --text: #fff;
+        --sub: #b0aec2;
+    }
 }
+
 body {
     margin: 0;
     padding: 20px;
@@ -70,6 +81,7 @@ body {
     color: var(--text);
     overflow-x: hidden;
 }
+
 #galaxyCanvas {
     position: fixed;
     inset: 0;
@@ -78,6 +90,7 @@ body {
     z-index: 0;
     pointer-events: none;
 }
+
 .container {
     position: relative;
     z-index: 2;
@@ -91,6 +104,7 @@ body {
     -webkit-backdrop-filter: blur(15px);
     box-shadow: 0 20px 50px rgba(0,0,0,.5);
 }
+
 .logo {
     width: 90px;
     height: 90px;
@@ -99,6 +113,7 @@ body {
     margin-bottom: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
+
 h1 {
     margin: 0 0 10px;
     font-size: 30px;
@@ -108,11 +123,13 @@ h1 {
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 .description {
     font-size: 15px;
     font-weight: 600;
     margin-bottom: 20px;
 }
+
 .story {
     color: var(--sub);
     font-size: 13.5px;
@@ -122,27 +139,32 @@ h1 {
     border-top: 1px solid rgba(128,128,128,.25);
     border-bottom: 1px solid rgba(128,128,128,.25);
 }
+
 .stats {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 10px;
     margin: 22px 0;
 }
+
 .stat {
     padding: 12px 5px;
     border-radius: 12px;
     background: rgba(128,128,128,.1);
 }
+
 .stat-number {
     font-size: 16px;
     font-weight: 800;
     color: #ff4b2b;
 }
+
 .stat-label {
     margin-top: 3px;
     font-size: 11px;
     color: #888;
 }
+
 .btn {
     display: block;
     width: 100%;
@@ -156,11 +178,27 @@ h1 {
     transition: .2s;
     text-align: center;
 }
-.btn:hover { transform: scale(.97); }
-.cydia { background: linear-gradient(135deg,#4cd964,#28c840); }
-.ipa { background: linear-gradient(135deg,#0072ff,#00c6ff); }
-.jailbreak { background: linear-gradient(135deg,#7b2ff7,#f107a3); }
-.links { background: linear-gradient(135deg,#ff512f,#dd2476); }
+
+.btn:hover {
+    transform: scale(.97);
+}
+
+.cydia {
+    background: linear-gradient(135deg,#4cd964,#28c840);
+}
+
+.ipa {
+    background: linear-gradient(135deg,#0072ff,#00c6ff);
+}
+
+.jailbreak {
+    background: linear-gradient(135deg,#7b2ff7,#f107a3);
+}
+
+.links {
+    background: linear-gradient(135deg,#ff512f,#dd2476);
+}
+
 .music-btn {
     position: absolute;
     right: 15px;
@@ -173,7 +211,11 @@ h1 {
     color: var(--text);
     font-weight: bold;
 }
-.music-btn.active { background: #28c840; color: white; }
+
+.music-btn.active {
+    background: #28c840;
+    color: white;
+}
 </style>
 </head>
 
@@ -185,22 +227,19 @@ h1 {
 
 <button class="music-btn" id="musicToggle">🎵 BGM: Off</button>
 
-<img
-    src="CydiaIcon.png"
-    class="logo"
-    alt="AnhTuan Repo"
-    onerror="this.style.display='none'"
->
+<img src="CydiaIcon.png"
+     class="logo"
+     alt="AnhTuan201X Repo"
+     onerror="this.style.display='none'">
 
-<h1>AnhTuan Repo</h1>
+<h1>AnhTuan201X Repo</h1>
 
 <div class="description">
 Kho lưu trữ Tweak và ứng dụng Legacy dành cho iOS.
 </div>
 
 <div class="story">
-<strong>🇻🇳 AnhTuan201X Repo</strong>
-<br><br>
+<strong>🇻🇳 AnhTuan201X Repo</strong><br><br>
 Kho lưu trữ dành cho các thiết bị iOS cũ,
 tập trung vào tweak, ứng dụng IPA và công cụ jailbreak legacy.
 </div>
@@ -208,49 +247,41 @@ tập trung vào tweak, ứng dụng IPA và công cụ jailbreak legacy.
 <div class="stats">
 
 <div class="stat">
-    <div class="stat-number">${total_packages}</div>
-    <div class="stat-label">Packages</div>
+<div class="stat-number">${total_packages}</div>
+<div class="stat-label">Packages</div>
 </div>
 
 <div class="stat">
-    <div class="stat-number">999+</div>
-    <div class="stat-label">Downloads</div>
+<div class="stat-number">999+</div>
+<div class="stat-label">Downloads</div>
 </div>
 
 <div class="stat">
-    <div class="stat-number" style="color:#28c840">Online</div>
-    <div class="stat-label">Server</div>
+<div class="stat-number" style="color:#28c840">Online</div>
+<div class="stat-label">Server</div>
 </div>
 
 </div>
 
-<a
-    href="cydia://url/https://anhtuan201x.github.io"
-    class="btn cydia"
->
-    ➕ Add to Cydia
+<a href="cydia://url/https://github.io" class="btn cydia">
+➕ Add to Cydia
 </a>
 
 <a href="ipas/index.html" class="btn ipa">
-    📦 IPA Store
+📦 IPA Store
 </a>
 
 <a href="jailbreaks/index.html" class="btn jailbreak">
-    ⚔️ Jailbreak Tools
+⚔️ Jailbreak Tools
 </a>
 
 <a href="link/index.html" class="btn links">
-    🔗 Link Bio
+🔗 Link Bio
 </a>
 
 </div>
 
-<audio
-    id="bgm"
-    loop
-    preload="none"
-    src="music.mp3"
-></audio>
+<audio id="bgm" loop preload="none" src="music.mp3"></audio>
 
 <script>
 const canvas = document.getElementById("galaxyCanvas");
@@ -297,8 +328,10 @@ class Star {
             0,
             Math.PI * 2
         );
+
         ctx.fillStyle =
             "rgba(255,255,255," + this.alpha + ")";
+
         ctx.fill();
     }
 }
@@ -332,26 +365,25 @@ musicToggle.addEventListener("click", () => {
 
     if (bgm.paused) {
 
-        bgm.play().then(() => {
-
+        bgm.play()
+        .then(() => {
             musicToggle.textContent = "🎵 BGM: On";
             musicToggle.classList.add("active");
-
-        }).catch(() => {
-
+        })
+        .catch(() => {
             alert(
                 "Không thể phát nhạc. Hãy đặt music.mp3 vào thư mục repo."
             );
-
         });
 
     } else {
 
         bgm.pause();
-
         musicToggle.textContent = "🎵 BGM: Off";
         musicToggle.classList.remove("active");
+
     }
+
 });
 </script>
 
@@ -360,9 +392,9 @@ musicToggle.addEventListener("click", () => {
 EOF
 
 # ==========================================
-# 4. KHO GAME IPA STORE: anhtuan201x.github.io/ipas
+# 4. KHO GAME IPA STORE
 # ==========================================
-cat <<'EOF' > ipas/index.html
+cat << 'EOF' > ipas/index.html
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -497,22 +529,16 @@ body{
 
 <h1>AnhTuan IPA Store</h1>
 
-<p
-    class="sub-title"
-    style="color:#8e8e93;font-size:13px;margin-bottom:20px;"
->
+<p style="color:#8e8e93;font-size:13px;margin-bottom:20px;">
 Kho tải ứng dụng & game IPA độc quyền cho thiết bị iOS và ESign / KSign.
 </p>
 
-<!-- MỤC CHATGPT -->
 <div class="game-item">
 
 <div class="game-info">
 
-<div
-    class="game-icon"
-    style="background:linear-gradient(135deg,#11998e,#38ef7d);"
->
+<div class="game-icon"
+style="background:linear-gradient(135deg,#11998e,#38ef7d);">
 📦
 </div>
 
@@ -525,18 +551,14 @@ Kho tải ứng dụng & game IPA độc quyền cho thiết bị iOS và ESign 
 
 <div class="btn-group">
 
-<a
-    href="ChatGPT.ipa"
-    class="btn-download"
-    download
->
+<a href="https://github.com"
+class="btn-download"
+download>
 Tải IPA
 </a>
 
-<a
-    href="itms-services://?action=download-manifest&url=https://anhtuan201x.github.io/ipas/ChatGPT.plist"
-    class="btn-install"
->
+<a href="itms-services://?action=download-manifest&url=http://bag-xml.com"
+class="btn-install">
 Cài đặt
 </a>
 
@@ -544,39 +566,33 @@ Cài đặt
 
 </div>
 
-<!-- MỤC OLDCLASH -->
 <div class="game-item">
 
 <div class="game-info">
 
-<div
-    class="game-icon"
-    style="background:linear-gradient(135deg,#ff9966,#ff5e62);"
->
-⚔️
-</div>
+<div class="game-icon">⚔️</div>
 
 <div>
-<div class="game-name">OldClash (Clash of Clans)</div>
-<div class="game-size">Dung lượng: 87.1 MB</div>
+<div class="game-name">
+OldClash (Clash of Clans)
+</div>
+<div class="game-size">
+Dung lượng: 87.1 MB
+</div>
 </div>
 
 </div>
 
 <div class="btn-group">
 
-<a
-    href="OldClash.ipa"
-    class="btn-download"
-    download
->
+<a href="#"
+class="btn-download"
+download>
 Tải IPA
 </a>
 
-<a
-    href="itms-services://?action=download-manifest&url=https://anhtuan201x.github.io/ipas/OldClash.plist"
-    class="btn-install"
->
+<a href="#"
+class="btn-install">
 Cài đặt
 </a>
 
@@ -584,17 +600,11 @@ Cài đặt
 
 </div>
 
-<!-- MỤC DISCORD -->
 <div class="game-item">
 
 <div class="game-info">
 
-<div
-    class="game-icon"
-    style="background:linear-gradient(135deg,#5865f2,#7289da);"
->
-💬
-</div>
+<div class="game-icon">💬</div>
 
 <div>
 <div class="game-name">Discord Classic</div>
@@ -605,18 +615,14 @@ Cài đặt
 
 <div class="btn-group">
 
-<a
-    href="DiscordClassic.ipa"
-    class="btn-download"
-    download
->
+<a href="#"
+class="btn-download"
+download>
 Tải IPA
 </a>
 
-<a
-    href="itms-services://?action=download-manifest&url=https://anhtuan201x.github.io/ipas/DiscordClassic.plist"
-    class="btn-install"
->
+<a href="#"
+class="btn-install">
 Cài đặt
 </a>
 
@@ -624,17 +630,11 @@ Cài đặt
 
 </div>
 
-<!-- MỤC ASPHALT -->
 <div class="game-item">
 
 <div class="game-info">
 
-<div
-    class="game-icon"
-    style="background:linear-gradient(135deg,#222,#555);"
->
-🏎️
-</div>
+<div class="game-icon">🏎️</div>
 
 <div>
 <div class="game-name">Asphalt 4: Elite Racing</div>
@@ -645,18 +645,14 @@ Cài đặt
 
 <div class="btn-group">
 
-<a
-    href="Asphalt4.ipa"
-    class="btn-download"
-    download
->
+<a href="#"
+class="btn-download"
+download>
 Tải IPA
 </a>
 
-<a
-    href="itms-services://?action=download-manifest&url=https://anhtuan201x.github.io/ipas/Asphalt4.plist"
-    class="btn-install"
->
+<a href="#"
+class="btn-install">
 Cài đặt
 </a>
 
@@ -664,10 +660,7 @@ Cài đặt
 
 </div>
 
-<a
-    href="../index.html"
-    class="btn-back"
->
+<a href="../index.html" class="btn-back">
 ⬅️ Quay lại Trang chủ
 </a>
 
@@ -680,24 +673,16 @@ EOF
 # ==========================================
 # 5. JAILBREAK TOOLS
 # ==========================================
-cat <<'EOF' > jailbreaks/index.html
+cat << 'EOF' > jailbreaks/index.html
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
-
 <meta charset="UTF-8">
-
-<meta
-    name="viewport"
-    content="width=device-width,initial-scale=1"
->
-
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>AnhTuan Jailbreaks</title>
 
 <style>
-
-body {
+body{
     font-family:-apple-system,sans-serif;
     background:linear-gradient(135deg,#0b001a 0%,#001133 100%);
     margin:0;
@@ -708,7 +693,7 @@ body {
     justify-content:center;
 }
 
-.card {
+.card{
     max-width:450px;
     width:100%;
     background:#fff;
@@ -718,7 +703,7 @@ body {
     box-shadow:0 10px 25px rgba(0,0,0,0.4);
 }
 
-.tool-item {
+.tool-item{
     background:#f8f9fa;
     border:1px solid #eee;
     padding:15px;
@@ -730,7 +715,7 @@ body {
     align-items:center;
 }
 
-.btn-add {
+.btn-add{
     background:linear-gradient(135deg,#0072ff,#00c6ff);
     color:#fff;
     padding:8px 15px;
@@ -739,68 +724,51 @@ body {
     font-size:13px;
     font-weight:bold;
 }
-
 </style>
-
 </head>
 
 <body>
 
 <div class="card">
 
-<h1>⚔️ AnhTuan Jailbreak Tools</h1>
+<h1>AnhTuan Jailbreak Tools</h1>
 
 <div class="tool-item">
 
 <div>
-<strong>p0sixspwn (iOS 6.1.3-6.1.5)</strong>
+<strong>p0sixspwn</strong><br>
+<small>iOS 6.1.3-6.1.5</small>
 </div>
 
-<a
-    href="p0sixspwn.ipa"
-    class="btn-add"
-    download
->
+<a href="#" class="btn-add">
 ESign
 </a>
 
 </div>
 
-<a
-    href="../index.html"
-    style="text-decoration:none;color:#ff4b2b;"
->
+<a href="../index.html">
 ⬅️ Quay lại Trang chủ
 </a>
 
 </div>
 
 </body>
-
 </html>
 EOF
 
 # ==========================================
 # 6. LINK BIO
 # ==========================================
-cat <<'EOF' > link/index.html
+cat << 'EOF' > link/index.html
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
-
 <meta charset="UTF-8">
-
-<meta
-    name="viewport"
-    content="width=device-width,initial-scale=1"
->
-
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>AnhTuan Links</title>
 
 <style>
-
-body {
+body{
     font-family:-apple-system,sans-serif;
     background:linear-gradient(135deg,#0b001a 0%,#111 100%);
     margin:0;
@@ -811,7 +779,7 @@ body {
     justify-content:center;
 }
 
-.card {
+.card{
     max-width:400px;
     width:100%;
     background:#fff;
@@ -820,7 +788,7 @@ body {
     text-align:center;
 }
 
-.lnk-btn {
+.lnk-btn{
     display:block;
     width:100%;
     background:#f1f3f5;
@@ -833,13 +801,11 @@ body {
     border:1px solid #e9ecef;
 }
 
-.lnk-btn:hover {
+.lnk-btn:hover{
     background:#ff4b2b;
     color:#fff;
 }
-
 </style>
-
 </head>
 
 <body>
@@ -848,41 +814,30 @@ body {
 
 <h1>AnhTuan Link Bio</h1>
 
-<a
-    class="lnk-btn"
-    href="https://github.com/anhtuan201x"
->
+<a href="#" class="lnk-btn">
 🔗 GitHub Profile
 </a>
 
-<a
-    class="lnk-btn"
-    href="https://anhtuan201x.github.io"
->
+<a href="#" class="lnk-btn">
 🏠 Nguồn Cydia Gốc
 </a>
 
-<a
-    class="lnk-btn"
-    href="../index.html"
->
+<a href="../index.html" class="lnk-btn">
 ⬅️ Quay lại
 </a>
 
 </div>
 
 </body>
-
 </html>
 EOF
 
 # ==========================================
 # 7. QUÉT MỤC LỤC PACKAGES CYDIA REPO
 # ==========================================
-rm -f Packages
-rm -f Packages.bz2
-rm -f dists/stable/main/binary-iphoneos-arm/Packages
-rm -f dists/stable/main/binary-iphoneos-arm/Packages.bz2
+rm -f Packages Packages.bz2 \
+dists/stable/main/binary-iphoneos-arm/Packages \
+dists/stable/main/binary-iphoneos-arm/Packages.bz2
 
 dpkg-scanpackages -m debs /dev/null > Packages
 
@@ -892,24 +847,21 @@ if [ -f "CydiaIcon.png" ]; then
     sed -i "s|^Description:.*|&\nIcon: github.io|" Packages
 fi
 
-cp \
-    Packages \
-    dists/stable/main/binary-iphoneos-arm/Packages
+cp Packages dists/stable/main/binary-iphoneos-arm/Packages
 
 bzip2 -fk Packages
 
-mv \
-    Packages.bz2 \
-    dists/stable/main/binary-iphoneos-arm/Packages.bz2
+mv Packages.bz2 \
+dists/stable/main/binary-iphoneos-arm/Packages.bz2
 
 bzip2 -fk Packages
 
 # ==========================================
-# 8. XUẤT BẢN FILE RELEASE
+# 8. ĐỔI TÊN THƯƠNG HIỆU REPO TRONG FILE RELEASE
 # ==========================================
 cat > Release <<EOF
-Origin: AnhTuan201X
-Label: AnhTuan201X
+Origin: AnhTuan201X Repo
+Label: AnhTuan201X Repo
 Suite: stable
 Version: 1.0
 Codename: stable
@@ -923,6 +875,4 @@ EOF
 
 sed -i 's/\r$//' Release
 
-cp \
-    Release \
-    dists/stable/Release
+cp Release dists/stable/Release
