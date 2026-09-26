@@ -3,7 +3,7 @@
 set -e
 
 # ==========================================
-# AnhTuan201X Repo - sync.sh BẢN VÁ TỐI THƯỢNG
+# AnhTuan201X Repo - sync.sh BẢN VÁ TỐI THƯỢNG FIX ICON
 # ==========================================
 
 ROOT_DIR="$(cd "$(dirname "$0")" && pwd)"
@@ -13,6 +13,7 @@ echo "=========================================="
 echo " AnhTuan201X Repo Sync"
 echo "=========================================="
 
+# DỌN SẠCH THƯ MỤC CŨ CÒN SÓT
 rm -rf jailbreaks link ipas bundles
 
 mkdir -p debs
@@ -29,7 +30,7 @@ echo "DEB packages : $count_deb"
 echo "Total        : $total_packages"
 
 # ==========================================
-# 2. XUẤT BẢN TRANG CHỦ MỚI: index.html (NÚT BẤM NHẢY THẲNG LINK CERT)
+# 2. XUẤT BẢN TRANG CHỦ MỚI: index.html (VŨ TRỤ SAO BAY)
 # ==========================================
 cat > index.html <<EOF
 <!DOCTYPE html>
@@ -82,9 +83,8 @@ h1 { margin: 0 0 10px; font-size: 30px; font-weight: 800; background: linear-gra
 <div class="stat"><div class="stat-number">999+</div><div class="stat-label">Downloads</div></div>
 <div class="stat"><div class="stat-number" style="color:#28c840">Online</div><div class="stat-label">Server</div></div>
 </div>
-<a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://anhtuan201x.github.io/"class="btn cydia">➕ Add to Cydia
-</a>
-<a href="https://tlsroot.litten.ca/beeg.mobileconfig" class="btn cert-btn">🔑 Cài đặt Hanabi CA Cert</a>
+<a href="cydia://url/https://saurik.com/api?share:http://anhtuan201x.github.io" class="btn cydia">➕ Add to Cydia</a>
+<a href="https://litten.ca" class="btn cert-btn">🔑 Cài đặt Hanabi CA Cert</a>
 </div>
 <audio id="bgm" loop preload="none" src="music.mp3"></audio>
 <script>
@@ -107,11 +107,17 @@ musicToggle.addEventListener("click", () => { if (bgm.paused) { bgm.play().then(
 EOF
 
 # ==========================================
-# 3. QUÉT MỤC LỤC PACKAGES CYDIA REPO CHUẨN IPHONEOS-ARM
+# 3. QUÉT MỤC LỤC PACKAGES VÀ TỰ ĐỘNG FIX LỖI ICON DẤU CHẤM HỎI
 # ==========================================
+rm -f Packages Packages.bz2 dists/stable/main/binary-iphoneos-arm/Packages dists/stable/main/binary-iphoneos-arm/Packages.bz2
 dpkg-scanpackages -m debs /dev/null > Packages
 sed -i 's/\r$//' Packages
-if [ -f "CydiaIcon.png" ]; then sed -i "s|^Description:.*|&\nIcon: https://github.io|" Packages; fi
+
+# MẸO CHÍ MẠNG: Tự động gài thẳng link icon nguồn anhtuan201x vào TỪNG TWEAK để xoá bỏ dấu chấm hỏi
+if [ -f "CydiaIcon.png" ]; then
+    sed -i "s|^Description:.*|&\nIcon: https://anhtuan201x.github.io/CydiaIcon.png|" Packages
+fi
+
 cp Packages dists/stable/main/binary-iphoneos-arm/Packages
 bzip2 -fk Packages
 mv Packages.bz2 dists/stable/main/binary-iphoneos-arm/Packages.bz2
@@ -138,13 +144,13 @@ sed -i 's/\r$//' Release
 cp Release dists/stable/Release
 
 # ==========================================
-# 5. LỆNH ĐẨY MÃ CƯỠNG BỨC CHỐNG LỖI REJECTED TRÊN ĐÁM MÂY
+# 5. LỆNH ĐẨY MÃ CƯỠNG BỨC CHỐNG LỖI REJECTED
 # ==========================================
 git config --global user.name "anhtuan201x-bot"
 git config --global user.email "anhtuan201x@github.io"
 git add -A
 if ! git diff --cached --exit-code --quiet; then
-    git commit -m "Bot: Removed bundles directory and updated direct Cert link" || true
+    git commit -m "Bot: Auto fixed tweak section icons question mark" || true
     git pull origin main --rebase --strategy-option=theirs || true
     git push origin main || true
 fi
