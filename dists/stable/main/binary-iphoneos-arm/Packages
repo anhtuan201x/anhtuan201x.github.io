@@ -172,6 +172,28 @@ Depiction: http://repo.bytafont.com/bytafont/264
 Name: BytaFont 2
 Sponsor: ModMyi.com <http://modmyi.com/forums/index.php?styleid=31>
 
+Package: com.chpwn.weeloader
+Version: 1.1-1
+Architecture: iphoneos-arm
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Installed-Size: 12
+Depends: mobilesubstrate, firmware (>= 5.0)
+Filename: debs/weeloader_1.1-1.deb
+Size: 3528
+MD5sum: eb29a698a1634ac9edfd8b17e3e0f822
+SHA1: f18a2abec1e5041e48c404328797bef79a4f4f43
+SHA256: 8cc7dffcaf568c6a6682b8ed31622a69ba4b9ae1e50bfca4335d7f0ca8022a6a
+Section: Development
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=weeloaderDp
+Description: Load Wee apps from a safe location
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Tag: role::developer, purpose::extension
+Author: chpwn <support@chpwn.com>
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=weeloaderDp
+Dev: chpwn
+Name: WeeLoader
+Sponsor: thebigboss.org <http://thebigboss.org>
+
 Package: com.coolbooter.coolbooter
 Version: 1.1-release
 Architecture: iphoneos-arm
@@ -245,6 +267,24 @@ Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: docmorelli <apps@hackulo.us>
 Depiction: http://hackulo.us/depict/installous5/
 Name: Installous 5
+Sponsor: Hackulo.us <http://hackulo.us>
+
+Package: com.hackulo.us.sourcegui
+Version: 1.2
+Architecture: iphoneos-arm
+Maintainer: Genius Blog <admin@hackulo.us
+Filename: debs/com.hackulo.us.sourcegui_1.2_iphoneos-arm.deb
+Size: 8510
+MD5sum: eee0a9ee46d880528efc7f5caf126505
+SHA1: aa6c1a2cdd2dec311832f7c822567340f3991cc4
+SHA256: 5d7fc50a1bfdee7ce491513c40d188446cae01642d334a8d1288ced718b62611
+Section: Hackulo.us
+Priority: standard
+Description: Hackulo.us Source GUI adds the source icons
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: Genius Blog <admin@hackulo.us>
+Depiction: http://hackulo.us/depict/sourcegui
+Name: Source GUI
 Sponsor: Hackulo.us <http://hackulo.us>
 
 Package: com.hackyouriphone.forecast6
@@ -1063,6 +1103,44 @@ Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: InvoxiPlayGames
 Depiction: http://cydia.invoxiplaygames.uk/dp/youtube.php
 Name: Classic YouTube App
+
+Package: us.hackulo.appsync50plus
+Version: 2.2
+Architecture: iphoneos-arm
+Maintainer: Genius Blog <apps@hackulo.us>
+Pre-Depends: firmware (>= 5.0), mobilesubstrate
+Conflicts: us.hackulo.appsync50
+Replaces: us.hackulo.appsync50
+Provides: appsync
+Filename: debs/us.hackulo.appsync50plus_2.2_iphoneos-arm.deb
+Size: 3996
+MD5sum: c9f0b3dc2cdac1a9a870b4fe0d9bf75e
+SHA1: c9f135b1bb536113bbc8a078e53c365b92405712
+SHA256: 593342819f6d99907f3921998059618e042369012d0803ede4f172594dfc2c66
+Section: Hackulo.us
+Priority: standard
+Description: AppSync allows you to sync and install cracked iOS applications.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: Dissident <apps@hackulo.us>
+Name: AppSync for iOS 5.0+
+Sponsor: Hackulo.us <http://hackulo.us>
+
+Package: us.hackulo.resources
+Version: 1.4
+Architecture: iphoneos-arm
+Maintainer: Dissident <apps@hackulo.us>
+Filename: debs/us.hackulo.resources_1.4_iphoneos-arm.deb
+Size: 1150
+MD5sum: 314bbf207d1c704aeb6d94dee3dcf8c6
+SHA1: f03cfc8401aea36e41dd440acb2bd1b66f820468
+SHA256: 0e8bfb895983518698dc7012edfc7891353dd216b993e2edc582f1f16107c410
+Section: Hackulo.us
+Priority: standard
+Description: Hackulous resource files for Installous.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: docmorelli <apps@hackulo.us>
+Name: Hackulous Resources
+Sponsor: Hackulo.us <http://hackulo.us>
 
 Package: winterboard
 Version: 0.9.3919
