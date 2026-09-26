@@ -154,6 +154,24 @@ Description: AnhTuan201X Repo icon package.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Name: AnhTuan201X Repo Icons
 
+Package: com.bytafont.bytafont2
+Version: 2.6.4
+Architecture: iphoneos-arm
+Maintainer: BytaFont.com <info@bytafont.com>
+Depends: firmware (>= 7),applist,unzip
+Filename: debs/com.bytafont.bytafont2_2.6.4_iphoneos-arm.deb
+Size: 1694528
+MD5sum: 2c2f4a8788927f4c30014989fe76af85
+SHA1: e05b53e7ed279ba4c278617cf7a4710d62d1ce44
+SHA256: 8ba789fdb17d41a3560937df545b52525a3dfd0b9205d08c3098c815c4d51c76
+Section: System
+Description: BytaFont 2 lets you apply fonts to your iDevice in few taps.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: BytaFont.com <info@bytafont.com>
+Depiction: http://repo.bytafont.com/bytafont/264
+Name: BytaFont 2
+Sponsor: ModMyi.com <http://modmyi.com/forums/index.php?styleid=31>
+
 Package: com.coolbooter.coolbooter
 Version: 1.1-release
 Architecture: iphoneos-arm
@@ -208,6 +226,26 @@ Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: kitalev
 Icon: file:///Applications/GitHubLegacy.app/Icon-72@2x.png
 Name: GitHub Legacy
+
+Package: com.hackulo.us.installous
+Version: 5.0.3-1
+Architecture: iphoneos-arm
+Maintainer: Dissident <apps@hackulo.us>
+Pre-Depends: firmware (>= 4.0)
+Depends: us.hackulo.resources, appsync, com.hackulo.us.sourcegui, com.chpwn.weeloader (>= 1.1) | firmware (<< 5.0)
+Filename: debs/installous-5.0.3-1.deb
+Size: 5326030
+MD5sum: 42e48c376dcedbefd0c5bc6876310e45
+SHA1: 14cc8f1ffb1e625bb57020f764f4e518b6d709f5
+SHA256: 4baf768abe97799850d5e5ffb53e9cd052ea5d413d7441f0cd57b4b1ae4dcf32
+Section: Hackulo.us
+Priority: standard
+Description: Installous is the perfect app to install your IPAs
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: docmorelli <apps@hackulo.us>
+Depiction: http://hackulo.us/depict/installous5/
+Name: Installous 5
+Sponsor: Hackulo.us <http://hackulo.us>
 
 Package: com.hackyouriphone.forecast6
 Version: 2.3.0-1
@@ -786,6 +824,33 @@ Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: KawaiiZenbo
 Name: Clicker
 
+Package: mobileterminal
+Version: 364.1-10
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Installed-Size: 536
+Pre-Depends: dpkg (>= 1.14.25-8)
+Depends: bash, coreutils, ncurses, system-cmds
+Filename: debs/mobileterminal_364.1-10.deb
+Size: 239682
+MD5sum: 1d9fe63d7db1d19e261a01d054476e45
+SHA1: 172ab9bded34511a8b8ffda7dcaa9cec5ea58a93
+SHA256: cad596395fd030eabe928d4ce84343afc3ec8d9156165d5155e0cd91715e492a
+Section: Terminal_Support
+Priority: standard
+Homepage: http://code.google.com/p/mobileterminal/
+Description: local UIKit-based Terminal emulator
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+ This is a Terminal emulator for the iPhone. With it you can do all of
+ your standard system administration tasks from anywhere: ssh into
+ remote boxes, download files, edit configuration files, whatever.
+ Please note, though, that this package does not fully work yet on
+ iPhoneOS 2.x. For more information (and a status update) please click
+ below for More Information.
+Author: Allen Porter <allen.porter@gmail.com>
+Depiction: http://cydia.saurik.com/info/mobileterminal/
+Name: MobileTerminal
+
 Package: mobileterminal-applesdk
 Version: 520-2
 Architecture: iphoneos-arm
@@ -868,6 +933,23 @@ Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=recordmysc
 Dev: coolstar
 Name: RecordMyScreen (App)
 Sponsor: thebigboss.org <http://thebigboss.org>
+
+Package: org.h6nry.adowngrader
+Version: 0.0.2-7
+Architecture: iphoneos-arm
+Maintainer: H6nry <henry.anonym@gmail.com>
+Installed-Size: 304
+Depends: mobilesubstrate
+Filename: debs/org.h6nry.adowngrader_0.0.2-7_iphoneos-arm.deb
+Size: 53280
+MD5sum: 814bfbfb309e70b575af5afe9e897e5d
+SHA1: 3d65e66c3736017940560d03cf744c3fc23d3be1
+SHA256: 72a4c1c91746c3bce290710d64f3491469548e5ef4048baeb1aca3a3fccd1674
+Section: Tweaks
+Description: Downgrade your apps. Well, at least try it.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: H6nry <henry.anonym@gmail.com>
+Name: Adowngrader
 
 Package: org.pilin.cavestory
 Version: v0.8
