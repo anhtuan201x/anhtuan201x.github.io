@@ -41,6 +41,22 @@ Depiction: https://adrienrl1.github.io/cydia/depiction.html
 Icon: https://adrienrl1.github.io/cydia/PackageIcon.png
 Name: AppDrop
 
+Package: clutch13
+Version: 1.3
+Architecture: iphoneos-arm
+Maintainer: KJCracks
+Conflicts: clutch2
+Filename: debs/clutch13_1.3_iphoneos-arm.deb
+Size: 44520
+MD5sum: 1ef9317c46728466d58d520b77b5f3e7
+SHA1: 606f0800c9370c4821c214cbd2d3ff931be40aee
+SHA256: ecc1cea00ba4b30b945cf6876fc8e3e75255ba66eb9808fd2575000b75aad8c2
+Section: Terminal Support
+Description: High-speed iOS app decryption tool (iOS 5)
+Icon: https://github.io
+Author: KJCracks
+Name: Clutch 1.3
+
 Package: com.a3tweaks.auxo-le
 Version: 1.1.1~beta1
 Architecture: iphoneos-arm
@@ -281,6 +297,41 @@ Icon: file:///Library/PreferenceBundles/SwipeSelectionPro.bundle/SwipeSelectionP
 Name: SwipeSelection
 Sponsor: thebigboss.org <http://thebigboss.org>
 
+Package: com.install0us.app
+Version: 2.5.1
+Architecture: iphoneos-arm
+Maintainer: puy0 <puy0@install0us.com>
+Filename: debs/com.install0us.app_2.5.1_iphoneos-arm.deb
+Size: 643014
+MD5sum: 1d5b0f11ee5cad93e8109915368ad51f
+SHA1: 68219669c605c7b6579727a283e7c7649921cac1
+SHA256: 4264ef3502c5a7773fec4c14d54e26d43bfa78d66e01f075fd439873afd58b6c
+Section: install0us
+Homepage: http://install0us.com
+Description: install0us is the perfect app to download & install your IPA Applications files.
+Icon: https://github.io
+Author: puy0 <puy0@install0us.com>
+Icon: file:///Applications/install0us.app/Icon.png
+Name: install0us
+
+Package: com.ipr.bytafont
+Version: 1.8
+Architecture: iphoneos-arm
+Maintainer: iPhoneRuler.net <info@iphoneruler.net>
+Depends: firmware (>> 4.2.1), firmware (<< 7)
+Filename: debs/com.ipr.bytafont_1.8_iphoneos-arm.deb
+Size: 269458
+MD5sum: b57b8b202b616c3c70a70a65b19cb285
+SHA1: 0f51687c9148e239d826a6abaebc76c76123e30a
+SHA256: 1eedaeda69c8ba5d42a61bd8568deb7acd0214373f123fa43a5dfd4ef4190202
+Section: System
+Description: BytaFont lets you apply fonts to your iDevice in few taps.
+Icon: https://github.io
+Author: iPhoneRuler.net <info@iphoneruler.net>
+Depiction: http://www.iphoneruler.net/depiction/BytaFont/
+Name: BytaFont
+Sponsor: ModMyi.com <http://modmyi.com/forums/index.php?styleid=31>
+
 Package: com.jamied360.ncsettings
 Version: 1.7.1
 Architecture: iphoneos-arm
@@ -316,6 +367,22 @@ Description: Brings the iOS 5 google maps app to iOS 6!
 Icon: https://github.io
 Author: Kita
 Name: Maps5
+
+Package: com.kjcracks.clutch
+Version: 2.0.4
+Architecture: iphoneos-arm
+Maintainer: KJCracks <unknown@unknown.com>
+Depends: firmware (>= 6.0), firmware (<= 10.3.4)
+Filename: debs/com.kjcracks.clutch_2.0.4_iphoneos-arm.deb
+Size: 457642
+MD5sum: 1ecaa02dc81e71efd1044b1d85ee9559
+SHA1: ad12a868b4ee829e0e2623bd4ff5bcaace85d55c
+SHA256: b9a6ab5eb1420b9282a82ff7000e41ff195b127fc8d34942d1f9410b8b7c07a0
+Section: Terminal Support
+Description: Clutch is a high-speed iOS decryption tool. It is used for decrypting apps currently installed and usable on the device.
+Icon: https://github.io
+Author: KJCracks <unknown@unknown.com>
+Name: Clutch 2.0.4
 
 Package: com.mathieubolard.killbackground
 Version: 1.3.1-7
