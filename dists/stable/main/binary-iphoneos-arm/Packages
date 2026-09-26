@@ -191,6 +191,24 @@ Depiction: http://ib-soft.net/depictions/?pkgId=com.exile90.icleanerpro
 Icon: file:///Applications/iCleaner.app/Icon.png
 Name: iCleaner Pro
 
+Package: com.githublegacy.app
+Version: 1.1
+Architecture: iphoneos-arm
+Maintainer: kitalev
+Installed-Size: 872
+Depends: firmware (>= 5.0), mobilesubstrate
+Filename: debs/com.githublegacy.app_1.1_iphoneos-arm.deb
+Size: 334148
+MD5sum: 26af6e513ae2931d8f010730e4b63d2d
+SHA1: eeed2079382ef2251f82ca982006e0dc0cee2362
+SHA256: a1d03beade74341eddd6fd830935474f5b3a02c7713a45eb451dc4a4f5401e0e
+Section: Applications
+Description: A lightweight GitHub client for iOS 5+ devices - browse repositories, read READMEs, and download releases.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: kitalev
+Icon: file:///Applications/GitHubLegacy.app/Icon-72@2x.png
+Name: GitHub Legacy
+
 Package: com.hackyouriphone.forecast6
 Version: 2.3.0-1
 Architecture: iphoneos-arm
