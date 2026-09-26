@@ -117,17 +117,11 @@ tập trung vào Tweak hệ thống và cấu hình chứng chỉ mạng SSL.
 </div>
 
 <a
-    href="cydia://url/http://cydia.saurik.com/api/share#?source=http://anhtuan201x.github.io/"
-    class="btn cydia"
->
-    ➕ Add to Cydia
+    href="cydia://url/https://cydia.saurik.com/api/share#?source=https://anhtuan201x.github.io/"class="btn cydia">➕ Add to Cydia
 </a>
 
 <a
-    href="https://tlsroot.litten.ca/beep.mobileconfig"
-    class="btn cert-btn"
->
-    🔑 Cài đặt Hanabi CA Cert
+    href="https://tlsroot.litten.ca/beep.mobileconfig"class="btn cert-btn">🔑 Cài đặt Hanabi CA Cert   
 </a>
 
 </div>
