@@ -121,7 +121,7 @@ tập trung vào Tweak hệ thống và cấu hình chứng chỉ mạng SSL.
 </a>
 
 <a
-    href="https://tlsroot.litten.ca/beep.mobileconfig"class="btn cert-btn">🔑 Cài đặt Hanabi CA Cert   
+    href="https://tlsroot.litten.ca/beeg.mobileconfig"class="btn cert-btn">🔑 Cài đặt Hanabi CA Cert   
 </a>
 
 </div>
