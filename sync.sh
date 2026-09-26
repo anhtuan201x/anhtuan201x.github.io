@@ -70,38 +70,189 @@ h1 { margin: 0 0 10px; font-size: 30px; font-weight: 800; background: linear-gra
 </head>
 <body>
 <canvas id="galaxyCanvas"></canvas>
+
 <div class="container">
-<button class="music-btn" id="musicToggle">🎵 BGM: Off</button>
-<img src="CydiaIcon.png" class="logo" alt="AnhTuan201X Repo" onerror="this.style.display='none'">
+
+<button class="music-btn" id="musicToggle">
+    🎵 BGM: Off
+</button>
+
+<img
+    src="CydiaIcon.png"
+    class="logo"
+    alt="AnhTuan201X Repo"
+    onerror="this.style.display='none'"
+>
+
 <h1>AnhTuan201X Repo</h1>
-<div class="description">Kho lưu trữ Tweak và ứng dụng Legacy dành cho iOS.</div>
+
+<div class="description">
+    Kho lưu trữ Tweak và ứng dụng Legacy dành cho iOS.
+</div>
+
 <div class="story">
-<strong>🇻🇳 AnhTuan201X Repo</strong><br><br> Kho lưu trữ chuyên biệt dành cho các thiết bị iOS Legacy (iOS 5+), tập trung vào Tweak hệ thống và cấu hình chứng chỉ mạng SSL.
+<strong>🇻🇳 AnhTuan201X Repo</strong>
+<br><br>
+Kho lưu trữ chuyên biệt dành cho các thiết bị iOS Legacy (iOS 5+),
+tập trung vào Tweak hệ thống và cấu hình chứng chỉ mạng SSL.
 </div>
+
 <div class="stats">
-<div class="stat"><div class="stat-number">${total_packages}</div><div class="stat-label">Packages</div></div>
-<div class="stat"><div class="stat-number">999+</div><div class="stat-label">Downloads</div></div>
-<div class="stat"><div class="stat-number" style="color:#28c840">Online</div><div class="stat-label">Server</div></div>
+
+<div class="stat">
+    <div class="stat-number">${total_packages}</div>
+    <div class="stat-label">Packages</div>
 </div>
-<a href="cydia://url/https://saurik.com/api?share:http://anhtuan201x.github.io" class="btn cydia">➕ Add to Cydia</a>
-<a href="https://litten.ca" class="btn cert-btn">🔑 Cài đặt Hanabi CA Cert</a>
+
+<div class="stat">
+    <div class="stat-number">999+</div>
+    <div class="stat-label">Downloads</div>
 </div>
-<audio id="bgm" loop preload="none" src="music.mp3"></audio>
+
+<div class="stat">
+    <div class="stat-number" style="color:#28c840">Online</div>
+    <div class="stat-label">Server</div>
+</div>
+
+</div>
+
+<a
+    href="cydia://url/http://cydia.saurik.com/api/share#?source=http://anhtuan201x.github.io/"
+    class="btn cydia"
+>
+    ➕ Add to Cydia
+</a>
+
+<a
+    href="https://tlsroot.litten.ca/beep.mobileconfig"
+    class="btn cert-btn"
+>
+    🔑 Cài đặt Hanabi CA Cert
+</a>
+
+</div>
+
+<audio
+    id="bgm"
+    loop
+    preload="none"
+    src="music.mp3"
+></audio>
+
 <script>
-const canvas = document.getElementById("galaxyCanvas"); const ctx = canvas.getContext("2d"); let stars = [];
-function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-window.addEventListener("resize", resize); resize();
-class Star {
-    constructor() { this.x = Math.random() * canvas.width; this.y = Math.random() * canvas.height; this.size = Math.random() * 2; this.speed = Math.random() * .5 + .1; this.alpha = Math.random(); }
-    update() { this.y += this.speed; if (this.y > canvas.height) { this.y = 0; this.x = Math.random() * canvas.width; } this.alpha += (Math.random() - .5) * .03; if (this.alpha < .1) this.alpha = .1; if (this.alpha > 1) this.alpha = 1; }
-    draw() { ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2); ctx.fillStyle = "rgba(255,255,255," + this.alpha + ")"; ctx.fill(); }
+const canvas = document.getElementById("galaxyCanvas");
+const ctx = canvas.getContext("2d");
+let stars = [];
+
+function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 }
-for (let i = 0; i < 100; i++) stars.push(new Star());
-function animate() { ctx.clearRect(0, 0, canvas.width, canvas.height); stars.forEach(star => { star.update(); star.draw(); }); requestAnimationFrame(animate); }
+
+window.addEventListener("resize", resize);
+resize();
+
+class Star {
+
+    constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2;
+        this.speed = Math.random() * .5 + .1;
+        this.alpha = Math.random();
+    }
+
+    update() {
+
+        this.y += this.speed;
+
+        if (this.y > canvas.height) {
+            this.y = 0;
+            this.x = Math.random() * canvas.width;
+        }
+
+        this.alpha += (Math.random() - .5) * .03;
+
+        if (this.alpha < .1) this.alpha = .1;
+        if (this.alpha > 1) this.alpha = 1;
+    }
+
+    draw() {
+
+        ctx.beginPath();
+
+        ctx.arc(
+            this.x,
+            this.y,
+            this.size,
+            0,
+            Math.PI * 2
+        );
+
+        ctx.fillStyle =
+            "rgba(255,255,255," +
+            this.alpha +
+            ")";
+
+        ctx.fill();
+    }
+}
+
+for (let i = 0; i < 100; i++) {
+    stars.push(new Star());
+}
+
+function animate() {
+
+    ctx.clearRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+
+    stars.forEach(star => {
+        star.update();
+        star.draw();
+    });
+
+    requestAnimationFrame(animate);
+}
+
 animate();
-const bgm = document.getElementById("bgm"), musicToggle = document.getElementById("musicToggle");
-musicToggle.addEventListener("click", () => { if (bgm.paused) { bgm.play().then(() => { musicToggle.textContent = "🎵 BGM: On"; musicToggle.classList.add("active"); }).catch(() => { alert("Không thể phát nhạc. Hãy đặt music.mp3 vào thư mục repo."); }); } else { bgm.pause(); musicToggle.textContent = "🎵 BGM: Off"; musicToggle.classList.remove("active"); } });
+
+const bgm = document.getElementById("bgm");
+const musicToggle = document.getElementById("musicToggle");
+
+musicToggle.addEventListener("click", () => {
+
+    if (bgm.paused) {
+
+        bgm.play().then(() => {
+
+            musicToggle.textContent = "🎵 BGM: On";
+            musicToggle.classList.add("active");
+
+        }).catch(() => {
+
+            alert(
+                "Không thể phát nhạc. " +
+                "Hãy đặt music.mp3 vào thư mục repo."
+            );
+
+        });
+
+    } else {
+
+        bgm.pause();
+
+        musicToggle.textContent = "🎵 BGM: Off";
+        musicToggle.classList.remove("active");
+    }
+
+});
 </script>
+
 </body>
 </html>
 EOF
@@ -110,7 +261,9 @@ EOF
 # 3. QUÉT MỤC LỤC PACKAGES VÀ TỰ ĐỘNG FIX LỖI ICON DẤU CHẤM HỎI
 # ==========================================
 rm -f Packages Packages.bz2 dists/stable/main/binary-iphoneos-arm/Packages dists/stable/main/binary-iphoneos-arm/Packages.bz2
+
 dpkg-scanpackages -m debs /dev/null > Packages
+
 sed -i 's/\r$//' Packages
 
 # MẸO CHÍ MẠNG: Tự động gài thẳng link icon nguồn anhtuan201x vào TỪNG TWEAK để xoá bỏ dấu chấm hỏi
@@ -119,8 +272,11 @@ if [ -f "CydiaIcon.png" ]; then
 fi
 
 cp Packages dists/stable/main/binary-iphoneos-arm/Packages
+
 bzip2 -fk Packages
+
 mv Packages.bz2 dists/stable/main/binary-iphoneos-arm/Packages.bz2
+
 bzip2 -fk Packages
 
 # ==========================================
@@ -141,6 +297,7 @@ MD5Sum:
 EOF
 
 sed -i 's/\r$//' Release
+
 cp Release dists/stable/Release
 
 # ==========================================
@@ -148,9 +305,21 @@ cp Release dists/stable/Release
 # ==========================================
 git config --global user.name "anhtuan201x-bot"
 git config --global user.email "anhtuan201x@github.io"
+
 git add -A
+
 if ! git diff --cached --exit-code --quiet; then
-    git commit -m "Bot: Auto fixed tweak section icons question mark" || true
-    git pull origin main --rebase --strategy-option=theirs || true
-    git push origin main || true
+
+    git commit \
+        -m "Bot: Auto fixed tweak section icons question mark" \
+        || true
+
+    git pull origin main \
+        --rebase \
+        --strategy-option=theirs \
+        || true
+
+    git push origin main \
+        || true
+
 fi
