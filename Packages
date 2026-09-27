@@ -395,6 +395,25 @@ Author: puy0 <puy0@install0us.com>
 Icon: file:///Applications/install0us.app/Icon.png
 Name: install0us
 
+Package: com.iphonecake.appcake2.ios6
+Version: 4.59
+Architecture: iphoneos-arm
+Maintainer: hotsjf <iphonecake@gmail.com>
+Pre-Depends: firmware (>= 6.0) | firware (<= 7.0)
+Filename: debs/com.iphonecake.appcake2.ios6_4.59_iphoneos-arm.deb
+Size: 4595756
+MD5sum: b3975d93b64cd3a5aa188b9a032c96db
+SHA1: e5f779439f9a655dd4fc3dfcdb0a6bdf59479a4b
+SHA256: 237d353bf6e8d68edf332d82f7cc5c9904a8f5e4e8144c8bb54128aab470baa8
+Section: Utilities
+Description: **All NEW AppCake 4.0! Clean UI with enhanced Settings, download cracked apps from the largest Cracked Store. Come with iTunes Sync, Metadata Removal, Update check, AirDrop Sharing and more. *** Require AppSync to be installed ***
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: hotsjf <iphonecake@gmail.com>
+Depiction: http://iphonecake.com/mobileapp/depiction/ios6.html
+Icon: file:///Applications/iPhoneCake.app/AppIcon57x57.png
+Name: AppCake for iOS6
+Website: http://iphonecake.com/forum/
+
 Package: com.ipr.bytafont
 Version: 1.8
 Architecture: iphoneos-arm
@@ -784,6 +803,31 @@ Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: OldWorldOrder <joey.t.reinhart@gmail.com>
 Name: iFile/MTerminal icon fix
 
+Package: libactivator
+Version: 1.9.12~beta1
+Architecture: iphoneos-arm
+Maintainer: Ryan Petrich <rpetrich+activator@gmail.com>
+Installed-Size: 4476
+Depends: mobilesubstrate (>= 0.9.5101), preferenceloader (>= 2.2.2), com.a3tweaks.flipswitch (>= 1.0.15), com.rpetrich.rocketbootstrap (>= 1.0.5) | firmware (<< 7.0)
+Conflicts: com.booleanmagic.overboard (<= 1.1), com.ashman.lockinfo (<= 2.0.0-6), sbsettings (<= 3.0.6), com.fuyuchi.missionboardpro (<= 1.3), com.kindadev.nobetaalert, libhide (<< 2.4.1), com.fortysixandtwo.activ8rfix, net.tateu.actisearch
+Replaces: com.booleanmagic.overboard (<= 1.1), com.ashman.lockinfo (<= 2.0.0-6), com.fuyuchi.missionboardpro (<= 1.3), com.kindadev.nobetaalert, com.fortysixandtwo.activ8rfix, net.tateu.actisearch
+Filename: debs/libactivator_1.9.12~beta1_iphoneos-arm.deb
+Size: 1334622
+MD5sum: cd5a81b321da4092cd1c4197538bfc17
+SHA1: 55ed6a21482a0536b2eeba3cad820b123aca5bb1
+SHA256: d806071a6fc39ba5c80860d19520f3c92bd913f08e1b3fe809f20b0f18171e0d
+Section: System
+Priority: optional
+Homepage: http://rpetri.ch/cydia/activator/beta/
+Description: Centralized gestures, button and shortcut management for iOS
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: Ryan Petrich <rpetrich+activator@gmail.com>
+Depiction: http://rpetri.ch/cydia/activator/beta/
+Dev: rpetrich
+Icon: file:///Applications/Activator.app/Icon-Small-modern@2x.png
+Name: Activator
+Sponsor: thebigboss.org <http://thebigboss.org>
+
 Package: me.k3a.powersounddisabler
 Version: 1.1.1-6
 Architecture: iphoneos-arm
@@ -910,6 +954,29 @@ Description: secure remote access between machines
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Depiction: http://cydia.saurik.com/info/openssh/
 Name: OpenSSH
+
+Package: org.coolstar.recordmyscreenapp
+Version: 1.1-4
+Architecture: iphoneos-arm
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Installed-Size: 398
+Depends: firmware (>= 5.0), gsc.armv7, firmware (<< 7.0)
+Filename: debs/org.coolstar.recordmyscreenapp_1.1-4_iphoneos-arm.deb
+Size: 302426
+MD5sum: 83f78bbaa71ad7d6746e2e53a17d39e0
+SHA1: 1668a077229d0873670953cde562386809431766
+SHA256: a827fbdf62c9ab9092f6ded843a33977f597031bd61a7dc43b1778a932f824af
+Section: Utilities
+Priority: optional
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=recordmyscreenDp
+Description: free, open source screen recorder
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Tag: purpose::uikit
+Author: RecordMyScreen Project <coolstarorganization@gmail.com>
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=recordmyscreenDp
+Dev: coolstar
+Name: RecordMyScreen (App)
+Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: org.h6nry.adowngrader
 Version: 0.0.2-7
@@ -1078,6 +1145,69 @@ Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: docmorelli <apps@hackulo.us>
 Name: Hackulous Resources
 Sponsor: Hackulo.us <http://hackulo.us>
+
+Package: vn.gsm.androidloader
+Version: 1.2.1
+Architecture: iphoneos-arm
+Maintainer: Thieu.Bocap <repo@cydia.vn>
+Depends: gsmicon, mobilesubstrate, libhide
+Filename: debs/vn.gsm.androidloader_1.2.1_iphoneos-arm.deb
+Size: 80362
+MD5sum: 8ffd3b30682b288f7f1d4440fda1f352
+SHA1: b14bfbe43c9281ec5ef6ee8830e1d4b7c10eea71
+SHA256: 9fe080512d546f155e168e37e11c719054824f559d3aa894ce9d65fcb7bd6e78
+Section: !GSMVN-Apps
+Homepage: http://cydia.gsm.vn/t1377/
+Description: With a single tap or slide gesture, you are able to launch and view all your applications in one place, Android style, on your iOS device!
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: Surenix <repo@cydia.vn>
+Depiction: http://cydia.gsm.vn/t1377/
+Icon: file:///Library/PreferenceBundles/AndroidLoaderPrefs.bundle/AndroidLoader@2x.png
+Name: AndroidLoader
+Sponsor: iPhone GSM.VN <http://gsm.vn/f339>
+
+Package: vn.gsm.bitesms6
+Version: 7.5
+Architecture: iphoneos-arm
+Maintainer: Cydia.vn <repo@cydia.vn>
+Installed-Size: 15424
+Pre-Depends: dpkg (>= 1.13.25-5)
+Depends: gsmicon, mobilesubstrate (>= 0.9.2587-1)
+Conflicts: vn.gsm.bitesms, vn.gsm.bitesms8
+Replaces: vn.gsm.bitesms, vn.gsm.bitesms8
+Filename: debs/vn.gsm.bitesms6_7.5_iphoneos-arm.deb
+Size: 8320326
+MD5sum: f9def61fa64b6b779906e6c60c9ecc17
+SHA1: be16f9f9874d9db2eea38cfacb9fc7ae7c8fc0d9
+SHA256: cd545b2ed53789048bb55cb48d7f835e31a1ce0db460e05b573187ca211a394f
+Section: !CydiaVn-Apps
+Homepage: http://www.bitesms.com/changelog
+Description: Frustrated with the built-in Messages app? Want more features? Wish it was much quicker to compose or reply to messages?
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: biteSMS <repo@cydia.vn>
+Depiction: http://cydia.vn/depic/t2220/
+Icon: file:///Applications/biteSMS.app/icon.png
+Name: biteSMS iOS 5, 6
+Sponsor: Cydia.vn Blog's <http://cydia.vn/>
+
+Package: vn.gsm.protube
+Version: 1.12.1p
+Architecture: iphoneos-arm
+Maintainer: Cydia.vn <repo@cydia.vn>
+Depends: firmware (>= 4.0), preferenceloader
+Filename: debs/vn.gsm.protube_1.12.1p_iphoneos-arm.deb
+Size: 7506562
+MD5sum: c863868d4c3bfa4a89a7b02cbb33a67e
+SHA1: f7347bb72041d2678d03a0d84b8a844f858be17b
+SHA256: aef58ec40b017f688de7f1a556baafbcaddc2a2009401a2318c351e99b0a6b69
+Section: !CydiaVn-Apps
+Homepage: http://cydia.vn/
+Description: complete feature-filled YouTube app
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: Jonas Gessner
+Depiction: http://cydia.vn/depic/t2248/
+Icon: file:///Applications/ProTube.app/icon.png
+Name: ProTube
 
 Package: winterboard
 Version: 0.9.3919
