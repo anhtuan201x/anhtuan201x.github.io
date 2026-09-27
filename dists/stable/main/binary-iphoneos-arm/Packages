@@ -911,29 +911,6 @@ Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Depiction: http://cydia.saurik.com/info/openssh/
 Name: OpenSSH
 
-Package: org.coolstar.recordmyscreenapp
-Version: 1.1-4
-Architecture: iphoneos-arm
-Maintainer: BigBoss <bigboss@thebigboss.org>
-Installed-Size: 398
-Depends: firmware (>= 5.0), gsc.armv7, firmware (<< 7.0)
-Filename: debs/recordmyscreen_1.1-4.deb
-Size: 281744
-MD5sum: 9127a7a26551f47615e506a69af3c959
-SHA1: 5b749785b1fe3f1cb8db2fd6ed24671a7f8e01be
-SHA256: a024cf0583cbf79fad718a6076f16d27f0a90be1c40ab3357218ac3e2c463e7b
-Section: Utilities
-Priority: optional
-Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=recordmyscreenDp
-Description: free, open source screen recorder
-Icon: https://anhtuan201x.github.io/CydiaIcon.png
-Tag: purpose::uikit
-Author: RecordMyScreen Project <coolstarorganization@gmail.com>
-Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=recordmyscreenDp
-Dev: coolstar
-Name: RecordMyScreen (App)
-Sponsor: thebigboss.org <http://thebigboss.org>
-
 Package: org.h6nry.adowngrader
 Version: 0.0.2-7
 Architecture: iphoneos-arm
