@@ -139,6 +139,28 @@ Description: Bộ sưu tập biểu tượng ảnh nhỏ hiển thị cho các g
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Name: AnhTuan201X Repo Icons
 
+Package: com.blackcrafter.slidemyname
+Version: 1.1
+Architecture: iphoneos-arm
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Installed-Size: 12
+Depends: firmware (>= 5.0), mobilesubstrate, preferenceloader
+Filename: debs/com.blackcrafter.slidemyname_1.1_iphoneos-arm.deb
+Size: 3496
+MD5sum: c7bce63af3e24fd37a00cf9602a18430
+SHA1: 472c6f0b76048f93535544c9a1071aae40794d61
+SHA256: 66d0b22bfcfafc40d51fa7bdc00d5ca7aaad034ccb0920d14249e2ddb2cb3c78
+Section: Tweaks
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=slidemynameDp
+Description: device name shown on unlock slider
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Tag: purpose::extension, role::enduser
+Author: c0d3 <blackcrafter@me.com
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=slidemynameDp
+Dev: blackcrafter
+Name: SlideMyName
+Sponsor: thebigboss.org <http://thebigboss.org>
+
 Package: com.bytafont.bytafont2
 Version: 2.6.4
 Architecture: iphoneos-arm
@@ -216,6 +238,27 @@ Depiction: http://ib-soft.net/depictions/?pkgId=com.exile90.icleanerpro
 Icon: file:///Applications/iCleaner.app/Icon.png
 Name: iCleaner Pro
 
+Package: com.filippobiga.harlem
+Version: 1.0-1
+Architecture: iphoneos-arm
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Installed-Size: 502
+Depends: firmware (>= 6.0), mobilesubstrate, libactivator
+Filename: debs/com.filippobiga.harlem_1.0-1_iphoneos-arm.deb
+Size: 495288
+MD5sum: aa059f59b4aebc6d6a7ac8b270f5f54e
+SHA1: 0e9bef922a73c9ac43298fb5c845f4bcc8fd4901
+SHA256: 68cde92ee55808d4f373b399e24c25bf97066051bde73f7dce8ff64dce463831
+Section: Tweaks
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=harlemshakeDp
+Description: Springboard Harlem Shake!
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Tag: purpose::extension
+Author: FilippoBiga <filippobiga.dev@gmail.com>
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=harlemshakeDp
+Dev: filippobiga
+Name: Harlem Shake
+
 Package: com.githublegacy.app
 Version: 1.1
 Architecture: iphoneos-arm
@@ -290,6 +333,82 @@ Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: Stimpy5050 <repo@hackyouriphone.org>
 Depiction: http://repo.hackyouriphone.org/depiction/depiction.php?filename=forecast6
 Name: Forecast for iOS6
+
+Package: com.hackyouriphone.iconoclasm
+Version: 1.9
+Architecture: iphoneos-arm
+Maintainer: iDevid <repo@hackyouriphone.org>
+Pre-Depends: mobilesubstrate
+Depends: firmware (>= 4.2), preferenceloader, com.chpwn.iconsupport (>> 1.7.7)
+Conflicts: net.r-ch.fcsb, com.macciti.fiveirows, com.touchmania.fiveirows, com.touchmania.fiveirowsnorm
+Filename: debs/com.hackyouriphone.iconoclasm_1.9_iphoneos-arm.deb
+Size: 33982
+MD5sum: 889e5ad9b1f4d7288833d6e1d4134faa
+SHA1: b0b0431ca6fbc7a646341c3299999c6984bfb1c5
+SHA256: 5f004b6d18078bd4978abae42a992818aa648a97425a02a1c790920d3ac812fc
+Section: Tweaks (HYI)
+Description: Easily customizable icon layout framework.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: Yanik Magnan <repo@hackyouriphone.org>
+Depiction: http://repo.hackyouriphone.org/depiction/depiction.php?filename=iconoclasm
+Name: Iconoclasm
+
+Package: com.hackyouriphone.infinifolders
+Version: 2.1.1-1
+Architecture: iphoneos-arm
+Maintainer: iDevid <repo@hackyouriphone.org>
+Pre-Depends: firmware (>= 5.0)
+Depends: mobilesubstrate, preferenceloader (>= 1.1), com.chpwn.iconsupport
+Filename: debs/com.hackyouriphone.infinifolders_2.1.1-1_iphoneos-arm.deb
+Size: 49154
+MD5sum: 123170bbdae56e0d7e9a33969e96e5bd
+SHA1: f31aa8d2c839860876a9da34877dc9f380edc9ec
+SHA256: 19a9bd3d6a0b9beba6710dab0856a44580be3fd88de7cdad87cd78e8e68d9c09
+Section: HYI - Tweaks
+Description: Scroll your folders: break the icon barrier!
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: chpwn <repo@hackyouriphone.org>
+Depiction: http://repo.hackyouriphone.org/depiction/depiction.php?filename=infinifolders
+Name: Infinifolders
+
+Package: com.hackyouriphone.udidfaker4
+Version: 2.3.6
+Architecture: iphoneos-arm
+Maintainer: iDevid <repo@hackyouriphone.org>
+Depends: mobilesubstrate
+Filename: debs/com.hackyouriphone.udidfaker4_2.3.6_iphoneos-arm.deb
+Size: 63080
+MD5sum: 477c599b32e199b422b78a272ee6e974
+SHA1: 9ff9d6b6a2050684c4056e92b5f30968ded0a037
+SHA256: de56ded1ee6abaa60c33c6dd4b374154abc9a1e12ff183ce47991cc2182d182c
+Section: Applications (HYI)
+Description: Change the UDID of any app.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: HYI <admin@hackyouriphone.org>
+Depiction: http://repo.hackyouriphone.org/depiction/depiction.php?filename=udidfaker4
+Name: UDIDFaker
+
+Package: com.heaveniphone.5icondock
+Version: 0.9.3202-1
+Architecture: iphoneos-arm
+Maintainer: HeaveniPhone
+Depends: mobilesubstrate (>= 0.9.3005-1), firmware (>= 2.2)
+Conflicts: gsc.wildcat
+Replaces: com.saurik.iphone.fid
+Filename: debs/com.heaveniphone.5icondock_0.9.3202-1_iphoneos-arm.deb
+Size: 3980
+MD5sum: cc3dfa0fd4b762c4bba8f870182be205
+SHA1: 4f32e934697f69c9ee2b4071326d9a0a0d32e4dc
+SHA256: 4f050ad2f1db04ebf3923ab724bfe1af3333bb979309bc22f683e69fdc2eac15
+Section: HiPhone-Tools
+Priority: optional
+Homepage: http://heaveniphone.com
+Description: Tạo 5 icon trên dock
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: HeaveniPhone<heaveniphone@heaveniphone.com>
+Depiction: http://heaveniphone.com/cydia/info/fiveicondock.php
+Icon: file:///Applications/Cydia.app/Sources/heaveniphone.com.png
+Name: Five Icon Dock
 
 Package: com.ia.iconbounce
 Version: 3.0.0-1
@@ -576,6 +695,29 @@ Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=sslpatchDp
 Dev: rpetrich
 Name: SSLPatch
 Sponsor: thebigboss.org <http://thebigboss.org>
+
+Package: com.saurik.afc2d
+Version: 1.2
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Pre-Depends: dpkg (>= 1.14.25-8)
+Depends: firmware (<< 8.0) | mobilesubstrate
+Conflicts: us.scw.afctwoadd, net.angelxwind.afc2ios70, afc2.25pp, afc2.25pp7, afc2.91, app.taig.afc2
+Replaces: us.scw.afctwoadd, net.angelxwind.afc2ios70, afc2.25pp, afc2.25pp7, afc2.91, app.taig.afc2
+Provides: us.scw.afctwoadd, net.angelxwind.afc2ios70, afc2.25pp, afc2.25pp7, afc2.91, app.taig.afc2
+Filename: debs/com.saurik.afc2d_1.2_iphoneos-arm.deb
+Size: 5272
+MD5sum: f56dbaa6b109a215ae1cbdded6c61555
+SHA1: 52628fcf233405f59bde4d0ab1639adcca920efd
+SHA256: d43997e26bbe5431ec9a625ad4d1822127f7b3ead9a6d275db4d2aeb8a6771de
+Section: System
+Priority: optional
+Description: allow full file-system access over USB
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Tag: purpose::daemon, role::enduser
+Author: Jay Freeman (saurik) <saurik@saurik.com>
+Depiction: http://cydia.saurik.com/info/com.saurik.afc2d/
+Name: Apple File Conduit "2"
 
 Package: com.skyglow.weatherx
 Version: 3.6
@@ -1046,6 +1188,47 @@ Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: InvoxiPlayGames <webmaster@invoxiplaygames.uk>
 Name: Cydia HTTPatch (iOS 4+)
 
+Package: uk.invoxiplaygames.simalertsuppression
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: InvoxiPlayGames <webmaster@invoxiplaygames.uk>
+Installed-Size: 132
+Depends: mobilesubstrate, firmware (>= 5.0)
+Conflicts: uk.invoxiplaygames.letmestealinpeace
+Filename: debs/uk.invoxiplaygames.simalertsuppression_1.0_iphoneos-arm.deb
+Size: 6294
+MD5sum: 6b1925f54b155c5446d416288f21dfa0
+SHA1: f23c10de00bec4d983a56cd6be9d75156919228e
+SHA256: 189708f18ea1e04cd5f26c87c58b678cd32de1f0dd43e48bba57bd4f6af582ac
+Section: Tweaks
+Description: Removes SIM-related alerts from SpringBoard
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: InvoxiPlayGames <webmaster@invoxiplaygames.uk>
+Depiction: http://cydia.invoxiplaygames.uk/dp/simalertsuppression.php
+Name: SIM Alert Suppression
+Sileodepiction: https://cydia.invoxiplaygames.uk/dp/simalertsuppression.json
+
+Package: uk.invoxiplaygames.tubefixer
+Version: 2.0-152+debug
+Architecture: iphoneos-arm
+Maintainer: InvoxiPlayGames <webmaster@invoxiplaygames.uk>
+Installed-Size: 136
+Pre-Depends: dpkg (>= 1.13.25-5)
+Depends: mobilesubstrate, firmware (>= 2.0)
+Filename: debs/uk.invoxiplaygames.tubefixer_2.0-152+debug_iphoneos-arm.deb
+Size: 32676
+MD5sum: 2233051ab2cc7a236b130964e6c11c02
+SHA1: 42c9ed7904fcd5612bf52aca85730d1a0b33215f
+SHA256: cd3f4de2cbd09cb573adc489c007d8eb3a6d7ebf91f1a729c2d6b5a504d3c2a3
+Section: Tweaks
+Homepage: http://tubefixer.ovh/
+Description: Package to fix YouTube on iOS 3-5
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: InvoxiPlayGames <webmaster@invoxiplaygames.uk>
+Depiction: http://cydia.invoxiplaygames.uk/dp/tubefixer.php
+Icon: file:///Library/Application%20Support/uk.invoxiplaygames.tubefixer/tubefixericon.png
+Name: TubeFixer for iOS
+
 Package: uk.invoxiplaygames.youtube
 Version: 1.0
 Architecture: iphoneos-arm
@@ -1103,6 +1286,25 @@ Author: docmorelli <apps@hackulo.us>
 Name: Hackulous Resources
 Sponsor: Hackulo.us <http://hackulo.us>
 
+Package: vn.com.epi.baomoi
+Version: 240117.2200.01
+Architecture: iphoneos-arm
+Maintainer: Admin <admin@localhost>
+Depends: firmware (>= 6.0), uikittools, appsync
+Filename: debs/vn.com.epi.baomoi_240117.2200.01_iphoneos-arm.deb
+Size: 18038444
+MD5sum: b3d0acac6ed94eb692bfe908b33d20c6
+SHA1: 0aed854398aacdc671226a13d0ff676a71bbbf1f
+SHA256: 0a2cf93f2b0d861f54840a28781eda65bab4d62ee749db6e595042fac2e29763
+Section: AppStore Apps
+Homepage: https://github.com/tomkidss/cydia
+Description: The decrypted ipa file: gdrive_app_1uhYv8a84yciRaqXLlMlOKUgUns-j0Pn8.ipa converted to .deb automatically by https://alex-free.github.io/ipa2deb .
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: Admin <admin@localhost>
+Depiction: https://github.com/tomkidss/cydia
+Name: BáoMới v240117.2200.01 (iOS 6.0)
+Sponsor: Admin <admin@localhost>
+
 Package: vn.gsm.androidloader
 Version: 1.2.1
 Architecture: iphoneos-arm
@@ -1145,6 +1347,69 @@ Author: biteSMS <repo@cydia.vn>
 Depiction: http://cydia.vn/depic/t2220/
 Icon: file:///Applications/biteSMS.app/icon.png
 Name: biteSMS iOS 5, 6
+Sponsor: Cydia.vn Blog's <http://cydia.vn/>
+
+Package: vn.gsm.blocker
+Version: 1.58
+Architecture: iphoneos-arm
+Maintainer: Cydia.vn <repo@cydia.vn>
+Installed-Size: 2019
+Depends: gsmicon, mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.2), firmware (>= 3.0), applist
+Filename: debs/vn.gsm.blocker_1.58_iphoneos-arm.deb
+Size: 605480
+MD5sum: 027bb9671e35f25d4fd2a61f0364302c
+SHA1: 7fd8ef0766d384ee44e51429695ba6b41a601025
+SHA256: 98358c9f03c37bc153a0c762a7ca71dbe41ecb7a3671da18fbc0146691d8c641
+Section: !CydiaVn-Tools
+Homepage: http://cydia.vn/
+Description: Ad blocker for Safari and other apps
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: Yllier <repo@cydia.vn>
+Depiction: http://cydia.gsm.vn/t66/
+Icon: file:///System/Library/PreferenceBundles/AdBlockerPreferences.bundle/blockericon@2x.png
+Name: AdBlocker
+Sponsor: Cydia.vn Blog's <http://cydia.vn/>
+
+Package: vn.gsm.iblacklist
+Version: 7.0-5
+Architecture: iphoneos-arm
+Maintainer: Cydia.vn <repo@cydia.vn>
+Pre-Depends: dpkg (>= 1.13.25-5)
+Depends: gsmicon, mobilesubstrate, shell-cmds, firmware (<< 4.0) | libstatusbar
+Filename: debs/vn.gsm.iblacklist_7.0-5_iphoneos-arm.deb
+Size: 2466472
+MD5sum: d1aff0fd200da854df33d8eb97e05cae
+SHA1: 410acfa3825c8be46488cea3f7a42c3e4bcc8c10
+SHA256: a651f017d409515b3c3efd2859e1de684e9d3b6f26004834ca98ea16ee0ae597
+Section: !CydiaVn-Apps
+Homepage: http://cydia.vn/
+Description: iBlacklist is the best firewall for iMessages, calls, facetime, SMS and MMS  available for the iDevices.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: spektro and hdsq2 <repo@cydia.vn>
+Depiction: http://cydia.gsm.vn/t2071/
+Icon: file:///Applications/iBlacklist.app/icon001.png
+Name: iBlacklist
+Sponsor: Cydia.vn Blog's <http://cydia.vn/>
+
+Package: vn.gsm.newterm
+Version: 1.0~beta1
+Architecture: iphoneos-arm
+Maintainer: Cydia.vn <repo@cydia.vn>
+Installed-Size: 2340
+Pre-Depends: firmware (>= 5.0), dpkg (>= 1.14.25-8)
+Depends: bash, coreutils, ncurses, system-cmds
+Filename: debs/vn.gsm.newterm_1.0~beta1_iphoneos-arm.deb
+Size: 1132970
+MD5sum: 5dc1a3c693b008c4a2cac5a85cf0a849
+SHA1: 257a1783d2b9bea7ee2c77aa024aab6aa2a349b7
+SHA256: 3a2063df590cc6ff57715ce0e79c1877c2c8f210a25da83ee011e47fa456d393
+Section: !Cydia-Tools
+Homepage: http://cydia.vn/
+Description: The standard terminal emulator with added awesome
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: HASHBANG Productions
+Depiction: http://cydia.vn/depic/t5521/
+Name: NewTerm
 Sponsor: Cydia.vn Blog's <http://cydia.vn/>
 
 Package: vn.gsm.protube
