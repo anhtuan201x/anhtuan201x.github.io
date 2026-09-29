@@ -600,26 +600,6 @@ Author: Jay Freeman (saurik) <saurik@saurik.com>
 Depiction: http://cydia.saurik.com/info/com.saurik.afc2d/
 Name: Apple File Conduit "2"
 
-Package: com.saurik.iphone.fid
-Version: 0.9.3400
-Architecture: iphoneos-arm
-Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
-Depends: mobilesubstrate (>= 0.9.3005-1), firmware (>= 2.2), firmware (<< 3.0) | com.chpwn.iconsupport (>= 1.7.3-1)
-Conflicts: gsc.wildcat
-Filename: debs/com.saurik.iphone.fid_0.9.3400_iphoneos-arm.deb
-Size: 8248
-MD5sum: 19858bc7105c8921319f7038d7ab80e8
-SHA1: e570978d488655de797b99229e66e42d26c4a417
-SHA256: 28d2bd4e42a095d5308fcc6f095cd638f8baf7cecde95d57201ec9049e7c8827
-Section: Tweaks
-Priority: optional
-Description: fits even more stuff right down there
-Icon: https://anhtuan201x.github.io/CydiaIcon.png
-Tag: purpose::extension, role::enduser
-Author: Jay Freeman (saurik) <saurik@saurik.com>
-Depiction: http://cydia.saurik.com/info/com.saurik.iphone.fid/
-Name: Five Icon Dock
-
 Package: com.skyglow.weatherx
 Version: 3.6
 Architecture: iphoneos-arm
