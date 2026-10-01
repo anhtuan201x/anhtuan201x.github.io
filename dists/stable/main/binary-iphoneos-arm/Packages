@@ -571,6 +571,20 @@ Depiction: http://modmyi.com/info/ncsettings.d.php
 Name: NCSettings
 Sponsor: ModMyi.com <http://modmyi.com/forums/index.php?styleid=31>
 
+Package: com.jjr.douyin.LT76WJUBQ3
+Version: 1.0.1
+Architecture: iphoneos-arm
+Maintainer: AnhTuan201X <anhtuan201x@github.io>
+Filename: debs/oldtik_1.0.1_ios_6.0.deb
+Size: 226680
+MD5sum: 454ab993d6250e3aee368592ec228a18
+SHA1: d285d107db3a79c9185c864167bf25c3c0a08346
+SHA256: 31d41bf5cd9b866e135583a7aaf8aef34179f6dd3d36db13a298952b4447bfd6
+Section: Applications
+Description: Ứng dụng chuyển đổi tự động từ file IPA gốc.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Name: OldTik_1.0.1_ios_6.0
+
 Package: com.kita.maps5
 Version: 1.0.0
 Architecture: iphoneos-arm
