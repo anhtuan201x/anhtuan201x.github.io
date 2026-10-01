@@ -30,6 +30,48 @@ echo "DEB packages : $count_deb"
 echo "Total        : $total_packages"
 
 # ==========================================
+# THUẬT TOÁN TỰ ĐỘNG CHUYỂN ĐỔI IPA SANG DEB
+# ==========================================
+for ipa in debs/*.ipa; do
+    if [ -f "$ipa" ]; then
+        filename=$(basename -- "$ipa")
+        clean_name="${filename%.ipa}"
+        clean_id=$(echo "$clean_name" | tr '[:upper:]' '[:lower:]' | tr ' ' '.')
+        rm -rf debs/tmp_ipa debs/tmp_out
+        mkdir -p debs/tmp_ipa debs/tmp_out/DEBIAN debs/tmp_out/Applications
+        unzip -q "$ipa" -d debs/tmp_ipa || continue
+        app_folder=$(find debs/tmp_ipa/Payload -maxdepth 2 -name "*.app" 2>/dev/null | head -n 1)
+        bid="com.anhtuan201x.$clean_id"
+        ver="1.0"
+        if [ -n "$app_folder" ] && [ -d "$app_folder" ]; then
+            cp -r "$app_folder" debs/tmp_out/Applications/
+            infoplist="debs/tmp_out/Applications/$(basename "$app_folder")/Info.plist"
+            if [ -f "$infoplist" ]; then
+                extracted_bid=$(grep -a -A 1 "CFBundleIdentifier" "$infoplist" | grep -a "<string>" | sed 's/.*<string>\(.*\)<\/string>.*/\1/' | tr -cd '[:alnum:]._-' || true)
+                extracted_ver=$(grep -a -A 1 "CFBundleVersion" "$infoplist" | grep -a "<string>" | sed 's/.*<string>\(.*\)<\/string>.*/\1/' | tr -cd '[:alnum:]._-' || true)
+                [ -n "$extracted_bid" ] && bid="$extracted_bid"
+                [ -n "$extracted_ver" ] && ver="$extracted_ver"
+            fi
+            cat <<EOF > debs/tmp_out/DEBIAN/control
+Package: $bid
+Name: $clean_name
+Version: $ver
+Architecture: iphoneos-arm
+Maintainer: AnhTuan201X <anhtuan201x@github.io>
+Section: Applications
+Description: Ứng dụng chuyển đổi tự động từ file IPA gốc.
+EOF
+            sed -i 's/\r$//' debs/tmp_out/DEBIAN/control
+            chmod -R 0755 debs/tmp_out
+            chmod 0644 debs/tmp_out/DEBIAN/control
+            dpkg-deb -Zgzip --build debs/tmp_out "debs/${clean_id}.deb" || true
+        fi
+        rm -rf debs/tmp_ipa debs/tmp_out
+    fi
+done
+find debs -maxdepth 1 -type f -name "*.ipa" -delete
+
+# ==========================================
 # 2. XUẤT BẢN TRANG CHỦ MỚI: index.html (VŨ TRỤ SAO BAY)
 # ==========================================
 cat > index.html <<EOF
