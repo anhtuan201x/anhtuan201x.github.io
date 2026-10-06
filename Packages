@@ -315,6 +315,41 @@ Depiction: http://hackulo.us/depict/sourcegui
 Name: Source GUI
 Sponsor: Hackulo.us <http://hackulo.us>
 
+Package: com.hackyouriphone.3dboard
+Version: 1.1.0-1
+Architecture: iphoneos-arm
+Maintainer: iDevid <repo@hackyouriphone.org>
+Depends: firmware (>= 4.0), mobilesubstrate (>= 0.9.2587-1), preferenceloader (>= 2.0)
+Filename: debs/com.hackyouriphone.3dboard_1.1.0-1_iphoneos-arm.deb
+Size: 16398
+MD5sum: 2b80693639be162b8d35fb1a9502a230
+SHA1: dd78e8aa76a3dd08a286cbfd1beb949b70e93246
+SHA256: fc44dcb6a875cbf4ed49bd49264e47245d38808e4d39bccc3408ccd395aa0896
+Section: Tweaks (HYI)
+Description: glasses-free 3D effect for home screen
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: Apocolipse <repo@hackyouriphone.org>
+Depiction: http://repo.hackyouriphone.org/depiction/depiction.php?filename=3dboard
+Name: 3DBoard
+
+Package: com.hackyouriphone.crackulous
+Version: 1.0.0.5
+Architecture: iphoneos-arm
+Maintainer: iDevid <repo@hackyouriphone.org>
+Pre-Depends: firmware (>= 4.0)
+Depends: zip
+Filename: debs/com.hackyouriphone.crackulous_1.0.0.5_iphoneos-arm.deb
+Size: 1187364
+MD5sum: 5ccc8ee847321094e7207b3e5f982dbf
+SHA1: 409a3fcd9c2a9c1173ee38e0545b6bcc99bdbeda
+SHA256: e66022be6a02513e7bc53171a45d449f5961587628d636419c93391430a094d3
+Section: Applications (HYI)
+Description: Crackulous is an easy-to-use cracking utility.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: Docmorelli <apps@hackulo.us>
+Depiction: http://repo.hackyouriphone.org/depiction/depiction.php?filename=crackulous
+Name: Crackulous
+
 Package: com.hackyouriphone.forecast6
 Version: 2.3.0-1
 Architecture: iphoneos-arm
@@ -333,6 +368,24 @@ Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: Stimpy5050 <repo@hackyouriphone.org>
 Depiction: http://repo.hackyouriphone.org/depiction/depiction.php?filename=forecast6
 Name: Forecast for iOS6
+
+Package: com.hackyouriphone.gbaemu
+Version: 1.5.29
+Architecture: iphoneos-arm
+Maintainer: iDevid <repo@hackyouriphone.org>
+Depends: firmware (>= 4.3), gsc.armv7
+Filename: debs/com.hackyouriphone.gbaemu_1.5.29_iphoneos-arm.deb
+Size: 4613544
+MD5sum: 57a8127cbcca505f9d6ff6cf4d9905b0
+SHA1: 9500a763762daef2330223a20abcad40871e4080
+SHA256: 460e6b53cc8cd17da0ed170e2015f39365ace022d4dd173124ea711153f03836
+Section: HYI - Applications
+Homepage: http://repo.hackyouriphone.org/depiction/depiction.php?filename=gbaemu
+Description: full-featured Gameboy Advance emulator
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: Robert Broglia <info@explusalpha.com>
+Depiction: http://repo.hackyouriphone.org/depiction/depiction.php?filename=gbaemu
+Name: GBA.emu
 
 Package: com.hackyouriphone.iconoclasm
 Version: 1.9
@@ -640,6 +693,57 @@ Dev: mattlawer
 Icon: file:///Library/PreferenceBundles/KillBackgroundPreferences.bundle/Icon@2x.png
 Name: KillBackground
 Sponsor: thebigboss.org <http://thebigboss.org>
+
+Package: com.notdbrand.veterisredirect
+Version: 1.7.2-4+debug
+Architecture: iphoneos-arm
+Maintainer: Notdbrand
+Installed-Size: 152
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: debs/com.notdbrand.veterisredirect_1.7.2-4+debug_iphoneos-arm.deb
+Size: 20092
+MD5sum: d621d092157bd51725d2395d68a9f03c
+SHA1: a87195b18df3a0c3570543b9d49b40d0128e9162
+SHA256: d95673e163cfd0f8b3f8a86b1f517c5f993e66d1c9a5f9dfa7ea2b7be23e3fd6
+Section: Tweaks
+Description: Redirect Veteris 1.7.2 to any server.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: Notdbrand
+Name: VeterisRedirect
+
+Package: com.patrickgriffin.disableyoutubeupdates
+Version: 0.0.1
+Architecture: iphoneos-arm
+Maintainer: Patrick_Griffin
+Installed-Size: 56
+Depends: mobilesubstrate
+Filename: debs/com.patrickgriffin.disableyoutubeupdates_0.0.1_iphoneos-arm.deb
+Size: 2176
+MD5sum: b637a6070ecfc443807517be2b683e32
+SHA1: 922f908bca6d34a7aaf66571f3d9cd67c392ddc2
+SHA256: 030bf1277d6d75d5b6cd4f31e1f07dcca1f3d3dac7e5802e91929081aab01f2a
+Section: Tweaks
+Description: Disables YouTube update prompts
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: Patrick_Griffin
+Name: DisableYouTubeUpdates
+
+Package: com.podpod123.gsaport
+Version: 1.0-12+debug
+Architecture: iphoneos-arm
+Maintainer: Pod <pod@podpod123.com>
+Installed-Size: 3552
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 6.0), firmware (<< 9.0)
+Filename: debs/com.podpod123.gsaport_1.0-12+debug_iphoneos-arm.deb
+Size: 1888676
+MD5sum: e54fcc7c86d31f382f47794d42f4307b
+SHA1: 1fb40adca0c2a21753c286f0859117c9620836a9
+SHA256: 51216bc4ed3d996152cb309683321480bb85700fe9ff80f5d746811613c09a02
+Section: Tweaks
+Description: Ports Apple's GrandSlam Authentication protocol to iOS versions prior to iOS 9. Fixes Apple ID login related endpoints that contain your account credentials. After you receive your verification code, enter ONLY that in the password field. You do NOT need to enter it after your password.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: Pod <pod@podpod123.com>
+Name: GSAPort
 
 Package: com.r333d.cylinder
 Version: 1.1
@@ -1108,6 +1212,26 @@ Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: H6nry <henry.anonym@gmail.com>
 Name: Adowngrader
 
+Package: org.herf.flux
+Version: 0.9988
+Architecture: iphoneos-arm
+Maintainer: Michael Herf <support@justgetflux.com>
+Depends: firmware (>= 5.0), firmware (<< 11), preferenceloader
+Filename: debs/org.herf.flux_0.9988_iphoneos-arm.deb
+Size: 91916
+MD5sum: 1b4b2422f428d96f92bcd07f539db4f3
+SHA1: 69cb5d6f6409c4bef9076b828c5742394e9ae1ee
+SHA256: b19d40308bbb41a02fcb6311fd38d546d62c4372ad1e19d6b03262e83ade947c
+Section: Tweaks
+Priority: standard
+Homepage: https://justgetflux.com/
+Description: warms colors at night to match indoor lighting
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: F.lux Software LLC <support@justgetflux.com>
+Depiction: https://justgetflux.com/cydia/
+Icon: file:///Library/PreferenceLoader/Preferences/org.herf.flux.png
+Name: f.lux
+
 Package: org.pilin.cavestory
 Version: v0.8
 Architecture: iphoneos-arm
@@ -1147,6 +1271,26 @@ Dev: philippemail1
 Icon: file:///Library/PreferenceLoader/Preferences/bncb/bncb@2x.png
 Name: BlurriedNCBackground
 Sponsor: thebigboss.org <http://thebigboss.org>
+
+Package: rousseaddict.oldpipe
+Version: 1
+Architecture: iphoneos-arm
+Maintainer: Tomkids
+Depends: firmware (>= 6.0), uikittools, appsync
+Filename: debs/rousseaddict.oldpipe_1_iphoneos-arm.deb
+Size: 17482858
+MD5sum: 5d28559c4904fac9f75970dce1b33b7e
+SHA1: c0c153494ccfea8603eb359e240a80fc594d3148
+SHA256: d8a21e37ee921dec764fa7fed841a1f025b9f04dc25f75b60b96823bee92f705
+Section: AppStore Apps
+Homepage: https://github.com/tomkidsrepos/AppStores
+Description: The decrypted ipa file: gdrive_app_1PgRe1cXdkeF5Gi6s3wwMe5DImfciO6bp.ipa converted to .deb automatically by https://alex-free.github.io/ipa2deb .
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: Tomkids
+Depiction: https://github.com/tomkidsrepos/AppStores
+Icon: https://tomkidsrepo.cloud/CydiaIcon.png?v=2
+Name: oldpipe v1 (iOS 6.0)
+Sponsor: Tomkids
 
 Package: trevir.Discord
 Version: 0.8.5
@@ -1319,6 +1463,48 @@ Depiction: https://github.com/tomkidss/cydia
 Name: BáoMới v240117.2200.01 (iOS 6.0)
 Sponsor: Admin <admin@localhost>
 
+Package: vn.gsm.a2600emu
+Version: 1.5.29
+Architecture: iphoneos-arm
+Maintainer: Cydia.vn <repo@cydia.vn>
+Installed-Size: 4613
+Depends: firmware (>= 3.1)
+Filename: debs/vn.gsm.a2600emu_1.5.29_iphoneos-arm.deb
+Size: 1622532
+MD5sum: 5572a5c1908bd450cd687caca149a3e6
+SHA1: ca5a3b51ac2478a9231f1faad16e71cd8b246ca1
+SHA256: 0a5b17e07419b2a0ab522df1cb4403220e0f6850c824cbf83a07dbda45f1d5cb
+Section: !CydiaVn-Games
+Homepage: http://cydia.vn/
+Description: full-featured Atari 2600 VCS emulator
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: Robert Broglia
+Depiction: http://cydia.vn/depic/t2165/
+Icon: file:///Applications/2600Emu.app/icon-57.png
+Name: 2600.emu
+Sponsor: Cydia.vn Blog's <http://cydia.vn/>
+
+Package: vn.gsm.androiddelete
+Version: 1.2.1
+Architecture: iphoneos-arm
+Maintainer: Thieu.Bocap <repo@cydia.vn>
+Installed-Size: 56
+Depends: gsmicon, mobilesubstrate, preferenceloader, firmware (>= 4.0)
+Filename: debs/vn.gsm.androiddelete_1.2.1_iphoneos-arm.deb
+Size: 45450
+MD5sum: e55d92e062ab62d83151e3e643a57150
+SHA1: 7bcfe8ae950889281b3c4266d64f403258ef8ed2
+SHA256: 7349f4b1825bd7fe3259a6430ec512ede30564002ef13619a091e2371ec4c952
+Section: !GSMVN-Tools
+Homepage: http://cydia.vn/
+Description: drag wiggling icons to the trash to delete
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: Fr0zen Sun
+Depiction: http://cydia.gsm.vn/t1907/
+Icon: file:///Library/PreferenceLoader/Preferences/AndroidDelete@2x.png
+Name: Android Delete
+Sponsor: iPhone GSM.VN <http://gsm.vn/f339/>
+
 Package: vn.gsm.androidloader
 Version: 1.2.1
 Architecture: iphoneos-arm
@@ -1338,6 +1524,67 @@ Depiction: http://cydia.gsm.vn/t1377/
 Icon: file:///Library/PreferenceBundles/AndroidLoaderPrefs.bundle/AndroidLoader@2x.png
 Name: AndroidLoader
 Sponsor: iPhone GSM.VN <http://gsm.vn/f339>
+
+Package: vn.gsm.androidlockxt
+Version: 3.6k
+Architecture: iphoneos-arm
+Maintainer: Cydia.vn <repo@cydia.vn>
+Depends: mobilesubstrate, preferenceloader (>= 2.0.3-2), firmware (>= 3.2)
+Conflicts: com.intelliborn.intelliscreen, cydialer, com.zmaster.androidlock
+Filename: debs/vn.gsm.androidlockxt_3.6k_iphoneos-arm.deb
+Size: 3883522
+MD5sum: c0173d3d9fe653a43f4026f59272204f
+SHA1: d7d612ec8936d50c988fd7a97ac8864a6e517388
+SHA256: 7041d6406c6ea7ae5bb48897e081f30e4883ae4c8cf3c57cdda5bfa13655f9f8
+Section: !CydiaVn-Tools
+Homepage: http://cydia.vn/
+Description: An Android-like lockscreen where you have to draw the correct pattern to unlock.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: Zmaster <repo@cydia.vn>
+Depiction: http://cydia.vn/depic/t54/
+Name: AndroidLock XT
+Sponsor: Cydia.vn Blog's <http://cydia.vn/>
+
+Package: vn.gsm.appcake
+Version: 2.1
+Architecture: iphoneos-arm
+Maintainer: Thieu.Bocap <support@gsm.vn>
+Depends: gsmicon
+Filename: debs/vn.gsm.appcake_2.1_iphoneos-arm.deb
+Size: 1035378
+MD5sum: 35cb3798234ac8b791d058099f34c686
+SHA1: d1c581f26e580862d020c8903796462fd8329bf0
+SHA256: 4bef5cd01dc63b2197972272a8dd9d53e196982f08e4cc3c3c94dc92475e7f0f
+Section: !GSMVN-Apps
+Homepage: http://iphone.gsm.vn/
+Description: Ứng dụng giúp cài đặt các IPA trực tiếp trên iPhone!
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: hotsjf <support@gsm.vn>
+Icon: file:///Applications/AppCake2.app/Icon.png
+Name: AppCake+
+Sponsor: iPhone GSM.VN <http://gsm.vn/f339/>
+
+Package: vn.gsm.auxo
+Version: 1.4.1-380+debug
+Architecture: iphoneos-arm
+Maintainer: Cydia.vn <repo@cydia.vn>
+Installed-Size: 1724
+Depends: gsmicon, firmware (>= 5.1), mobilesubstrate, preferenceloader, applist, com.a3tweaks.flipswitch (>> 1.0)
+Conflicts: vn.gsm.auxo.org, org.thebigboss.auxo
+Filename: debs/vn.gsm.auxo_1.4.1-380+debug_iphoneos-arm.deb
+Size: 869446
+MD5sum: 03c7d734c46033e564e5836b07dc8a61
+SHA1: 049ef51c112f128f295eabb5227d8c6eea676959
+SHA256: 0c3df46ed046e53bea5063898a45bd7e444b6db1b2cb0a24b12f67dab00f9d63
+Section: !GSMVN-Tools
+Homepage: http://cydia.vn/
+Description: A bleeding edge, nightly beta of the popular app switcher, Auxo.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: A3tweaks
+Depiction: http://cydia.gsm.vn/t3857/
+Icon: file:///Library/PreferenceLoader/Preferences/AuxoIcon@2x.png
+Name: Auxo Beta
+Sponsor: Cydia.vn Blog's <http://cydia.vn/>
 
 Package: vn.gsm.bitesms6
 Version: 7.5
@@ -1382,6 +1629,45 @@ Author: Yllier <repo@cydia.vn>
 Depiction: http://cydia.gsm.vn/t66/
 Icon: file:///System/Library/PreferenceBundles/AdBlockerPreferences.bundle/blockericon@2x.png
 Name: AdBlocker
+Sponsor: Cydia.vn Blog's <http://cydia.vn/>
+
+Package: vn.gsm.c64emu
+Version: 1.5.29
+Architecture: iphoneos-arm
+Installed-Size: 5526
+Depends: firmware (>= 4.3)
+Filename: debs/vn.gsm.c64emu_1.5.29_iphoneos-arm.deb
+Size: 2352036
+MD5sum: 253da22a1a38b7b9bcf6fc52a7291981
+SHA1: 892faa255741cd27d6017821d4be041e3b59f371
+SHA256: e31cd36cd72337063abaf345c4353a5b66e99e3698428500145e39f214bc806c
+Section: !CydiaVn-Games
+Description: Advanced Commodore 64 (C64) emulator
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: Robert Broglia
+Depiction: http://cydia.vn/depic/t5713/
+Icon: file:///Applications/C64Emu.app/icon-57.png
+Name: C64.emu
+
+Package: vn.gsm.gbcemu
+Version: 1.5.29
+Architecture: iphoneos-arm
+Maintainer: Cydia.vn <repo@cydia.vn>
+Installed-Size: 2312
+Depends: firmware (>= 3.1)
+Filename: debs/vn.gsm.gbcemu_1.5.29_iphoneos-arm.deb
+Size: 1046438
+MD5sum: 02594f5a65c1a45434e2e756ef4ab080
+SHA1: 1e9270ed67e4c3139bfb42135b0b890584c43f98
+SHA256: 5d003346c0e11e237383493faba96b907a983a91769e3b270e190ac2c85a170d
+Section: !CydiaVn-Games
+Homepage: http://cydia.vn/
+Description: full-featured Gameboy Color emulator
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: Robert Broglia
+Depiction: http://cydia.vn/depic/t1399/
+Icon: file:///Applications/GbcEmu.app/icon-57.png
+Name: GBC.emu
 Sponsor: Cydia.vn Blog's <http://cydia.vn/>
 
 Package: vn.gsm.iblacklist
@@ -1444,6 +1730,97 @@ Author: Jonas Gessner
 Depiction: http://cydia.vn/depic/t2248/
 Icon: file:///Applications/ProTube.app/icon.png
 Name: ProTube
+
+Package: vn.gsm.springtomize2
+Version: 1.4.3-1
+Architecture: iphoneos-arm
+Maintainer: Cydia.vn <repo@cydia.vn>
+Installed-Size: 561
+Depends: gsmicon, firmware (>= 5.0), mobilesubstrate, preferenceloader, vn.gsm.springtomize2-icons, vn.gsm.springtomize2-localizations
+Conflicts: com.filippobiga.springtomize, vn.gsm.springtomize
+Filename: debs/vn.gsm.springtomize2_1.4.3-1_iphoneos-arm.deb
+Size: 207420
+MD5sum: db0904b86a8ae8d8830165e5bc73c57f
+SHA1: 861b511afab2f0e64e1960b66a6d7729d19e2b08
+SHA256: 20282a4ab1c1a830acaf2c7795f058e4dc771db3a4fb467f875c040982c11464
+Section: !GSMVN-Tools
+Homepage: http://cydia.vn/
+Description: SpringBoard, the way you want it. All over again.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: FilippoBiga
+Depiction: http://cydia.gsm.vn/t2197/
+Icon: file:///Applications/springtomizeapp.app/Icon.png
+Name: Springtomize 2 - iOS 5 & 6
+Sponsor: Cydia.vn Blog's <http://cydia.vn/>
+
+Package: vn.gsm.springtomize2-icons
+Version: 1.0-1
+Architecture: iphoneos-arm
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Installed-Size: 88
+Depends: firmware (>= 5.0)
+Replaces: com.filippobiga.springtomize2 (<< 1.3-3)
+Filename: debs/vn.gsm.springtomize2-icons_1.0-1_iphoneos-arm.deb
+Size: 68022
+MD5sum: 9ecae68e0358daa558a45fffd53da2c2
+SHA1: 48246c3c171e4423380dc5e1854b13ff33c61223
+SHA256: a043bb8f5509d3aadff5610345e58de24540e56343c6c014384567aef5fc17a1
+Section: Addons
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=springtomize2Dp
+Description: Settings Icons for Springtomize2
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Tag: role::developer
+Author: FilippoBiga <filippobiga.dev@gmail.com>
+Depiction: http://cydia.gsm.vn/t2197/
+Dev: filippobiga
+Icon: file:///Applications/springtomizeapp.app/Icon.png
+Name: Springtomize2-Icons
+Sponsor: thebigboss.org <http://thebigboss.org>
+
+Package: vn.gsm.springtomize2-localizations
+Version: 1.0.1
+Architecture: iphoneos-arm
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Installed-Size: 215
+Depends: firmware (>= 5.0)
+Replaces: com.filippobiga.springtomize2 (<< 1.3-3)
+Filename: debs/vn.gsm.springtomize2-localizations_1.0.1_iphoneos-arm.deb
+Size: 56830
+MD5sum: 00a4eedc23c4363cdd639155abcbda41
+SHA1: a9bafcdc269ded8d0cb4d1e4beb2c7ee6f5a4810
+SHA256: 777f421be548661c28ae2048df5e6283a3f334313967338e787f183cf8b9539d
+Section: Addons
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=springtomize2Dp
+Description: Localizations for Springtomize2
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: FilippoBiga <filippobiga.dev@gmail.com>
+Depiction: http://cydia.gsm.vn/t2197/
+Icon: file:///Applications/springtomizeapp.app/Icon.png
+Name: Springtomize2-Localizations
+Sponsor: thebigboss.org <http://thebigboss.org>
+
+Package: vn.gsm.zephyr
+Version: 1.6.4-1
+Architecture: iphoneos-arm
+Maintainer: Cydia.vn <repo@cydia.vn>
+Installed-Size: 112
+Pre-Depends: firmware (>= 5.0)
+Depends: gsmicon, mobilesubstrate, preferenceloader, applist, com.rpetrich.layersnapshotter
+Conflicts: com.dapetcu21.multicleaner (<= 2.9.4), com.xsellize.multicleaner, vn.gsm.multicleaner (<= 2.9.4), com.xsellize.zephyr
+Filename: debs/vn.gsm.zephyr_1.6.4-1_iphoneos-arm.deb
+Size: 44436
+MD5sum: ede9b41dccd3a6539820ffd3a275c4db
+SHA1: 3f0032a927eb9ed6bddc2680704178a343b6eb6f
+SHA256: 01f36a772dce4a1098e1b4581e6f6c8d29cfa071981593e58c0791355bb9120a
+Section: !GSMVN-Tools
+Homepage: http://cydia.vn/
+Description: Awesome, useful swipe multitasking!
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: chpwn
+Depiction: http://cydia.gsm.vn/t2238/
+Icon: file:///Library/PreferenceLoader/Preferences/Zephyr@2x.png
+Name: Zephyr
+Sponsor: Cydia.vn Blog's <http://cydia.vn/>
 
 Package: winterboard
 Version: 0.9.3919
