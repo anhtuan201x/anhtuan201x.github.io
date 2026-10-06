@@ -20,6 +20,52 @@ mkdir -p debs
 mkdir -p dists/stable/main/binary-iphoneos-arm
 
 # ==========================================
+# 2. ĐÓNG GÓI ICON REPO CHUẨN IPHONEOS-ARM (ÁP DỤNG CHO TẤT CẢ CHUYÊN MỤC)
+# ==========================================
+rm -rf debs/tmp_icons
+mkdir -p debs/tmp_icons/DEBIAN debs/tmp_icons/usr/share/cydia/sections
+
+# Thuật toán tự động phủ ảnh CydiaIcon cho toàn bộ các chuyên mục Cydia gốc
+if [ -f "CydiaIcon.png" ]; then 
+    # Icon nguồn mặc định hiển thị ở mặt tiền danh sách Sources
+    cp CydiaIcon.png debs/tmp_icons/usr/share/cydia/sections/com.anhtuan201x.repoicons.png
+    
+    # --- CÁC CHUYÊN MỤC TIẾNG VIỆT ĐỒNG BỘ ---
+    cp CydiaIcon.png "debs/tmp_icons/usr/share/cydia/sections/!AnhTuan201X-Tinh chỉnh.png"
+    cp CydiaIcon.png "debs/tmp_icons/usr/share/cydia/sections/!AnhTuan201X-Hệ thống.png"
+    cp CydiaIcon.png "debs/tmp_icons/usr/share/cydia/sections/!AnhTuan201X-Ứng dụng.png"
+    cp CydiaIcon.png "debs/tmp_icons/usr/share/cydia/sections/!AnhTuan201X-Trò chơi.png"
+    cp CydiaIcon.png "debs/tmp_icons/usr/share/cydia/sections/!AnhTuan201X-Tiện ích.png"
+    cp CydiaIcon.png "debs/tmp_icons/usr/share/cydia/sections/!AnhTuan201X-Giao diện.png"
+    
+    # --- CÁC CHUYÊN MỤC TIẾNG ANH GỐC CỦA CYDIA (ĐỀ PHÒNG MÁY ĐỔI NGÔN NGỮ) ---
+    cp CydiaIcon.png debs/tmp_icons/usr/share/cydia/sections/!AnhTuan201X-Tweaks.png
+    cp CydiaIcon.png debs/tmp_icons/usr/share/cydia/sections/!AnhTuan201X-System.png
+    cp CydiaIcon.png debs/tmp_icons/usr/share/cydia/sections/!AnhTuan201X-Applications.png
+    cp CydiaIcon.png debs/tmp_icons/usr/share/cydia/sections/!AnhTuan201X-Games.png
+    cp CydiaIcon.png debs/tmp_icons/usr/share/cydia/sections/!AnhTuan201X-Utilities.png
+    cp CydiaIcon.png debs/tmp_icons/usr/share/cydia/sections/!AnhTuan201X-Themes.png
+    cp CydiaIcon.png debs/tmp_icons/usr/share/cydia/sections/!AnhTuan201X-Administration.png
+    cp CydiaIcon.png debs/tmp_icons/usr/share/cydia/sections/!AnhTuan201X-Terminal_Support.png
+fi
+
+cat <<EOF > debs/tmp_icons/DEBIAN/control
+Package: com.anhtuan201x.repoicons
+Name: AnhTuan201X Repo Icons
+Version: 1.3
+Architecture: iphoneos-arm
+Maintainer: AnhTuan201X <anhtuan201x@github.io>
+Section: Themes
+Description: Bộ sưu tập biểu tượng tự động áp dụng cho tất cả chuyên mục tiếng Anh và tiếng Việt.
+EOF
+
+sed -i 's/\r$//' debs/tmp_icons/DEBIAN/control
+chmod -R 0755 debs/tmp_icons
+chmod 0644 debs/tmp_icons/DEBIAN/control
+dpkg-deb -Zgzip --build debs/tmp_icons debs/com.anhtuan201x.repoicons_1.3_iphoneos-arm.deb
+rm -rf debs/tmp_icons
+
+# ==========================================
 # 1. ĐẾM SỐ LƯỢNG GÓI SẢN PHẨM CYDIA REPO
 # ==========================================
 count_deb=$(find debs -maxdepth 1 -type f -name "*.deb" | wc -l)
