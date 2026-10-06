@@ -20,21 +20,21 @@ mkdir -p debs
 mkdir -p dists/stable/main/binary-iphoneos-arm
 
 # ==========================================
-# 2. ĐÓNG GÓI ICON REPO CHUẨN IPHONEOS-ARM (SỬA ĐƯỜNG DẪN THEO Ý TUẤN)
+# 2. ĐÓNG GÓI ICON REPO CHUẨN IPHONEOS-ARM (BẢN VÁ KHỚP NẸP 100% Ý TUẤN)
 # ==========================================
 rm -rf debs/tmp_icons
 mkdir -p debs/tmp_icons/DEBIAN
 mkdir -p debs/tmp_icons/Applications/Cydia.app/Sections
 mkdir -p debs/tmp_icons/Applications/Cydia.app/Sources
 
-# Nhân bản file logo CydiaIcon.png của Tuấn vào đúng thư mục chuyên mục (Sections) tiếng Anh và thư mục nguồn (Sources)
+# Phân bóc tệp tin logo CydiaIcon.png của Tuấn vào đúng phân vùng hệ thống Apple
 if [ -f "CydiaIcon.png" ]; then 
-    # 1. Gài logo hiển thị đại diện nhỏ ngay cạnh tên nguồn ngoài mặt tiền Cydia (Thư mục Sources)
+    # 1. GÀI FILE TRONG THƯ MỤC SOURCES (Tên chuẩn cydiaicon và domain của Tuấn)
+    cp CydiaIcon.png debs/tmp_icons/Applications/Cydia.app/Sources/cydiaicon
+    cp CydiaIcon.png debs/tmp_icons/Applications/Cydia.app/Sources/anhtuan201x.github.io.png
     cp CydiaIcon.png debs/tmp_icons/Applications/Cydia.app/Sources/anhtuan201x.png
-    cp CydiaIcon.png debs/tmp_icons/Applications/Cydia.app/Sources/com.anhtuan201x.repoicons.png
     
-    # 2. Gài logo xóa bỏ dấu chấm hỏi cho toàn bộ các chuyên mục tiếng Anh gốc (Thư mục Sections)
-    cp CydiaIcon.png debs/tmp_icons/Applications/Cydia.app/Sections/com.anhtuan201x.repoicons.png
+    # 2. GÀI FILE TRONG THƯ MỤC SECTIONS (Bỏ file com.anhtuan201x rác, giữ lại tên chuyên mục gốc)
     cp CydiaIcon.png debs/tmp_icons/Applications/Cydia.app/Sections/!AnhTuan201X-Tweaks.png
     cp CydiaIcon.png debs/tmp_icons/Applications/Cydia.app/Sections/!AnhTuan201X-System.png
     cp CydiaIcon.png debs/tmp_icons/Applications/Cydia.app/Sections/!AnhTuan201X-Applications.png
@@ -46,17 +46,17 @@ fi
 cat <<EOF > debs/tmp_icons/DEBIAN/control
 Package: com.anhtuan201x.repoicons
 Name: AnhTuan201X Repo Icons
-Version: 1.4
+Version: 1.5
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Section: Themes
-Description: Bộ sưu tập biểu tượng chuẩn hệ thống Cydia.app cho cả Sources và Sections.
+Description: Bộ sưu tập biểu tượng chuẩn đét hệ thống Cydia cổ cho cả Sources và Sections.
 EOF
 
 sed -i 's/\r$//' debs/tmp_icons/DEBIAN/control
 chmod -R 0755 debs/tmp_icons
 chmod 0644 debs/tmp_icons/DEBIAN/control
-dpkg-deb -Zgzip --build debs/tmp_icons debs/com.anhtuan201x.repoicons_1.4_iphoneos-arm.deb
+dpkg-deb -Zgzip --build debs/tmp_icons debs/com.anhtuan201x.repoicons_1.5_iphoneos-arm.deb
 rm -rf debs/tmp_icons
 
 # ==========================================
