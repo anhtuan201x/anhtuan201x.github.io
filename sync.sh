@@ -30,7 +30,6 @@ mkdir -p debs/tmp_icons/Applications/Cydia.app/Sources
 # Phân bóc tệp tin logo CydiaIcon.png của Tuấn vào đúng phân vùng hệ thống Apple
 if [ -f "CydiaIcon.png" ]; then 
     # 1. GÀI FILE TRONG THƯ MỤC SOURCES (Tên chuẩn cydiaicon và domain của Tuấn)
-    cp CydiaIcon.png debs/tmp_icons/Applications/Cydia.app/Sources/cydiaicon
     cp CydiaIcon.png debs/tmp_icons/Applications/Cydia.app/Sources/anhtuan201x.github.io.png
     cp CydiaIcon.png debs/tmp_icons/Applications/Cydia.app/Sources/anhtuan201x.png
     
