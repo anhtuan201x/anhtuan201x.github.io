@@ -139,6 +139,20 @@ Description: Bộ sưu tập biểu tượng ảnh nhỏ hiển thị cho các g
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Name: AnhTuan201X Repo Icons
 
+Package: com.anhtuan201x.repoicons
+Version: 1.3
+Architecture: iphoneos-arm
+Maintainer: AnhTuan201X <anhtuan201x@github.io>
+Filename: debs/com.anhtuan201x.repoicons_1.3_iphoneos-arm.deb
+Size: 16462
+MD5sum: 5a04aecac51be2ac30992a20f80ab2a7
+SHA1: c8a436d928023492253b95482c4e1cc66cbbe537
+SHA256: 78e0eb3948c3e9c42c82f08ef1add935183fcb53aa519c5bfb3b32f7f700b8f5
+Section: Themes
+Description: Bộ sưu tập biểu tượng tự động áp dụng cho tất cả chuyên mục tiếng Anh và tiếng Việt.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Name: AnhTuan201X Repo Icons
+
 Package: com.blackcrafter.slidemyname
 Version: 1.1
 Architecture: iphoneos-arm
