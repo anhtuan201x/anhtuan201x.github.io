@@ -45,7 +45,7 @@ fi
 cat <<EOF > debs/tmp_icons/DEBIAN/control
 Package: com.anhtuan201x.repoicons
 Name: AnhTuan201X Repo Icons
-Version: 1.5
+Version: 1.6
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Section: Themes
