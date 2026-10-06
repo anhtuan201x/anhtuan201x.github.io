@@ -1,11 +1,11 @@
 Origin: AnhTuan201X Repo
 Label: AnhTuan201X Repo
 Suite: stable
-Version: 1.3
+Version: 1.4
 Codename: stable
 Architectures: iphoneos-arm
 Components: main
 Description: Kho lưu trữ Tweak và Ứng dụng Jailbreak của AnhTuan201X.
 MD5Sum:
- 9efec1eb9b7b7812f48de7b1b328b78a 77862 main/binary-iphoneos-arm/Packages
- 7f058c2010cab1b461d96ba636279f78 20733 main/binary-iphoneos-arm/Packages.bz2
+ c1b341b1fa9cf5f2475492a4aa0de676 77862 main/binary-iphoneos-arm/Packages
+ 85d789f6768d582aec1338be9c4d11dd 20725 main/binary-iphoneos-arm/Packages.bz2
