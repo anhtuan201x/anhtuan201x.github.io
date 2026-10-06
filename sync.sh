@@ -362,7 +362,7 @@ cat <<EOF > Release
 Origin: AnhTuan201X Repo
 Label: AnhTuan201X Repo
 Suite: stable
-Version: 1.4
+Version: 1.5
 Codename: stable
 Architectures: iphoneos-arm
 Components: main
