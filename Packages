@@ -173,9 +173,9 @@ Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: debs/com.anhtuan201x.repoicons_1.5_iphoneos-arm.deb
 Size: 15544
-MD5sum: b377aaf41f89ecf74058484ff54c2418
-SHA1: f248b86d727fbb05667008bd47a77f3d2152b07b
-SHA256: ec251a10f74adcf58920703eece92bbc38e2a814dbf86fd0db8d750b0492e38d
+MD5sum: 7cac502b28fe0b18d0433547841d89bf
+SHA1: cfd17a79eddb8fc31a914082f5b2e9316987ff06
+SHA256: 62051a5a036b3448060b5c89c3aa0f828e981e8ebdbf9c462daa01d46c967bab
 Section: Themes
 Description: Bộ sưu tập biểu tượng chuẩn đét hệ thống Cydia cổ cho cả Sources và Sections.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
