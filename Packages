@@ -196,10 +196,10 @@ Version: 1.6
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: debs/com.anhtuan201x.repoicons_1.5_iphoneos-arm.deb
-Size: 15418
-MD5sum: f5e57acf0978fce27d38cd6ee624e778
-SHA1: df9d9789faab056599bc8d9f6568332469733835
-SHA256: a355b11259abde386ec715608892246ba19230b0262ff2a03d326ccadfa6c4a8
+Size: 15416
+MD5sum: 00cc27639dce1cbf4060dd32fc46aad1
+SHA1: cca38e1e0e70fe0b76a59bd529dfa64b5e29b94f
+SHA256: 18df7bed4f3eb99a099d4e401fe7b98c59351e00eddb9ef3bb3d881de7e56abf
 Section: Themes
 Description: Bộ sưu tập biểu tượng chuẩn đét hệ thống Cydia cổ cho cả Sources và Sections.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
@@ -852,6 +852,68 @@ Description: Ports Apple's GrandSlam Authentication protocol to iOS versions pri
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: Pod <pod@podpod123.com>
 Name: GSAPort
+
+Package: com.ps.emojiportlegacy
+Version: 1.8.10
+Architecture: iphoneos-arm
+Maintainer: PoomSmart
+Installed-Size: 432
+Depends: preferenceloader, firmware (>= 6.0), firmware (<< 8.3), com.ps.emojilayout (>= 1.1.21), com.ps.emojiattributes (>= 1.4.4~b1), com.ps.emojilocalization (>= 1.1), com.ps.emojilibrary (>= 1.6.1), firmware (<< 7.0) | com.ps.emojiresources (>= 1.2)
+Conflicts: com.ps.emoji9legacy, com.ps.emoji10legacy
+Filename: debs/com.ps.emojiportlegacy_1.8.10_iphoneos-arm.deb
+Size: 80320
+MD5sum: 8563dd25fbb210f598a02f400806bf79
+SHA1: cc0d363f176d739c3ad666ed36dc402cade8f6fb
+SHA256: 5f13ffed0d14c9c87eba376f2d4b312d18836be1387327a807b43ae5a3e4a819
+Section: Tweaks
+Description: Latest emojis for iOS 6.0-8.2
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Tag: compatible::ios6, compatible::ios7, compatible::ios8
+Author: PoomSmart
+Depiction: https://poomsmart.github.io/repo/depictions/emojiport_6.html
+Name: EmojiPort (iOS 6.0-8.2)
+
+Package: com.ps.emojiportps
+Version: 1.7.1
+Architecture: iphoneos-arm
+Maintainer: PoomSmart
+Installed-Size: 268
+Depends: firmware (>= 8.3), firmware (<< 10.0), com.ps.emojiattributes (>= 1.4.4~b1), com.ps.emojilibrary (>= 1.6.0~b2), firmware (>= 9.1) | com.ps.emojilocalization (>= 1.1), firmware (>= 9.1) | com.ps.emojiresources (>= 1.1)
+Conflicts: org.thebigboss.emoji83plus, com.hamzasood.emoji9, com.ps.emoji9ps, com.ps.emoji10ps, com.ps.emojiportfix
+Replaces: com.ps.emojiportfix
+Provides: com.ps.emojiportfix
+Filename: debs/com.ps.emojiportps_1.7.1_iphoneos-arm.deb
+Size: 14850
+MD5sum: 12250a1a8b6a221446b0dad42d1b914c
+SHA1: 784e2cbd28b7723e2c21a4121f70a865d516da96
+SHA256: 43b62a77e7557a58953fa04061d7f358ca3c3c39b7566c0a335913b7de95500c
+Section: Tweaks
+Description: Latest emojis for iOS 8.3-9.3
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Tag: compatible::ios8, compatible::ios9
+Author: PoomSmart
+Depiction: https://poomsmart.github.io/repo/depictions/emojiport_8_9.html
+Name: EmojiPort (iOS 8.3-9.3)
+
+Package: com.ps.emojiportwt
+Version: 1.4.2
+Architecture: iphoneos-arm
+Maintainer: PoomSmart
+Installed-Size: 304
+Depends: firmware (>= 10.0), firmware (<< 12.0), com.ps.emojiattributes (>= 1.4.5), com.ps.emojilibrary (>= 1.6.1), com.ps.emojiport10resources (>= 1.5.0)
+Conflicts: com.ps.emoji10wt
+Filename: debs/com.ps.emojiportwt_1.4.2_iphoneos-arm.deb
+Size: 14946
+MD5sum: 9cac27722b7bf44093b9b5f1c5d4a86a
+SHA1: 99ea375ddb28e02f0e77d4205819e72a4c8e115a
+SHA256: 7267d7cea5a8d6f3fe602aeb21bdc8a862db57e017898b8c271c34ee143ee2b0
+Section: Tweaks
+Description: Latest emojis for iOS 10.0-11.4
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: PoomSmart
+Depiction: https://poomsmart.github.io/repo/depictions/emojiport_10.html
+Name: EmojiPort (iOS 10.0-11.4)
+Sileodepiction: https://poomsmart.github.io/repo/sileodepictions/emojiport_10.json
 
 Package: com.pw5a29.speedintensifier
 Version: 10.1-1
