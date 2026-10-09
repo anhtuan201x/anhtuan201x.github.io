@@ -1,11 +1,17 @@
+# ==========================================
+# 6. XUẤT BẢN FILE RELEASE KHÓA CỨNG (GÀI THẺ ABOUT CHO CYDIA)
+# ==========================================
+cat <<EOF > Release
 Origin: AnhTuan201X Repo
 Label: AnhTuan201X Repo
 Suite: stable
-Version: 1.6
+Version: 1.0
 Codename: stable
 Architectures: iphoneos-arm
 Components: main
 Description: Kho lưu trữ Tweak và Ứng dụng Jailbreak của AnhTuan201X.
+About: about.html
 MD5Sum:
- 7dbcea5cf3125cc0e4d87e2770d8da22 85612 main/binary-iphoneos-arm/Packages
- beaa55ab3bab0a8310b40283feab11c6 22315 main/binary-iphoneos-arm/Packages.bz2
+ $(md5sum dists/stable/main/binary-iphoneos-arm/Packages | cut -d' ' -f1) $(stat -c%s dists/stable/main/binary-iphoneos-arm/Packages) main/binary-iphoneos-arm/Packages
+ $(md5sum dists/stable/main/binary-iphoneos-arm/Packages.bz2 | cut -d' ' -f1) $(stat -c%s dists/stable/main/binary-iphoneos-arm/Packages.bz2) main/binary-iphoneos-arm/Packages.bz2
+EOF
