@@ -1,0 +1,29 @@
+{
+  "minVersion": "0.1",
+  "tabs": [
+    {
+      "class": "SileoDepictionTabBarTabItem",
+      "title": "About Me",
+      "view": {
+        "class": "SileoDepictionStackView",
+        "views": [
+          {
+            "class": "SileoDepictionHeaderView",
+            "title": "AnhTuan201X Repo",
+            "useBoldText": true
+          },
+          {
+            "class": "SileoDepictionMarkdownView",
+            "markdown": "**Xin chào!** Tôi là người duy trì kho lưu trữ này nhằm hỗ trợ cộng đồng **iOS Legacy** tại Việt Nam. \n\nCác sản phẩm nổi bật:\n- **Hanabi CA Cert**: Sửa lỗi bảo mật SSL.\n- **AppStore Fix**: Hồi sinh App Store trên iOS cũ.",
+            "useMargins": true
+          },
+          {
+            "class": "SileoDepictionTableButtonView",
+            "title": "Ghé thăm GitHub",
+            "action": "https://anhtuan201x.github.com"
+          }
+        ]
+      }
+    }
+  ]
+}
