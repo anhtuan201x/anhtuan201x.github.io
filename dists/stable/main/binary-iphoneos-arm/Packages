@@ -196,14 +196,28 @@ Version: 1.6
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: debs/com.anhtuan201x.repoicons_1.5_iphoneos-arm.deb
-Size: 15416
-MD5sum: 00cc27639dce1cbf4060dd32fc46aad1
-SHA1: cca38e1e0e70fe0b76a59bd529dfa64b5e29b94f
-SHA256: 18df7bed4f3eb99a099d4e401fe7b98c59351e00eddb9ef3bb3d881de7e56abf
+Size: 15418
+MD5sum: ece5416005f0a28a20d96c012c4e824f
+SHA1: 03a717e0053e9e486c2e5a162114d5d397d49c2a
+SHA256: 25a82bb922525c1556b2ed19b3f1553370143a1df7ae99e02636e76fedfc4a54
 Section: Themes
 Description: Bộ sưu tập biểu tượng chuẩn đét hệ thống Cydia cổ cho cả Sources và Sections.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Name: AnhTuan201X Repo Icons
+
+Package: com.anhtuan201x.youtube.1.0.0.iphone.4s
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: AnhTuan201X <anhtuan201x@github.io>
+Filename: debs/youtube.1.0.0.iphone.4s.deb
+Size: 5128056
+MD5sum: 2b387cd7f57b983dc37c96cd7aded474
+SHA1: 19d149b1266a4f82b24e3295445eafd009af6199
+SHA256: 8cbd2981695c303bf550977aaefb301a9ed214c6cbdf2d7597bf374f34dcad2c
+Section: Applications
+Description: Ứng dụng chuyển đổi tự động từ file IPA gốc.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Name: YouTube 1.0.0 iPhone 4s
 
 Package: com.blackcrafter.slidemyname
 Version: 1.1
