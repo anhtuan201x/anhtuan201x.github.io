@@ -333,6 +333,43 @@ musicToggle.addEventListener("click", () => {
 EOF
 
 # ==========================================
+# 4. XUẤT BẢN TRANG PHỤ TRONG CYDIA: about.html
+# ==========================================
+cat > about.html <<EOF
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About AnhTuan201X</title>
+<style>
+body { font-family: -apple-system, sans-serif; background: #f2f2f7; color: #000; margin: 0; padding: 15px; }
+.card { background: #fff; border-radius: 12px; padding: 15px; margin-bottom: 15px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+.title { font-size: 20px; font-weight: bold; color: #ff4b2b; text-align: center; margin-bottom: 5px; }
+.subtitle { font-size: 13px; color: #8e8e93; text-align: center; margin-bottom: 15px; }
+.item { border-bottom: 1px solid #e5e5ea; padding: 10px 0; font-size: 14px; }
+.item:last-child { border-bottom: none; }
+.label { font-weight: bold; color: #333; }
+.val { float: right; color: #007aff; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="card">
+    <div class="title">AnhTuan201X Repo 🚀</div>
+    <div class="subtitle">Thông tin bản quyền và hệ thống nguồn</div>
+    <div class="item"><span class="label">Chủ sở hữu:</span><span class="val">AnhTuan201X</span></div>
+    <div class="item"><span class="label">Quốc gia:</span><span class="val">Việt Nam 🇻🇳</span></div>
+    <div class="item"><span class="label">Phiên bản nguồn:</span><span class="val">1.0 Stable</span></div>
+    <div class="item"><span class="label">Năm phát hành:</span><span class="val">2026</span></div>
+</div>
+<div class="card" style="text-align: justify; font-size: 13px; line-height: 1.5; color: #555;">
+    ℹ️ <b>Lời ngỏ:</b> Cảm ơn bạn đã tin tưởng và nạp nguồn của Tuấn! Đây là kho lưu trữ tinh khiết, sạch bóng lỗi, chuyên bẻ khóa và lưu giữ các báu vật tweak hoài niệm dành riêng cho thiết bị iOS Legacy. Chúc bạn có trải nghiệm tuyệt vời nhất trên chiếc iPhone cổ của mình!
+</div>
+</body>
+</html>
+EOF
+
+# ==========================================
 # 3. QUÉT MỤC LỤC PACKAGES VÀ TỰ ĐỘNG FIX LỖI ICON DẤU CHẤM HỎI
 # ==========================================
 rm -f Packages Packages.bz2 dists/stable/main/binary-iphoneos-arm/Packages dists/stable/main/binary-iphoneos-arm/Packages.bz2
