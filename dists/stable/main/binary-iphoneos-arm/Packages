@@ -163,6 +163,20 @@ Description: Ứng dụng chuyển đổi tự động từ file IPA gốc.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Name: Facebook 5.5.0
 
+Package: com.anhtuan201x.messenger.2.5.0
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: AnhTuan201X <anhtuan201x@github.io>
+Filename: debs/messenger.2.5.0.deb
+Size: 13352048
+MD5sum: bcb4ef6788263cead2971af088e8f828
+SHA1: 96838e1b8dc5e355bbf85097473f192968a3bfd9
+SHA256: c7235c5835447c3e4ae64692141741324c2ab416e24893fa5de4a1430b2546cd
+Section: Applications
+Description: Ứng dụng chuyển đổi tự động từ file IPA gốc.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Name: Messenger 2.5.0
+
 Package: com.anhtuan201x.repoicons
 Version: 1.0
 Architecture: iphoneos-arm
@@ -211,13 +225,27 @@ Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: debs/com.anhtuan201x.repoicons_1.5_iphoneos-arm.deb
 Size: 15418
-MD5sum: f61b61d7105aa5adf3114d67dfe27c3a
-SHA1: ec144ef89dea4ebfc5f5055d7b85728626979595
-SHA256: df7a7f88dd9c033fcb341a3b5ac2296f5d722b669cc03f9bb34e86850e280b74
+MD5sum: bd4e57aaa86c24da31dbffbada1c96a3
+SHA1: 8f32ea87e3ded6eeb7e3ceb5e875c8e44286fa8d
+SHA256: 7dbd0e680284e3d0659942a6959792ba065cc827d361796db11a44657730dcf0
 Section: Themes
 Description: Bộ sưu tập biểu tượng chuẩn đét hệ thống Cydia cổ cho cả Sources và Sections.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Name: AnhTuan201X Repo Icons
+
+Package: com.anhtuan201x.snapchat.7.0.5
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: AnhTuan201X <anhtuan201x@github.io>
+Filename: debs/snapchat.7.0.5.deb
+Size: 5989064
+MD5sum: e2fc8d22fdbd17cbd53b3017b99a98db
+SHA1: 03815c27edffa9b23134e0df676143bab5be6cb7
+SHA256: 1aa2ab50cf98a4765a13697810d4248604dca5835797e3d14c36d678c8e29997
+Section: Applications
+Description: Ứng dụng chuyển đổi tự động từ file IPA gốc.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Name: Snapchat 7.0.5
 
 Package: com.anhtuan201x.twitter.5.9.0
 Version: 1.0
