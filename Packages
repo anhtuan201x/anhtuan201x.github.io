@@ -177,6 +177,20 @@ Description: Ứng dụng chuyển đổi tự động từ file IPA gốc.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Name: AccuWeather for iPad 1.6
 
+Package: com.anhtuan201x.chatgpt-v1.0.2-openrouter
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: AnhTuan201X <anhtuan201x@github.io>
+Filename: debs/chatgpt-v1.0.2-openrouter.deb
+Size: 3551764
+MD5sum: 84eee910c69613a8d909408acde35554
+SHA1: 3ac19ed181a05b81c14cb519e66c9e56784f1e12
+SHA256: 4aadaecec1d3ce67f59d50ec856a3177911686126083451b8e4c1b99833c5cb5
+Section: Applications
+Description: Ứng dụng chuyển đổi tự động từ file IPA gốc.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Name: ChatGPT-v1.0.2-openrouter
+
 Package: com.anhtuan201x.facebook.5.5.0
 Version: 1.0
 Architecture: iphoneos-arm
@@ -266,10 +280,10 @@ Version: 1.6
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: debs/com.anhtuan201x.repoicons_1.5_iphoneos-arm.deb
-Size: 15416
-MD5sum: 62ab3d505cbd6daf6900cc0b18c04b17
-SHA1: 01148a7cd8baf3b15d3cfafdabb254d6b21450ea
-SHA256: f83f8a88e621d0578a2dd7f043370dfb17622760f3ed4ff69690421a6a63b847
+Size: 15418
+MD5sum: 861f5b088e1bdfd3c4149bb9c19e2b11
+SHA1: 220e948decc58ecdad87a692483493ca2edac5f5
+SHA256: 9bc99ff7c3d8b25bb8d08a54c1aae4ecfaf4715381feb9ad262ffdee2a727a50
 Section: Themes
 Description: Bộ sưu tập biểu tượng chuẩn đét hệ thống Cydia cổ cho cả Sources và Sections.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
