@@ -163,6 +163,20 @@ Description: Ứng dụng chuyển đổi tự động từ file IPA gốc.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Name: 2048
 
+Package: com.anhtuan201x.accuweather.for.ipad.1.6
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: AnhTuan201X <anhtuan201x@github.io>
+Filename: debs/accuweather.for.ipad.1.6.deb
+Size: 7601158
+MD5sum: c1686ef30b530d01a445b942c1f3add9
+SHA1: 0b81ff9ea4d60a94faf41b6301a40afaa368999c
+SHA256: 66076d0987515d58034fc019bc3fc36f095764e870c462fd0fed65bc98d52a97
+Section: Applications
+Description: Ứng dụng chuyển đổi tự động từ file IPA gốc.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Name: AccuWeather for iPad 1.6
+
 Package: com.anhtuan201x.facebook.5.5.0
 Version: 1.0
 Architecture: iphoneos-arm
@@ -190,6 +204,20 @@ Section: Applications
 Description: Ứng dụng chuyển đổi tự động từ file IPA gốc.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Name: Messenger 2.5.0
+
+Package: com.anhtuan201x.minecraft.pe.0.7.5
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: AnhTuan201X <anhtuan201x@github.io>
+Filename: debs/minecraft.pe.0.7.5.deb
+Size: 5069550
+MD5sum: ee860c2648128f359c07e798ab221d31
+SHA1: 59fcd3567fa009c1c29f26250a4fff87b21a6ed6
+SHA256: a9a109b4cb601bba74d90154c6b0072acd92d2d4de3d074b2b14b257c80a5284
+Section: Applications
+Description: Ứng dụng chuyển đổi tự động từ file IPA gốc.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Name: Minecraft PE 0.7.5
 
 Package: com.anhtuan201x.repoicons
 Version: 1.0
@@ -239,9 +267,9 @@ Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: debs/com.anhtuan201x.repoicons_1.5_iphoneos-arm.deb
 Size: 15416
-MD5sum: e068f5c8d7aa17ce43fed6d271ecc4a2
-SHA1: b9f837c060ba823f0bb2c30508bcb1c541a5fbf7
-SHA256: 1cfd7c9cb3961bc5638ddf9965595dbc49a0d6c2cbe83784f021ba5ea957580b
+MD5sum: 62ab3d505cbd6daf6900cc0b18c04b17
+SHA1: 01148a7cd8baf3b15d3cfafdabb254d6b21450ea
+SHA256: f83f8a88e621d0578a2dd7f043370dfb17622760f3ed4ff69690421a6a63b847
 Section: Themes
 Description: Bộ sưu tập biểu tượng chuẩn đét hệ thống Cydia cổ cho cả Sources và Sections.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
