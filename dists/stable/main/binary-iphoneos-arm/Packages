@@ -210,14 +210,28 @@ Version: 1.6
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: debs/com.anhtuan201x.repoicons_1.5_iphoneos-arm.deb
-Size: 15416
-MD5sum: 0638deebe8b6b18a76eccb6f6f8603d8
-SHA1: aa80d88193d507ced9a25002828a7c60a475a1ca
-SHA256: 45f172e6d27130384eb9c4f6afb0644f42b44ab945fcb00bacb9f9c89b7504c6
+Size: 15418
+MD5sum: f61b61d7105aa5adf3114d67dfe27c3a
+SHA1: ec144ef89dea4ebfc5f5055d7b85728626979595
+SHA256: df7a7f88dd9c033fcb341a3b5ac2296f5d722b669cc03f9bb34e86850e280b74
 Section: Themes
 Description: Bộ sưu tập biểu tượng chuẩn đét hệ thống Cydia cổ cho cả Sources và Sections.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Name: AnhTuan201X Repo Icons
+
+Package: com.anhtuan201x.twitter.5.9.0
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: AnhTuan201X <anhtuan201x@github.io>
+Filename: debs/twitter.5.9.0.deb
+Size: 9634068
+MD5sum: 7b403a118a965c02c9aff65c1b93814b
+SHA1: 3ae714dc8fef893a83be8ba9de54a93624996731
+SHA256: 450455a4c1fcd7d78edcdb8d4e2898a7c136936bbf954aa53956b5a26140d831
+Section: Applications
+Description: Ứng dụng chuyển đổi tự động từ file IPA gốc.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Name: Twitter 5.9.0
 
 Package: com.anhtuan201x.youtube.1.0.0.iphone.4s
 Version: 1.0
