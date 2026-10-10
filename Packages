@@ -149,6 +149,20 @@ Icon: http://i.imgur.com/tvLxnB5.png
 Name: Zeppelin
 Sponsor: ModMyi.com <http://modmyi.com/forums/index.php?styleid=31>
 
+Package: com.anhtuan201x.2048
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: AnhTuan201X <anhtuan201x@github.io>
+Filename: debs/2048.deb
+Size: 3021946
+MD5sum: 2a1f53163beaadd8316a8a3924fca1d4
+SHA1: 176b0755ba6376cf9ad998a07115b8c59f2b7761
+SHA256: b4d5b2b0e9cbc2070093c1f8dc9212330c25e59fd480eff7e4e0b710e6f3da97
+Section: Applications
+Description: Ứng dụng chuyển đổi tự động từ file IPA gốc.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Name: 2048
+
 Package: com.anhtuan201x.facebook.5.5.0
 Version: 1.0
 Architecture: iphoneos-arm
@@ -225,9 +239,9 @@ Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: debs/com.anhtuan201x.repoicons_1.5_iphoneos-arm.deb
 Size: 15418
-MD5sum: bd4e57aaa86c24da31dbffbada1c96a3
-SHA1: 8f32ea87e3ded6eeb7e3ceb5e875c8e44286fa8d
-SHA256: 7dbd0e680284e3d0659942a6959792ba065cc827d361796db11a44657730dcf0
+MD5sum: 005dff2355592fb96cacf0a0523ccc95
+SHA1: f9fde7b925498556249d2ce6bdd9c3b4232f96f9
+SHA256: 1e000b68022a9fa468128b82b0d367c1024ec4f091a2f714330204ceaca31165
 Section: Themes
 Description: Bộ sưu tập biểu tượng chuẩn đét hệ thống Cydia cổ cho cả Sources và Sections.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
