@@ -280,10 +280,10 @@ Version: 1.6
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: debs/com.anhtuan201x.repoicons_1.5_iphoneos-arm.deb
-Size: 15414
-MD5sum: 8641e4b7368837c807165ad62862c2c7
-SHA1: 807cfb1054574f2b211b266481abaf08f4f0d443
-SHA256: 1d5ae9187b198498516542daa288c6093d5e715cf8ecb3f72935bc9989558dcd
+Size: 15418
+MD5sum: 47cba38a06052d66aa407d1d06dc4d47
+SHA1: 8ab3d11668eacf54b8e1c1356d5f6f24184b4bf2
+SHA256: b5659074dd7b838ac2ff66c0cf5394f6677584ac9b6802ca1a86773eff44f7ff
 Section: Themes
 Description: Bộ sưu tập biểu tượng chuẩn đét hệ thống Cydia cổ cho cả Sources và Sections.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
@@ -1371,6 +1371,27 @@ Depiction: http://rpetri.ch/cydia/activator/beta/
 Dev: rpetrich
 Icon: file:///Applications/Activator.app/Icon-Small-modern@2x.png
 Name: Activator
+Sponsor: thebigboss.org <http://thebigboss.org>
+
+Package: libbox2d
+Version: 2.3.0-1
+Architecture: iphoneos-arm
+Maintainer: Bigboss <bigboss@thebigboss.org>
+Installed-Size: 557
+Filename: debs/libbox2d_2.3.0-1.deb
+Size: 141608
+MD5sum: abc5a93d0377bdc97d90e797f0a8373c
+SHA1: d9e5f94d9f7a852d934dcbaada50d8091dea4885
+SHA256: baa060ada98367aa81e4bd69aa179405f42ac8a1abd372ab2be1f3578d80f65d
+Section: Development
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=libbox2dDp
+Description: A 2D physics engine written by Erin Catto
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Tag: role::developer, purpose::library
+Author: Conrad Kramer <support@kramerapps.com>
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=libbox2dDp
+Dev: conradkramer
+Name: Box2D
 Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: me.k3a.powersounddisabler
