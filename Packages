@@ -280,10 +280,10 @@ Version: 1.6
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: debs/com.anhtuan201x.repoicons_1.5_iphoneos-arm.deb
-Size: 15420
-MD5sum: e5647bb97daa14df1bf03dc1df7015f0
-SHA1: 470dc838e41c7ccfcb59c35f6411dff08709683d
-SHA256: 2cecc98936ff8870e621ea7f2f2042e078223228b818a133165816f5247058b4
+Size: 15416
+MD5sum: 7863179f14dcca3d580ea985d48953ec
+SHA1: c41915a46f51f5648f7a048c845b68230756bbfc
+SHA256: c51f75bb2f6453e34b9c56b8c58a28e1e37b15bd688c840d16664fc90536647d
 Section: Themes
 Description: Bộ sưu tập biểu tượng chuẩn đét hệ thống Cydia cổ cho cả Sources và Sections.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
@@ -330,6 +330,28 @@ Section: Applications
 Description: Ứng dụng chuyển đổi tự động từ file IPA gốc.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Name: YouTube 1.0.0 iPhone 4s
+
+Package: com.autopear.installipa
+Version: 3.4.1-1
+Architecture: iphoneos-arm
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Installed-Size: 238
+Depends: firmware (>= 4.0)
+Filename: debs/com.autopear.installipa_3.4.1-1_iphoneos-arm.deb
+Size: 151638
+MD5sum: 7371e80f842b7bfb3876b2b9e49a0293
+SHA1: ca57f3439ff68d90d521b3a06234efdbdb643885
+SHA256: 88c37bf69e637462dd2d67e25f1e7cf80007b346bc8f69eef8e2e093605058e3
+Section: Utilities
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=ipainstallerconsoleDp
+Description: Install IPA from the command line
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Tag: purpose::console, role::enduser, compatible::ios7, compatible::ios8
+Author: Merlin <lonelystars@gmail.com>
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=ipainstallerconsoleDp
+Dev: lonelystars
+Name: IPA Installer Console
+Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: com.blackcrafter.slidemyname
 Version: 1.1
@@ -579,6 +601,25 @@ Author: Robert Broglia <info@explusalpha.com>
 Depiction: http://repo.hackyouriphone.org/depiction/depiction.php?filename=gbaemu
 Name: GBA.emu
 
+Package: com.hackyouriphone.graviboard
+Version: 2.1.1-1
+Architecture: iphoneos-arm
+Maintainer: iLeoLion <repo@hackyouriphone.org>
+Depends: firmware (>= 5.0), mobilesubstrate, libactivator, preferenceloader (>= 1.2), libbox2d
+Conflicts: com.conradkramer.graviboard
+Replaces: com.conradkramer.graviboard
+Filename: debs/com.hackyouriphone.graviboard_2.1.1-1_iphoneos-arm.deb
+Size: 207958
+MD5sum: 26ef3cee9ba73b4cf66782a2f255f9f1
+SHA1: 81fc89b9a370639b3ed1569b6a7f6432a659ceff
+SHA256: e5fa897f6e4ce240de3ed634ca9f8f0f79cdb983a16eb3e331d3295db1480bce
+Section: Tweaks (HYI)
+Description: Adds gravity to SpringBoard!
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: Conrad Kramer <repo@hackyouriphone.org>
+Depiction: http://repo.hackyouriphone.org/depiction/depiction.php?filename=graviboard
+Name: Graviboard
+
 Package: com.hackyouriphone.iconoclasm
 Version: 1.9
 Architecture: iphoneos-arm
@@ -598,6 +639,24 @@ Author: Yanik Magnan <repo@hackyouriphone.org>
 Depiction: http://repo.hackyouriphone.org/depiction/depiction.php?filename=iconoclasm
 Name: Iconoclasm
 
+Package: com.hackyouriphone.infiniboard
+Version: 2.1.1-1
+Architecture: iphoneos-arm
+Maintainer: iDevid <repo@hackyouriphone.org>
+Pre-Depends: firmware (>= 5.0)
+Depends: mobilesubstrate, preferenceloader (>= 1.1), com.chpwn.iconsupport (>= 1.6)
+Filename: debs/com.hackyouriphone.infiniboard_2.1.1-1_iphoneos-arm.deb
+Size: 53072
+MD5sum: 3f38759980798ecfe4378726b1d1def0
+SHA1: e57c7e820dffe658adf4cf077f95977bb7c644f0
+SHA256: e21850ad167edf217ef133ea1cceaa943a040dc291eb39e5c4fd1daa2a8a6ef3
+Section: Tweaks (HYI)
+Description: Vertically scroll your home screen pages!
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: chpwn <repo@hackyouriphone.org>
+Depiction: http://repo.hackyouriphone.org/depiction/depiction.php?filename=infiniboard
+Name: Infiniboard
+
 Package: com.hackyouriphone.infinifolders
 Version: 2.1.1-1
 Architecture: iphoneos-arm
@@ -615,6 +674,22 @@ Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: chpwn <repo@hackyouriphone.org>
 Depiction: http://repo.hackyouriphone.org/depiction/depiction.php?filename=infinifolders
 Name: Infinifolders
+
+Package: com.hackyouriphone.ios7ringtones
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: iDevid <repo@hackyouriphone.org>
+Filename: debs/com.hackyouriphone.ios7ringtones_1.0_iphoneos-arm.deb
+Size: 11774050
+MD5sum: c3efb21f62e2ea56214ea979913eb990
+SHA1: c253c289b2179bf20530382dbb634e02275873f7
+SHA256: fe62f3051c5ca1bc82653278311a3f1a12dde5d3182a43ad826d415dbc5fb2da
+Section: Ringtones (HYI)
+Description: The official iOS 7's Ringtones
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: iDevid <repo@hackyouriphone.org>
+Depiction: http://repo.hackyouriphone.org/depiction/depiction.php?filename=ios7ringtones
+Name: iOS 7 Ringtones
 
 Package: com.hackyouriphone.springtomize3
 Version: 1.4.5-1
