@@ -280,10 +280,10 @@ Version: 1.6
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: debs/com.anhtuan201x.repoicons_1.5_iphoneos-arm.deb
-Size: 15416
-MD5sum: 7863179f14dcca3d580ea985d48953ec
-SHA1: c41915a46f51f5648f7a048c845b68230756bbfc
-SHA256: c51f75bb2f6453e34b9c56b8c58a28e1e37b15bd688c840d16664fc90536647d
+Size: 15420
+MD5sum: 1fff066bc5c0a2fb16bdb4cfcd0876b5
+SHA1: f59a7c58a4c0dbc17ee0fc2a72d56e24dd9f4f16
+SHA256: 61b4890f2c92f7d1adcd4e8184fa4744e9c784bd92e3de0d1625ffaed012cc3b
 Section: Themes
 Description: Bộ sưu tập biểu tượng chuẩn đét hệ thống Cydia cổ cho cả Sources và Sections.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
@@ -691,6 +691,24 @@ Author: iDevid <repo@hackyouriphone.org>
 Depiction: http://repo.hackyouriphone.org/depiction/depiction.php?filename=ios7ringtones
 Name: iOS 7 Ringtones
 
+Package: com.hackyouriphone.iprotect
+Version: 7.0-5
+Architecture: iphoneos-arm
+Maintainer: iDevid <repo@hackyouriphone.org>
+Depends: firmware (>= 6.0), mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.2), applist
+Filename: debs/com.hackyouriphone.iprotect_7.0-5_iphoneos-arm.deb
+Size: 196040
+MD5sum: 2c7e7eb14db00d4e3ac7bae6f96049ca
+SHA1: 9c505d3f9acebc954d85de6c9f848d45ee027005
+SHA256: 9df437b969f934b8d47ead93f9a5cef7d2288dbd44d97149742c0374a29345a6
+Section: Applications (HYI)
+Homepage: http://repo.hackyouriphone.org/depiction/depiction.php?filename=iprotect
+Description: block apps with password/touchID/SIM control
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: Daniel (hdsq2) <repo@hackyouriphone.org>
+Depiction: http://repo.hackyouriphone.org/depiction/depiction.php?filename=iprotect
+Name: iProtect
+
 Package: com.hackyouriphone.springtomize3
 Version: 1.4.5-1
 Architecture: iphoneos-arm
@@ -852,6 +870,23 @@ Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: puy0 <puy0@install0us.com>
 Icon: file:///Applications/install0us.app/Icon.png
 Name: install0us
+
+Package: com.iphonecake.appcake
+Version: 1.1
+Architecture: iphoneos-arm
+Maintainer: hotsjf <iphonecake@gmail.com>
+Filename: debs/com.iphonecake.appcake_1.1_iphoneos-arm.deb
+Size: 623888
+MD5sum: 62156bac24fb33c3121f8dba1065bd7e
+SHA1: e863fdcf933a226bf37af8f0e7b172953e843fc6
+SHA256: eb75d84fc9e83cff060a092b4472132bee3b5841ae46543407bc470d1a91fd32
+Section: [iPhoneCake]
+Description: iPhone端下载及安装IPA,DEB的工具。 Install IPA,deb on iPhone. 更多信息查看 iPhoneCake.com。Please visit iPhoneCake.com for more!
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: hotsjf <iphonecake@gmail.com>
+Icon: file:///Applications/AppCake.app/Icon.png
+Name: AppCake
+Website: http://iphonecake.com/appcake
 
 Package: com.iphonecake.appcake2.ios6
 Version: 4.59
@@ -1279,6 +1314,24 @@ Author: Victor <contact@victorlobe.me>
 Compatibility: iOS 6.0+
 Depiction: http://repo.victorlobe.me/depictions/depiction.html?id=com.victorlobe.appstorefix
 Name: AppStoreFix
+
+Package: com.victorlobe.googlefix
+Version: 1.0.2
+Architecture: iphoneos-arm
+Maintainer: Victor
+Installed-Size: 136
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: debs/com.victorlobe.googlefix_1.0.2_iphoneos-arm.deb
+Size: 8556
+MD5sum: ecd4036c3f58b278b2f523eed93e4676
+SHA1: 4384999e23f5c3be88276003a018040568cad608
+SHA256: 5fa145d814e5ba220f838b40d7952173702d784016f06442b5fc1ff3145cad60
+Section: Tweaks
+Description: Fixes Google on iOS 6
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: Victor
+Depiction: http://repo.victorlobe.me/depictions/depiction.html?id=com.victorlobe.googlefix
+Name: GoogleFix
 
 Package: com.victorlobe.veteris
 Version: 3.2
@@ -1740,6 +1793,29 @@ Icon: https://tomkidsrepo.cloud/CydiaIcon.png?v=2
 Name: oldpipe v1 (iOS 6.0)
 Sponsor: Tomkids
 
+Package: ru.domo.cocoatop
+Version: 2.0.1
+Architecture: iphoneos-arm
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Installed-Size: 915
+Depends: firmware (>= 5.0)
+Filename: debs/ru.domo.cocoatop_2.0.1_iphoneos-arm.deb
+Size: 360582
+MD5sum: eae002115e0da4d6c639e1f82f6652cf
+SHA1: 0e82fefee531ca227e8cb0a9908a7636b440f862
+SHA256: 36da773f1a45c6ef4dd5bdb33a055d1d7499ec42277264541fff9b0c5ef4db1a
+Section: Utilities
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=cocoatopDp
+Description: Process Viewer for iOS GUI
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Tag: purpose::uikit, compatible::ios7, compatible::ios8, compatible::ios9, compatible::ios10
+Author: Domo <domo@rambler.ru>
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=cocoatopDp
+Dev: domo
+Icon: file:///Applications/CocoaTop.app/Icon.png
+Name: CocoaTop
+Sponsor: thebigboss.org <http://thebigboss.org>
+
 Package: sbsettings
 Version: 6.0.5-1
 Architecture: iphoneos-arm
@@ -2053,6 +2129,51 @@ Icon: file:///Applications/AppCake2.app/Icon.png
 Name: AppCake+
 Sponsor: iPhone GSM.VN <http://gsm.vn/f339/>
 
+Package: vn.gsm.appstorevn5x
+Version: 2.6.2
+Architecture: iphoneos-arm
+Maintainer: Thieu.Bocap <support@gsm.vn>
+Pre-Depends: firmware (>= 5.0)
+Depends: gsmicon, vn.gsm.appsync50plus
+Replaces: vn.gsm.appstorevn, vn.gsm.appstorevn3x, vn.gsm.appstorevn4x, vn.gsm.appsync40plus, com.heaveniphone.hipstore, appsync, vn.gsm.appsync40, vn.gsm.appsync41, vn.gsm.appsync42, com.heaveniphone.appsync40plus, appsync40plus.vnmagic, com.heaveniphone.appsync50plus, com.heaveniphone.appsync50
+Filename: debs/vn.gsm.appstorevn5x_2.6.2_iphoneos-arm.deb
+Size: 670062
+MD5sum: fdf3df09e73f14f27a53dbf04b3b1cf0
+SHA1: ee6e6ca33eb0c5060b2c7748400b37924c79570c
+SHA256: dfba9ee091ae7ccf578739f0506fd97b00e14f3d648538cc68858b2c955e47b5
+Section: !GSMVN-Apps
+Homepage: http://cydia.vn/
+Description: AppStoreVN - App Store of Vietnamese.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: Thieu.Bocap <support@gsm.vn>
+Depiction: http://cydia.gsm.vn/t2087/
+Icon: file:///Applications/appstorevn.app/Icon.png
+Name: AppStoreVN OS5.x
+Sponsor: iPhone GSM.VN <http://gsm.vn/f339/>
+
+Package: vn.gsm.appsync50plus
+Version: 2.2b
+Architecture: iphoneos-arm
+Maintainer: Cydia.vn <repo@cydia.vn>
+Depends: gsmicon, firmware (>= 5.0), mobilesubstrate
+Conflicts: us.hackulo.appsync50, vn.gsm.appsync50
+Replaces: us.hackulo.appsync50, vn.gsm.appsync50
+Provides: appsync, us.hackulo.appsync50plus
+Filename: debs/vn.gsm.appsync50plus_2.2b_iphoneos-arm.deb
+Size: 4060
+MD5sum: d1c9365c3c9edec424c25fbf5d1fdd6a
+SHA1: 750221bb3f2cd505545c6875056ead0b85375464
+SHA256: e4b34121b13c54f880a698505ea87af92971b94f405833986a9d04beb1a09076
+Section: !CydiaVn-Tools
+Priority: standard
+Homepage: http://cydia.vn/
+Description: AppSync allows you to sync and install cracked iOS applications.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: Dissident <repo@cydia.vn>
+Depiction: http://cydia.gsm.vn/t2086/
+Name: AppSync for iOS 5.0+
+Sponsor: Cydia.vn Blog's <http://cydia.vn/>
+
 Package: vn.gsm.auxo
 Version: 1.4.1-380+debug
 Architecture: iphoneos-arm
@@ -2138,6 +2259,26 @@ Depiction: http://cydia.vn/depic/t5713/
 Icon: file:///Applications/C64Emu.app/icon-57.png
 Name: C64.emu
 
+Package: vn.gsm.displayrecorder
+Version: 1.3.20K
+Architecture: iphoneos-arm
+Maintainer: Cydia.vn <repo@cydia.vn>
+Installed-Size: 2464
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.2), libactivator (>= 1.9.1), gdata-objectivec-client | firmware (>= 7.0), firmware (>= 3), openssl, firmware (<< 9.9), com.rpetrich.rocketbootstrap (>= 1.0.1) | firmware (<< 7.0), com.a3tweaks.flipswitch (>= 1.0.5)
+Filename: debs/vn.gsm.displayrecorder_1.3.20K_iphoneos-arm.deb
+Size: 956994
+MD5sum: bdfea4fa15caf66179a77b8ff1b1968d
+SHA1: c2ed23d87baa8847d7ab676fe11d1a6951aedcc1
+SHA256: efc094d24db048eb691bf35ff0d021523eea76d85838cfff5980de92fca3d0dd
+Section: !CydiaVn-Apps
+Homepage: http://cydia.vn/
+Description: Record the display in real-time, send to camera roll, web interface, ProTapper-style touch circles and Activator integration
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: Ryan Petrich <repo@cydia.vn>
+Depiction: http://cydia.vn/depic/t971/
+Name: Display Recorder
+Sponsor: Cydia.vn Blog's <http://cydia.vn/>
+
 Package: vn.gsm.gbcemu
 Version: 1.5.29
 Architecture: iphoneos-arm
@@ -2219,6 +2360,27 @@ Author: Jonas Gessner
 Depiction: http://cydia.vn/depic/t2248/
 Icon: file:///Applications/ProTube.app/icon.png
 Name: ProTube
+
+Package: vn.gsm.protubehd
+Version: 1.6.9-2
+Architecture: iphoneos-arm
+Maintainer: Cydia.vn <repo@cydia.vn>
+Installed-Size: 11112
+Depends: firmware (>= 4.3), preferenceloader
+Filename: debs/vn.gsm.protubehd_1.6.9-2_iphoneos-arm.deb
+Size: 10567820
+MD5sum: ad13943ed9ed3d3fe8d65a1550c9035f
+SHA1: 4c7ababfc13a8f85cd8c013929fe9b57cff6651f
+SHA256: 0bd0996a95af9c6aff90d4eb7d13dc60b55ddbb3f0f7cd4e8114bca2297ed690
+Section: !CydiaVn-Apps
+Homepage: http://cydia.vn/
+Description: complete feature-filled YouTube app for iPad
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Author: Jonas Gessner
+Depiction: http://cydia.vn/depic/t2294/
+Icon: file:///Applications/ProTubeHD.app/icon.png
+Name: ProTube HD
+Sponsor: Cydia.vn Blog's <http://cydia.vn/>
 
 Package: vn.gsm.springtomize2
 Version: 1.4.3-1
