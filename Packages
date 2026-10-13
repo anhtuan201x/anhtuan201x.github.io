@@ -280,10 +280,10 @@ Version: 1.6
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: debs/com.anhtuan201x.repoicons_1.5_iphoneos-arm.deb
-Size: 15420
-MD5sum: 1fff066bc5c0a2fb16bdb4cfcd0876b5
-SHA1: f59a7c58a4c0dbc17ee0fc2a72d56e24dd9f4f16
-SHA256: 61b4890f2c92f7d1adcd4e8184fa4744e9c784bd92e3de0d1625ffaed012cc3b
+Size: 15416
+MD5sum: f93ce74fa49a0d2edc86913f5a61b2a1
+SHA1: 0eb5e30bdb79d6c61a43654d6137d37446c35b14
+SHA256: e7f74ad218d0f8612adb5f8a30fbddba6107db1f38dfa57aace86381eaf810cf
 Section: Themes
 Description: Bộ sưu tập biểu tượng chuẩn đét hệ thống Cydia cổ cho cả Sources và Sections.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
@@ -1856,24 +1856,6 @@ Author: Trevir <triveri@outlook.com>
 Depiction: http://cydia.invoxiplaygames.uk/dp/classicdiscord.php
 Icon: file:///Applications/Discord.app/Icon@2x.png
 Name: Discord Classic
-
-Package: uk.invoxiplaygames.checkmatestore
-Version: 1.2
-Architecture: iphoneos-arm
-Maintainer: InvoxiPlayGames <webmaster@invoxiplaygames.uk>
-Installed-Size: 164
-Depends: mobilesubstrate, firmware (>= 2.0)
-Filename: debs/checkmatestore-1.2.deb
-Size: 5200
-MD5sum: 5245fc6431aadd77110a226b8f0d9ee8
-SHA1: 1330e7a5c051c6dfbff558184de78accecb19032
-SHA256: 0863fee434c9a1aed89696655b4075aa3edde2b2ad3ee2a0e99a99428c17ffe3
-Section: Tweaks
-Description: Disable capability limits in the App Store.
-Icon: https://anhtuan201x.github.io/CydiaIcon.png
-Author: InvoxiPlayGames <webmaster@invoxiplaygames.uk>
-Depiction: http://cydia.invoxiplaygames.uk/dp/checkmatestore.php
-Name: Checkmate, Store!
 
 Package: uk.invoxiplaygames.cydiahttpatch
 Version: 1.0
