@@ -233,6 +233,20 @@ Description: Ứng dụng chuyển đổi tự động từ file IPA gốc.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Name: Geometry 1.20
 
+Package: com.anhtuan201x.gmeil-ios5.0+
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: AnhTuan201X <anhtuan201x@github.io>
+Filename: debs/gmeil-ios5.0+.deb
+Size: 62046
+MD5sum: c334ce30e8d106be99c67b817c8abdc2
+SHA1: 1bcef8a17faf0d20d80bfcdd769215dd965c8b4c
+SHA256: b7d64d76e0efea147271255fe4d3cd37726b1fdd0d9f4f187e09ae5a2de1a90f
+Section: Applications
+Description: Ứng dụng chuyển đổi tự động từ file IPA gốc.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Name: Gmeil-iOS5.0+
+
 Package: com.anhtuan201x.messenger.2.5.0
 Version: 1.0
 Architecture: iphoneos-arm
@@ -309,9 +323,9 @@ Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: debs/com.anhtuan201x.repoicons_1.5_iphoneos-arm.deb
 Size: 15416
-MD5sum: 629cb87bee3c78933702b068b50bde74
-SHA1: 2a79d91aea52f2ce59f6ee035161397b9ae89f37
-SHA256: a4aeb83bddd951bf39c4d0778a85bae1c7d0b6b1b29831412acbef709d961020
+MD5sum: 3c937aa2f2ecc08907481f9aad46bfcd
+SHA1: 835f073b96876a32fb1fd5e297e33c502f68c5f3
+SHA256: 4c5c4551d4b4fa078481282a87f7ad6f66b2ee5d04380632e52a922bba8ffc2e
 Section: Themes
 Description: Bộ sưu tập biểu tượng chuẩn đét hệ thống Cydia cổ cho cả Sources và Sections.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
