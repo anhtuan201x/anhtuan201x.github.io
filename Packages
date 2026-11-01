@@ -280,10 +280,10 @@ Version: 1.6
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: debs/com.anhtuan201x.repoicons_1.5_iphoneos-arm.deb
-Size: 15418
-MD5sum: 9a66547439a61b068e22b79593880105
-SHA1: 00ad28faefd0e307710991e6fae3f539f1b041ec
-SHA256: b3590d80264d4d97960cbcb6935d9d629e91e3d7937584f203843eae12410b98
+Size: 15420
+MD5sum: 2e902f4b28ff35919d80aa6cfe901025
+SHA1: 28c156bfa1b24ab6c9c6cc80b888b018d618de3a
+SHA256: 6f6802d9663bc17f2161210f514956685f6b6af1143b1bb267cc33d173675f82
 Section: Themes
 Description: Bộ sưu tập biểu tượng chuẩn đét hệ thống Cydia cổ cho cả Sources và Sections.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
@@ -1856,6 +1856,20 @@ Author: Trevir <triveri@outlook.com>
 Depiction: http://cydia.invoxiplaygames.uk/dp/classicdiscord.php
 Icon: file:///Applications/Discord.app/Icon@2x.png
 Name: Discord Classic
+
+Package: uk.co.bbc.news
+Version: 3.9.1.48
+Architecture: iphoneos-arm
+Maintainer: AnhTuan201X <anhtuan201x@github.io>
+Filename: debs/bbc.news.3.9.1.deb
+Size: 17877778
+MD5sum: e5e6cd031c2be233bd98762b58dae48d
+SHA1: e03c7a78f9bcc81c35d5515ea33a6b2111150bd1
+SHA256: 21e8b110cf36ed97279c3610de861c8ae00930b9e506d175585d2bf445340052
+Section: Applications
+Description: Ứng dụng chuyển đổi tự động từ file IPA gốc.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Name: BBC News 3.9.1
 
 Package: uk.invoxiplaygames.cydiahttpatch
 Version: 1.0
