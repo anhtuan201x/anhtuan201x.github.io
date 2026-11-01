@@ -191,6 +191,20 @@ Description: Ứng dụng chuyển đổi tự động từ file IPA gốc.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Name: ChatGPT-v1.0.2-openrouter
 
+Package: com.anhtuan201x.dropbox.3.0.2
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: AnhTuan201X <anhtuan201x@github.io>
+Filename: debs/dropbox.3.0.2.deb
+Size: 17454546
+MD5sum: e0a74002dce4d7b3354553accd2995ff
+SHA1: 783384c14383b5348c16e5c54d5341190828a20d
+SHA256: ceee9006ccf9fb17555c55ad60e58136cf799cb7927487ab9dba38d926878f06
+Section: Applications
+Description: Ứng dụng chuyển đổi tự động từ file IPA gốc.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Name: Dropbox 3.0.2
+
 Package: com.anhtuan201x.facebook.5.5.0
 Version: 1.0
 Architecture: iphoneos-arm
@@ -294,10 +308,10 @@ Version: 1.6
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: debs/com.anhtuan201x.repoicons_1.5_iphoneos-arm.deb
-Size: 15418
-MD5sum: 53e91f0ccd1a38246d24be607f63a6fd
-SHA1: 55ae2b9706c90af8f9539aa9e5b4bb4803f668ff
-SHA256: 313430ff3c64b77d29dccbec066f105c51d5d11bf4a6b603dabe852aff39c840
+Size: 15416
+MD5sum: 629cb87bee3c78933702b068b50bde74
+SHA1: 2a79d91aea52f2ce59f6ee035161397b9ae89f37
+SHA256: a4aeb83bddd951bf39c4d0778a85bae1c7d0b6b1b29831412acbef709d961020
 Section: Themes
 Description: Bộ sưu tập biểu tượng chuẩn đét hệ thống Cydia cổ cho cả Sources và Sections.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
