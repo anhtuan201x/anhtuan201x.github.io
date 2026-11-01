@@ -205,6 +205,20 @@ Description: Ứng dụng chuyển đổi tự động từ file IPA gốc.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Name: Facebook 5.5.0
 
+Package: com.anhtuan201x.geometry.1.20
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: AnhTuan201X <anhtuan201x@github.io>
+Filename: debs/geometry.1.20.deb
+Size: 24746788
+MD5sum: 10f2b33e21de128f1e253c18081e942e
+SHA1: 87603d899d073dae68b16fe907444e26562436ce
+SHA256: 3057081fbf922a076ac841ebc82cffae6ddbbe4aa2ed4e8eaac58568bfb53479
+Section: Applications
+Description: Ứng dụng chuyển đổi tự động từ file IPA gốc.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Name: Geometry 1.20
+
 Package: com.anhtuan201x.messenger.2.5.0
 Version: 1.0
 Architecture: iphoneos-arm
@@ -280,10 +294,10 @@ Version: 1.6
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: debs/com.anhtuan201x.repoicons_1.5_iphoneos-arm.deb
-Size: 15420
-MD5sum: 2e902f4b28ff35919d80aa6cfe901025
-SHA1: 28c156bfa1b24ab6c9c6cc80b888b018d618de3a
-SHA256: 6f6802d9663bc17f2161210f514956685f6b6af1143b1bb267cc33d173675f82
+Size: 15418
+MD5sum: 53e91f0ccd1a38246d24be607f63a6fd
+SHA1: 55ae2b9706c90af8f9539aa9e5b4bb4803f668ff
+SHA256: 313430ff3c64b77d29dccbec066f105c51d5d11bf4a6b603dabe852aff39c840
 Section: Themes
 Description: Bộ sưu tập biểu tượng chuẩn đét hệ thống Cydia cổ cho cả Sources và Sections.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
