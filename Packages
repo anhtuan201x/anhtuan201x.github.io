@@ -350,10 +350,10 @@ Version: 1.6
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: debs/com.anhtuan201x.repoicons_1.5_iphoneos-arm.deb
-Size: 15416
-MD5sum: 9392e203e7b59948c4597985a5ef2542
-SHA1: f6b4c26d37b05c686609b59f83d9eae4ceb58972
-SHA256: a644bd5de1586dece514003ec97e8d64966d4f5c72ec6824932529e570321aaa
+Size: 15418
+MD5sum: 3dc216dcff1a32a57c12eafe4f500f42
+SHA1: 19e561703e48591c07f1dffcffecc048c67510f6
+SHA256: 8f0672b874b68534bf412a97be586a601eb9964efe566fca2cb1686166554132
 Section: Themes
 Description: Bộ sưu tập biểu tượng chuẩn đét hệ thống Cydia cổ cho cả Sources và Sections.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
@@ -1124,6 +1124,20 @@ Description: Redirect Veteris 1.7.2 to any server.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: Notdbrand
 Name: VeterisRedirect
+
+Package: com.opera.OperaMini
+Version: 14.0.0.104835
+Architecture: iphoneos-arm
+Maintainer: AnhTuan201X <anhtuan201x@github.io>
+Filename: debs/opera.mini-(com.opera.operamini)-14.0.0.104835-(ios_7.0)-96b8bc8cb5c7d05808dbf57ee829c948.deb
+Size: 19847916
+MD5sum: f5d3e1f4f831e3ba57a6bf7cf9a775d5
+SHA1: bd831dc64534ba1927d6ab0cef1cfe8a3533b39a
+SHA256: 8222b952b34cc801cbe4405a328e39ccd3ca263204982ae18a9c80c7c1eec69b
+Section: Applications
+Description: Ứng dụng chuyển đổi tự động từ file IPA gốc.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Name: Opera Mini-(com.opera.OperaMini)-14.0.0.104835-(iOS_7.0)-96b8bc8cb5c7d05808dbf57ee829c948
 
 Package: com.patrickgriffin.disableyoutubeupdates
 Version: 0.0.1
