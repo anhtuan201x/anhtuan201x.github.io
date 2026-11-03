@@ -351,9 +351,9 @@ Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: debs/com.anhtuan201x.repoicons_1.5_iphoneos-arm.deb
 Size: 15416
-MD5sum: b1ba6d772a280252c9311eb13e20d582
-SHA1: e4004a6ad88f75ecd4d94a71ff2090139cf3d4b4
-SHA256: 89634eadd90c602ce909cc8f6fbcd386c3f83d21386c9ddab072c99141fc74b0
+MD5sum: be429c3f14ceadf9463f192bbd6d1149
+SHA1: 4680c6cbd83643b081e1d63a063a4112ea465b07
+SHA256: 3073de18975a1cc0e1f81fda7569d212802efa9f80e8dcab7970fbdb9ddfb924
 Section: Themes
 Description: Bộ sưu tập biểu tượng chuẩn đét hệ thống Cydia cổ cho cả Sources và Sections.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
@@ -1061,6 +1061,29 @@ Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: KJCracks <unknown@unknown.com>
 Name: Clutch 2.0.4
 
+Package: com.marcosinghof.noslowanimations
+Version: 5.2.1
+Architecture: iphoneos-arm
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Installed-Size: 358
+Depends: firmware (>= 7.0.3), mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.2)
+Filename: debs/noslowanimations_5.2.1.deb
+Size: 28264
+MD5sum: 7e128b7b8b43e8391bbadfea6e529992
+SHA1: 30858e76efcb429e2b42f5698244d6e72283dccb
+SHA256: 3f6ec3fbbc5c9a65b47d127d8c1a07e9cdbf2321f39ed86e38f30aa0150f36a7
+Section: Tweaks
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=noslowanimationsDp
+Description: speed up slow animations in iOS 7+
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Tag: purpose::extension, role::enduser, compatible::ios7, compatible::ios8, compatible::ios9
+Author: Marco Singhof <singhofmarco@gmail.com>
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=noslowanimationsDp
+Dev: marcosinghof
+Icon: file:///Library/PreferenceBundles/NoSlowAnimationsSettings.bundle/NoSlowAnimationsSettings@2x.png
+Name: NoSlowAnimations
+Sponsor: thebigboss.org <http://thebigboss.org>
+
 Package: com.mathieubolard.killbackground
 Version: 1.3.1-7
 Architecture: iphoneos-arm
@@ -1342,6 +1365,27 @@ Tag: purpose::daemon, role::enduser
 Author: Jay Freeman (saurik) <saurik@saurik.com>
 Depiction: http://cydia.saurik.com/info/com.saurik.afc2d/
 Name: Apple File Conduit "2"
+
+Package: com.saurik.impactor
+Version: 0.9.43
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Depends: firmware (>= 7.1), firmware (<= 10.3.3)
+Breaks: com.saurik.patych (<< 1.0.1)
+Filename: debs/com.saurik.impactor_0.9.43_iphoneos-arm.deb
+Size: 386560
+MD5sum: 21cb7131e2949c1696ece268d6056c6d
+SHA1: 2efe3eab846d97b60308c59a11a40c32d91ffbe7
+SHA256: b91be52acef2b18455b16285f9ba105b404cc2aa9cb6439626517a47061e8727
+Section: Utilities
+Priority: optional
+Description: specific utility to unjailbreak most devices
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Tag: purpose::uikit, role::enduser
+Author: Jay Freeman (saurik) <saurik@saurik.com>
+Depiction: http://cydia.saurik.com/info/com.saurik.impactor/
+Icon: file:///Applications/Eraser.app/Icon-60.png
+Name: Cydia Eraser
 
 Package: com.skyglow.weatherx
 Version: 3.6
@@ -1750,6 +1794,45 @@ Description: secure remote access between machines
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Depiction: http://cydia.saurik.com/info/openssh/
 Name: OpenSSH
+
+Package: openssl
+Version: 0.9.8zg-13
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Installed-Size: 6164
+Pre-Depends: dpkg (>= 1.14.25-8)
+Filename: debs/openssl_0.9.8zg-13_iphoneos-arm.deb
+Size: 1031128
+MD5sum: 405f8d4c91aab0cf85e6f8ad93b8ab30
+SHA1: 3aedf9d8393b7c8a426840223625a601dd7d089d
+SHA256: 0e57f4b5968fc32c1fb56c1361d163a1ffdcda9173145551aff839cfc19be664
+Section: Security
+Priority: standard
+Description: SSL library and cryptographic tools
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Name: OpenSSL
+
+Package: org.altervista.exilecom.icleaner
+Version: 7.10.0
+Architecture: iphoneos-arm
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Installed-Size: 8217
+Pre-Depends: firmware (>= 4.0), apt | apt7, findutils
+Filename: debs/icleaner_7.10.0.deb
+Size: 2446940
+MD5sum: 4c9b7f7b22f6dc30faa0066a350c6c21
+SHA1: 6efb68d54f18921885f5cd18b30710ffe7daa27c
+SHA256: 751ef15952b2eae96556601ad4514507cda474d1ccbf30980be3aa72e307e6c1
+Section: Utilities
+Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=icleanerDp
+Description: The first real iOS system cleanup and management utility
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Tag: purpose::uikit
+Author: Ivano Bilenchi <support@ib-soft.net>
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=icleanerDp
+Dev: exilecom
+Icon: file:///Applications/iCleaner.app/Icon.png
+Name: iCleaner
 
 Package: org.coolstar.classicdock
 Version: 2.0
@@ -2594,4 +2677,48 @@ Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Author: Jay Freeman (saurik) <saurik@saurik.com>
 Depiction: http://cydia.saurik.com/info/winterboard/
 Name: WinterBoard
+
+Package: ws.hbang.newterm3
+Version: 3.0~beta1-1
+Architecture: iphoneos-arm
+Maintainer: HASHBANG Productions <support@hbang.ws>
+Installed-Size: 14891
+Depends: firmware (>= 14.0), zsh | bash | fish, coreutils, ncurses, system-cmds, gettext-localizations
+Conflicts: ws.hbang.newterm, ws.hbang.newterm2
+Replaces: ws.hbang.newterm, ws.hbang.newterm2
+Filename: debs/ws.hbang.newterm3_3.0~beta1-1_iphoneos-arm.deb
+Size: 3836214
+MD5sum: 2102bf2c564c5debafe983cfc555a9a4
+SHA1: ea1b3b1d83771aa5695e24b520447dbf8c64fded
+SHA256: 10aa26ac7a2e168caa814bdb5b380d8f9b4dfef4a426f4651c96d76b9fb2dd9f
+Section: Terminal Support
+Description: Powerful terminal app for iOS
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Tag: compatible_min::ios14.0
+Author: HASHBANG Productions <support@hbang.ws>
+Depiction: https://chariz.com/get/newterm-beta
+Icon: https://img.chariz.cloud/icon/newterm-beta/icon@3x.png
+Name: NewTerm 3 Beta
+Support: https://hashbang.productions/support/
+
+Package: xyz.willy.zebra
+Version: 1.1.36
+Architecture: iphoneos-arm
+Maintainer: Zebra Team <team@getzbra.com>
+Installed-Size: 15032
+Depends: dpkg, uikittools, firmware (>= 9.0)
+Filename: debs/xyz.willy.zebra_1.1.36_iphoneos-arm.deb
+Size: 8451692
+MD5sum: f28880aa6be9a0556000cc7f58c5c3ad
+SHA1: 06e3fcec78dba4e3450a0dac0c27bc0af75bd8a7
+SHA256: e724e4e45807880b9a4122100e89c4ea8326ce56dd3223abbbb01757779d5f5f
+Section: Packaging
+Description: A Useful Package Manager
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Tag: compatible::9.0-16.6
+Author: Zebra Team <team@getzbra.com>
+Depiction: https://getzbra.com/repo/depictions/xyz.willy.Zebra/
+Icon: file:///Applications/Zebra.app/AppIcon60x60@3x.png
+Name: Zebra
+Support: https://getzbra.com/repo/depictions/xyz.willy.Zebra/bug_report.html
 
