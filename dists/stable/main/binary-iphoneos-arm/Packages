@@ -350,10 +350,10 @@ Version: 1.6
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: debs/com.anhtuan201x.repoicons_1.5_iphoneos-arm.deb
-Size: 15418
-MD5sum: 4a71b2df203bc6662e535f2d4e3364cd
-SHA1: fc60bb284bb07e9ff4875438cfe4cf7d21bba8eb
-SHA256: cea109c3d1ea2b4069fb39ecd5720ab5110feee1c74d61a14516a9604f023e7d
+Size: 15416
+MD5sum: 6c3e3152b7418d7a6d5c2b95b0f2442e
+SHA1: e0d7892c3fb4ce105dcac64e58ae2e0ac259a721
+SHA256: 9ce665df910a670bc1b92b7874431b982afac7e4a1a060c94c0f6b69f9b9ade7
 Section: Themes
 Description: Bộ sưu tập biểu tượng chuẩn đét hệ thống Cydia cổ cho cả Sources và Sections.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
@@ -1605,6 +1605,24 @@ Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=libbox2dDp
 Dev: conradkramer
 Name: Box2D
 Sponsor: thebigboss.org <http://thebigboss.org>
+
+Package: libssl1.1.1
+Version: 1.1.1n-1
+Architecture: iphoneos-arm
+Maintainer: Sam Bingner <maintainer@sbdhi.com>
+Installed-Size: 16848
+Pre-Depends: dpkg (>= 1.14.25-8)
+Depends: ca-certificates
+Filename: debs/libssl1.1.1_1.1.1n-1_iphoneos-arm.deb
+Size: 1741376
+MD5sum: ae5a8f3949e98c7ac541ca6db455e50f
+SHA1: 8cc6171dfdc24ec475c4f2909963e7e943f483ae
+SHA256: 228c43df4ddb58345b814a942b6590c17f986e6290cb3bebdd6eea77c45152ec
+Section: Security
+Priority: standard
+Description: OpenSSL Libraries for version 1.1.1
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Name: OpenSSL 1.1.1 Libraries
 
 Package: me.k3a.powersounddisabler
 Version: 1.1.1-6
