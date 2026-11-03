@@ -233,6 +233,20 @@ Description: Ứng dụng chuyển đổi tự động từ file IPA gốc.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
 Name: Facebook 5.5.0
 
+Package: com.anhtuan201x.flappy.bird.v1.2
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: AnhTuan201X <anhtuan201x@github.io>
+Filename: debs/flappy.bird.v1.2.deb
+Size: 1318310
+MD5sum: 8e0a6da875599c25bf1e26cf10560247
+SHA1: bbeb83040cb5a87ac85361e835a959f94ca21362
+SHA256: 348503005efdcee0ee81042780ba0245544b9f31767bf634e761a1b799795074
+Section: Applications
+Description: Ứng dụng chuyển đổi tự động từ file IPA gốc.
+Icon: https://anhtuan201x.github.io/CydiaIcon.png
+Name: Flappy Bird v1.2
+
 Package: com.anhtuan201x.geometry.1.20
 Version: 1.0
 Architecture: iphoneos-arm
@@ -336,10 +350,10 @@ Version: 1.6
 Architecture: iphoneos-arm
 Maintainer: AnhTuan201X <anhtuan201x@github.io>
 Filename: debs/com.anhtuan201x.repoicons_1.5_iphoneos-arm.deb
-Size: 15418
-MD5sum: e7ab43fdde82b20e357112fc40a72002
-SHA1: c85b5604157bb1068e7487c1f175d17ebc48f762
-SHA256: bb327608652c3e9c2fcb748fd5045f177e601de6dbed4d954e71ae55a5019918
+Size: 15420
+MD5sum: 814f48b1cdde42de03a99ad18119b84c
+SHA1: 1e53444b8fafcf2fb40ebb9deadc1831ef1b4930
+SHA256: e3b6140c41deb392b838afcb8eacfffc78701f66c18f353435feefc7a6ace337
 Section: Themes
 Description: Bộ sưu tập biểu tượng chuẩn đét hệ thống Cydia cổ cho cả Sources và Sections.
 Icon: https://anhtuan201x.github.io/CydiaIcon.png
